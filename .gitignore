@@ -16,8 +16,6 @@ __pycache__/
 *.pkl
 progress/
 cache/
-/old/
-/Old/
 
 # IDE
 .vscode/settings.json

@@ -5,7 +5,12 @@
 
 Deep Mastery Lab is a full-coverage learning system built for dense study material — textbooks, certification guides, and technical references where each sentence matters. It processes your material into a structured learning path: read a paragraph, confront it with multiple-choice questions grounded in the source, then move forward. It is also powered by the FSRS spaced repetition algorithm, which schedules reviews across all your courses to lock in what you've learned. The goal is to finish a course with full confidence, no gaps, and everything committed to long-term memory.
 
+> **Try the demo** — [Live Demo](YOUR_LINK_HERE) · No API key required to test the main features.
+
 ![Screenshot](assets/screenshots/welcome1.png)
+
+
+
 ---
 
 ## Table of Contents
@@ -207,7 +212,7 @@ Reviews are bucketed by calendar day, with each new day starting at 4:00 AM. Thi
 
 ## Themes
 
-Being stuck with a single look for every study session is quietly draining. Deep Mastery Lab ships with a large collection of themes — mostly low-contrast and dark designs chosen to reduce eye fatigue and keep sessions comfortable over long stretches. Switching takes one click and applies instantly across the entire app, so there is always something fresh without ever reaching for a setting buried in a menu.
+Being stuck with a single look for every study session is quietly draining. Deep Mastery Lab ships with a large collection of themes — mostly low-contrast and dark designs chosen to reduce eye fatigue and keep sessions comfortable over long stretches. 
 
 <p>
   <img src="assets/screenshots/css1.png" width="48%">
@@ -277,7 +282,7 @@ Requires [Git](https://git-scm.com/downloads) installed.
 Navigate in Windows Explorer to the folder where you want to install the app. `Shift + Right-click` on an empty area inside it and choose **Open in Terminal** (or **Open PowerShell window here** on older Windows). Then paste all of the following at once and press Enter:
 
 ```bash
-git clone https://github.com/YujiKamyk/deep-mastery-lab
+git clone https://github.com/piotrszmyt-dev/deep-mastery-lab
 cd deep-mastery-lab
 python -m venv venv
 venv\Scripts\activate
