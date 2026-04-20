@@ -313,7 +313,7 @@ def show_chunk_review(view_container):
             st.session_state['_scroll_top'] = True
             st.rerun()
     with col_go:
-        if st.button("Start Generation", icon=":material/rocket_launch:", type="primary", use_container_width=True):
+        if st.button("Start Generation", icon=":material/rocket_launch:", type="primary", use_container_width=True, disabled=st.session_state.get('is_cloud', False)):
             view_container.empty()
             time.sleep(0.2)
             st.session_state.generator_v5_state = 'RUNNING'

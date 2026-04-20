@@ -230,11 +230,12 @@ def _render_action_buttons(selected_option, has_progress, api_key_valid):
     c_gen, c_decks, c_api = st.columns(3)
 
     with c_gen:
+        is_cloud = st.session_state.get('is_cloud', False)
         if st.button(
             "AI Course Creator",
             icon=":material/auto_awesome:",
             use_container_width=True,
-            disabled=not api_key_valid,
+            disabled=not api_key_valid and not is_cloud,
         ):
             st.session_state.generator_v5_state = 'INPUT'
             st.session_state['_scroll_top'] = True

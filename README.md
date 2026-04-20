@@ -5,7 +5,7 @@
 
 Deep Mastery Lab is a full-coverage learning system built for dense study material — textbooks, certification guides, and technical references where each sentence matters. It processes your material into a structured learning path: read a paragraph, confront it with multiple-choice questions grounded in the source, then move forward. It is also powered by the FSRS spaced repetition algorithm, which schedules reviews across all your courses to lock in what you've learned. The goal is to finish a course with full confidence, no gaps, and everything committed to long-term memory.
 
-> **Try the demo** — [Live Demo](YOUR_LINK_HERE) · No API key required to test the main features.
+> **Try the demo** — [Live Demo](https://deep-mastery-lab.streamlit.app/) · No API key required to test the main features.
 
 ![Screenshot](assets/screenshots/welcome1.png)
 
@@ -315,7 +315,7 @@ pip install -r requirements.txt
 
 ### Option B — ZIP package
 
-1. Download the ZIP from the [Releases](../../releases) page and extract it anywhere
+1. Download the ZIP from the [Releases](https://github.com/piotrszmyt-dev/deep-mastery-lab/releases) page and extract it anywhere
 2. Double-click **`install.bat`** — this installs all dependencies (one time only)
 3. Double-click **`Start Deep Mastery Lab.bat`** to launch
 
