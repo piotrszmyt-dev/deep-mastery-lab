@@ -1,0 +1,467 @@
+:root {
+  /* ========================================================================
+     TIER 1: GLOBAL DESIGN TOKENS (PRIMITIVES)
+     ======================================================================== */
+     
+  /* Brand Colors */
+  --color-primary-100: #dbeafe;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  
+  --color-accent-400:  #fbbf24;
+  --color-accent-500:  #f59e0b;
+  --color-accent-600:  #d97706;
+
+  /* Neutral Surface Palette */
+  --color-neutral-0:   #ffffff;       /* Pure white */
+  --color-neutral-50:  #f8fafc;       /* Off-white backgrounds */
+  --color-neutral-100: #f1f5f9;       /* Inset backgrounds */
+  --color-neutral-200: #e2e8f0;       /* Standard borders */
+  --color-neutral-300: #cbd5e1;       /* Heavy borders */
+  --color-neutral-400: #94a3b8;       /* Disabled text/icons */
+  --color-neutral-500: #64748b;       /* Muted text */
+  --color-neutral-700: #334155;       /* Standard text */
+  --color-neutral-900: #0f172a;       /* Headings/Strong text */
+
+  /* Semantic Feedback Colors */
+  --color-success-bg:   #dcfce7;
+  --color-success-border: #22c55e;
+  --color-success-text: #15803d;
+  
+  --color-error-bg:     #fee2e2;
+  --color-error-border: #ef4444;
+  --color-error-text:   #b91c1c;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+  --shadow-focus-ring: 0 0 0 2px var(--color-neutral-0), 0 0 0 4px var(--color-primary-500);
+
+  /* Textures / Background Tricks */
+  --texture-paper: url('data:image/svg+xml;utf8,...'); /* Placeholder for noise/texture SVG */
+  --bg-striped-warning: repeating-linear-gradient(45deg, var(--color-accent-400), var(--color-accent-400) 10px, var(--color-accent-500) 10px, var(--color-accent-500) 20px);
+
+  /* ========================================================================
+     TIER 2: COMPONENT TOKENS (ELEMENT MAP)
+     ======================================================================== */
+
+  /* --- 1. BUTTON — PRIMARY --- */
+  --btn-pri-bg-default: var(--color-primary-600);
+  --btn-pri-border-default: transparent;
+  --btn-pri-text-default: var(--color-neutral-0);
+  --btn-pri-shadow-default: var(--shadow-md);
+  --btn-pri-radius: var(--radius-md);
+
+  --btn-pri-bg-hover: var(--color-primary-500);
+  --btn-pri-border-hover: transparent;
+  --btn-pri-shadow-hover: var(--shadow-lg);
+
+  --btn-pri-bg-active: var(--color-primary-700);
+  --btn-pri-border-active: transparent;
+  --btn-pri-shadow-active: var(--shadow-sm);
+
+  --btn-pri-bg-focus: var(--color-primary-600);
+  --btn-pri-focus-ring: var(--shadow-focus-ring);
+
+  --btn-pri-bg-disabled: var(--color-neutral-200);
+  --btn-pri-border-disabled: transparent;
+  --btn-pri-text-disabled: var(--color-neutral-400);
+
+
+  /* --- 2. BUTTON — SECONDARY --- */
+  --btn-sec-bg-default: transparent;
+  --btn-sec-border-default: var(--color-neutral-300);
+  --btn-sec-text-default: var(--color-neutral-700);
+  --btn-sec-shadow-default: var(--shadow-sm);
+  --btn-sec-radius: var(--radius-md);
+
+  --btn-sec-bg-hover: var(--color-neutral-50);
+  --btn-sec-border-hover: var(--color-neutral-400);
+  --btn-sec-shadow-hover: var(--shadow-md);
+
+  --btn-sec-bg-active: var(--color-neutral-100);
+  --btn-sec-border-active: var(--color-neutral-400);
+  --btn-sec-shadow-active: none;
+
+  --btn-sec-bg-focus: transparent;
+  --btn-sec-focus-ring: var(--shadow-focus-ring);
+
+  --btn-sec-bg-disabled: transparent;
+  --btn-sec-border-disabled: var(--color-neutral-200);
+  --btn-sec-text-disabled: var(--color-neutral-400);
+
+
+  /* --- 3. PROGRESS BAR --- */
+  --prog-track-bg: var(--color-neutral-200);
+  --prog-track-height: 8px;
+  --prog-track-radius: var(--radius-pill);
+  
+  --prog-fill-bg: var(--color-accent-500);
+  --prog-fill-shadow: inset 0 -2px 0 rgba(0,0,0,0.1); /* Inner 3D pop */
+
+
+  /* --- 4. WELCOME CARD --- */
+  --welcome-cont-bg: var(--color-neutral-0);
+  --welcome-cont-border: var(--color-neutral-200);
+  --welcome-cont-shadow: var(--shadow-lg);
+  --welcome-cont-radius: var(--radius-xl);
+
+  --welcome-title-color: var(--color-neutral-900);
+  --welcome-title-font: var(--font-sans);
+  --welcome-icon-color: var(--color-primary-500);
+  
+  --welcome-sub-color: var(--color-neutral-700);
+  --welcome-sub-opacity: 0.8;
+  --welcome-div-border: var(--color-neutral-200);
+
+
+  /* --- 5. SIDEBAR --- */
+  --sidebar-cont-bg: var(--color-neutral-50);
+  --sidebar-cont-text: var(--color-neutral-700);
+
+  --sidebar-coll-color: var(--color-neutral-500);
+  --sidebar-coll-color-hover: var(--color-neutral-900);
+  --sidebar-coll-bg-hover: var(--color-neutral-200);
+
+  --sidebar-title-color: var(--color-neutral-900);
+  --sidebar-title-size: 1.125rem;
+  --sidebar-title-weight: 700;
+  --sidebar-title-shadow: 0 1px 0 rgba(255,255,255,0.5); /* Crisp text embed */
+  
+  --sidebar-title-icon-color: var(--color-primary-500);
+  --sidebar-title-icon-shadow: var(--shadow-sm);
+  
+  --sidebar-sep-bg: var(--color-neutral-200);
+
+  --sidebar-exp-closed-bg: transparent;
+  --sidebar-exp-closed-text: var(--color-neutral-700);
+  
+  --sidebar-exp-hover-bg: var(--color-neutral-100);
+  --sidebar-exp-hover-text: var(--color-neutral-900);
+  
+  --sidebar-exp-open-bg: var(--color-neutral-0);
+  --sidebar-exp-open-text: var(--color-neutral-900);
+  --sidebar-exp-open-radius: var(--radius-md);
+  --sidebar-exp-open-shadow: var(--shadow-sm);
+
+  --sidebar-subc-head-color: var(--color-neutral-400); /* Label style */
+  
+  --sidebar-subc-norm-bg: transparent;
+  --sidebar-subc-norm-color: var(--color-neutral-500);
+  
+  --sidebar-subc-hover-color: var(--color-neutral-900);
+  
+  --sidebar-act-bg: var(--color-primary-100);
+  --sidebar-act-text: var(--color-primary-700);
+  
+  --sidebar-act-hover-bg: var(--color-primary-100);
+  --sidebar-act-hover-text: var(--color-primary-700);
+
+
+  /* --- 6. MAIN AREA --- */
+  --main-bg: var(--color-neutral-0);
+  --main-text: var(--color-neutral-700);
+  --main-exp-sidebar-color: var(--color-neutral-400);
+  --main-exp-sidebar-color-hover: var(--color-primary-500);
+
+
+  /* --- 7. LESSON CARD --- */
+  --lesson-title-color: var(--color-neutral-900);
+  --lesson-title-font: var(--font-sans);
+  --lesson-title-weight: 700;
+
+  --lesson-card-bg: var(--color-neutral-0);
+  --lesson-card-border: var(--color-neutral-200);
+  --lesson-card-radius: var(--radius-lg);
+  --lesson-card-shadow: var(--shadow-md);
+  --lesson-card-texture: var(--texture-paper);
+
+  --lesson-strong-color: var(--color-neutral-900);
+  --lesson-strong-weight: 700;
+
+  --lesson-head-color: var(--color-neutral-900);
+  --lesson-head-font: var(--font-sans);
+  --lesson-head-letter-spc: -0.02em;
+  --lesson-head-weight: 700;
+
+  --lesson-italic-color: var(--color-neutral-500);
+
+  --lesson-th-color: var(--color-neutral-700);
+  --lesson-th-border: var(--color-neutral-300);
+  --lesson-th-bg: var(--color-neutral-50);
+  
+  --lesson-td-color: var(--color-neutral-700);
+  --lesson-td-border: var(--color-neutral-200);
+
+  --lesson-scroll-thumb: var(--color-neutral-300);
+
+
+  /* --- 8. QUIZ / TEST --- */
+  --quiz-q-color: var(--color-neutral-900);
+  --quiz-q-opacity: 1;
+
+  --quiz-ans-bg: var(--color-neutral-0);
+  --quiz-ans-border: transparent;
+  --quiz-ans-radius: var(--radius-md);
+
+  --quiz-ans-border-hover: var(--color-primary-500);
+  
+  --quiz-ans-letter-color: var(--color-accent-500);
+
+  --quiz-hint-bg: var(--color-neutral-0);
+  --quiz-hint-color: var(--color-neutral-700);
+  --quiz-hint-border: var(--color-neutral-200);
+  --quiz-hint-radius: var(--radius-sm);
+  --quiz-hint-shadow: var(--shadow-sm);
+
+  --quiz-key-legend-color: var(--color-neutral-400);
+  --quiz-key-legend-font: var(--font-mono);
+
+
+  /* --- 9. FEEDBACK --- */
+  --fb-metric-bg: var(--color-neutral-0);
+  --fb-metric-border: var(--color-neutral-200);
+  --fb-metric-radius: var(--radius-md);
+  --fb-metric-shadow: var(--shadow-sm);
+
+  --fb-metric-border-hover: var(--color-primary-500);
+
+  --fb-metric-passed-border: var(--color-success-border);
+  --fb-metric-passed-shadow: 0 0 0 1px var(--color-success-border);
+  --fb-metric-passed-color: var(--color-success-text);
+
+  --fb-metric-failed-border: var(--color-neutral-300);
+
+  --fb-metric-icon-size: 24px;
+  --fb-metric-icon-opacity: 0.8;
+
+  --fb-metric-label-color: var(--color-neutral-500);
+  --fb-metric-label-size: 0.75rem;
+  --fb-metric-label-uc: uppercase;
+  --fb-metric-label-ls: 0.05em;
+
+  --fb-metric-val-color: var(--color-neutral-900);
+  --fb-metric-val-size: 1.5rem;
+  --fb-metric-val-weight: 700;
+
+  --fb-exp-norm-border: 1px solid var(--color-neutral-200);
+  --fb-exp-hover-bg: var(--color-neutral-50);
+  --fb-exp-hover-color: var(--color-neutral-900);
+  --fb-exp-hover-pad: 1rem;
+  
+  --fb-exp-open-bg: var(--color-primary-50);
+  --fb-exp-open-color: var(--color-primary-700);
+
+  --fb-ans-base-radius: var(--radius-md);
+  --fb-ans-base-fs: 1rem;
+  --fb-ans-base-border: transparent;
+
+  --fb-ans-usr-wrong-bg: var(--color-error-bg);
+  --fb-ans-usr-wrong-border: 2px dotted var(--color-error-border);
+  --fb-ans-usr-wrong-text: var(--color-error-text);
+
+  --fb-ans-usr-corr-bg: var(--color-success-bg);
+  --fb-ans-usr-corr-border: 2px solid var(--color-success-border);
+  --fb-ans-usr-corr-text: var(--color-success-text);
+
+  --fb-ans-corr-key-bg: var(--color-success-border); /* Solid green */
+  --fb-ans-corr-key-border: transparent;
+  --fb-ans-corr-key-text: var(--color-neutral-0); /* Inverted */
+
+  --fb-ans-label-opacity: 0.7;
+  --fb-ans-label-size: 0.75rem;
+  --fb-ans-label-uc: uppercase;
+
+  --fb-expl-bg: var(--color-neutral-50);
+  --fb-expl-border-l: 4px solid var(--color-primary-500);
+  --fb-expl-radius: var(--radius-sm);
+  --fb-expl-text: var(--color-neutral-700);
+  --fb-expl-lh: 1.6;
+
+
+  /* --- 10. GENERATOR WINDOW --- */
+  --gen-card-bg: var(--color-neutral-0);
+  --gen-card-border: var(--color-neutral-200);
+  --gen-card-border-t: 4px solid var(--color-accent-500);
+  --gen-card-shadow: var(--shadow-lg);
+  --gen-card-radius: var(--radius-xl);
+
+  --gen-head-color: var(--color-neutral-900);
+  --gen-head-font: var(--font-sans);
+  --gen-card-div-border: var(--color-neutral-200);
+  
+  --gen-head-icon-color: var(--color-accent-500);
+  --gen-inp-icon-color: var(--color-neutral-400);
+
+  --gen-warn-color: var(--color-neutral-900);
+  --gen-warn-border: var(--bg-striped-warning); 
+
+  --gen-stat-bg: var(--color-neutral-50);
+  --gen-stat-border: var(--color-neutral-200);
+  --gen-stat-radius: var(--radius-md);
+  
+  --gen-stat-item-border: 1px solid var(--color-neutral-200);
+  
+  --gen-stat-label-color: var(--color-neutral-500);
+  --gen-stat-label-size: 0.75rem;
+  --gen-stat-label-uc: uppercase;
+  
+  --gen-stat-val-color: var(--color-neutral-900);
+  --gen-stat-val-weight: 700;
+  --gen-stat-val-size: 1.25rem;
+  --gen-stat-val-acc: var(--color-accent-600);
+
+  --gen-spin-icon-color: var(--color-primary-500);
+
+  --gen-cons-bg: var(--color-neutral-900); /* Deeper/Dark terminal feel */
+  --gen-cons-border: var(--color-neutral-700);
+  --gen-cons-radius: var(--radius-md);
+  --gen-cons-font: var(--font-mono);
+
+  --gen-cons-step-border: 1px dotted var(--color-neutral-700);
+  --gen-cons-icon-color: var(--color-accent-400);
+  
+  --gen-cons-title-color: var(--color-neutral-0);
+  --gen-cons-title-weight: 700;
+  
+  --gen-cons-msg-color: var(--color-neutral-300);
+  --gen-cons-msg-size: 0.875rem;
+  --gen-cons-msg-border-l: 2px solid var(--color-neutral-700);
+
+  --gen-comp-head-color: var(--color-success-text);
+  --gen-comp-icon-color: var(--color-success-border);
+  --gen-comp-icon-size: 32px;
+
+
+  /* --- 11. STREAMLIT METRIC WIDGET --- */
+  --st-met-cont-bg: var(--color-neutral-0);
+  --st-met-cont-border: var(--color-neutral-200);
+  --st-met-cont-radius: var(--radius-md);
+  --st-met-cont-shadow: var(--shadow-sm);
+
+  --st-met-hover-border: var(--color-accent-500);
+  --st-met-hover-shadow: var(--shadow-md);
+
+  --st-met-label-color: var(--color-neutral-500);
+  --st-met-label-size: 0.875rem;
+  --st-met-label-uc: uppercase;
+  --st-met-label-ls: 0.05em;
+
+  --st-met-val-color: var(--color-neutral-900);
+  --st-met-val-size: 2rem;
+  --st-met-val-weight: 700;
+
+  --st-met-delta-bg: var(--color-success-bg);
+  --st-met-delta-color: var(--color-success-text);
+  --st-met-delta-radius: var(--radius-sm);
+
+
+  /* --- 12. UI ELEMENTS --- */
+  
+  /* Tabs */
+  --ui-tab-inact-bg: transparent;
+  --ui-tab-inact-color: var(--color-neutral-500);
+  --ui-tab-inact-radius: var(--radius-md);
+  
+  --ui-tab-inact-hover-bg: var(--color-neutral-50);
+  
+  --ui-tab-act-bg: var(--color-neutral-100); /* Inset/deeper */
+  --ui-tab-act-color: var(--color-neutral-900);
+  --ui-tab-act-shadow: inset 0 -2px 0 var(--color-accent-500); /* Accent ring */
+  --ui-tab-border-line: hidden;
+
+  /* File Dropzone */
+  --ui-drop-cont-bg: var(--color-neutral-50);
+  --ui-drop-cont-border: 2px dashed var(--color-neutral-300);
+  --ui-drop-cont-radius: var(--radius-lg);
+  
+  --ui-drop-text-color: var(--color-neutral-500);
+  
+  --ui-drop-btn-bg: var(--color-neutral-0);
+  --ui-drop-btn-color: var(--color-neutral-700);
+  --ui-drop-btn-border: var(--color-neutral-200);
+  --ui-drop-btn-radius: var(--radius-md);
+  
+  --ui-drop-icon-color: var(--color-neutral-400);
+
+  /* Popover */
+  --ui-pop-cont-bg: var(--color-neutral-0);
+  --ui-pop-cont-shadow: var(--shadow-lg);
+  --ui-pop-cont-border: var(--color-neutral-200);
+  --ui-pop-cont-radius: var(--radius-md);
+  --ui-pop-text-color: var(--color-neutral-700);
+
+  /* Dropdown Menu */
+  --ui-dropd-clos-bg: var(--color-neutral-50); /* Inset */
+  --ui-dropd-clos-border: var(--color-neutral-200);
+  --ui-dropd-clos-radius: var(--radius-md);
+  --ui-dropd-clos-text: var(--color-neutral-700);
+  
+  --ui-dropd-open-bg: var(--color-neutral-0);
+  --ui-dropd-open-border: var(--color-primary-500);
+  --ui-dropd-open-text: var(--color-primary-700);
+  
+  --ui-dropd-hover-bg: var(--color-neutral-0);
+  --ui-dropd-hover-border: var(--color-neutral-400);
+  --ui-dropd-hover-text: var(--color-neutral-900);
+  
+  --ui-dropd-item-norm: var(--color-neutral-700);
+  --ui-dropd-item-sel-bg: var(--color-primary-600);
+  --ui-dropd-item-sel-text: var(--color-neutral-0); /* Inverted */
+  --ui-dropd-item-sel-hover: var(--color-primary-700);
+  
+  --ui-dropd-scroll: var(--color-neutral-300);
+
+  /* Text Fields */
+  --ui-tf-norm-bg: var(--color-neutral-50); /* Inset */
+  --ui-tf-norm-border: var(--color-neutral-200);
+  --ui-tf-norm-text: var(--color-neutral-900);
+  --ui-tf-norm-radius: var(--radius-md);
+  
+  --ui-tf-hover-bg: var(--color-neutral-0);
+  --ui-tf-hover-border: var(--color-neutral-400);
+  
+  --ui-tf-foc-bg: var(--color-neutral-0);
+  --ui-tf-foc-border: var(--color-primary-500);
+  
+  --ui-tf-scroll: var(--color-neutral-300);
+  
+  --ui-tf-num-btn-bg: var(--color-neutral-100);
+  --ui-tf-num-btn-icon: var(--color-neutral-400);
+  
+  --ui-tf-tt-icon: var(--color-neutral-400);
+  
+  --ui-tf-lbl-color: var(--color-neutral-700);
+  --ui-tf-lbl-size: 0.875rem;
+  --ui-tf-lbl-opac: 0.9;
+
+
+  /* --- 13. MASTERY / SRS TREE --- */
+  --srs-mod-head-color: var(--color-primary-600);
+  --srs-mod-head-size: 1.25rem;
+  --srs-mod-head-weight: 700;
+
+  --srs-conc-grp-color: var(--color-neutral-900);
+  --srs-conc-grp-size: 1rem;
+  --srs-conc-grp-weight: 600;
+
+  --srs-lsn-row-color: var(--color-neutral-500);
+  --srs-lsn-row-weight: 400;
+
+  --srs-dis-item-color: var(--color-neutral-300);
+  --srs-dis-item-opac: 0.5;
+
+}

@@ -1,0 +1,2510 @@
+{
+  "L09": {
+    "pool": [
+      {
+        "question": "Which German emperor actively supported the construction of a powerful Imperial German Navy?",
+        "options": {
+          "A": "Wilhelm II",
+          "B": "Otto von Bismarck",
+          "C": "Franz Ferdinand",
+          "D": "Leo von Caprivi"
+        },
+        "target_id": "P009_Q01",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who was the German Admiral who championed the policy of building a navy to rival Britain's?",
+        "options": {
+          "A": "Alfred von Tirpitz",
+          "B": "Alfred Thayer Mahan",
+          "C": "Theobald von Bethmann Hollweg",
+          "D": "Gavrilo Princip"
+        },
+        "target_id": "P009_Q02",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The German naval expansion policy was heavily influenced by the writings of which American naval author?",
+        "options": {
+          "A": "Alfred Thayer Mahan",
+          "B": "Ernst Haeckel",
+          "C": "Gavrilo Princip",
+          "D": "Otto von Bismarck"
+        },
+        "target_id": "P009_Q03",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "According to the ideas adopted by German leadership, what type of navy did Alfred Thayer Mahan argue was essential for a nation to project global power?",
+        "options": {
+          "A": "A blue-water navy",
+          "B": "A coastal defense fleet",
+          "C": "A submarine-based fleet",
+          "D": "A privateer force"
+        },
+        "target_id": "P009_Q04",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What action did Kaiser Wilhelm II take regarding the works of naval theorist Alfred Thayer Mahan?",
+        "options": {
+          "A": "Made them required reading for his advisors and senior military personnel",
+          "B": "Had them banned in Germany",
+          "C": "Translated them into French for his allies",
+          "D": "Personally wrote a rebuttal to them"
+        },
+        "target_id": "P009_Q05",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:29:53.054209",
+    "pool_size": 5
+  },
+  "L04": {
+    "pool": [
+      {
+        "question": "Which conference imposed the post-World War I settlements on the defeated powers?",
+        "options": {
+          "A": "The Paris Peace Conference",
+          "B": "The Berlin Conference",
+          "C": "The Congress of Vienna",
+          "D": "The Yalta Conference"
+        },
+        "target_id": "P004_Q01",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what years did the Paris Peace Conference take place?",
+        "options": {
+          "A": "1919–1920",
+          "B": "1914–1918",
+          "C": "1918–1919",
+          "D": "1920–1921"
+        },
+        "target_id": "P004_Q02",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which treaty specifically dealt with the post-war settlement for Germany?",
+        "options": {
+          "A": "The Treaty of Versailles",
+          "B": "The Treaty of Brest-Litovsk",
+          "C": "The Treaty of Trianon",
+          "D": "The Treaty of Sevres"
+        },
+        "target_id": "P004_Q03",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Under the Treaty of Versailles, what was Germany forced to pay to the Allies?",
+        "options": {
+          "A": "Large war reparations",
+          "B": "Territorial concessions only",
+          "C": "An annual tribute of raw materials",
+          "D": "No financial penalties"
+        },
+        "target_id": "P004_Q04",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was one major consequence for Germany under the Treaty of Versailles?",
+        "options": {
+          "A": "It was disarmed",
+          "B": "It gained new colonies",
+          "C": "It formed a military alliance with France",
+          "D": "It annexed Austria"
+        },
+        "target_id": "P004_Q05",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following was a new independent state created after World War I from the dissolved empires?",
+        "options": {
+          "A": "Czechoslovakia",
+          "B": "Belgium",
+          "C": "Italy",
+          "D": "Prussia"
+        },
+        "target_id": "P004_Q06",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The dissolution of which empire led to the creation of Poland and the Baltic states?",
+        "options": {
+          "A": "The German Empire",
+          "B": "The British Empire",
+          "C": "The French Empire",
+          "D": "The Spanish Empire"
+        },
+        "target_id": "P004_Q07",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What international organization was established after World War I with the aim of maintaining world peace?",
+        "options": {
+          "A": "The League of Nations",
+          "B": "The United Nations",
+          "C": "The Concert of Europe",
+          "D": "The North Atlantic Treaty Organization"
+        },
+        "target_id": "P004_Q08",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is cited as a major reason for the League of Nations' ultimate failure?",
+        "options": {
+          "A": "Its failure to manage instability during the interwar period",
+          "B": "Its excessive military power",
+          "C": "Its domination by a single superpower",
+          "D": "Its focus on economic issues over political ones"
+        },
+        "target_id": "P004_Q09",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:30:20.378645",
+    "pool_size": 9
+  },
+  "L08": {
+    "pool": [
+      {
+        "question": "In what year was Otto von Bismarck forced to retire by Kaiser Wilhelm II?",
+        "options": {
+          "A": "1890",
+          "B": "1887",
+          "C": "1871",
+          "D": "1914"
+        },
+        "target_id": "P008_Q01",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which secret treaty between Germany and Russia was not renewed in 1890, following Bismarck's dismissal?",
+        "options": {
+          "A": "The Reinsurance Treaty",
+          "B": "The Dual Alliance",
+          "C": "The Triple Alliance",
+          "D": "The Entente Cordiale"
+        },
+        "target_id": "P008_Q02",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what year was the Franco-Russian Alliance formally agreed upon?",
+        "options": {
+          "A": "1894",
+          "B": "1890",
+          "C": "1904",
+          "D": "1907"
+        },
+        "target_id": "P008_Q03",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the name of the 1904 agreement that settled colonial disputes between Britain and France?",
+        "options": {
+          "A": "The Entente Cordiale",
+          "B": "The Franco-Russian Alliance",
+          "C": "The Anglo-Russian Convention",
+          "D": "The Triple Alliance"
+        },
+        "target_id": "P008_Q04",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which 1907 agreement completed the formation of the Triple Entente?",
+        "options": {
+          "A": "The Anglo-Russian Convention",
+          "B": "The Entente Cordiale",
+          "C": "The Franco-Russian Alliance",
+          "D": "The Reinsurance Treaty"
+        },
+        "target_id": "P008_Q05",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How were the agreements of the Triple Entente primarily characterized, in terms of their formal obligations?",
+        "options": {
+          "A": "They were not formal military alliances but settled colonial disputes.",
+          "B": "They were formal defensive military alliances.",
+          "C": "They were economic and customs unions.",
+          "D": "They were treaties of perpetual peace and arbitration."
+        },
+        "target_id": "P008_Q06",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "During which 1911 international crisis did Britain and Russia demonstrate their support for France against Germany?",
+        "options": {
+          "A": "The Agadir Crisis",
+          "B": "The Bosnian Crisis",
+          "C": "The July Crisis",
+          "D": "The Balkan Wars"
+        },
+        "target_id": "P008_Q07",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which German official persuaded Kaiser Wilhelm II not to renew the Reinsurance Treaty with Russia in 1890?",
+        "options": {
+          "A": "Chancellor Leo von Caprivi",
+          "B": "Otto von Bismarck",
+          "C": "Admiral Alfred von Tirpitz",
+          "D": "Chancellor Theobald von Bethmann Hollweg"
+        },
+        "target_id": "P008_Q08",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What did Otto von Bismarck consider to be the cornerstone or foundation of German foreign policy?",
+        "options": {
+          "A": "Maintaining peace with Russia",
+          "B": "The complete isolation of France",
+          "C": "Building a navy to rival Britain's",
+          "D": "Forming an alliance with Great Britain"
+        },
+        "target_id": "P008_Q09",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was a major diplomatic consequence of Germany's decision not to renew the Reinsurance Treaty in 1890?",
+        "options": {
+          "A": "It provided France with an opportunity to form an alliance with Russia.",
+          "B": "It immediately led to the formation of the Triple Alliance.",
+          "C": "It triggered the Anglo-German naval arms race.",
+          "D": "It caused the outbreak of the First World War."
+        },
+        "target_id": "P008_Q10",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:30:21.367797",
+    "pool_size": 10
+  },
+  "L05": {
+    "pool": [
+      {
+        "question": "Before World War II, what was the conflict of 1914-1918 most commonly called?",
+        "options": {
+          "A": "The Great War or the World War",
+          "B": "The War to End All Wars",
+          "C": "The European War",
+          "D": "The Global Conflict"
+        },
+        "target_id": "P005_Q01",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In August 1914, which publication stated 'This is the Great War. It names itself.'?",
+        "options": {
+          "A": "The Independent",
+          "B": "The Times of London",
+          "C": "The New York Times",
+          "D": "Le Figaro"
+        },
+        "target_id": "P005_Q02",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why did many people in the decade after World War I hope it would be 'the war to end all wars'?",
+        "options": {
+          "A": "Because of its unprecedented destructiveness and death toll",
+          "B": "Because it involved all major global empires",
+          "C": "Because it resulted in the creation of the League of Nations",
+          "D": "Because it settled the balance of power in Europe"
+        },
+        "target_id": "P005_Q03",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who was the German biologist and philosopher that wrote about the conflict becoming 'the first world war in the full sense of the word'?",
+        "options": {
+          "A": "Ernst Haeckel",
+          "B": "Otto von Bismarck",
+          "C": "Friedrich Nietzsche",
+          "D": "Max Planck"
+        },
+        "target_id": "P005_Q04",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what month and year did Ernst Haeckel first use the term 'First World War'?",
+        "options": {
+          "A": "September 1914",
+          "B": "August 1914",
+          "C": "November 1918",
+          "D": "July 1914"
+        },
+        "target_id": "P005_Q05",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "When Ernst Haeckel first wrote about it in 1914, what did he predict the ongoing 'European War' would become?",
+        "options": {
+          "A": "The first world war in the full sense of the word",
+          "B": "The final war between European empires",
+          "C": "A brief conflict soon to be forgotten",
+          "D": "A prelude to a larger war in Asia"
+        },
+        "target_id": "P005_Q06",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which phrase, originating in hopes after World War I, described the belief that the war's horror would prevent future large-scale conflicts?",
+        "options": {
+          "A": "The war to end all wars",
+          "B": "The war for democracy",
+          "C": "The soldiers' war",
+          "D": "The war of national self-determination"
+        },
+        "target_id": "P005_Q07",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:30:31.231183",
+    "pool_size": 7
+  },
+  "L07": {
+    "pool": [
+      {
+        "question": "Which three empires were members of the League of the Three Emperors, negotiated by Bismarck in 1873?",
+        "options": {
+          "A": "Germany, Austria-Hungary, and Russia",
+          "B": "Germany, Italy, and Austria-Hungary",
+          "C": "Germany, France, and Russia",
+          "D": "Britain, France, and Russia"
+        },
+        "target_id": "P007_Q01",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary diplomatic objective behind Bismarck's creation of the Dual and Triple Alliances?",
+        "options": {
+          "A": "To isolate France by ensuring disputes were resolved between the German, Austrian, and Russian empires",
+          "B": "To create a military bloc capable of launching an immediate war against Britain",
+          "C": "To support the Ottoman Empire against Russian expansion in the Balkans",
+          "D": "To formalize an anti-colonial pact against other European powers"
+        },
+        "target_id": "P007_Q02",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which bilateral alliance, formed in 1879, became the core of the later Triple Alliance?",
+        "options": {
+          "A": "The Dual Alliance between Germany and Austria-Hungary",
+          "B": "The Franco-Russian Alliance",
+          "C": "The Entente Cordiale between Britain and France",
+          "D": "The League of the Three Emperors"
+        },
+        "target_id": "P007_Q03",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which country joined the Dual Alliance in 1882, transforming it into the Triple Alliance?",
+        "options": {
+          "A": "Italy",
+          "B": "Russia",
+          "C": "Great Britain",
+          "D": "The Ottoman Empire"
+        },
+        "target_id": "P007_Q04",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the name of the secret 1887 agreement in which Germany and Russia promised neutrality if the other was attacked by certain powers?",
+        "options": {
+          "A": "The Reinsurance Treaty",
+          "B": "The Dual Alliance",
+          "C": "The Entente Cordiale",
+          "D": "The Pact of Steel"
+        },
+        "target_id": "P007_Q05",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Under the terms of the 1887 Reinsurance Treaty, against which two countries did Germany and Russia promise neutrality if the other was attacked?",
+        "options": {
+          "A": "France or Austria-Hungary",
+          "B": "Britain or Italy",
+          "C": "The Ottoman Empire or Serbia",
+          "D": "France or Britain"
+        },
+        "target_id": "P007_Q06",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What major international event in the late 1870s caused the dissolution of Bismarck's League of the Three Emperors?",
+        "options": {
+          "A": "The Russo-Turkish War of 1877–1878",
+          "B": "The Franco-Prussian War",
+          "C": "The First Balkan War",
+          "D": "The assassination of Franz Ferdinand"
+        },
+        "target_id": "P007_Q07",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why did Austria-Hungary object to Russian actions after the Russo-Turkish War, leading to the end of the League of the Three Emperors?",
+        "options": {
+          "A": "Austria was concerned about the expansion of Russian influence in the strategically vital Balkans",
+          "B": "Austria wanted to annex all Ottoman territory in the Balkans for itself",
+          "C": "Austria formed a secret alliance with France against Russia",
+          "D": "Austria believed Russia was becoming too weak to be a useful ally"
+        },
+        "target_id": "P007_Q08",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the context of Bismarck's alliance system, what was the significance of the year 1882?",
+        "options": {
+          "A": "It was the year Italy joined the Dual Alliance, creating the Triple Alliance",
+          "B": "It was the year the League of the Three Emperors was first formed",
+          "C": "It was the year the Reinsurance Treaty with Russia was signed",
+          "D": "It was the year the Franco-Russian Alliance was concluded"
+        },
+        "target_id": "P007_Q09",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Before the Triple Alliance was formed in 1882, which two powers had already established a formal defensive alliance in 1879?",
+        "options": {
+          "A": "Germany and Austria-Hungary",
+          "B": "Austria-Hungary and Russia",
+          "C": "Germany and Italy",
+          "D": "Russia and France"
+        },
+        "target_id": "P007_Q10",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:30:31.326745",
+    "pool_size": 10
+  },
+  "L01": {
+    "pool": [
+      {
+        "question": "What was the global conflict from 28 July 1914 to 11 November 1918 commonly called?",
+        "options": {
+          "A": "The Great War",
+          "B": "The Second World War",
+          "C": "The Napoleonic Wars",
+          "D": "The Franco-Prussian War"
+        },
+        "target_id": "P001_Q01",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Between which two coalitions was World War I primarily fought?",
+        "options": {
+          "A": "The Allies (Entente) and the Central Powers",
+          "B": "The Axis and the Allies",
+          "C": "The Entente and the Triple Alliance",
+          "D": "The North and the South"
+        },
+        "target_id": "P001_Q02",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of these was a major region of conflict in World War I?",
+        "options": {
+          "A": "The Middle East",
+          "B": "North America",
+          "C": "South America",
+          "D": "Australia"
+        },
+        "target_id": "P001_Q03",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is an estimated figure for military casualties (dead and wounded) in World War I?",
+        "options": {
+          "A": "30 million",
+          "B": "10 million",
+          "C": "50 million",
+          "D": "70 million"
+        },
+        "target_id": "P001_Q04",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Approximately how many civilian deaths from war-related causes and genocide are estimated for World War I?",
+        "options": {
+          "A": "8 million",
+          "B": "2 million",
+          "C": "15 million",
+          "D": "20 million"
+        },
+        "target_id": "P001_Q05",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of these weapons saw important development and use during World War I?",
+        "options": {
+          "A": "Chemical weapons",
+          "B": "Nuclear weapons",
+          "C": "Guided missiles",
+          "D": "Submarines (U-boats)"
+        },
+        "target_id": "P001_Q06",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What major global health crisis was exacerbated by the movement of people during World War I?",
+        "options": {
+          "A": "The Spanish flu pandemic",
+          "B": "The Black Death",
+          "C": "The cholera pandemic",
+          "D": "The smallpox pandemic"
+        },
+        "target_id": "P001_Q07",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of these was another name for World War I during and immediately after the conflict?",
+        "options": {
+          "A": "The First World War",
+          "B": "The War of the Nations",
+          "C": "The Imperial War",
+          "D": "The European War"
+        },
+        "target_id": "P001_Q08",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which part of the world, besides Europe, was there significant fighting during World War I?",
+        "options": {
+          "A": "The Asia-Pacific region",
+          "B": "The Caribbean",
+          "C": "Scandinavia",
+          "D": "Central America"
+        },
+        "target_id": "P001_Q09",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What type of new military technology, involving armored vehicles, was developed in World War I?",
+        "options": {
+          "A": "Tanks",
+          "B": "Aircraft carriers",
+          "C": "Jet fighters",
+          "D": "Battleships"
+        },
+        "target_id": "P001_Q10",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:31:21.300984",
+    "pool_size": 10
+  },
+  "L02": {
+    "pool": [
+      {
+        "question": "On June 28, 1914, who was assassinated, an event that triggered a chain reaction leading to World War I?",
+        "options": {
+          "A": "Franz Ferdinand, the heir to the Austro-Hungarian throne",
+          "B": "Kaiser Wilhelm II of Germany",
+          "C": "Tsar Nicholas II of Russia",
+          "D": "Woodrow Wilson, President of the United States"
+        },
+        "target_id": "P002_Q01",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who assassinated Archduke Franz Ferdinand of Austria-Hungary on June 28, 1914?",
+        "options": {
+          "A": "Gavrilo Princip, a Bosnian Serb",
+          "B": "A member of the Black Hand terrorist group from Bulgaria",
+          "C": "An anarchist from Italy",
+          "D": "A disgruntled Austrian army officer"
+        },
+        "target_id": "P002_Q02",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "On what date did Austria-Hungary declare war on Serbia, marking a major escalation towards a general European war?",
+        "options": {
+          "A": "28 July 1914",
+          "B": "4 August 1914",
+          "C": "1 August 1914",
+          "D": "11 November 1918"
+        },
+        "target_id": "P002_Q03",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which country declared war on Russia and France in 1914 after Russia mobilized to defend Serbia?",
+        "options": {
+          "A": "Germany",
+          "B": "Austria-Hungary",
+          "C": "The Ottoman Empire",
+          "D": "Bulgaria"
+        },
+        "target_id": "P002_Q04",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which nation entered World War I after Germany invaded Belgium in 1914?",
+        "options": {
+          "A": "The United Kingdom",
+          "B": "The United States",
+          "C": "Italy",
+          "D": "The Ottoman Empire"
+        },
+        "target_id": "P002_Q05",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In November 1914, which empire entered World War I on the side of the Central Powers?",
+        "options": {
+          "A": "The Ottoman Empire",
+          "B": "The Russian Empire",
+          "C": "The British Empire",
+          "D": "The Austro-Hungarian Empire"
+        },
+        "target_id": "P002_Q06",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was Germany's strategic plan for 1914 at the start of World War I?",
+        "options": {
+          "A": "To quickly defeat France before transferring forces to fight Russia",
+          "B": "To launch an immediate invasion of Russia before it could mobilize",
+          "C": "To remain on the defensive in the west and attack in the east",
+          "D": "To use unrestricted submarine warfare to blockade Britain"
+        },
+        "target_id": "P002_Q07",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "By the end of 1914, what characterized the Western Front?",
+        "options": {
+          "A": "A near-continuous line of trenches from the English Channel to Switzerland",
+          "B": "A series of large, open, and rapid battles of movement",
+          "C": "A stalemate broken only by the use of massed tanks",
+          "D": "A front where German forces achieved a decisive breakthrough"
+        },
+        "target_id": "P002_Q08",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How did the Eastern Front in 1914 compare to the Western Front?",
+        "options": {
+          "A": "It was more dynamic, with greater movement of armies",
+          "B": "It was more static, with entrenched lines like the west",
+          "C": "It was the main focus of decisive German victories",
+          "D": "It saw no significant fighting until 1915"
+        },
+        "target_id": "P002_Q09",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What disturbing shift in European power was a long-term cause of World War I?",
+        "options": {
+          "A": "The rise of the German Empire and the decline of the Ottoman Empire",
+          "B": "The rise of the United States and the decline of Britain",
+          "C": "The unification of Italy and the decline of Austria-Hungary",
+          "D": "The rise of the Russian Empire and the decline of France"
+        },
+        "target_id": "P002_Q10",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of these was a long-term cause contributing to the outbreak of World War I?",
+        "options": {
+          "A": "An arms race between the great powers",
+          "B": "The policy of appeasement by major nations",
+          "C": "The economic policies of the Great Depression",
+          "D": "The spread of revolutionary communism"
+        },
+        "target_id": "P002_Q11",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What region of Europe experienced growing tensions that reached a breaking point in June 1914?",
+        "options": {
+          "A": "The Balkans",
+          "B": "The Iberian Peninsula",
+          "C": "Scandinavia",
+          "D": "The Low Countries"
+        },
+        "target_id": "P002_Q12",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which country was blamed by Austria-Hungary for the assassination of Archduke Franz Ferdinand?",
+        "options": {
+          "A": "Serbia",
+          "B": "Russia",
+          "C": "Bosnia and Herzegovina",
+          "D": "Montenegro"
+        },
+        "target_id": "P002_Q13",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Following Austria-Hungary's declaration of war, which country mobilized its forces in Serbia's defence?",
+        "options": {
+          "A": "Russia",
+          "B": "France",
+          "C": "Germany",
+          "D": "Italy"
+        },
+        "target_id": "P002_Q14",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which nations entered World War I from 1915 onward, as mentioned in the context of the war's expansion?",
+        "options": {
+          "A": "Italy, Bulgaria, Romania, and Greece",
+          "B": "The United States, Japan, China, and Brazil",
+          "C": "Spain, Portugal, Sweden, and Norway",
+          "D": "Switzerland, the Netherlands, Denmark, and Luxembourg"
+        },
+        "target_id": "P002_Q15",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the outcome of Germany's attempt to quickly defeat France in 1914?",
+        "options": {
+          "A": "Its advance was halted in September, leading to stalemate",
+          "B": "It succeeded, forcing France to surrender that year",
+          "C": "It failed due to American intervention in the summer",
+          "D": "It diverted to attack Russia first, leaving France untouched"
+        },
+        "target_id": "P002_Q16",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:31:31.184188",
+    "pool_size": 16
+  },
+  "L03": {
+    "pool": [
+      {
+        "question": "Which of the following is true about the battles of Verdun, the Somme, and Passchendaele in World War I?",
+        "options": {
+          "A": "They failed to break the stalemate on the Western Front.",
+          "B": "They led to the entry of the United States into the war.",
+          "C": "They resulted in the signing of the Armistice of 11 November 1918.",
+          "D": "They were part of Germany's spring offensive in 1918."
+        },
+        "target_id": "P003_Q01",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which month and year did the United States join the Allies in World War I?",
+        "options": {
+          "A": "April 1917",
+          "B": "March 1918",
+          "C": "August 1914",
+          "D": "November 1918"
+        },
+        "target_id": "P003_Q02",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary reason for the United States joining the Allies in World War I in 1917?",
+        "options": {
+          "A": "Germany resumed unrestricted submarine warfare.",
+          "B": "The assassination of Archduke Franz Ferdinand.",
+          "C": "The Bolshevik Revolution in Russia.",
+          "D": "The invasion of Belgium by Germany."
+        },
+        "target_id": "P003_Q03",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which political group seized power in Russia in the October Revolution of 1917?",
+        "options": {
+          "A": "The Bolsheviks",
+          "B": "The Mensheviks",
+          "C": "The Provisional Government",
+          "D": "The White Army"
+        },
+        "target_id": "P003_Q04",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the outcome of the October Revolution in Russia in 1917?",
+        "options": {
+          "A": "The Bolsheviks seized power.",
+          "B": "Russia signed an armistice with the Central Powers.",
+          "C": "The Tsar was assassinated.",
+          "D": "Russia joined the Central Powers."
+        },
+        "target_id": "P003_Q05",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "When did Soviet Russia sign an armistice with the Central Powers, leading to its exit from World War I?",
+        "options": {
+          "A": "December 1917",
+          "B": "March 1918",
+          "C": "April 1917",
+          "D": "August 1918"
+        },
+        "target_id": "P003_Q06",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "When did Soviet Russia sign a separate peace treaty with the Central Powers?",
+        "options": {
+          "A": "March 1918",
+          "B": "December 1917",
+          "C": "November 1918",
+          "D": "January 1919"
+        },
+        "target_id": "P003_Q07",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which month did Germany launch its spring offensive on the Western Front in 1918?",
+        "options": {
+          "A": "March",
+          "B": "April",
+          "C": "August",
+          "D": "November"
+        },
+        "target_id": "P003_Q08",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the result of Germany's spring offensive in 1918?",
+        "options": {
+          "A": "It initially succeeded but left the German Army exhausted and demoralised.",
+          "B": "It broke the stalemate and led to a German victory.",
+          "C": "It was immediately repelled by Allied forces.",
+          "D": "It caused the United States to enter the war."
+        },
+        "target_id": "P003_Q09",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the name of the Allied offensive that began in August 1918 and caused the collapse of the German front line?",
+        "options": {
+          "A": "The Hundred Days Offensive",
+          "B": "The Spring Offensive",
+          "C": "The Vardar Offensive",
+          "D": "The Somme Offensive"
+        },
+        "target_id": "P003_Q10",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "When did the Allied Hundred Days Offensive begin?",
+        "options": {
+          "A": "August 1918",
+          "B": "March 1918",
+          "C": "April 1917",
+          "D": "November 1918"
+        },
+        "target_id": "P003_Q11",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "After which offensive did Bulgaria sign an armistice with the Allies in World War I?",
+        "options": {
+          "A": "The Vardar Offensive",
+          "B": "The Hundred Days Offensive",
+          "C": "The Spring Offensive",
+          "D": "The Brusilov Offensive"
+        },
+        "target_id": "P003_Q12",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "When did Bulgaria sign an armistice with the Allies in World War I?",
+        "options": {
+          "A": "Late September 1918",
+          "B": "Early November 1918",
+          "C": "March 1918",
+          "D": "December 1917"
+        },
+        "target_id": "P003_Q13",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which two countries signed armistices with the Allies in early November 1918, leaving Germany isolated?",
+        "options": {
+          "A": "The Ottoman Empire and Austria-Hungary",
+          "B": "Bulgaria and Russia",
+          "C": "Italy and France",
+          "D": "United States and Britain"
+        },
+        "target_id": "P003_Q14",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "On what date did Kaiser Wilhelm II abdicate during World War I?",
+        "options": {
+          "A": "9 November 1918",
+          "B": "11 November 1918",
+          "C": "28 June 1914",
+          "D": "28 July 1914"
+        },
+        "target_id": "P003_Q15",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "On what date did World War I end with the signing of an armistice?",
+        "options": {
+          "A": "11 November 1918",
+          "B": "9 November 1918",
+          "C": "28 June 1914",
+          "D": "28 July 1914"
+        },
+        "target_id": "P003_Q16",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:31:58.374018",
+    "pool_size": 16
+  },
+  "L06": {
+    "pool": [
+      {
+        "question": "What was the term for the 19th-century system where major European powers maintained a tenuous balance of power?",
+        "options": {
+          "A": "Concert of Europe",
+          "B": "Congress of Vienna",
+          "C": "Triple Entente",
+          "D": "League of Nations"
+        },
+        "target_id": "P006_Q01",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "After 1848, which country adopted a policy of 'splendid isolation,' withdrawing from active involvement in continental European affairs?",
+        "options": {
+          "A": "Britain",
+          "B": "France",
+          "C": "Germany",
+          "D": "Russia"
+        },
+        "target_id": "P006_Q02",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The decline of which empire after 1848 was a factor that challenged the European balance of power?",
+        "options": {
+          "A": "The Ottoman Empire",
+          "B": "The Austro-Hungarian Empire",
+          "C": "The Russian Empire",
+          "D": "The British Empire"
+        },
+        "target_id": "P006_Q03",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What term describes the late-19th-century trend of European powers aggressively expanding their colonial territories?",
+        "options": {
+          "A": "New Imperialism",
+          "B": "Colonialism",
+          "C": "Scramble for Africa",
+          "D": "Mercantilism"
+        },
+        "target_id": "P006_Q04",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Under which leader did Prussia rise to challenge the European balance of power after 1848?",
+        "options": {
+          "A": "Otto von Bismarck",
+          "B": "Kaiser Wilhelm I",
+          "C": "Napoleon III",
+          "D": "Klemens von Metternich"
+        },
+        "target_id": "P006_Q05",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which war, fought from 1870 to 1871, allowed Otto von Bismarck to consolidate the German Empire?",
+        "options": {
+          "A": "The Franco-Prussian War",
+          "B": "The Austro-Prussian War",
+          "C": "The Russo-Turkish War",
+          "D": "The Crimean War"
+        },
+        "target_id": "P006_Q06",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "After the Franco-Prussian War, what was a primary aim of French foreign policy regarding Germany?",
+        "options": {
+          "A": "To avenge the defeat and seek revenge",
+          "B": "To expand its colonial empire",
+          "C": "To form an alliance with Britain",
+          "D": "To promote disarmament in Europe"
+        },
+        "target_id": "P006_Q07",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In addition to seeking revenge against Germany, what was another key objective of French policy after 1871?",
+        "options": {
+          "A": "To expand France's colonial empire",
+          "B": "To rebuild its military infrastructure",
+          "C": "To join the Triple Alliance",
+          "D": "To support the Ottoman Empire"
+        },
+        "target_id": "P006_Q08",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:39:10.158331",
+    "pool_size": 8
+  },
+  "L12": {
+    "pool": [
+      {
+        "question": "What major factor led to a series of crises in the Balkans before 1914?",
+        "options": {
+          "A": "The decline of the Ottoman Empire.",
+          "B": "The Anglo-German naval arms race.",
+          "C": "The formation of the Balkan League.",
+          "D": "The Russian Revolution of 1905."
+        },
+        "target_id": "P012_Q01",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Before 1914, Russia considered itself the protector of which groups in the Balkans?",
+        "options": {
+          "A": "Serbia and other Slav states.",
+          "B": "The Ottoman Empire.",
+          "C": "Austria-Hungary.",
+          "D": "The Balkan League."
+        },
+        "target_id": "P012_Q02",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why did Russia prefer the Bosporus straits to be controlled by a weak Ottoman government before 1914?",
+        "options": {
+          "A": "To prevent an ambitious Slav power like Bulgaria from controlling it.",
+          "B": "To ensure free trade for all nations.",
+          "C": "To prepare for Russian annexation of the straits.",
+          "D": "To comply with international treaties."
+        },
+        "target_id": "P012_Q03",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which region did Russia have territorial ambitions before 1914, apart from the Balkans?",
+        "options": {
+          "A": "Northeastern Anatolia.",
+          "B": "The Baltic states.",
+          "C": "Central Asia.",
+          "D": "The Mediterranean coast."
+        },
+        "target_id": "P012_Q04",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What complicated Russian foreign policy in the Balkans before 1914?",
+        "options": {
+          "A": "Overlapping claims among Russia's client states.",
+          "B": "Lack of support from France.",
+          "C": "Military superiority of the Ottoman Empire.",
+          "D": "Economic sanctions from Britain."
+        },
+        "target_id": "P012_Q05",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How did the competing interests in the Balkans affect Russian decision-making before 1914?",
+        "options": {
+          "A": "They divided Russian policy-makers and increased regional instability.",
+          "B": "They led to a unified Russian strategy for expansion.",
+          "C": "They caused Russia to abandon its Balkan interests.",
+          "D": "They prompted Russia to seek an alliance with Germany."
+        },
+        "target_id": "P012_Q06",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:52:41.803112",
+    "pool_size": 6
+  },
+  "L10": {
+    "pool": [
+      {
+        "question": "Why did Otto von Bismarck oppose building a German navy to compete with the British Royal Navy?",
+        "options": {
+          "A": "He believed Britain would not interfere in Europe as long as its maritime supremacy remained secure.",
+          "B": "He thought the German economy was too weak to support both a large army and navy.",
+          "C": "He was focused on maintaining the Reinsurance Treaty with Russia instead.",
+          "D": "He wanted to avoid antagonizing the United States, which had a growing Pacific fleet."
+        },
+        "target_id": "P010_Q01",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What event in 1890 is considered the start of the Anglo-German naval arms race?",
+        "options": {
+          "A": "The dismissal of Chancellor Otto von Bismarck.",
+          "B": "The signing of the Franco-Russian Alliance.",
+          "C": "Kaiser Wilhelm II's accession to the throne.",
+          "D": "The British launch of the first submarine."
+        },
+        "target_id": "P010_Q02",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary effect of the launch of HMS Dreadnought in 1906?",
+        "options": {
+          "A": "It made every existing battleship in the world obsolete.",
+          "B": "It caused Germany to immediately surrender the naval race.",
+          "C": "It triggered a multinational treaty to limit naval construction.",
+          "D": "It prompted France to focus its spending on its army instead of its navy."
+        },
+        "target_id": "P010_Q03",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What technological advantage did Britain gain from HMS Dreadnought?",
+        "options": {
+          "A": "A technological advantage in battleship design that they never relinquished.",
+          "B": "A significant lead in submarine warfare technology.",
+          "C": "Superior naval aviation capabilities.",
+          "D": "A monopoly on the production of heavy naval artillery."
+        },
+        "target_id": "P010_Q04",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the ultimate result of Germany's massive investment in its navy before World War I?",
+        "options": {
+          "A": "It created a navy large enough to antagonize Britain, but not large enough to defeat it.",
+          "B": "It successfully achieved parity with the British Royal Navy by 1914.",
+          "C": "It forced Britain to abandon its naval supremacy and seek an alliance.",
+          "D": "It diverted so many resources that the German army became critically weak."
+        },
+        "target_id": "P010_Q05",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the 'Rüstungswende' or 'armaments turning point' of 1911?",
+        "options": {
+          "A": "The German decision to switch military expenditure from the navy to the army.",
+          "B": "The British decision to focus on building more dreadnought-class battleships.",
+          "C": "The Russian decision to massively expand its railway network for military use.",
+          "D": "The French extension of compulsory military service from two to three years."
+        },
+        "target_id": "P010_Q06",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which German leader formally acknowledged the failure of the naval arms race against Britain in 1911?",
+        "options": {
+          "A": "Chancellor Theobald von Bethmann Hollweg.",
+          "B": "Kaiser Wilhelm II.",
+          "C": "Admiral Alfred von Tirpitz.",
+          "D": "General Helmuth von Moltke the Younger."
+        },
+        "target_id": "P010_Q07",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How did the Anglo-German naval arms race fundamentally change after 1911?",
+        "options": {
+          "A": "Germany began shifting its financial resources and focus to strengthening its army.",
+          "B": "Britain agreed to limit its naval construction to ease tensions with Germany.",
+          "C": "Germany accelerated its battleship construction to overtake Britain.",
+          "D": "The race ended with the signing of a formal naval limitation treaty."
+        },
+        "target_id": "P010_Q08",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Prior to the 'Rüstungswende', what was the primary goal of Admiral Tirpitz's naval policy?",
+        "options": {
+          "A": "To build an Imperial German Navy that could compete with the British Royal Navy.",
+          "B": "To create a fleet specifically designed for coastal defense of Germany.",
+          "C": "To develop a navy strong enough to defeat the combined French and Russian fleets.",
+          "D": "To achieve naval dominance in the Baltic Sea only."
+        },
+        "target_id": "P010_Q09",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:52:17.333422",
+    "pool_size": 9
+  },
+  "L13": {
+    "pool": [
+      {
+        "question": "How did Austrian statesmen view the region of the Balkans in relation to their Empire?",
+        "options": {
+          "A": "As essential for the Empire's continued existence",
+          "B": "As a potential zone for economic cooperation with Russia",
+          "C": "As a neutral buffer against German expansion",
+          "D": "As an area of minor strategic importance"
+        },
+        "target_id": "P013_Q01",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What did Austrian statesmen see as the primary danger posed by Serbian expansion?",
+        "options": {
+          "A": "A direct threat to the Austro-Hungarian Empire",
+          "B": "A risk of increased French influence in the region",
+          "C": "A challenge to British naval supremacy in the Mediterranean",
+          "D": "A potential obstacle to Ottoman trade routes"
+        },
+        "target_id": "P013_Q02",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What specific action by Austria-Hungary triggered the 1908–1909 Bosnian Crisis?",
+        "options": {
+          "A": "The annexation of Bosnia and Herzegovina",
+          "B": "A declaration of war on the Ottoman Empire",
+          "C": "Forming a military alliance with Serbia",
+          "D": "Blockading Russian ports on the Black Sea"
+        },
+        "target_id": "P013_Q03",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Since what year had Austria-Hungary occupied the territory of Bosnia and Herzegovina before annexing it?",
+        "options": {
+          "A": "1878",
+          "B": "1882",
+          "C": "1894",
+          "D": "1904"
+        },
+        "target_id": "P013_Q04",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which other event did Austria-Hungary time its annexation of Bosnia and Herzegovina to coincide with?",
+        "options": {
+          "A": "The Bulgarian Declaration of Independence from the Ottoman Empire",
+          "B": "The signing of the Anglo-Russian Convention",
+          "C": "The launch of the German dreadnought battleship program",
+          "D": "The outbreak of the Italo-Turkish War"
+        },
+        "target_id": "P013_Q05",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the initial reaction of the other European powers to Austria's unilateral annexation of Bosnia and Herzegovina?",
+        "options": {
+          "A": "They denounced the action but ultimately accepted it due to a lack of consensus",
+          "B": "They immediately formed a military coalition to reverse the annexation",
+          "C": "They universally praised it as a stabilizing move in the Balkans",
+          "D": "They imposed a full economic blockade on Austria-Hungary"
+        },
+        "target_id": "P013_Q06",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "According to some historians, what were two major consequences of the Bosnian Crisis?",
+        "options": {
+          "A": "It ended any chance of Austrian cooperation with Russia in the Balkans and damaged Serbo-Italian relations",
+          "B": "It solidified the Triple Alliance and prompted the First Balkan War",
+          "C": "It forced Germany to abandon its naval ambitions and triggered the Reinsurance Treaty",
+          "D": "It led directly to the creation of the Balkan League and the Treaty of London"
+        },
+        "target_id": "P013_Q07",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:51:43.195543",
+    "pool_size": 7
+  },
+  "L14": {
+    "pool": [
+      {
+        "question": "What event demonstrated Ottoman weakness and increased tensions prior to the First Balkan War?",
+        "options": {
+          "A": "The 1911–1912 Italo-Turkish War",
+          "B": "The 1908–1909 Bosnian Crisis",
+          "C": "The Russo-Japanese War of 1904–1905",
+          "D": "The 1913 Second Balkan War"
+        },
+        "target_id": "P014_Q01",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which countries were members of the Balkan League?",
+        "options": {
+          "A": "Serbia, Bulgaria, Montenegro, and Greece",
+          "B": "Germany, Austria-Hungary, and Italy",
+          "C": "France, Russia, and Britain",
+          "D": "Serbia, Greece, Romania, and Montenegro"
+        },
+        "target_id": "P014_Q02",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the outcome of the First Balkan War for the Ottoman Empire's Balkan territories?",
+        "options": {
+          "A": "They were quickly overrun by the Balkan League",
+          "B": "The Ottoman Empire successfully defended them",
+          "C": "The war ended in a stalemate with no territorial changes",
+          "D": "The Ottoman Empire gained new territories from the Balkan states"
+        },
+        "target_id": "P014_Q03",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How did outside observers react to the rapid Ottoman collapse in the First Balkan War?",
+        "options": {
+          "A": "They were surprised",
+          "B": "They had anticipated the outcome",
+          "C": "They were indifferent to the events",
+          "D": "They were primarily alarmed by the Balkan League's aggression"
+        },
+        "target_id": "P014_Q04",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What action by Serbia during the First Balkan War led to partial Austrian mobilisation?",
+        "options": {
+          "A": "The capture of ports on the Adriatic",
+          "B": "Advancing deep into Macedonian territory",
+          "C": "Forming an alliance with Russia",
+          "D": "Declaring war on Austria-Hungary"
+        },
+        "target_id": "P014_Q05",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "On what date did Austria begin its partial mobilisation in response to events in the First Balkan War?",
+        "options": {
+          "A": "21 November 1912",
+          "B": "28 June 1914",
+          "C": "16 June 1913",
+          "D": "1908"
+        },
+        "target_id": "P014_Q06",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Along which border did Austria mobilise units during its partial mobilisation in November 1912?",
+        "options": {
+          "A": "The Russian border in Galicia",
+          "B": "The Serbian border in Bosnia",
+          "C": "The Italian border in the Alps",
+          "D": "The Ottoman border in the Balkans"
+        },
+        "target_id": "P014_Q07",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why did Russia choose not to mobilise in response to Austria's partial mobilisation in 1912?",
+        "options": {
+          "A": "They were unprepared to precipitate a war",
+          "B": "They were in a secret alliance with Austria-Hungary",
+          "C": "They were preoccupied with the aftermath of the Russo-Japanese War",
+          "D": "They believed the crisis would resolve diplomatically without intervention"
+        },
+        "target_id": "P014_Q08",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:52:17.418982",
+    "pool_size": 8
+  },
+  "L11": {
+    "pool": [
+      {
+        "question": "What two events in Russia led to German concerns about its rapid recovery before World War I?",
+        "options": {
+          "A": "The Russo-Japanese War and the 1905 Russian Revolution",
+          "B": "The Franco-Prussian War and the Paris Commune",
+          "C": "The Bosnian Crisis and the Balkan Wars",
+          "D": "The October Revolution and the Treaty of Brest-Litovsk"
+        },
+        "target_id": "P011_Q01",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "After 1908, what did Russia significantly expand in its western border regions as part of economic reforms?",
+        "options": {
+          "A": "Railways and transportation infrastructure",
+          "B": "Naval bases and shipyards",
+          "C": "Fortifications and trench systems",
+          "D": "Industrial factories and munitions plants"
+        },
+        "target_id": "P011_Q02",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why did Germany and Austria-Hungary need to achieve faster mobilization than Russia?",
+        "options": {
+          "A": "To compensate for their numerical inferiority in troop numbers",
+          "B": "To launch a surprise attack on France",
+          "C": "To protect their overseas colonies",
+          "D": "To counter the British blockade"
+        },
+        "target_id": "P011_Q03",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "For Germany, what threat was considered more critical than competing with the British Royal Navy during the pre-war arms race?",
+        "options": {
+          "A": "The threat posed by Russia's improving mobilization capabilities",
+          "B": "The threat of French revanchism after the Franco-Prussian War",
+          "C": "The threat of Austrian expansion in the Balkans",
+          "D": "The threat of Italian betrayal of the Triple Alliance"
+        },
+        "target_id": "P011_Q04",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In 1913, by how many troops did Germany expand its standing army?",
+        "options": {
+          "A": "By 170,000 troops",
+          "B": "By 100,000 troops",
+          "C": "By 200,000 troops",
+          "D": "By 250,000 troops"
+        },
+        "target_id": "P011_Q05",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How did France change its compulsory military service policy in response to Germany's 1913 army expansion?",
+        "options": {
+          "A": "Extended it from two years to three years",
+          "B": "Reduced it from three years to two years",
+          "C": "Introduced conscription for the first time",
+          "D": "Abolished compulsory service entirely"
+        },
+        "target_id": "P011_Q06",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "After France extended military service, which countries were prompted to take similar measures?",
+        "options": {
+          "A": "The Balkan powers, Italy, the Ottoman Empire, and Austria-Hungary",
+          "B": "Britain, Russia, Japan, and the United States",
+          "C": "Spain, Portugal, Belgium, and the Netherlands",
+          "D": "Sweden, Norway, Denmark, and Switzerland"
+        },
+        "target_id": "P011_Q07",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why are absolute figures for military spending during this period difficult to calculate accurately?",
+        "options": {
+          "A": "Because expenditure categories often omitted civilian infrastructure projects like railways that had military use",
+          "B": "Because governments kept their military budgets secret",
+          "C": "Because of hyperinflation in several European economies",
+          "D": "Because spending was often reported in different currencies without conversion"
+        },
+        "target_id": "P011_Q08",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "From 1908 to 1913, by approximately how much did military spending increase for the six major European powers?",
+        "options": {
+          "A": "By over 50% in real terms",
+          "B": "By about 25% in real terms",
+          "C": "By nearly 100% in real terms",
+          "D": "By less than 10% in real terms"
+        },
+        "target_id": "P011_Q09",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What strategic advantage did Germany and Austria-Hungary rely on to counter Russia's larger army?",
+        "options": {
+          "A": "Faster mobilization",
+          "B": "Superior naval power",
+          "C": "Advanced artillery technology",
+          "D": "Stronger fortifications"
+        },
+        "target_id": "P011_Q10",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What led to Russia's post-1908 expansion of railways and transportation infrastructure in its western regions?",
+        "options": {
+          "A": "Economic reforms",
+          "B": "Military demands from the Russo-Japanese War",
+          "C": "Requirements from the Franco-Russian Alliance",
+          "D": "Investments from foreign powers"
+        },
+        "target_id": "P011_Q11",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T12:53:23.743641",
+    "pool_size": 11
+  },
+  "L16": {
+    "pool": [
+      {
+        "question": "On which date did the assassination attempt on Archduke Franz Ferdinand take place?",
+        "options": {
+          "A": "28 June 1914",
+          "B": "16 June 1913",
+          "C": "21 November 1912",
+          "D": "28 July 1914"
+        },
+        "target_id": "P016_Q01",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which city was Archduke Franz Ferdinand visiting when the assassination plot was carried out?",
+        "options": {
+          "A": "Sarajevo",
+          "B": "Vienna",
+          "C": "Belgrade",
+          "D": "Sofia"
+        },
+        "target_id": "P016_Q02",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the name of the movement to which the assassins of Archduke Franz Ferdinand belonged?",
+        "options": {
+          "A": "Young Bosnia",
+          "B": "The Black Hand",
+          "C": "The Balkan League",
+          "D": "The Triple Entente"
+        },
+        "target_id": "P016_Q03",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which organization supplied the weapons to the assassins of Archduke Franz Ferdinand?",
+        "options": {
+          "A": "The Serbian Black Hand intelligence organisation",
+          "B": "The Russian Imperial government",
+          "C": "The Austrian military intelligence",
+          "D": "The Bosnian revolutionary council"
+        },
+        "target_id": "P016_Q04",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary goal of the assassins who targeted Archduke Franz Ferdinand?",
+        "options": {
+          "A": "To free Bosnia from Austrian rule",
+          "B": "To trigger a war between Russia and the Ottoman Empire",
+          "C": "To protest the naval arms race with Britain",
+          "D": "To unite all South Slavs under Bulgarian leadership"
+        },
+        "target_id": "P016_Q05",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who was the heir presumptive to Emperor Franz Joseph I of Austria at the time of the Sarajevo visit?",
+        "options": {
+          "A": "Archduke Franz Ferdinand",
+          "B": "Kaiser Wilhelm II",
+          "C": "Crown Prince Rudolf",
+          "D": "Prince Alexander of Serbia"
+        },
+        "target_id": "P016_Q06",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the capital of the recently annexed territory of Bosnia and Herzegovina in 1914?",
+        "options": {
+          "A": "Sarajevo",
+          "B": "Sarajevo",
+          "C": "Vienna",
+          "D": "Belgrade"
+        },
+        "target_id": "P016_Q07",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following was one of the Bosnian Serb assassins involved in the plot against Franz Ferdinand?",
+        "options": {
+          "A": "Gavrilo Princip",
+          "B": "Alfred von Tirpitz",
+          "C": "Theobald von Bethmann Hollweg",
+          "D": "Zbyněk Zeman"
+        },
+        "target_id": "P016_Q08",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "From which community was the assassin Muhamed Mehmedbašić, who was part of the plot in Sarajevo?",
+        "options": {
+          "A": "The Bosniaks",
+          "B": "The Austrians",
+          "C": "The Bulgarians",
+          "D": "The Montenegrins"
+        },
+        "target_id": "P016_Q09",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T13:19:28.429239",
+    "pool_size": 9
+  },
+  "L17": {
+    "pool": [
+      {
+        "question": "What did Gavrilo Princip use to fatally wound Archduke Franz Ferdinand and his wife?",
+        "options": {
+          "A": "A pistol",
+          "B": "A grenade",
+          "C": "A rifle",
+          "D": "A bomb"
+        },
+        "target_id": "P017_Q01",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following was a direct result of the assassination attempt in Sarajevo by the Young Bosnia group?",
+        "options": {
+          "A": "The fatal shooting of Archduke Franz Ferdinand and his wife",
+          "B": "The Austrian annexation of Bosnia and Herzegovina",
+          "C": "The launch of the Anglo-German naval arms race",
+          "D": "The outbreak of the Second Balkan War"
+        },
+        "target_id": "P017_Q02",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What caused Archduke Franz Ferdinand's car to be on the same street as Gavrilo Princip an hour after the initial attack?",
+        "options": {
+          "A": "The driver took a wrong turn",
+          "B": "He was returning to the royal palace",
+          "C": "He was trying to escape the city",
+          "D": "He was heading to a pre-arranged meeting"
+        },
+        "target_id": "P017_Q03",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "During the return trip from the hospital, where was Gavrilo Princip located when he encountered Archduke Franz Ferdinand's car?",
+        "options": {
+          "A": "Standing on a street",
+          "B": "Inside a cafe",
+          "C": "At the railway station",
+          "D": "In the hospital courtyard"
+        },
+        "target_id": "P017_Q04",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was Gavrilo Princip's reason for being present at the location of the fatal shooting?",
+        "options": {
+          "A": "He was part of the original assassination plot",
+          "B": "He was a bystander who seized an opportunity",
+          "C": "He was a member of the Archduke's security detail",
+          "D": "He was a local journalist covering the event"
+        },
+        "target_id": "P017_Q05",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How many shots did Gavrilo Princip fire at the Archduke's car in the fatal encounter?",
+        "options": {
+          "A": "Two",
+          "B": "One",
+          "C": "Three",
+          "D": "Four"
+        },
+        "target_id": "P017_Q06",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T13:19:14.691394",
+    "pool_size": 6
+  },
+  "L15": {
+    "pool": [
+      {
+        "question": "What was the primary objective of the Great Powers in the 1913 Treaty of London regarding the Balkan situation?",
+        "options": {
+          "A": "To re-assert their control by creating an independent Albania and enlarging Balkan states.",
+          "B": "To punish Bulgaria for starting the First Balkan War.",
+          "C": "To form a new military alliance, the Balkan League.",
+          "D": "To transfer all Ottoman territory in Europe to Austria-Hungary."
+        },
+        "target_id": "P015_Q01",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which country's attack on Serbia and Greece on 16 June 1913 began the Second Balkan War?",
+        "options": {
+          "A": "Bulgaria",
+          "B": "The Ottoman Empire",
+          "C": "Austria-Hungary",
+          "D": "Romania"
+        },
+        "target_id": "P015_Q02",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How long did the Second Balkan War last?",
+        "options": {
+          "A": "33 days",
+          "B": "100 days",
+          "C": "6 months",
+          "D": "1 year"
+        },
+        "target_id": "P015_Q03",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "As a result of its defeat in the Second Balkan War, which region did Bulgaria lose to Romania?",
+        "options": {
+          "A": "Southern Dobruja",
+          "B": "Northern Macedonia",
+          "C": "Bosnia and Herzegovina",
+          "D": "The Bosporus straits"
+        },
+        "target_id": "P015_Q04",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "After the Balkan Wars, how did countries like Serbia and Greece feel about their territorial gains?",
+        "options": {
+          "A": "They felt cheated of their 'rightful gains'.",
+          "B": "They were completely satisfied and sought no further expansion.",
+          "C": "They were fearful of immediate retaliation from the Ottoman Empire.",
+          "D": "They believed the gains were solely due to German support."
+        },
+        "target_id": "P015_Q05",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What did the outcome of the Balkan Wars demonstrate to Austria-Hungary about the attitude of other powers?",
+        "options": {
+          "A": "An apparent indifference to Austrian concerns.",
+          "B": "A strong and unanimous support for Austrian interests.",
+          "C": "A desire to form a new alliance with Austria against Russia.",
+          "D": "A commitment to preventing any further Balkan conflicts."
+        },
+        "target_id": "P015_Q06",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Due to a mix of resentment, nationalism, and insecurity, what did the pre-1914 Balkans become known as?",
+        "options": {
+          "A": "The 'powder keg of Europe'.",
+          "B": "The 'heart of the Triple Alliance'.",
+          "C": "The 'breadbasket of the Austro-Hungarian Empire'.",
+          "D": "The 'cradle of the Entente Cordiale'."
+        },
+        "target_id": "P015_Q07",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which treaty established an independent Albania in 1913?",
+        "options": {
+          "A": "The Treaty of London",
+          "B": "The Treaty of Bucharest",
+          "C": "The Reinsurance Treaty",
+          "D": "The Treaty of Berlin"
+        },
+        "target_id": "P015_Q08",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the Second Balkan War, Bulgaria lost most of which region to Serbia and Greece?",
+        "options": {
+          "A": "Macedonia",
+          "B": "Bosnia and Herzegovina",
+          "C": "Southern Dobruja",
+          "D": "Galicia"
+        },
+        "target_id": "P015_Q09",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was a major consequence of the Balkan Wars for the major European powers' perception of the region?",
+        "options": {
+          "A": "It highlighted the region as a dangerous source of instability and conflict.",
+          "B": "It signaled the final decline of nationalism as a political force.",
+          "C": "It proved the effectiveness of the Triple Alliance in maintaining peace.",
+          "D": "It led to the immediate dissolution of the Ottoman Empire."
+        },
+        "target_id": "P015_Q10",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T13:19:36.444515",
+    "pool_size": 10
+  },
+  "L18": {
+    "pool": [
+      {
+        "question": "According to historian Zbyněk Zeman, what was the initial public reaction in Vienna to the assassination of Archduke Franz Ferdinand?",
+        "options": {
+          "A": "It almost failed to make any impression.",
+          "B": "It caused widespread panic and mourning.",
+          "C": "It immediately led to anti-Serb riots.",
+          "D": "It was celebrated with public demonstrations."
+        },
+        "target_id": "P018_Q01",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What were crowds in Vienna doing on June 28 and 29, 1914, as described by historian Zbyněk Zeman?",
+        "options": {
+          "A": "Listening to music and drinking wine as if nothing had happened.",
+          "B": "Demonstrating in support of war against Serbia.",
+          "C": "Mobilizing for military action along the borders.",
+          "D": "Attending memorial services for the Archduke."
+        },
+        "target_id": "P018_Q02",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Historian Christopher Clark compared the political impact of the Sarajevo assassination to which modern terrorist event?",
+        "options": {
+          "A": "The 9/11 terrorist attacks.",
+          "B": "The July Crisis of 1914.",
+          "C": "The Balkan Wars of 1912-1913.",
+          "D": "The Bosnian Crisis of 1908."
+        },
+        "target_id": "P018_Q03",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How did historian Christopher Clark describe the effect of the Sarajevo assassination on Vienna's political atmosphere?",
+        "options": {
+          "A": "It transformed the political chemistry in Vienna.",
+          "B": "It had no significant political impact.",
+          "C": "It led to immediate diplomatic resolutions with Serbia.",
+          "D": "It stabilized the Austro-Hungarian government's control."
+        },
+        "target_id": "P018_Q04",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What phrase did historian Christopher Clark use to characterize the Sarajevo assassination in terms of its historical meaning?",
+        "options": {
+          "A": "A terrorist event charged with historic meaning.",
+          "B": "A minor diplomatic incident in Balkan affairs.",
+          "C": "A catalyst for the formation of the Balkan League.",
+          "D": "An example of Pan-Slavic aggression against Austria."
+        },
+        "target_id": "P018_Q05",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Despite the initial calm in Vienna, what was the broader significance of the Sarajevo assassination as highlighted by historians?",
+        "options": {
+          "A": "It had a significant impact, described as a '9/11 effect' on politics.",
+          "B": "It was quickly overshadowed by the Anglo-German naval arms race.",
+          "C": "It directly triggered the First Balkan War.",
+          "D": "It led to the dismissal of Chancellor Bismarck in Germany."
+        },
+        "target_id": "P018_Q06",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T13:19:44.934913",
+    "pool_size": 6
+  },
+  "L19": {
+    "pool": [
+      {
+        "question": "Who encouraged anti-Serb riots in Sarajevo following the assassination of Archduke Franz Ferdinand?",
+        "options": {
+          "A": "Austro-Hungarian authorities",
+          "B": "The Serbian Black Hand",
+          "C": "The Russian government",
+          "D": "The Balkan League"
+        },
+        "target_id": "P019_Q01",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Where, besides Sarajevo, were violent actions against ethnic Serbs organized by authorities?",
+        "options": {
+          "A": "In other cities in Bosnia and Herzegovina, Croatia, and Slovenia",
+          "B": "In Serbia and Montenegro",
+          "C": "In Albania and Macedonia",
+          "D": "In Galicia and Romania"
+        },
+        "target_id": "P019_Q02",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Approximately how many prominent Serbs were imprisoned by Austro-Hungarian authorities in Bosnia and Herzegovina after the Sarajevo assassination?",
+        "options": {
+          "A": "5,500",
+          "B": "2,200",
+          "C": "460",
+          "D": "170,000"
+        },
+        "target_id": "P019_Q03",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How many of the imprisoned prominent Serbs died in Austro-Hungarian prisons?",
+        "options": {
+          "A": "Between 700 and 2,200",
+          "B": "Approximately 5,500",
+          "C": "Exactly 460",
+          "D": "Over 10,000"
+        },
+        "target_id": "P019_Q04",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How many Serbs were sentenced to death by Austro-Hungarian authorities in Bosnia and Herzegovina?",
+        "options": {
+          "A": "460",
+          "B": "5,500",
+          "C": "2,200",
+          "D": "700"
+        },
+        "target_id": "P019_Q05",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the name of the predominantly Bosniak special militia established to persecute Serbs?",
+        "options": {
+          "A": "The Schutzkorps",
+          "B": "The Black Hand",
+          "C": "Young Bosnia",
+          "D": "The Balkan League"
+        },
+        "target_id": "P019_Q06",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary ethnic composition of the Schutzkorps militia?",
+        "options": {
+          "A": "Bosniak",
+          "B": "Serb",
+          "C": "Croat",
+          "D": "Slovene"
+        },
+        "target_id": "P019_Q07",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary purpose of the Schutzkorps?",
+        "options": {
+          "A": "To carry out the persecution of Serbs",
+          "B": "To assassinate Archduke Franz Ferdinand",
+          "C": "To defend the Ottoman Empire",
+          "D": "To form a Balkan alliance against Austria-Hungary"
+        },
+        "target_id": "P019_Q08",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T13:19:59.583828",
+    "pool_size": 8
+  }
+}

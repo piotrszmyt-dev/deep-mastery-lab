@@ -1,0 +1,1530 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+    /* 🎨 DEEP SEA PALETTE MAPPING */
+    --abyss-navy: #12161F;
+    --midnight-navy: #1B212C;
+    --surface-navy: #232A38;
+    --bio-sage: #80CBC4;
+    --bio-sage-dark: #4DB6AC;
+    --lavender: #B39DDB;
+    --ghost-text: #8E97B0;
+    --white-text: #E2E8F0;
+
+    /* 1. BUTTONS: PRIMARY (Sage & Dark) */
+    --bt_main: var(--bio-sage); 
+    --bt_main_text: var(--abyss-navy); /* Dark text for contrast */
+    --bt_main_border: var(--bio-sage);
+    --bt_main_hover: #9BE7E0; /* Slightly lighter Sage */
+    --bt_main_active: var(--bio-sage-dark);
+    --bt_main_focus: var(--bio-sage);
+    --bt_main_disabled: var(--surface-navy);
+    --bt_main_text_disabled: #64708D;
+    
+    /* Gradients (Set to solid Sage for flat look, or adjust for subtle depth) */
+    --bt_main_gradient_start: var(--bio-sage);
+    --bt_main_gradient_end: var(--bio-sage);
+
+    /* Shadows & Glows */
+    --bt_main_shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --bt_main_shadow_hover: 0 0 12px rgba(128, 203, 196, 0.6); /* Bio-lume Glow */
+    --bt_main_focus_ring: rgba(128, 203, 196, 0.4);
+
+    /* 2. BUTTONS: SECONDARY (Ghost) */
+    --bt_secondary: transparent;
+    --bt_secondary_text: var(--ghost-text);
+    --bt_secondary_border: #8e97b046;
+    --bt_secondary_hover: rgba(142, 151, 176, 0.1);
+    --bt_secondary_active: rgba(142, 151, 176, 0.2);
+    --bt_secondary_focus: rgba(142, 151, 176, 0.1);
+    --bt_secondary_disabled: transparent;
+    --bt_secondary_text_disabled: rgba(142, 151, 176, 0.5);
+    
+    --bt_secondary_gradient_start: transparent;
+    --bt_secondary_gradient_end: transparent;
+
+    --bt_secondary_shadow: none;
+    --bt_secondary_shadow_hover: 0 0 8px rgba(142, 151, 176, 0.1);
+    --bt_secondary_focus_ring: rgba(142, 151, 176, 0.2);
+
+    /* 3. UI GLOBALS */
+    --ui_input_radius: 8px; /* Standardized radius */
+
+    /* 4. PROGRESS BAR */
+    --prog-bg: var(--abyss-navy);
+    --prog_height: 8px;
+    --prog_radius: 10px;
+    --prog-shadow: 0 0 8px rgba(128, 203, 196, 0.3); /* Glow at tip */
+}
+
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color: var(--ds-sage, #80CBC4) !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    letter-spacing: 0.5px !important;
+    text-shadow: 0 0 12px rgba(128, 203, 196, 0.4) !important; /* Bio-lume glow */
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header{
+    color: var(--ds-starlight, #E2E8F0) !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    font-style: normal !important;
+    letter-spacing: 0px !important;
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color: var(--ds-starlight, #E2E8F0) !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    letter-spacing: 0px !important;
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary {
+    color: var(--ds-ghost, #8E97B0) !important;
+    opacity: 0.5 !important;
+    text-shadow: none !important; /* Sinks into the deep sea background */
+}
+
+/* Main Button ──────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    background: var(--bt_main); /* Solid Sage */
+    background-color: var(--bt_main);
+    border: 1px solid var(--bt_main_border);
+    color: var(--bt_main_text) !important; /* Force Dark Text */
+    font-weight: 600; /* Make text bolder for contrast */
+    box-shadow: var(--bt_main_shadow);
+    border-radius: var(--ui_input_radius);
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover State - The "Bio-lume Glow" */
+button[kind="primary"]:hover {
+    background-color: var(--bt_main_hover);
+    border-color: var(--bt_main_hover);
+    box-shadow: var(--bt_main_shadow_hover); /* Glow effect applied here */
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background-color: var(--bt_main_active);
+    border-color: var(--bt_main_active);
+    box-shadow: none;
+    transform: scale(0.98); /* Click press effect */
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    background-color: var(--bt_main_focus);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--bt_main_focus_ring), 0 2px 8px var(--bt_main_shadow);
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background-color: var(--bt_main_disabled);
+    border-color: transparent;
+    color: var(--bt_main_text_disabled) !important;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: transparent;
+    background-color: transparent;
+    border: 1px solid var(--bt_secondary_border);
+    color: var(--bt_secondary_text) !important;
+    box-shadow: none;
+    border-radius: var(--ui_input_radius);
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: var(--bt_secondary_hover);
+    border-color: #E2E8F0; /* Starlight White border on hover */
+    color: #E2E8F0 !important; /* Text becomes White on hover */
+    box-shadow: var(--bt_secondary_shadow_hover);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: var(--bt_secondary_active);
+    border-color: var(--bt_secondary_active);
+    box-shadow: 0 1px 4px var(--bt_secondary_shadow);
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    background-color: var(--bt_secondary_focus);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--bt_secondary_focus_ring);
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background-color: transparent;
+    border-color: var(--bt_secondary_text_disabled);
+    color: var(--bt_secondary_text_disabled) !important;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Progress Bar ──────────────────────────────────────────── */
+
+.progress-container {
+    background-color: var(--prog-bg) !important; /* Abyss Navy */
+    height: var(--prog_height);
+    border-radius: var(--prog_radius);
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5); /* Inner depth shadow */
+    overflow: hidden;
+}
+
+.progress-fill {
+    /* Gradient from Sage (#80CBC4) to Lavender (#B39DDB) */
+    background: linear-gradient(90deg, #80CBC4 0%, #B39DDB 100%) !important;
+    box-shadow: var(--prog-shadow) !important; /* Glow at the tip */
+    height: 100%;
+    border-radius: var(--prog_radius);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   1. THE DEEP SEA BIO-LUME PALETTE
+   (New Variable Definitions)
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Core Backgrounds */
+    --ds-abyss:      #12161F; /* Sidebar, Inputs */
+    --ds-midnight:   #1B212C; /* Main Background */
+    --ds-surface:    #232A38; /* Hover, Modals */
+    
+    /* Accents */
+    --ds-sage:       #80CBC4; /* Primary Action, Biolume Glow */
+    --ds-rose:       #E57373; /* Secondary, Error */
+    --ds-lavender:   #B39DDB; /* Settings */
+    
+    /* Typography */
+    --ds-ghost:      #8E97B0; /* Body text */
+    --ds-starlight:  #E2E8F0; /* Headings */
+    
+    /* Functional */
+    --ds-glass-bg:   rgba(27, 33, 44, 0.7);   /* Midnight Navy @ 70% */
+    --ds-glass-bord: rgba(255, 255, 255, 0.08);
+    --ds-glow-sage:  rgba(128, 203, 196, 0.4); /* For text shadows */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   2. WELCOME WINDOW / LANDING STATE
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    background-color: var(--ds-glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Border Styling */
+    border: 1px solid var(--ds-glass-bord);
+    border-top: 1px solid var(--ds-sage); /* Biolume Sage accent on top */
+    
+    /* Depth */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    border-radius: 16px;
+    padding: 2rem; /* Added padding for better spacing inside the glass card */
+}
+
+/* The Main Title */
+.welcome-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--ds-starlight);
+    
+    /* The "Bio-lume" Glow Effect */
+    text-shadow: 0 0 15px var(--ds-glow-sage); 
+}
+
+/* The Icon next to the title */
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    color: var(--ds-sage); /* Primary Sage Color */
+    opacity: 0.9;
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    color: var(--ds-ghost);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    border-color: rgba(255, 255, 255, 0.05); /* Low opacity separator */
+    margin: 1.5rem 0;
+}
+
+:root {
+    /* ─── Deep Sea Bio-Lume Palette ─── */
+    --abyss-navy: #12161F;
+    --midnight-navy: #1B212C;
+    --surface-navy: #232A38;
+    --biolume-sage: #80CBC4;
+    --dusty-rose: #E57373;
+    --deep-lavender: #B39DDB;
+    --ghost-text: #8e97b0c4;
+    --starlight: #E2E8F0;
+
+    /* ─── Sidebar Variables ─── */
+    --sb_background: var(--abyss-navy);
+    --sb_text: var(--ghost-text);
+    
+    /* Title & Brand */
+    --sb_title: var(--starlight);
+    --sb_title_size: 1.5rem;
+    --sb_title_weight: 600;
+    --sb_title_shadow: 0 0 15px rgba(128, 203, 196, 0.2); /* Subtle sage glow */
+    --primary-color: var(--biolume-sage); /* Used for main icons */
+    
+    /* Collapse Button */
+    --sb_collapse_icon_default: var(--ghost-text);
+    --sb_collapse_icon_size: 1.2rem;
+    --sb_collapse_icon_hover: var(--starlight);
+    --sb_collapse_bg_hover: var(--surface-navy);
+    --nordic-glow: 0 0 8px rgba(128, 203, 196, 0.4); /* Biolume glow effect */
+
+    /* Separators */
+    --sb_separator: rgba(255, 255, 255, 0.05);
+    --sb_separator_margin: 1rem 0;
+
+    /* Expander / Navigation Headers */
+    --sb_expander_closed_text: var(--ghost-text);
+    --sb_expander_closed_background: transparent;
+    
+    --sb_expander_hover_text: var(--starlight);
+    --sb_expander_hover_background: rgba(255, 255, 255, 0.03);
+    
+    --sb_expander_open_text: var(--starlight);
+    --sb_expander_open_background: var(--surface-navy); /* Slightly lighter than abyss */
+    --sb_radius_default: 8px;
+
+    /* Lesson Items (Subconcepts) */
+    --sb_header_subconcepts_text: rgba(142, 151, 176, 0.6); /* Dimmed Ghost */
+    
+    --sb_lesson_text_normal: var(--ghost-text);
+    --sb_lesson_background: transparent;
+    --sb_lesson_text_hover: var(--starlight);
+
+    /* Active Lesson State (The "Phosphorous" Focus) */
+    --sb_active_bg_normal: rgba(128, 203, 196, 0.1); /* Low opacity Sage */
+    --sb_active_text_normal: var(--biolume-sage);
+    --sb_active_bg_hover: rgba(128, 203, 196, 0.15);
+    --sb_active_text_hover: var(--biolume-sage);
+    
+    /* Special: Test/Quiz Icons */
+    --sb_icon_test: var(--dusty-rose);
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--sb_background);
+    color: var(--sb_text);
+    border-right: 1px solid var(--sb_separator); /* Optional: adds edge definition */
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: var(--sb_collapse_icon_default) !important;
+    font-size: var(--sb_collapse_icon_size) !important;
+    text-shadow: 0 0 5px rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: var(--sb_collapse_icon_hover) !important;
+    background-color: var(--sb_collapse_bg_hover) !important;
+    text-shadow: var(--nordic-glow);
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* Sidebar - APP Title */
+.sidebar-title, .card-title  {
+    font-size: var(--sb_title_size) !important;
+    font-weight: var(--sb_title_weight) !important;
+    color: var(--sb_title) !important; 
+    text-shadow: var(--sb_title_shadow);
+    letter-spacing: 0.5px;
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons,
+.card-title .material-icons {
+    font-size: inherit;      
+    line-height: inherit;   
+    vertical-align: middle; 
+    color: var(--primary-color);
+    text-shadow: var(--nordic-glow); 
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: var(--sb_separator) !important;
+    margin-top: var(--sb_separator_margin) !important;
+    margin-top: 5px !important;
+    border: none;
+    height: 1px;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: var(--sb_expander_closed_background) !important;
+    border: 1px solid transparent !important; /* Setup for hover transition */
+    color: var(--sb_expander_closed_text) !important;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: var(--sb_expander_hover_text) !important;
+    background-color: var(--sb_expander_hover_background) !important;
+}
+
+/* Expander Module Title - Open */
+/* Added border-left to match "Active/Open" requirement */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: var(--sb_expander_open_background) !important;
+    color: var(--sb_expander_open_text) !important;
+    border-radius: 0 var(--sb_radius_default) var(--sb_radius_default) 0 !important;
+    border-left: 3px solid var(--biolume-sage) !important; /* The Sage Indicator */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+}
+
+/* Header for subconcepts */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: var(--sb_header_subconcepts_text) !important; 
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    margin-top: 10px;
+} 
+
+/* Subconcepts (Nav Buttons) - Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p {
+    color: var(--sb_lesson_text_normal) !important;
+    background-color: var(--sb_lesson_background) !important;
+    font-weight: 400;
+}
+
+/* Subconcepts (Nav Buttons) - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p {
+    color: var(--sb_lesson_text_hover) !important;
+    text-shadow: 0 0 8px rgba(128, 203, 196, 0.4); 
+}
+
+/* Test/Quiz Icons (Dusty Rose) - Normal */
+/* Updated to use Dusty Rose for the 'Test' category buttons */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+     color: var(--sb_lesson_text_normal) !important;
+     background-color: transparent !important;
+     opacity: 0.9;
+}
+
+/* Test/Quiz Icons - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: var(--sb_lesson_text_hover) !important;
+    text-shadow: 0 0 8px rgba(229, 115, 115, 0.5);
+    background-color: rgba(229, 115, 115, 0.1) !important;
+}
+
+/* Subconcepts: Active Element: Normal */
+/* This is the clicked/selected lesson */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: var(--sb_active_bg_normal) !important;
+    border-radius: var(--sb_radius_default) !important;
+    border: 1px solid rgba(128, 203, 196, 0.2) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: var(--sb_active_text_normal) !important;
+    font-weight: 600;
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: var(--sb_active_bg_hover) !important;
+    box-shadow: 0 0 10px rgba(128, 203, 196, 0.1);
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: var(--sb_active_text_hover) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME: DEEP SEA BIO-LUME
+   PALETTE DEFINITIONS
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Core Palette */
+    --ds-abyss:      #12161F;  /* Sidebar / Inputs */
+    --ds-midnight:   #1B212C;  /* Main Background */
+    --ds-surface:    #232A38;  /* Cards / Modals */
+    
+    /* Accents */
+    --ds-sage:       #80CBC4;  /* Primary Action / Focus */
+    --ds-rose:       #E57373;  /* Tests / Errors */
+    --ds-lavender:   #B39DDB;  /* Italics / Settings */
+    
+    /* Text */
+    --ds-ghost:      #8E97B0;  /* Body Text */
+    --ds-starlight:  #E2E8F0;  /* Headers / Active */
+    
+    /* Utility */
+    --ds-glow:       0 0 10px rgba(128, 203, 196, 0.4);
+    --ds-border-subtle: rgba(255, 255, 255, 0.05);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   MAIN LAYOUT & BACKGROUNDS
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Area - Midnight Navy Background */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--ds-midnight);
+    color: var(--ds-ghost);
+}
+
+/* Sidebar Expand Button - Icon (default) -> Sage Green with Glow */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: var(--ds-sage) !important;
+    text-shadow: var(--ds-glow); 
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Expand Button - Icon (hover) -> Starlight White */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: var(--ds-starlight) !important;
+    background-color: transparent !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: transparent !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   LESSON STATE (FOCUS MODE)
+   ───────────────────────────────────────────────────────────── */
+
+/* Lesson Title -> Starlight White */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: var(--ds-starlight);
+    background-color: transparent;
+    font-weight: 300;
+}
+
+/* Lesson Card: Main Window 
+   - Surface Navy Background
+   - 4px Phosphorous Green Border (Left)
+*/
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: var(--ds-surface);
+    border-radius: 5px;
+    padding: 20px; /* Increased padding slightly for better read logic */
+    border-left: 4px solid var(--ds-sage); 
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4); /* Deep drop shadow */
+}
+
+/* Lesson Card: Strong/Bold Text -> Sage Green Highlighting */
+section[data-testid="stMain"] .st-key-lesson_window strong {
+    color: var(--ds-sage);
+    font-weight: 700;
+}
+
+/* Lesson: Headers -> Starlight White */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--ds-starlight) !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+}
+
+/* Lesson Card: Italic Text -> Deep Lavender (for soft contrast) */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--ds-lavender);
+    font-style: italic;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TABLES
+   ───────────────────────────────────────────────────────────── */
+
+/* Lesson Card: Table Headers 
+   - Abyss Navy Background 
+   - Starlight Text
+*/
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--ds-starlight);
+    border: 1px solid var(--ds-border-subtle);
+    border-bottom: 1px solid var(--ds-sage); /* Subtle green underline for headers */
+    background-color: var(--ds-abyss);
+}
+
+/* Lesson Card: Table Data 
+   - Ghost Text
+   - Subtle borders
+*/
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--ds-ghost);
+    border: 1px solid var(--ds-border-subtle);
+}
+
+/* Scrollbar styling for lesson window -> Sage Thumb */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ds-sage) var(--ds-abyss);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   1. THE DEEP SEA SYSTEM (VARIABLE DEFINITIONS)
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Core Palette -------------------------------- */
+    --abyss-navy:    #12161F;
+    --midnight-navy: #1B212C;
+    --surface-navy:  #232A38;
+    --biolume-sage:  #80CBC4;
+    --dusty-rose:    #E57373;
+    --deep-lavender: #B39DDB;
+    --ghost-text:    #8E97B0;
+    --starlight:     #e2e8f096;
+
+    /* Semantic Mappings for Quiz State ------------ */
+    
+    /* Question */
+    --question-text: #e2e8f096;
+
+    /* Answers */
+    --answer-bg:          var(--midnight-navy);
+    --answer-bg-hover:    var(--surface-navy); /* Slightly lighter */
+    --answer-bg-selected: rgba(229, 115, 115, 0.2);
+    
+    --answer-text:        var(--ghost-text);
+    --answer-letter-text: var(--biolume-sage); /* The A, B, C identifier */
+    
+    --answer-border:          #4B5563; /* The specific gray requested */
+    --answer-border-hover:    var(--dusty-rose);
+    --answer-border-selected: var(--dusty-rose);
+
+    /* Keyboard Legend */
+    --kbd-key-bg:     #0F1520; /* Darker than Abyss for contrast */
+    --kbd-key-text:   var(--ghost-text);
+    --kbd-key-border: #333333; /* Subtle outline */
+    --kbd-key-shadow: #000000; /* Deep black for the 3D effect */
+    --kbd-legend-text: var(--ghost-text);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   2. QUIZ TEST STATE (UPDATED SELECTORS)
+   ───────────────────────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question {
+    color: #a1aac5 !important;
+
+    background-color: transparent;
+}
+
+.st-key-question p {
+    font-weight: 600; /* Bolder as requested */
+    line-height: 1.5;
+}
+
+/* Quiz Test State: Answer text & Container */
+/* Matches "Default" state in your specs */
+[class*="st-key-answer"] {
+    color: var(--answer-text);
+    background-color: var(--answer-bg);
+    border: 1px solid var(--answer-border); /* Added to match specs */
+    border-radius: 8px;
+    padding: 12px 16px; /* Added padding for better visual weight */
+    transition: all 0.2s ease; /* Smooth transition for hover effects */
+    cursor: pointer;
+}
+
+/* Quiz Test State: Hover Interaction */
+/* Added to achieve the "Bio-Lume" focus effect */
+[class*="st-key-answer"]:hover {
+    border-color: var(--answer-border-hover);
+    background-color: var(--answer-bg-hover);
+    color: var(--starlight); /* Brighten text on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Quiz Test State: Selected Interaction */
+/* Assuming you toggle a class or using active state */
+[class*="st-key-answer"]:active,
+[class*="st-key-answer"].selected {
+    background-color: var(--answer-bg-selected);
+    border-color: var(--answer-border-selected);
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    color: var(--answer-letter-text);
+    font-weight: 700;
+    margin-right: 8px; /* Spacing between letter and answer */
+}
+
+/* Keyboard Legend (Keycaps) */
+.key-hint {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    color: var(--kbd-key-text);
+    background: var(--kbd-key-bg);
+    
+    /* Physical Keycap Styling */
+    border: 1px solid var(--kbd-key-border);
+    border-bottom: 2px solid var(--kbd-key-shadow); /* The "Physical" 3D look */
+    border-radius: 6px; /* Slightly softer corners */
+    padding: 2px 6px;
+    margin: 0 4px;
+}
+
+.keyboard-legend {
+    color: var(--kbd-legend-text);
+    font-size: 13px;
+    font-family: system-ui, -apple-system, sans-serif;
+    gap: 8px;
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+:root {
+    /* Deep Sea Bio-Lume Palette */
+    --abyss-navy: #12161F;
+    --midnight-navy: #1B212C;
+    --surface-navy: #232A38;
+    
+    --bio-sage: #80CBC4;      /* Primary / Success */
+    --bio-rose: #E57373;      /* Secondary / Error */
+    --bio-lavender: #B39DDB;  /* Settings / Neutral */
+    
+    --ghost-text: #8E97B0;    /* Body text */
+    --starlight-text: #E2E8F0; /* Headings / Active */
+    
+    /* Glass settings based on Surface Navy */
+    --glass-bg: rgba(35, 42, 56, 0.6); 
+    --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+/* 1. HERO METRIC BOXES (Glassmorphism) */
+.feedback-box {
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feedback-box:hover {
+    border-color: rgba(142, 151, 176, 0.2); /* Ghost text low opacity */
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--ghost-text);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--starlight-text);
+    text-shadow: 0 0 15px rgba(128, 203, 196, 0.1); /* Subtle Sage glow */
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border: 1px solid var(--bio-sage);
+    box-shadow: 0 0 20px rgba(128, 203, 196, 0.2); /* Phosphorous Glow */
+    color: var(--bio-sage);
+}
+
+.feedback-box.status-failed {
+    border: 1px solid var(--bio-rose);
+    box-shadow: 0 0 20px rgba(229, 115, 115, 0.2); /* Red Glow */
+    color: var(--bio-rose);
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.5rem;   
+    opacity: 1;
+}
+
+/* 2. QUESTION EXPANDERS */
+
+/* Normal */
+.st-key-feedback_list details div[data-testid="stExpander"] > details > summary {
+    border: none !important;
+    background: transparent !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+    color: var(--ghost-text) !important;
+}
+
+/* Hover */
+.st-key-feedback_list div[data-testid="stExpander"] > details > summary:hover {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 1.0rem;
+    color: var(--starlight-text);
+    transition: all 0.2s ease;
+    padding: 10px 5px;
+}
+
+/* Open State */
+.st-key-feedback_list div[data-testid="stExpander"] details[open] > summary {
+    color: var(--bio-sage); /* Text turns Biolume Sage */
+    background-color: rgba(128, 203, 196, 0.05) !important; /* Very subtle sage bg */
+}
+
+/* 3. ANSWER COMPARISON CARDS */
+.answer-card {
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    transition: background-color 0.2s;
+}
+
+/* User's Answer Card - WRONG */
+.answer-card.user-wrong {
+    background-color: rgba(229, 115, 115, 0.1); /* Rose Tint */
+    border-left: 4px solid var(--bio-rose);
+    color: var(--starlight-text);
+}
+
+/* User's Answer Card - CORRECT */
+.answer-card.user-correct {
+    background-color: rgba(128, 203, 196, 0.1); /* Sage Tint */
+    border-left: 4px solid var(--bio-sage);
+    color: var(--starlight-text);
+}
+
+/* Correct Answer Card (The Key) */
+.answer-card.correct-key {
+    background-color: var(--abyss-navy); /* Deep background to stand out */
+    border: 1px solid var(--bio-sage);
+    color: var(--bio-sage);
+    box-shadow: inset 0 0 10px rgba(128, 203, 196, 0.05);
+}
+
+.answer-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-weight: 700;
+}
+
+/* Explanation Box Theme */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: rgba(27, 33, 44, 0.5) !important; /* Midnight Navy transparent */
+    border-left: 3px solid var(--bio-sage) !important;
+    border-radius: 0 8px 8px 0 !important;
+    color: var(--ghost-text) !important;
+    font-style: normal !important;
+    line-height: 1.6 !important;
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: var(--bio-sage);
+}
+
+/* ============================================================
+   🌊 DEEP SEA THEME :: GENERATOR WINDOW VARIABLES
+   ============================================================ */
+:root {
+    /* Core Palette */
+    --ds-abyss:      #12161F; /* Deepest Background */
+    --ds-midnight:   #1B212C; /* Main Card Background */
+    --ds-surface:    #232A38; /* Hover/Modal Surface */
+    
+    /* Accents */
+    --ds-sage:       #80CBC4; /* Primary / Success / Bio-lume */
+    --ds-rose:       #E57373; /* Error / Test */
+    --ds-lavender:   #B39DDB; /* Settings / Toggles */
+    --ds-amber:      #F0C674; /* Warning (Specific to this section) */
+    
+    /* Text */
+    --ds-ghost:      #8E97B0; /* Body Text */
+    --ds-starlight:  #E2E8F0; /* Headings */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SECTION 10: GENERATOR WINDOW (The "Machine")
+   ───────────────────────────────────────────────────────────── */
+
+/* 1. Main Card Container (Glassmorphism + Bio-lume Accent) */
+.st-key-generator_card {
+    background-color: rgba(27, 33, 44, 0.85); /* Midnight Navy with opacity */
+    backdrop-filter: blur(12px);              /* Glass blur */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    
+    /* The "Phosphorous" Top Border */
+    border-top: 3px solid var(--ds-sage);
+    
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6); /* Deep shadow */
+    border-radius: 12px;
+    padding: 24px;
+    animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: var(--ds-starlight);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(226, 232, 240, 0.1);
+}
+
+/* Separator Line (Low Opacity) */
+.st-key-generator_card hr {
+    border-color: rgba(142, 151, 176, 0.1) !important; /* Ghost Text low opacity */
+    margin: 1.5rem 0;
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    color: var(--ds-sage);
+    filter: drop-shadow(0 0 5px rgba(128, 203, 196, 0.4)); /* Bio-lume glow */
+}
+
+/* 2. Warning Box (Amber) */
+.generator-warning {
+    color: var(--ds-amber); 
+    background: rgba(240, 198, 116, 0.08); /* Very low opacity Amber */
+    border-radius: 8px;
+    border: 1px solid rgba(240, 198, 116, 0.25);
+    padding: 12px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 3. Metric Stats Box (Grid Layout) */
+.generator-stat-box {
+    background: var(--ds-abyss); /* Recedes into the page */
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    display: grid;
+    gap: 10px;
+}
+
+/* Stat Labels */
+.stat-label {
+    color: var(--ds-ghost);
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 500;
+}
+
+/* Stat Values */
+.stat-value {
+    color: var(--ds-starlight);
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+/* The Sage Accent Value (Success/Key Metric) */
+.stat-value-accent {
+    color: var(--ds-sage);
+    font-weight: bold;
+    font-size: 1.2em;
+    text-shadow: 0 0 12px rgba(128, 203, 196, 0.3); /* Glow */
+}
+
+/* 4. Console Log (The Terminal) */
+.generator-console {
+    background: #0B0E14; /* Darker than Abyss for contrast */
+    border: 1px solid #2E3440;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.8);
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.generator-console-step {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+/* Console Text styling */
+.console-icon {
+    color: var(--ds-sage);
+}
+
+.console-message {
+    color: var(--ds-ghost); /* Default log text */
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Highlighted success message in console */
+.console-message.success {
+    color: var(--ds-sage);
+}
+
+/* 5. Streamlit Metric Overrides */
+[data-testid="stMetric"] {
+    background-color: var(--ds-surface); 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    border-color: var(--ds-sage); /* Highlight border on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--ds-ghost) !important;
+    font-size: 0.8rem !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--ds-starlight) !important;
+    font-size: 1.8rem !important;
+}
+
+/* 6. Spinner Animation */
+@keyframes spin { 
+    100% { transform: rotate(360deg); } 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Spinner Color Override */
+.stVerticalBlock [data-testid="stSpinner"] > div {
+    border-top-color: var(--ds-sage) !important;
+    border-right-color: transparent !important;
+    border-bottom-color: transparent !important;
+    border-left-color: transparent !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THE DEEP SEA BIO-LUME THEME
+   Palette & Variable Definitions
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Core Palette */
+    --abyss-navy: #12161F;      /* Sidebar, Input BGs */
+    --midnight-navy: #1B212C;   /* Main Background */
+    --surface-navy: #232A38;    /* Hovers, Modals */
+    --biolume-sage: #80CBC4;    /* Primary Action, Progress */
+    --dusty-rose: #E57373;      /* Secondary, Tests */
+    --deep-lavender: #B39DDB;   /* Settings */
+    --ghost-text: #8E97B0;      /* Body text */
+    --starlight: #E2E8F0;       /* Headings, Active text */
+    --dark-grey: #4B5563;       /* Borders, Placeholders */
+
+    /* UI Mapping: Tabs */
+    --ui_tab_inactive_bg: transparent;
+    --ui_tab_inactive_text: var(--ghost-text);
+    --ui_tab_inactive_hover_bg: rgba(255, 255, 255, 0.05);
+    --ui_tab_active_bg: transparent;
+    --ui_tab_active_text: var(--starlight);
+    --ui_tab_radius: 0px; 
+    --ui_tab_padding: 0.5rem 1rem;
+
+    /* UI Mapping: File Uploader */
+    --ui_uploader_bg: var(--abyss-navy);
+    --ui_uploader_text: var(--ghost-text);
+    --ui_uploader_border: 2px dashed var(--dark-grey);
+    --ui_uploader_hover_border: 2px dashed var(--biolume-sage);
+    --ui_uploader_radius: 12px;
+    --ui_uploader_icon: var(--biolume-sage);
+
+    /* UI Mapping: Popovers */
+    --ui_popover_bg: var(--surface-navy);
+    --ui_popover_border: 1px solid var(--dark-grey);
+    --ui_popover_text: var(--starlight);
+    --ui_popover_width: 250px;
+
+    /* UI Mapping: Dropdowns (Closed) */
+    --ui_dropdown_closed_bg: var(--abyss-navy);
+    --ui_dropdown_closed_border: var(--dark-grey); /* Or transparent if preferred */
+    --ui_dropdown_closed_text: var(--starlight);
+    --ui_dropdown_hover_bg: var(--surface-navy);
+    --ui_dropdown_hover_border: var(--biolume-sage);
+    --ui_dropdown_hover_text: #FFFFFF;
+
+    /* UI Mapping: Dropdowns (Open) */
+    --ui_dropdown_open_bg: var(--surface-navy);
+    --ui_dropdown_open_border: var(--dark-grey);
+    --ui_dropdown_open_text_container: var(--starlight);
+    --ui_dropdown_open_icon: var(--biolume-sage);
+
+    /* UI Mapping: Virtual List (Dropdown Items) */
+    --ui_list_bg: var(--surface-navy);
+    --ui_list_border: 1px solid var(--dark-grey);
+    --ui_list_radius: 8px;
+    --ui_list_text: var(--ghost-text);
+    
+    /* Selection States */
+    --ui_list_selected_bg: rgba(128, 203, 196, 0.1); /* Low opacity Sage */
+    --ui_list_selected_text: var(--biolume-sage);
+    --ui_list_selected_hover_bg: rgba(128, 203, 196, 0.2); 
+    --ui_list_selected_hover_text: var(--biolume-sage);
+
+    /* Misc */
+    --ui_list_scrollbar_thumb: var(--dark-grey);
+    --ui_list_scrollbar_track: transparent;
+    --ui_input_radius: 8px;
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: var(--ui_tab_inactive_bg) !important;
+    color: var(--ui_tab_inactive_text) !important;
+    border-radius: var(--ui_tab_radius) !important;
+    padding: var(--ui_tab_padding) !important;
+    margin-right: 5px;
+    border-bottom: 2px solid transparent !important; /* Prep for hover/active */
+    transition: color 0.2s, border-bottom 0.2s;
+}
+
+/* Tab area: Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: var(--ui_tab_inactive_hover_bg) !important;
+    color: var(--starlight) !important;
+}
+
+/* Tab area: Active Tab */
+/* MODIFIED: Removed box-shadow pill, added bottom border per instructions */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--ui_tab_active_bg) !important;
+    color: var(--ui_tab_active_text) !important;
+    border-bottom: 2px solid var(--biolume-sage) !important; 
+    box-shadow: none !important; 
+}
+
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: var(--ui_uploader_text);
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: var(--ui_uploader_text);
+    opacity: 0.7;
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: var(--ui_uploader_bg);
+    border: var(--ui_uploader_border);
+    border-radius: var(--ui_uploader_radius);
+    transition: border 0.3s ease;
+}
+
+/* ADDED: File Dropzone Hover Effect (Sage Border) */
+[data-testid="stFileUploaderDropzone"]:hover {
+    border: var(--ui_uploader_hover_border);
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    background-color: rgba(128, 203, 196, 0.1); /* Sage tint */
+    color: var(--biolume-sage);
+    border: none;
+}
+
+/* File Dropzone: Icon color */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: var(--ui_uploader_icon);
+    filter: drop-shadow(0 0 8px rgba(128, 203, 196, 0.3));
+}
+
+/* Button Dropdown Popover */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: var(--ui_popover_width) !important;  
+    max-width: var(--ui_popover_width) !important;
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"] {
+    background-color: var(--ui_popover_bg); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+}
+
+/* Button Dropdown Popover: Border */
+[data-testid="stPopoverBody"] {
+    border: var(--ui_popover_border) !important;
+    border-radius: 12px;
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--ui_popover_text) !important;
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+}
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: var(--ui_dropdown_closed_bg) !important;
+    border: 2px solid var(--ui_dropdown_closed_border); /* Changed from 2px to 1px usually looks cleaner, kept 2px per req */
+    border-radius: var(--ui_input_radius) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: var(--ui_dropdown_closed_text) !important;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--ui_dropdown_open_bg) !important;
+    border: 2px solid var(--ui_dropdown_open_border);
+    color: var(--ui_dropdown_open_text_container) !important;
+    border-radius: var(--ui_input_radius) !important;
+}  
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: var(--ui_dropdown_open_icon) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--ui_dropdown_hover_bg) !important;
+    border: 2px solid var(--ui_dropdown_hover_border);
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: var(--ui_dropdown_hover_text) !important;
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: var(--ui_list_bg) !important;
+    border: var(--ui_list_border) !important;
+    border-radius: var(--ui_list_radius) !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5) !important;
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_text) !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: var(--ui_list_selected_bg) !important;
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_text) !important;
+    font-weight: bold;
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: var(--ui_list_selected_hover_bg) !important;
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_hover_text) !important;
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_list_scrollbar_thumb) transparent;
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: var(--ui_list_scrollbar_track);
+}
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* ==========================================================================
+   THEME: DEEP SEA BIO-LUME
+   TYPE: Input & Text Field Variables
+   ========================================================================== */
+
+:root {
+    /* --- Core Palette (Deep Sea) --- */
+    --ds_abyss:      #12161F; /* Abyss Navy */
+    --ds_midnight:   #1B212C; /* Midnight Navy */
+    --ds_surface:    #232A38; /* Surface Navy */
+    --ds_sage:       #80CBC4; /* Biolume Sage */
+    --ds_rose:       #E57373; /* Dusty Rose */
+    --ds_lavender:   #B39DDB; /* Deep Lavender */
+    --ds_ghost:      #8E97B0; /* Ghost Text */
+    --ds_starlight:  #E2E8F0; /* Starlight (Text) */
+    --ds_placeholder:#4B5563; /* Dark Blue-Gray */
+
+    /* --- Functional Mappings (Inputs) --- */
+    
+    /* Shape & Form */
+    --ui_input_radius: 8px;
+    
+    /* Backgrounds: Creating the "Hole" effect in the surface */
+    --ui_input_bg_normal: var(--ds_abyss); 
+    --ui_input_bg_hover:  var(--ds_abyss); /* Keep deep to maintain depth */
+    --ui_input_bg_focus:  var(--ds_abyss); 
+    
+    /* Typography */
+    --ui_input_text_normal: var(--ds_starlight);
+    --ui_input_text_hover:  #FFFFFF; /* Pure white on hover */
+    --ui_input_label:       var(--ds_ghost);
+    
+    /* Borders & Accents */
+    /* Default is transparent to make it look like a cutout/hole */
+    --ui_input_border_normal: 1px solid transparent; 
+    
+    /* Hover adds a subtle boundary (Ghost text color, low opacity) */
+    --ui_input_border_hover:  1px solid rgba(142, 151, 176, 0.3); 
+    
+    /* Focus brings the Bioluminescence (Sage Glow) */
+    --ui_input_border_focus:  1px solid var(--ds_sage);
+    
+    /* Icons & UI Extras */
+    --ui_input_scrollbar_thumb: var(--ds_surface);
+    --ui_input_step_btn_disabled: var(--ds_surface);
+    --ui_tooltip_icon: var(--ds_ghost);
+}
+
+/* ==========================================================================
+   EXISTING SELECTORS (DO NOT MODIFY)
+   ========================================================================== */
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: var(--ui_input_radius);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5); /* Enhanced shadow for "Hole" effect */
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: var(--ui_input_bg_normal) !important;
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: var(--ui_input_bg_hover) !important;
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: var(--ui_input_bg_focus) !important;
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--ui_input_text_normal) !important;
+    caret-color: var(--ds_sage); /* Added caret color for extra polish */
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: var(--ui_input_text_hover) !important;
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: var(--ui_input_text_normal) !important;
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: var(--ui_input_border_normal) !important;
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: var(--ui_input_border_hover) !important;
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: var(--ui_input_border_focus) !important;
+    box-shadow: 0 0 10px rgba(128, 203, 196, 0.2); /* Soft Sage Glow */
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_input_scrollbar_thumb) transparent;
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: var(--ui_input_step_btn_disabled) !important;
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--ui_tooltip_icon) !important;
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--ui_input_label);
+    font-size: 0.9em;
+    opacity: 0.8;
+}

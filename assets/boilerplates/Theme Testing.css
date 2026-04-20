@@ -1,0 +1,879 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Main Button ──────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"] {
+    background: linear-gradient(180deg, var(--bt_main_gradient_start), var(--bt_main_gradient_end));
+    background-color: var(--bt_main);
+    border: 1px solid var(--bt_main_border);
+    color: var(--bt_main_text);
+    box-shadow: 0 2px 8px var(--bt_main_shadow);
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/*Hover State */
+button[kind="primary"]:hover {
+    background-color: var(--bt_main_hover);
+    border-color: var(--bt_main_hover);
+    box-shadow: 0 4px 12px var(--bt_main_shadow_hover);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background-color: var(--bt_main_active);
+    border-color: var(--bt_main_active);
+    box-shadow: 0 1px 4px var(--bt_main_shadow);
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    background-color: var(--bt_main_focus);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--bt_main_focus_ring), 0 2px 8px var(--bt_main_shadow);
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background-color: var(--bt_main_disabled);
+    border-color: var(--bt_main_disabled);
+    color: var(--bt_main_text_disabled);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"] {
+    background: linear-gradient(180deg, var(--bt_secondary_gradient_start), var(--bt_secondary_gradient_end));
+    background-color: var(--bt_secondary);
+    border: 1px solid var(--bt_secondary_border);
+    color: var(--bt_secondary_text);
+    box-shadow: 0 2px 8px var(--bt_secondary_shadow);
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+section[data-testid="stMain"] button[kind="secondary"]:hover {
+    background-color: var(--bt_secondary_hover);
+    border-color: var(--bt_secondary_hover);
+    box-shadow: 0 4px 12px var(--bt_secondary_shadow_hover);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active {
+    background-color: var(--bt_secondary_active);
+    border-color: var(--bt_secondary_active);
+    box-shadow: 0 1px 4px var(--bt_secondary_shadow);
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+section[data-testid="stMain"] button[kind="secondary"]:focus {
+    background-color: var(--bt_secondary_focus);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--bt_secondary_focus_ring), 0 2px 8px var(--bt_secondary_shadow);
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled {
+    background-color: var(--bt_secondary_disabled);
+    border-color: var(--bt_secondary_disabled);
+    color: var(--bt_secondary_text_disabled);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--sb_background);
+    color: var(--sb_text);
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: var(--sb_collapse_icon_default) !important;
+    font-size: var(--sb_collapse_icon_size) !important;
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: var(--sb_collapse_icon_hover) !important;
+    background-color: var(--sb_collapse_bg_hover) !important;
+}
+
+/* Sidebar - APP Title */
+.sidebar-title {
+    font-size: var(--sb_title_size) !important;
+    font-weight: var(--sb_title_weight) !important;
+    color: var(--sb_title) !important; 
+    text-shadow: var(--sb_title_shadow);
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons {
+    font-size: inherit;      
+    line-height: inherit;   
+    vertical-align: middle; 
+    color: var(--primary-color); 
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: var(--sb_separator) !important;
+    margin-top: var(--sb_separator_margin) !important;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: var(--sb_expander_closed_background) !important;
+    border: none !important;
+    color: var(--sb_expander_closed_text) !important;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: var(--sb_expander_hover_text) !important;
+    background-color: var(--sb_expander_hover_background) !important;
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: var(--sb_expander_open_background) !important;
+    color: var(--sb_expander_open_text) !important;
+    border-radius: var(--sb_radius_default) !important;
+}
+
+/* Header for subconcepts */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: var(--sb_header_subconcepts_text) !important; 
+    text-transform: uppercase;
+} 
+
+/* Subconcepts and quick test icon: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: var(--sb_lesson_text_normal) !important;
+    background-color: var(--sb_lesson_background) !important;
+}
+
+/* Subconcepts and quick test icon: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: var(--sb_lesson_text_hover) !important;
+}
+
+/* Subconcepts: Active Element: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: var(--sb_active_bg_normal) !important;
+    border-radius: var(--sb_radius_default) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: var(--sb_active_text_normal) !important;
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: var(--sb_active_bg_hover) !important;
+    border-radius: var(--sb_radius_default) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: var(--sb_active_text_hover) !important;
+}
+
+/* Sidebar Scrollbar */
+div[data-testid="stSidebarContent"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--sb_scrollbar_thumb_hover) var(--sb_scrollbar_track);
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--main-area-bg);
+    color: var(--main-area-text);
+}
+
+/* Sidebar Expand Button - Icon (default) */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: rgb(157, 192, 0) !important;
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: blue !important;
+    background-color: transparent !important;
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: transparent !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: var(--lesson-title-text);
+    background-color: transparent;
+}
+
+/* Lesson Card: Main Area */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Lesson Card: Strong Text */
+section[data-testid="stMain"] .st-key-lesson_window strong {
+    color: var(--lesson-strong-text);
+    font-weight: 700;
+}
+
+/* Lesson: Headers */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--lesson-header-text);
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--lesson-italic-text);
+    font-style: italic;
+}
+
+/* Lesson Card: Table Headers + text */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--lesson-table-header-text);
+    border: 1px solid var(--lesson-table-header-border);
+}
+
+/* Lesson Card: Table Data + text */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--lesson-table-data-text);
+    border: 1px solid var(--lesson-table-data-border);
+}
+
+/* Scrollbar styling for lesson window */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(  --lesson_scrollbar_thumb) transparent;
+}
+
+/* Quiz Test State ──────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question  {
+    color: var(--question-text) !important;
+    /* background: var(--question-bg); */
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.st-key-question p {
+    font-weight: bolder;
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    color: var(--answer-text);
+    background-color: var(--answer-bg);
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    color: var(--answer-letter-text);
+}
+
+/* Keyboard Legend (Bellow primary A B C D button ──────────── */
+
+/* Keyboard Legend */
+.key-hint {
+    display: inline-block;
+    padding: 2px 8px;
+    min-width: 24px;
+    text-align: center;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    color: var(--kbd-key-text);
+    background: var(--kbd-key-bg);
+    border: 1px solid var(--kbd-key-border);
+    border-radius: 4px;
+    box-shadow: 0 2px 0 var(--kbd-key-shadow);
+    margin: 0 4px;
+}
+
+.keyboard-legend {
+    color: var(--kbd-legend-text);
+    font-size: 13px;
+    text-align: center;
+    margin: 8px 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+
+/* --- 1. HERO METRIC BOXES (Glassmorphism Cards) --- */
+.feedback-box {
+    background-color: rgba(46, 52, 64, 0.6); /* Glass BG */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Glass Border */
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.feedback-box:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: #A0AAB4; /* Nordic Silver */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ECEFF4; /* Nordic Snow */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Status: Passed (Green) */
+.feedback-box.status-passed {
+    border: 1px solid rgba(163, 190, 140, 0.3);
+    box-shadow: 0 0 15px rgba(163, 190, 140, 0.1);
+    color: #A3BE8C;
+}
+
+/* Status: Failed (Red) */
+.feedback-box.status-failed {
+    border: 1px solid rgba(191, 97, 106, 0.3);
+    box-shadow: 0 0 15px rgba(191, 97, 106, 0.1);
+    color: #BF616A;
+}
+
+/* Icons inside Metric Boxes */
+.feedback-box .material-icons {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+
+/* --- 2. SEAMLESS LIST (Zero Gap Expanders) --- */
+
+/* A. Target the Main Container to kill Flex Gap */
+.st-key-feedback_list {
+    gap: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* B. Reset Margins on inner Streamlit wrappers */
+.st-key-feedback_list [data-testid="stLayoutWrapper"],
+.st-key-feedback_list .stExpander {
+    margin: 0px !important;
+    padding: 0px !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* C. Style the Expander Detail (The visible strip) */
+.st-key-feedback_list details {
+    border-radius: 0px !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #2E3440 !important; /* Nordic Separator */
+}
+
+/* D. Round Corners: FIRST Item (Top Left/Right) */
+.st-key-feedback_list > div:first-child .stExpander details {
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+}
+
+/* E. Round Corners: LAST Item (Bottom Left/Right) & Remove Border */
+.st-key-feedback_list > div:last-child .stExpander details {
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    border-bottom: none !important;
+}
+
+/* F. Header (Summary) Styling */
+.st-key-feedback_list summary {
+    padding: 15px 10px !important;
+    font-weight: 500;
+    font-size: 1.05rem;
+    border-radius: inherit !important;
+    transition: background-color 0.2s;
+}
+
+.st-key-feedback_list summary:hover {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.st-key-feedback_list summary:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+/* --- 3. COMPARISON CARDS (Inside Expander) --- */
+
+.comparison-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.answer-card {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+}
+
+/* Card: User Wrong (Red Tint) */
+.answer-card.user-wrong {
+    background-color: rgba(191, 97, 106, 0.1);
+    border-color: rgba(191, 97, 106, 0.3);
+    color: #A0AAB4; /* Silver */
+}
+
+/* Card: User Correct (Green Tint) */
+.answer-card.user-correct {
+    background-color: rgba(163, 190, 140, 0.1);
+    border-color: rgba(163, 190, 140, 0.3);
+    color: #ECEFF4; /* Snow */
+}
+
+/* Card: Correct Key (Dark Slate + Green Border) */
+.answer-card.correct-key {
+    background-color: rgba(46, 52, 64, 0.8);
+    border: 1px solid #A3BE8C; /* Green */
+    color: #A3BE8C;
+}
+
+.answer-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 4px;
+    font-weight: 700;
+    display: block;
+}
+
+
+/* --- 4. INSIGHT BOX (Styled Blockquote) --- */
+
+/* Override default Markdown Blockquote */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border-left: 3px solid #5E81AC !important; /* Teal */
+    padding: 15px !important;
+    border-radius: 0 8px 8px 0 !important;
+    color: #A0AAB4 !important; /* Silver */
+    font-style: normal !important;
+    line-height: 1.6 !important;
+    margin-top: 10px !important;
+}
+
+/* Icon alignment inside the blockquote */
+.insight-icon {
+    color: #5E81AC; /* Teal */
+    font-size: 1.2rem;
+    vertical-align: sub;
+    margin-right: 8px;
+}
+
+.insight-label {
+    font-weight: bold;
+    color: #ECEFF4; /* Snow */
+    opacity: 0.9;
+    margin-right: 5px;
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Progress Bar */
+.progress-container {
+    background-color: var(--prog-bg) !important;
+    height: var(--prog_height);
+    border-radius: var(--prog_radius);
+
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.progress-fill {
+    background-color: hsl(var(--bar-hue), var(--prog-sat), var(--prog-light)) !important;
+    box-shadow: var(--prog-shadow) !important;
+    height: 100%;
+    border-radius: var(--prog_radius);
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: var(--ui_tab_inactive_bg) !important;
+    color: var(--ui_tab_inactive_text) !important;
+    border-radius: var(--ui_tab_radius) !important;
+    padding: var(--ui_tab_padding) !important;
+}
+
+/* Tab area: Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: var(--ui_tab_inactive_hover_bg) !important;
+}
+
+/* Tab area: Active Tab */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--ui_tab_active_bg) !important;
+    color: var(--ui_tab_active_text) !important;
+    border-bottom: 3px solid var(--ui_tab_active_border_color) !important;
+}
+    
+/* Tab area: Traveling highlight line */
+div[data-baseweb="tab-highlight"] {
+    display: none;
+}
+
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: var(--ui_uploader_text);
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: var(--ui_uploader_text);
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: var(--ui_uploader_bg);
+    border: var(--ui_uploader_border);
+    border-radius: var(--ui_uploader_radius);
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+}
+
+/* File Dropzone: Icon color */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: var(--ui_uploader_icon);
+}
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: var(--ui_dropdown_closed_bg) !important;
+    border: 2px solid var(--ui_dropdown_closed_border);
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: var(--ui_dropdown_closed_text) !important;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--ui_dropdown_open_bg) !important;
+    border: 2px solid var(--ui_dropdown_open_border);
+    color: var(--ui_dropdown_open_text_container) !important;
+}  
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: var(--ui_dropdown_open_icon) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--ui_dropdown_hover_bg) !important;
+    border: 2px solid var(--ui_dropdown_hover_border);
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: var(--ui_dropdown_hover_text) !important;
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: var(--ui_list_bg) !important;
+    border: var(--ui_list_border) !important;
+    border-radius: var(--ui_list_radius) !important;
+    overflow: hidden !important;
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_text) !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: var(--ui_list_selected_bg) !important;
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_text) !important;
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: var(--ui_list_selected_hover_bg) !important;
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_hover_text) !important;
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_list_scrollbar_thumb) transparent;
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: var(--ui_list_scrollbar_track);
+}
+
+/* Button Dropdown Popover */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: var(--ui_popover_width) !important;  
+    max-width: var(--ui_popover_width) !important;
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"],
+[data-testid="stPopoverBody"] > div {
+    background-color: var(--ui_popover_bg); 
+    box-shadow: none !important;
+}
+
+/* Button Dropdown Popover: Border */
+[data-testid="stPopoverBody"] {
+    border: var(--ui_popover_border) !important;
+    border-radius: 5px;
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--ui_popover_text) !important;
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+}
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* Text Fields: */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: var(--ui_input_radius);
+}
+
+div[data-baseweb="base-input"] {
+    border-radius: 0px; /* Must stay as 0px */
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: var(--ui_input_bg_normal) !important;
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: var(--ui_input_bg_hover) !important;
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: var(--ui_input_bg_focus) !important;
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--ui_input_text_normal) !important;
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: var(--ui_input_text_hover) !important;
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: var(--ui_input_text_normal) !important;
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: var(--ui_input_border_normal) !important;
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: var(--ui_input_border_hover) !important;
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: var(--ui_input_border_focus) !important;
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_input_scrollbar_thumb) transparent;
+}
+
+/* Text Fields: Resize Button */
+textarea::-webkit-resizer {
+    display: none;
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: var(--ui_input_step_btn_disabled) !important;
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--ui_tooltip_icon) !important;
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--ui_input_label);
+}
+
+/* Various Fixes ──────────────────────────────────────────── */
+
+/* Invisible scrollbar in stMain */
+section[data-testid="stMain"]:hover {
+    scrollbar-width: 0px;
+    scrollbar-color: transparent transparent;
+}
+
+/* Gradient on the tab bar removed */
+div[data-baseweb="tab-list"]::after,
+div[data-baseweb="tab-list"]::before {
+    display: none !important;
+    background: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1657 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@300;500;600;700;800&display=swap');
+
+:root {
+    /* --- MAKIMA THEME PALETTE --- */
+    --mk_bg_deep: #1A1A1D;       /* Deepest Charcoal */
+    --mk_bg_surface: #1E1E22;    /* Sidebar Background */
+    --mk_bg_hover: #26262A;      /* Hover State */
+    
+    --mk_accent_red: #8B3A3A;    /* Makima Red (Muted) */
+    --mk_accent_gold: #C5A059;   /* Eye Gold (Focus/Icon) */
+    --mk_highlight: #D4A5A5;     /* Dusty Pink (Text Highlight) */
+    
+    --mk_text_main: #CFCFCF;     /* Off-white text */
+    --mk_text_muted: #85858A;    /* Subtitles/Closed state */
+    
+    --mk_border_subtle: #2D2D32; /* Separators */
+    --mk_shadow_soft: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color:       var(--mk_accent_gold, #C5A059) !important;   /* ← active module colour (The Eye) */
+    font-size:   1rem    !important;   /* ← module font size        */
+    font-weight: 700     !important;   /* ← module font weight      */
+    font-style:  normal  !important;   /* ← normal / italic         */
+    letter-spacing: 0.5px !important;  /* ← tracking adjustment     */
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.2) !important; /* Subtle gold glow */
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header
+ {
+    color:       var(--mk_highlight, #D4A5A5) !important;   /* ← active concept colour (Dusty Pink) */
+    font-size:   0.95rem !important;   /* ← concept font size       */
+    font-weight: 600     !important;   /* ← concept font weight     */
+    font-style:  normal  !important;   /* ← normal / italic         */
+    letter-spacing: 0.5px !important;  /* ← tracking adjustment     */
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color:       var(--mk_text_main, #CFCFCF) !important;   /* ← active lesson colour (Clinical White) */
+    font-size:   0.9rem  !important;   /* ← lesson font size        */
+    font-weight: 400     !important;   /* ← lesson font weight      */
+    font-style:  normal  !important;   /* ← normal / italic         */
+    letter-spacing: 0px  !important;   /* ← tracking adjustment     */
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary {
+    color:       var(--mk_text_muted, #85858A) !important;   /* ← disabled/inactive colour */
+    opacity:     0.6     !important;   /* ← sinks into the background */
+}
+/* ─────────────────────────────────────────────────────────────
+   SIDEBAR: THE BUREAU INTERFACE
+   Style: Low Contrast, Clinical, Authoritative
+   ───────────────────────────────────────────────────────────── */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* 1. Sidebar Container */
+section[data-testid="stSidebar"] {
+    background-color: var(--mk_bg_surface);
+    color: var(--mk_text_main);
+    border-right: 1px solid var(--mk_border_subtle); /* Defined edge */
+}
+
+/* 2. Collapse Button (The "Eye") */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: var(--mk_text_muted) !important;
+    transition: all 0.3s ease;
+}
+
+div[data-testid="stSidebarCollapseButton"] button:hover {
+    background-color: transparent !important; /* Remove generic block bg */
+}
+
+div[data-testid="stSidebarCollapseButton"] button:hover span[data-testid="stIconMaterial"] {
+    color: var(--mk_accent_gold) !important; /* Gold Eye glow */
+    text-shadow: 0 0 8px rgba(197, 160, 89, 0.4); 
+    transform: scale(1.1);
+}
+
+/* 3. APP Title (The "Authority") */
+.sidebar-title, .card-title {
+    font-family: 'Playfair Display', serif; /* If available, else inherits */
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px;
+    color: var(--mk_text_main) !important;  /* Underline accent */
+    padding-bottom: 10px;
+}
+
+/* App Title Icon */
+.sidebar-title .material-icons,
+.card-title .material-icons {
+    color: var(--mk_accent_red);
+    vertical-align: middle;
+    margin-right: 8px;
+    text-shadow: none; /* Clean look */
+}
+
+/* 4. Separator Line */
+section[data-testid="stSidebar"] hr {
+    background-color: var(--mk_border_subtle) !important;
+    height: 1px;
+    opacity: 0.5;
+    margin-top: 5px !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   NAVIGATION & EXPANDERS
+   ───────────────────────────────────────────────────────────── */
+
+/* Expander Header - CLOSED */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    color: var(--mk_text_muted) !important;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+/* Expander Header - HOVER */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: var(--mk_highlight) !important; /* Dusty Pink hover */
+}
+
+/* Expander Header - OPEN */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: var(--mk_bg_hover) !important;
+    color: var(--mk_text_main) !important;
+    border-radius: 4px;
+    border-left: 3px solid var(--mk_accent_gold); /* Gold indicator for open folder */
+}
+
+/* Sub-concept Headers (Disabled Buttons) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: var(--mk_accent_red) !important; /* Red labels */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    letter-spacing: 1.5px;
+    opacity: 0.8;
+} 
+
+/* ─────────────────────────────────────────────────────────────
+   LESSON BUTTONS
+   ───────────────────────────────────────────────────────────── */
+
+/* Inactive Lesson: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    color: var(--mk_text_muted) !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Inactive Lesson: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:hover {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid var(--mk_border_subtle) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:hover p {
+    color: var(--mk_highlight) !important; /* Pink text on hover */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   ACTIVE ELEMENT (The "Control" State)
+   This is the most important part of the theme.
+   ───────────────────────────────────────────────────────────── */
+
+/* Active Lesson: Container */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background: linear-gradient(90deg, rgba(139, 58, 58, 0.15) 0%, transparent 100%) !important;
+    border: none !important;
+    border-left: 3px solid var(--mk_accent_red) !important; /* The Makima Stripe */
+    border-radius: 0px 4px 4px 0px !important; /* Sharp left, rounded right */
+}
+
+/* Active Lesson: Text */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: var(--mk_text_main) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Active Lesson: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background: linear-gradient(90deg, rgba(139, 58, 58, 0.25) 0%, transparent 100%) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME: CONTROL & ORDER (MAKIMA INSPIRED)
+   PALETTE: Charcoal, Bruised Plum, Pale Pink, Dull Gold
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+    /* Core Backgrounds */
+    --makima-base: #1A1A1D;       /* Deep warm charcoal */
+    --makima-surface: #242428;    /* Card background */
+    --makima-overlay: rgba(36, 36, 40, 0.75); /* Glass tint */
+    
+    /* Accents */
+    --makima-red: #8B3A3A;        /* Muted crimson (The Tie/Coat) */
+    --makima-pink: #D4A5A5;       /* Desaturated rose (The Hair) */
+    --makima-gold: #C5A059;       /* Dull gold (The Eyes) */
+    
+    /* Text */
+    --makima-text-primary: #CFCFCF;
+    --makima-text-muted: #9E9E9E;
+    
+    /* Borders */
+    --makima-border-subtle: #2D2D32;
+    --makima-border-accent: rgba(139, 58, 58, 0.4);
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area Background - Adding a subtle "film grain" feel via gradient */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--makima-base);
+    background-image: radial-gradient(circle at 50% 50%, #1f1f23 0%, #1A1A1D 100%);
+    color: var(--makima-text-primary);
+}
+
+/* Sidebar Expand Button - The "Eye" */
+button[data-testid="stExpandSidebarButton"] {
+    transition: all 0.3s ease;
+}
+
+/* Default State: The Eye (Gold) watching */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: var(--makima-gold) !important; 
+    opacity: 0.8;
+}
+
+/* Hover State: Engagement (Red) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: var(--makima-red) !important;
+    transform: scale(1.1);
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: rgba(139, 58, 58, 0.1) !important; /* Faint red halo */
+    border: none !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title - Elegant & Authoritative */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: var(--makima-pink); /* Highlighting the title in the secondary color */
+    background-color: transparent;
+    font-family: 'Georgia', serif; /* Serif font for elegance */
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Lesson Card: The "Glass" Dossier */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: var(--makima-overlay);
+    backdrop-filter: blur(12px); /* The frosted glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--makima-border-subtle);
+    border-radius: 4px; /* Sharper corners for a "clinical" feel */
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Deep, soft shadow */
+}
+
+/* Lesson Card: Strong Text - The "Order" */
+section[data-testid="stMain"] .st-key-lesson_window strong {
+    color: var(--makima-gold);
+    font-weight: 600;
+}
+
+/* Lesson: Headers (H1-H6) */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--makima-gold);
+    text-transform: none !important;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.5px;
+    margin-top: 1.5rem;
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--makima-pink);
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Lesson Card: Tables - The "Report" */
+section[data-testid="stMain"] .st-key-lesson_window table {
+    border-collapse: separate; 
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid var(--makima-border-subtle);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Table Headers */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--makima-text-primary);
+    border-bottom: 1px solid var(--makima-red); /* Thin red line */
+    background-color: rgba(36, 36, 40, 0.9);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 12px;
+}
+
+/* Table Data */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--makima-text-muted);
+    border-bottom: 1px solid var(--makima-border-subtle);
+    padding: 10px 12px;
+    font-size: 0.95rem;
+}
+
+/* Striped rows for readability (Very subtle red tint) */
+section[data-testid="stMain"] .st-key-lesson_window tr:nth-of-type(even) {
+    background-color: rgba(139, 58, 58, 0.03);
+}
+
+/* Scrollbar styling - Minimalist */
+.st-key-lesson_window::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.st-key-lesson_window::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.st-key-lesson_window::-webkit-scrollbar-thumb {
+    background-color: var(--makima-border-subtle);
+    border-radius: 3px;
+}
+
+.st-key-lesson_window::-webkit-scrollbar-thumb:hover {
+    background-color: var(--makima-red); /* Turns red when engaged */
+}
+
+/* -------------------------------------------------------------------------- */
+/* MAKIMA THEME: QUIZ VARIABLES                         */
+/* -------------------------------------------------------------------------- */
+:root {
+    /* Palette */
+    --mk-void:       #1A1A1D;  /* Deepest background */
+    --mk-surface:    #242428;  /* Card surface */
+    --mk-border:     #333336;  /* Subtle separators */
+    --mk-red:        #8B3A3A;  /* The Control Red (Muted) */
+    --mk-gold:       #C5A059;  /* The Eye Gold */
+    --mk-pink:       #D4A5A5;  /* Hair Pink (Highlights) */
+    --mk-text-main:  #CFCFCF;  /* Readability without glare */
+    --mk-text-dim:   #8A8A90;  /* Secondary text */
+}
+
+/* -------------------------------------------------------------------------- */
+/* 8. QUIZ TEST STATE                              */
+/* -------------------------------------------------------------------------- */
+
+/* 1. The Question 
+   We treat the question like a formal directive. 
+   Added a left accent border to guide the eye. */
+.st-key-question {
+    color: var(--mk-text-main) !important;
+    background-color: transparent;
+    padding-left: 1rem;
+    border-left: 3px solid var(--mk-red); /* Makima's Red Accent */
+    margin-bottom: 1.5rem;
+}
+
+.st-key-question p {
+    font-family: 'Inter', system-ui, sans-serif; /* Clean, modern */
+    font-weight: 600;
+    font-size: 1.25em; /* Slightly larger for hierarchy */
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+/* 2. The Answer Cards 
+   These are now interactive "plates" rather than just text boxes.
+   Low contrast background, high contrast on hover. */
+[class*="st-key-answer"] {
+    color: var(--mk-text-dim);
+    background-color: var(--mk-surface);
+    border: 1px solid var(--mk-border);
+    border-radius: 4px; /* Tighter radius = More professional/clinical */
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    
+    /* The Eyecandy Animation */
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover State for Answers:
+   The border turns Red, text brightens, and card lifts slightly. */
+[class*="st-key-answer"]:hover {
+    background-color: #2A2A2E; 
+    border-color: var(--mk-red);
+    color: var(--mk-text-main);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Soft depth */
+}
+
+/* Active/Selected State (Optional visual cue) */
+[class*="st-key-answer"]:active {
+    transform: translateY(0);
+    border-color: var(--mk-gold);
+}
+
+/* 3. The Option Letter (A, B, C, D) 
+   Styled to look like a stamp or classification code. */
+[class*="st-key-answer"] strong {
+    color: var(--mk-gold); /* The Eye color for focus */
+    font-family: 'JetBrains Mono', monospace; /* Technical feel */
+    font-size: 0.9em;
+    margin-right: 12px;
+    opacity: 0.9;
+}
+
+/* 4. Keyboard Shortcuts 
+   Styled to look like physical, backlit mechanical keys. */
+.key-hint {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    font-size: 0.75em;
+    
+    /* The Key Aesthetic */
+    color: var(--mk-pink); /* Subtle pink highlight */
+    background: linear-gradient(180deg, #2D2D32 0%, #1E1E22 100%);
+    border: 1px solid #3E3E42;
+    border-bottom-color: #1A1A1D; /* Deepening shadow */
+    
+    border-radius: 4px;
+    padding: 2px 6px;
+    box-shadow: 0 2px 0 #141417, 0 2px 4px rgba(0,0,0,0.4);
+    
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.keyboard-legend {
+    color: var(--mk-text-dim);
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.05em;
+    text-transform: uppercase; /* Authority */
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
+/* Feedback State: Public Safety Edition ──────────────────────── */
+:root {
+    /* The Makima Palette */
+    --mk-base: #1A1A1D;       /* Deepest Charcoal */
+    --mk-surface: #242428;    /* Card Surface */
+    --mk-crimson: #8B3A3A;    /* Makima Red (Muted) */
+    --mk-pink: #D4A5A5;       /* Hair Pink (Highlights) */
+    --mk-gold: #C5A059;       /* Eye Gold (Focus/Success) */
+    --mk-text-main: #CFCFCF;  /* Off-white text */
+    --mk-text-dim: #8A8A8E;   /* Subtitles */
+    --mk-border: #2D2D32;     /* Structural borders */
+    --mk-border-hover: #3E3E42;
+}
+
+/* 1. HERO METRIC BOXES (The Report) */
+/* Moving from "Glassmorphism" to "Clinical Cards" */
+.feedback-box {
+    background-color: var(--mk-surface);
+    border: 1px solid var(--mk-border);
+    /* Sharper radius for a more serious tone */
+    border-radius: 4px; 
+    /* Subtle, heavy shadow - grounded, not floating */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+    padding: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feedback-box:hover {
+    background-color: #2a2a2e;
+    border-color: var(--mk-border-hover);
+}
+
+.metric-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: var(--mk-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Wider spacing for authority */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-family: 'Playfair Display', serif; /* The "Elegant" touch */
+    font-size: 2.5rem;
+    font-weight: 400; /* Thinner weight looks more expensive */
+    color: var(--mk-text-main);
+    line-height: 1;
+}
+
+/* Status Specifics */
+/* PASSED: Uses the Eye Gold. It feels like "Compliance". */
+.feedback-box.status-passed {
+    border-left: 2px solid var(--mk-gold);
+}
+.feedback-box.status-passed .metric-value {
+    color: var(--mk-gold);
+    text-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+}
+
+/* FAILED: Uses the Makima Crimson. It feels like a "Breach". */
+.feedback-box.status-failed {
+    border-left: 2px solid var(--mk-crimson);
+}
+.feedback-box.status-failed .metric-value {
+    color: var(--mk-crimson);
+    text-shadow: 0 0 15px rgba(139, 58, 58, 0.2);
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 1.5rem;
+    opacity: 0.5;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* 2. QUESTION EXPANDERS (The Interrogation Files) */
+.st-key-feedback_list details {
+    border: 1px solid var(--mk-border) !important;
+    background: rgba(36, 36, 40, 0.5) !important;
+    border-radius: 4px !important;
+    margin-bottom: 8px;
+    transition: border-color 0.2s;
+}
+
+.st-key-feedback_list details:hover {
+    border-color: var(--mk-text-dim) !important;
+}
+
+.st-key-feedback_list summary {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--mk-text-main) !important;
+    padding: 0.5rem 1rem;
+}
+
+.st-key-feedback_list summary:hover {
+    color: var(--mk-pink) !important; /* Soft hover highlight */
+    background-color: transparent !important;
+}
+
+/* 3. ANSWER COMPARISON CARDS */
+.answer-card {
+    border-radius: 4px;
+    font-size: 0.9rem;
+    padding: 12px;
+    margin-top: 8px;
+    border-left: 2px solid transparent;
+}
+
+/* User's Answer Card */
+.answer-card.user-wrong {
+    background-color: rgba(139, 58, 58, 0.08); /* Very low opacity red */
+    border-left-color: var(--mk-crimson);
+    color: var(--mk-text-main);
+}
+
+.answer-card.user-correct {
+    background-color: rgba(197, 160, 89, 0.08); /* Low opacity gold */
+    border-left-color: var(--mk-gold);
+    color: var(--mk-text-main);
+}
+
+/* Correct Answer Key (The "Truth") */
+.answer-card.correct-key {
+    background-color: #1E1E22;
+    border: 1px solid var(--mk-border);
+    color: var(--mk-gold); /* Text is gold to signify truth */
+    font-family: 'Space Mono', monospace; /* Technical feel */
+}
+
+.answer-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--mk-text-dim);
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+/* 4. EXPLANATION BOX (The Whisper) */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: #1E1E22 !important;
+    /* The Pink accent represents Makima's softer side/manipulation */
+    border-left: 2px solid var(--mk-pink) !important; 
+    border-radius: 0 4px 4px 0 !important;
+    color: var(--mk-text-main) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-style: italic !important;
+    font-size: 0.95rem !important;
+    padding: 1rem 1.5rem !important;
+    box-shadow: inset 10px 0 20px -10px rgba(0,0,0,0.5);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE (THE BUREAU THEME)
+   ───────────────────────────────────────────────────────────── */
+
+/* Define scoped variables for this section for easy tweaking */
+.st-key-welcome_card {
+    --makima-red: #8B3A3A;
+    --makima-pink: #D4A5A5;
+    --eye-gold: #C5A059;
+    --void-dark: #1A1A1D;
+    --surface-grey: rgba(36, 36, 40, 0.85);
+}
+
+/* 1. The Card Container */
+/* We increase opacity slightly to ensure text is readable (Low Contrast Safety) */
+.st-key-welcome_card {
+    background: linear-gradient(
+        145deg, 
+        rgba(36, 36, 40, 0.9) 0%, 
+        rgba(26, 26, 29, 0.95) 100%
+    );
+    backdrop-filter: blur(12px); /* Heavier blur for a premium feel */
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* The Border: Subtle charcoal all around, but... */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    
+    /* The "Control" Accent: A thin, blood-red line only on top */
+    border-top: 2px solid var(--makima-red); 
+    
+    /* Shadow: Soft, layered shadows instead of one harsh black box */
+    box-shadow: 
+        0 10px 30px -10px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(139, 58, 58, 0.1); /* Faint red halo */
+        
+    border-radius: 12px; /* Slightly tighter radius for a more "clinical" look */
+    padding: 2rem; /* Add breathing room */
+}
+
+/* 2. The Main Title */
+.welcome-title {
+    /* Switch to Serif for Authority/Elegance */
+    font-family: 'Playfair Display', 'Georgia', serif; 
+    font-weight: 600;
+    font-size: 2.4rem;
+    
+    /* Off-white, not pure white, to reduce eye strain */
+    color: #E0E0E0; 
+    
+    /* No neon glow. A subtle lift instead. */
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0.5rem;
+}
+
+/* The Icon (The "Eye") */
+.welcome-title .material-icons {
+    font-size: 2.2rem;
+    color: var(--eye-gold); /* The iconic gold eyes */
+    vertical-align: middle;
+    margin-right: 12px;
+    opacity: 0.9;
+}
+
+/* 3. The Subtitle */
+.welcome-subtitle {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    
+    /* The "Hair" color - Desaturated Pink */
+    color: var(--makima-pink); 
+    
+    font-size: 0.95rem;
+    font-weight: 400;
+    
+    /* Wide tracking creates a "Cinematic" feel */
+    letter-spacing: 3px; 
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* 4. Custom Divider */
+/* Instead of a solid line, we use a fading gradient */
+.st-key-welcome_card hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+        to right,
+        rgba(139, 58, 58, 0),    /* Fade in */
+        rgba(139, 58, 58, 0.4),  /* Muted Red Center */
+        rgba(139, 58, 58, 0)     /* Fade out */
+    );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME VARIABLES: "The Control Devil"
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Base Colors */
+    --makima-bg-deep: #141417;       /* Void Black */
+    --makima-bg-surface: #1E1E22;    /* Charcoal Suit */
+    --makima-glass: rgba(30, 30, 34, 0.75);
+    
+    /* Accents */
+    --makima-red: #8B3A3A;           /* Dried Blood/Tie */
+    --makima-red-glow: rgba(139, 58, 58, 0.25);
+    --makima-pink: #D4A5A5;          /* Hair (Highlights) */
+    --makima-gold: #C5A059;          /* The Eyes (Focus) */
+    
+    /* Text */
+    --text-primary: #CFCFCF;         /* Silver */
+    --text-muted: #8A8A90;           /* Grey */
+    
+    /* Borders */
+    --border-subtle: rgba(255, 255, 255, 0.08);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The "Contract" Box)
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container */
+.st-key-generator_card {
+    background-color: var(--makima-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    
+    /* The border is dark, but the top has the "Red Control" line */
+    border: 1px solid var(--border-subtle);
+    border-top: 3px solid var(--makima-red);
+    
+    /* Deep, layered shadow for depth without "heaviness" */
+    box-shadow: 
+        0 4px 20px rgba(0,0,0,0.4),
+        0 0 0 1px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+        
+    border-radius: 12px; /* Slightly tighter radius for professional look */
+    animation: smoothRise 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: var(--text-primary);
+    font-family: 'Playfair Display', serif; /* Optional: Adds the elegance */
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    /* Gradient fade instead of solid line */
+    border: 0 !important;
+    height: 1px !important;
+    background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        var(--makima-red) 50%, 
+        transparent 100%
+    ) !important;
+    opacity: 0.4;
+    margin: 24px 0;
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    color: var(--makima-gold); /* The "Eye" watching you */
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
+}
+
+.gen-input-icon {
+    color: var(--makima-pink);
+    opacity: 0.8;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   STATUS & METRICS
+   ───────────────────────────────────────────────────────────── */
+
+/* Warning Box - "Public Safety Alert" style */
+.generator-warning {
+    color: #E6B6B6; 
+    background: linear-gradient(90deg, rgba(139,58,58,0.15) 0%, rgba(30,30,34,0) 100%);
+    border-left: 3px solid var(--makima-red);
+    border-radius: 4px;
+    padding: 12px 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Metric Stats Box */
+.generator-stat-box {
+    background: var(--makima-bg-deep);
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: 1px solid var(--border-subtle);
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Cinematic spacing */
+    font-weight: 600;
+}
+
+.stat-value {
+    color: var(--text-primary);
+    font-weight: 400; /* Thinner weights look more elegant */
+    font-size: 1.1em;
+}
+
+.stat-value-accent {
+    color: var(--makima-pink);
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+/* "Success" is no longer generic green. It is Gold/Restored Order. */
+.stat-value-success {
+    color: var(--makima-gold);
+    font-weight: 500;
+    font-size: 1.4em;
+    text-shadow: 0 0 15px rgba(197, 160, 89, 0.2);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   ANIMATIONS & CONSOLE
+   ───────────────────────────────────────────────────────────── */
+
+/* Loading/Spinner Icon */
+.spinner-icon {
+    color: var(--makima-red);
+    opacity: 0.8;
+    animation: hypnoticSpin 3s linear infinite;
+}
+
+@keyframes hypnoticSpin { 
+    0% { transform: rotate(0deg); opacity: 0.5; } 
+    50% { opacity: 1; }
+    100% { transform: rotate(360deg); opacity: 0.5; } 
+}
+
+@keyframes smoothRise { 
+    from { opacity: 0; transform: translateY(20px); filter: blur(5px); } 
+    to { opacity: 1; transform: translateY(0); filter: blur(0); } 
+}
+
+/* Console Log - The "Contract" Text */
+.generator-console {
+    background: #0F0F11; /* Pure void black */
+    border: 1px solid #2A2A2E;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace; /* Coding font */
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.8);
+    padding: 1rem;
+}
+
+.generator-console-step {
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    padding: 8px 0;
+    transition: background 0.2s ease;
+}
+
+.generator-console-step:hover {
+    background: rgba(255,255,255,0.02);
+}
+
+.generator-console-step:last-child {
+    border-bottom: none;
+}
+
+.console-icon {
+    color: var(--makima-red);
+    margin-right: 8px;
+}
+
+.console-title {
+    color: #E0E0E0;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.console-message {
+    color: var(--text-muted);
+    font-size: 0.85em;
+    margin-top: 4px;
+    margin-left: 24px; /* Indent to align with text, not icon */
+    border-left: 1px solid var(--makima-pink); /* Thin pink line guide */
+    padding-left: 10px;
+    opacity: 0.7;
+}
+
+/* Completion Screen */
+.completion-header {
+    color: var(--makima-gold); 
+    letter-spacing: 1px;
+}
+
+.completion-icon {
+    font-size: 36px;
+    filter: drop-shadow(0 0 8px rgba(197, 160, 89, 0.4));
+}
+
+:root {
+    /* Core Makima Palette */
+    --makima-red: #8B3A3A;
+    --makima-red-hover: #A34545;
+    --makima-red-glow: rgba(139, 58, 58, 0.4);
+    
+    --bureau-charcoal: #2D2D32;
+    --bureau-border: #3E3E42;
+    --hair-pink: #D4A5A5;
+    --eye-gold: #C5A059;
+    
+    /* Text */
+    --text-on-primary: #ECECEC; /* Not pure white */
+    --text-muted: #B0B0B0;
+    
+    /* Shape */
+    --ui-radius: 8px; /* Professional, slightly tighter than 12px */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   1. PRIMARY BUTTON (The "Control" State)
+   Matte Crimson, Authoritative, Subtle Red Glow
+   ───────────────────────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    background: var(--makima-red) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Subtle frosted top border */
+    color: var(--text-on-primary) !important;
+    border-radius: var(--ui-radius) !important;
+    
+    /* The "Eyecandy" depth - soft shadow, no harsh blacks */
+    box-shadow: 0 4px 12px var(--makima-red-glow), 
+                inset 0 1px 0 rgba(255,255,255,0.1) !important;
+    
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important; /* Slightly wider for authority */
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important; /* Smooth, distinct movement */
+}
+
+/* Hover State - Lifts slightly, gets warmer */
+button[kind="primary"]:hover {
+    background: var(--makima-red-hover) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px var(--makima-red-glow), 
+                inset 0 1px 0 rgba(255,255,255,0.2) !important;
+}
+
+/* Active State - precise press */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    transform: translateY(0) scale(0.98) !important;
+    box-shadow: 0 2px 5px var(--makima-red-glow) !important;
+}
+
+/* Focus State - The "Eye" (Gold Ring) */
+button[kind="primary"]:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px var(--bureau-charcoal), 
+                0 0 0 4px var(--eye-gold) !important; /* Double ring effect */
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background: #2A2A2E !important;
+    border-color: #3E3E42 !important;
+    color: #55555A !important;
+    box-shadow: none !important;
+    opacity: 0.7 !important;
+    cursor: not-allowed !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   2. SECONDARY BUTTON (The "Contract" State)
+   Charcoal, Professional, Pink Highlights on Hover
+   ───────────────────────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: var(--bureau-charcoal) !important;
+    border: 1px solid var(--bureau-border) !important;
+    color: var(--text-muted) !important;
+    border-radius: var(--ui-radius) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+    
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Hover State - This is where the personality shows */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background: #343438 !important; /* Slightly lighter charcoal */
+    border-color: var(--hair-pink) !important; /* The Makima Pink appears */
+    color: var(--hair-pink) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(212, 165, 165, 0.15) !important; /* Faint pink glow */
+}
+
+/* Active State */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    transform: translateY(0) !important;
+    background: var(--bureau-charcoal) !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+/* Focus State */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px var(--bureau-charcoal), 
+                0 0 0 4px var(--eye-gold) !important;
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background: transparent !important;
+    border-color: #2D2D32 !important;
+    color: #444448 !important;
+    opacity: 0.5 !important;
+}
+
+:root {
+    /* Core Palette */
+    --mak-bg-deep:   #1A1A1D;       /* Main Background */
+    --mak-surface:   #242428;       /* Card/Container Background */
+    --mak-red:       #8B3A3A;       /* Primary Accent (Dried Blood) */
+    --mak-red-glow:  rgba(139, 58, 58, 0.4);
+    --mak-pink:      #D4A5A5;       /* Secondary Accent (Pale) */
+    --mak-gold:      #C5A059;       /* Focus/Icon Accent */
+    --mak-text-main: #CFCFCF;       /* Low Contrast White */
+    --mak-text-sub:  #8E8E93;       /* Subtitles */
+    
+    /* Functional Defaults */
+    --prog-height:   6px;
+    --prog-radius:   3px;
+    --ui-trans:      all 0.3s ease; /* Smooth "Liquid" Transitions */
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* 1. PROGRESS BAR 
+   Concept: A "Life Bar". Sleek, dangerous, glowing. 
+*/
+.progress-container {
+    background-color: #2D2D32 !important; /* Darker than surface */
+    height: var(--prog-height);
+    border-radius: var(--prog-radius);
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    /* Inner shadow to make it look engraved/sunken */
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.5); 
+    border: 1px solid #3E3E42;
+}
+
+.progress-fill {
+    /* Gradient: Transition from the dark red to the pale pink */
+    background: linear-gradient(90deg, var(--mak-red) 0%, var(--mak-pink) 100%) !important;
+    height: 100%;
+    border-radius: var(--prog-radius);
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1); /* "Ease Out Quint" for mechanical feel */
+    /* subtle glowing pulse */
+    box-shadow: 0 0 8px var(--mak-red-glow) !important; 
+}
+
+/* 2. TAB AREA 
+   Concept: Bureaucratic Tabs. Minimalist. 
+   Focus on text, not heavy blocks.
+*/
+
+/* Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: transparent !important; /* Glassy/Clean */
+    color: var(--mak-text-sub) !important;
+    border-radius: 4px !important;
+    padding: 8px 16px !important;
+    margin-right: 8px;
+    border: 1px solid transparent !important;
+    transition: var(--ui-trans);
+    font-weight: 500;
+}
+
+/* Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    color: var(--mak-pink) !important; /* Text turns pink on hover */
+    border-color: rgba(212, 165, 165, 0.2) !important;
+}
+
+/* Active Tab */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: rgba(139, 58, 58, 0.15) !important; /* Very faint red tint */
+    color: var(--mak-text-main) !important;
+    border-bottom: none !important;
+    /* The "Control" Ring - Gold/Orange subtle border */
+    border: 1px solid var(--mak-red) !important;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2) !important;
+}
+
+/* Hide default bottom border line */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* 3. FILE UPLOADER (DROPZONE)
+   Concept: "Submit Report". Clinical and precise.
+*/
+
+/* Text Instructions */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: var(--mak-text-main);
+    font-family: 'Inter', sans-serif; /* Clean font */
+    font-weight: 500;
+}
+
+/* File size limit text (make it very subtle) */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: var(--mak-text-sub);
+    opacity: 0.6;
+    font-size: 0.85em;
+}
+
+/* The Dropzone Container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: rgba(36, 36, 40, 0.6); /* Semi-transparent surface */
+    /* Dashed border that isn't white - use the Charcoal Grey */
+    border: 1px dashed #4A4A50; 
+    border-radius: 6px;
+    transition: var(--ui-trans);
+}
+
+/* Dropzone Hover State (Crucial for interaction) */
+[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: var(--mak-pink); /* Border turns pink */
+    background-color: rgba(36, 36, 40, 0.9);
+}
+
+/* The "Browse Files" Button */
+[data-testid="stFileUploaderDropzone"] button {
+    width: auto; /* Don't force full width, keep it elegant */
+    padding: 0px 20px;
+    background-color: transparent;
+    color: var(--mak-gold); /* Gold text for action */
+    border: 1px solid var(--mak-gold);
+    border-radius: 4px;
+    transition: var(--ui-trans);
+}
+
+[data-testid="stFileUploaderDropzone"] button:hover {
+    background-color: var(--mak-gold);
+    color: var(--mak-bg-deep); /* Invert colors on hover */
+    box-shadow: 0 0 8px rgba(197, 160, 89, 0.4); /* Gold Glow */
+}
+
+/* Icon Color (The upload arrow) */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: var(--mak-red); /* The icon is Red */
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 5px var(--mak-red-glow));
+}
+
+:root {
+    /* --- The Bureau Palette --- */
+    --makima-base: #1A1A1D;       /* Deep Charcoal */
+    --makima-surface: #242428;    /* Card Surface */
+    --makima-red: #8B3A3A;        /* Muted Crimson */
+    --makima-red-dim: #4A2525;    /* Darker Red for backgrounds */
+    --makima-hair: #D4A5A5;       /* Dusty Rose/Pink */
+    --makima-eye: #C5A059;        /* Gold (Focus) */
+    --text-main: #CFCFCF;         /* Off-white */
+    --text-muted: #8F8F95;        /* Dimmed text */
+    
+    /* --- Dropdown Specifics --- */
+    --ui_input_radius: 6px;
+    
+    /* Closed State */
+    --ui_dropdown_closed_bg: #242428;
+    --ui_dropdown_closed_border: #3E3E42;
+    --ui_dropdown_closed_text: var(--text-main);
+    
+    /* Hover State */
+    --ui_dropdown_hover_bg: #2A2A2E;
+    --ui_dropdown_hover_border: var(--makima-red); /* Hints at control */
+    --ui_dropdown_hover_text: #EAEAEA;
+    
+    /* Open/Focus State */
+    --ui_dropdown_open_bg: #1A1A1D;
+    --ui_dropdown_open_border: var(--makima-eye); /* The "Eye" watching */
+    --ui_dropdown_open_text: var(--makima-hair);
+    
+    /* The List (Popover) */
+    --ui_list_bg: #1A1A1D;
+    --ui_list_border: 1px solid #3E3E42;
+    --ui_list_text: var(--text-main);
+    
+    /* List Item Selection */
+    --ui_list_selected_bg: var(--makima-red); 
+    --ui_list_selected_text: #1A1A1D; /* Dark text on Red bg for contrast */
+    
+    /* List Item Hover */
+    --ui_list_hover_bg: #2D2D32;
+    --ui_list_hover_text: var(--makima-hair);
+    
+    /* Scrollbars */
+    --ui_list_scrollbar_thumb: var(--makima-red-dim);
+    --ui_list_scrollbar_track: #1A1A1D;
+}
+
+/* ==========================================================================
+   DROPDOWN MENU (Makima Theme)
+   ========================================================================== */
+
+/* 1. RESET & CONTAINER
+   Removes default white backgrounds from the outer BaseWeb container */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* 2. THE INPUT BOX (Closed)
+   Clinical, sharp, professional. */
+[data-baseweb="select"] > div {
+    background-color: var(--ui_dropdown_closed_bg) !important;
+    border: 1px solid var(--ui_dropdown_closed_border) !important; /* Thinner border for elegance */
+    border-radius: var(--ui_input_radius) !important;
+    transition: all 0.2s ease-in-out !important; /* Smooth animation */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+}
+
+/* Text & Icons (Closed) */
+[data-baseweb="select"] div[class*="st-"], 
+[data-baseweb="select"] svg {
+    color: var(--ui_dropdown_closed_text) !important;
+    fill: var(--ui_dropdown_closed_text) !important;
+    transition: color 0.2s ease !important;
+}
+
+/* 3. HOVER STATE
+   When hovering, the border turns Makima Red, suggesting interactivity. */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--ui_dropdown_hover_bg) !important;
+    border-color: var(--ui_dropdown_hover_border) !important;
+    cursor: pointer !important;
+}
+
+[data-baseweb="select"]:hover div[class*="st-"], 
+[data-baseweb="select"]:hover svg {
+    color: var(--ui_dropdown_hover_text) !important;
+    fill: var(--ui_dropdown_hover_text) !important;
+}
+
+/* 4. OPEN / FOCUS STATE
+   When clicked, the border turns Gold (The Eye), signaling active focus. */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--ui_dropdown_open_bg) !important;
+    border-color: var(--ui_dropdown_open_border) !important;
+    box-shadow: 0 0 0 1px var(--ui_dropdown_open_border) !important; /* Double ring effect */
+}
+
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: var(--ui_dropdown_open_text) !important;
+    fill: var(--ui_dropdown_open_text) !important;
+}
+
+/* ==========================================================================
+   DROPDOWN LIST (The Popover)
+   ========================================================================== */
+
+/* 1. POPOVER CONTAINER 
+   Ensures the box floating above is dark and styled. */
+[data-baseweb="popover"],
+[data-baseweb="popover"] > div {
+    background-color: var(--ui_list_bg) !important;
+    box-shadow: none !important;
+
+}
+
+/* The actual scrolling list container */
+[data-testid="stSelectboxVirtualDropdown"] {
+    border: var(--ui_list_border) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important; /* Deep shadow for depth */
+    margin-top: 4px !important;
+}
+
+/* 2. LIST ITEMS (Standard) */
+[role="option"] {
+    background-color: transparent !important;
+    transition: background-color 0.15s ease, color 0.15s ease !important;
+    border-left: 2px solid transparent !important; /* Prep for hover effect */
+}
+
+[role="option"] div {
+    color: var(--ui_list_text) !important;
+}
+
+/* 3. LIST ITEMS (Hover) 
+   Highlights with a dark grey and a Pink text accent */
+[role="option"]:hover {
+    background-color: var(--ui_list_hover_bg) !important;
+    border-left: 2px solid var(--makima-hair) !important; /* Pink accent on left */
+}
+
+[role="option"]:hover div {
+    color: var(--ui_list_hover_text) !important;
+}
+
+/* 4. LIST ITEMS (Selected/Active) 
+   The item currently chosen. Uses Makima Red. */
+[role="option"][aria-selected="true"] {
+    background-color: var(--ui_list_selected_bg) !important;
+}
+
+[role="option"][aria-selected="true"] div {
+    color: var(--ui_list_selected_text) !important;
+    font-weight: 600 !important;
+}
+
+/* 5. SCROLLBARS 
+   Sleek, thin, and dark red. */
+[data-testid="stSelectboxVirtualDropdown"]::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+[data-testid="stSelectboxVirtualDropdown"]::-webkit-scrollbar-track {
+    background: var(--ui_list_scrollbar_track); 
+}
+
+[data-testid="stSelectboxVirtualDropdown"]::-webkit-scrollbar-thumb {
+    background: var(--ui_list_scrollbar_thumb); 
+    border-radius: 3px;
+}
+
+[data-testid="stSelectboxVirtualDropdown"]::-webkit-scrollbar-thumb:hover {
+    background: var(--makima-red); 
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME VARIABLES: MAKIMA / PUBLIC SAFETY
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Palette */
+    --makima-red: #8B3A3A;
+    --makima-red-dim: #5c2b2b;
+    --eye-gold: #C5A059;
+    --hair-pink: #D4A5A5;
+    --charcoal-base: #1A1A1D;
+    --charcoal-surface: #242428;
+    --charcoal-input: #1E1E22;
+    --text-primary: #CFCFCF;
+    --text-muted: #8F8F94;
+    
+    /* Component Variables */
+    --ui_popover_bg: var(--charcoal-surface);
+    --ui_popover_border: 1px solid #3E3E42;
+    --ui_popover_text: var(--text-primary);
+    --ui_popover_width: 250px; /* Adjust as needed */
+    
+    --ui_input_radius: 4px; /* Sharper corners for a professional/clinical look */
+    --ui_input_bg_normal: var(--charcoal-input);
+    --ui_input_bg_hover: #26262b;
+    --ui_input_bg_focus: #26262b;
+    
+    --ui_input_text_normal: var(--text-primary);
+    --ui_input_text_hover: #FFFFFF;
+    
+    /* The Logic: Muted border normal -> Red on Hover -> Gold on Focus */
+    --ui_input_border_normal: 1px solid #2D2D32;
+    --ui_input_border_hover: 1px solid var(--makima-red); 
+    --ui_input_border_focus: 1px solid var(--eye-gold);
+    
+    --ui_input_scrollbar_thumb: var(--makima-red);
+    --ui_input_step_btn_disabled: #3E3E42;
+    --ui_tooltip_icon: var(--text-muted);
+    --ui_input_label: var(--text-muted);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   1. BUTTON DROPDOWN POPOVER (The "Secret File")
+   ───────────────────────────────────────────────────────────── */
+
+/* Popover: Container & Geometry */
+[data-testid="stPopoverBody"] {
+    width: var(--ui_popover_width) !important;  
+    max-width: var(--ui_popover_width) !important;
+    border: var(--ui_popover_border) !important;
+    border-radius: 6px !important; /* Slightly distinct from inputs */
+    
+    /* Glassmorphism Logic */
+    background-color: rgba(36, 36, 40, 0.95) !important; /* High opacity surface */
+    backdrop-filter: blur(10px);
+    
+    /* Layered shadow for depth without high contrast */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 
+                0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Popover: Internal Backgrounds */
+[data-testid="stPopoverBody"],
+[data-testid="stPopoverBody"] > div {
+    color: var(--ui_popover_text);
+}
+
+/* Popover: Text Typography */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--ui_popover_text) !important;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+/* Popover: Button Interaction Fixes */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+    border-color: var(--eye-gold) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   2. TEXT FIELDS & INPUTS (The "Bureaucratic Forms")
+   ───────────────────────────────────────────────────────────── */
+
+/* Global Transition for Smoothness (The "Liquid" feel) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"],
+div[data-baseweb="base-input"] {
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Root Elements & Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: var(--ui_input_radius);
+    /* Subtle inset shadow to make inputs look "recessed" into the page */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.25); 
+}
+
+/* --- BACKGROUNDS --- */
+
+/* Normal State */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+div[data-testid="stNumberInputContainer"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: var(--ui_input_bg_normal) !important;
+} 
+
+/* Hover State */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    background-color: var(--ui_input_bg_hover) !important;
+}
+
+/* Focus State */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    background-color: var(--ui_input_bg_focus) !important;
+}
+
+/* --- BORDERS & GLOWS --- */
+
+/* Normal Border */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: var(--ui_input_border_normal) !important;
+}
+
+/* Hover Border (Makima Red - Subtle Warning) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: var(--ui_input_border_hover) !important;
+    /* Faint red glow on hover */
+    box-shadow: 0 0 8px rgba(139, 58, 58, 0.15); 
+}
+
+/* Focus Border (Eye Gold - Total Control) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: var(--ui_input_border_focus) !important;
+    /* Gold glow on focus */
+    box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.1), 0 0 10px rgba(197, 160, 89, 0.2);
+}
+
+/* --- TEXT TYPOGRAPHY --- */
+
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--ui_input_text_normal) !important;
+    font-family: 'Inter', sans-serif; /* Recommended font */
+}
+
+/* Highlighting Text Selection (Makima Style) */
+::selection {
+    background: var(--makima-red);
+    color: #fff;
+}
+
+/* Placeholder Text Styling */
+input::placeholder, textarea::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 0.5;
+}
+
+/* --- SCROLLBARS (For TextAreas) --- */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_input_scrollbar_thumb) transparent;
+}
+
+/* --- NUMBER INPUT BUTTONS --- */
+
+/* Remove default borders on the step buttons to blend them */
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    border: none !important;
+    border-left: 1px solid #2D2D32 !important; /* Internal separator */
+}
+
+/* Icon Color */
+button[data-testid="stNumberInputStepDown"] svg,
+button[data-testid="stNumberInputStepUp"] svg {
+    fill: var(--text-muted) !important;
+}
+
+/* Icon Hover */
+button[data-testid="stNumberInputStepDown"]:hover svg,
+button[data-testid="stNumberInputStepUp"]:hover svg {
+    fill: var(--eye-gold) !important;
+}
+
+/* Disabled State */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: var(--ui_input_step_btn_disabled) !important;
+}
+
+/* --- MISC UI ELEMENTS --- */
+
+/* Tooltip Icon - Subtle & unobtrusive */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--ui_tooltip_icon) !important;
+    opacity: 0.7;
+}
+[data-testid="stTooltipIcon"]:hover svg {
+    stroke: var(--eye-gold) !important;
+    opacity: 1;
+}
+
+/* Input Labels - Professional Caps */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--ui_input_label);
+    font-size: 0.85rem;
+    text-transform: uppercase; /* Bureaucratic feel */
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+/* Sidebar Layout Fixes (From your request) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+div[data-testid="stPopoverBody"] > div {
+        background-color: transparent !important; /* Make it transparent */
+        /* OR specific color */
+        /* background-color: #f0f2f6 !important; */
+        
+    }

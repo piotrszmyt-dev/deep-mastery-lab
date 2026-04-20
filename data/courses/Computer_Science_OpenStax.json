@@ -1,0 +1,834 @@
+{
+  "L01": {
+    "module_id": "M01",
+    "module_title": "History of Computing",
+    "module_subtitle": "Explore the origins and early evolution of computer science.",
+    "lesson_header": "Computer Science",
+    "lesson_title": "Defining the Field and Impact of Computer Science (1)",
+    "lesson_content": [
+      {
+        "id": "P001",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P001"
+    ],
+    "type": "lesson",
+    "next": "L02"
+  },
+  "L02": {
+    "module_id": "M01",
+    "module_title": "History of Computing",
+    "module_subtitle": "Explore the origins and early evolution of computer science.",
+    "lesson_header": "Computer Science",
+    "lesson_title": "The Historical Foundations of Modern Computing (2)",
+    "lesson_content": [
+      {
+        "id": "P002",
+        "questions": 6
+      }
+    ],
+    "source_ids": [
+      "P002"
+    ],
+    "type": "lesson",
+    "next": "L03"
+  },
+  "L03": {
+    "module_id": "M01",
+    "module_title": "History of Computing",
+    "module_subtitle": "Explore the origins and early evolution of computer science.",
+    "lesson_header": "The Early History of Computing",
+    "lesson_title": "From Ancient Tools to the Concept of Algorithms (1)",
+    "lesson_content": [
+      {
+        "id": "P003",
+        "questions": 16
+      }
+    ],
+    "source_ids": [
+      "P003"
+    ],
+    "type": "lesson",
+    "next": "L04"
+  },
+  "L04": {
+    "module_id": "M01",
+    "module_title": "History of Computing",
+    "module_subtitle": "Explore the origins and early evolution of computer science.",
+    "lesson_header": "The Early History of Computing",
+    "lesson_title": "Understanding Algorithms Through Binary Search (2)",
+    "lesson_content": [
+      {
+        "id": "P004",
+        "questions": 7
+      }
+    ],
+    "source_ids": [
+      "P004"
+    ],
+    "type": "lesson",
+    "next": "L05"
+  },
+  "L05": {
+    "module_id": "M01",
+    "module_title": "History of Computing",
+    "module_subtitle": "Explore the origins and early evolution of computer science.",
+    "lesson_header": "The Early History of Computing",
+    "lesson_title": "Everyday Algorithms: The Example of a Recipe (3)",
+    "lesson_content": [
+      {
+        "id": "P005",
+        "questions": 5
+      }
+    ],
+    "source_ids": [
+      "P005"
+    ],
+    "type": "lesson",
+    "next": "L06"
+  },
+  "L06": {
+    "module_id": "M01",
+    "module_title": "History of Computing",
+    "module_subtitle": "Explore the origins and early evolution of computer science.",
+    "lesson_header": "The Early History of Computing",
+    "lesson_title": "Logarithms and Calculating Machines of the 1600s (4)",
+    "lesson_content": [
+      {
+        "id": "P006",
+        "questions": 4
+      }
+    ],
+    "source_ids": [
+      "P006"
+    ],
+    "type": "lesson",
+    "next": "M01-SYNTHESIS"
+  },
+  "M01-SYNTHESIS": {
+    "module_id": "M01",
+    "module_title": "History of Computing",
+    "module_subtitle": "Explore the origins and early evolution of computer science.",
+    "lesson_title": "Module Summary: History of Computing",
+    "type": "module_synthesis",
+    "children_ids": [
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06"
+    ],
+    "next": "L07"
+  },
+  "L07": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_header": "Computer Science OpenStax",
+    "lesson_title": "Babbage's Difference Engine and Automating Calculations (1)",
+    "lesson_content": [
+      {
+        "id": "P007",
+        "questions": 4
+      }
+    ],
+    "source_ids": [
+      "P007"
+    ],
+    "type": "lesson",
+    "next": "L08"
+  },
+  "L08": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_header": "Computer Science OpenStax",
+    "lesson_title": "The Analytical Engine and Ada Lovelace's Programming (2)",
+    "lesson_content": [
+      {
+        "id": "P008",
+        "questions": 5
+      }
+    ],
+    "source_ids": [
+      "P008"
+    ],
+    "type": "lesson",
+    "next": "L09"
+  },
+  "L09": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_header": "Computer Science OpenStax",
+    "lesson_title": "Hollerith's Punch Card Machine and the 1890 Census (3)",
+    "lesson_content": [
+      {
+        "id": "P009",
+        "questions": 4
+      }
+    ],
+    "source_ids": [
+      "P009"
+    ],
+    "type": "lesson",
+    "next": "L10"
+  },
+  "L10": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_header": "Computer Science OpenStax",
+    "lesson_title": "Early Computing Machines and the Advent of Digital Computers (4)",
+    "lesson_content": [
+      {
+        "id": "P010",
+        "questions": 7
+      }
+    ],
+    "source_ids": [
+      "P010"
+    ],
+    "type": "lesson",
+    "next": "L11"
+  },
+  "L11": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_header": "Computer Science OpenStax",
+    "lesson_title": "The Emergence of Computer Science as an Academic Discipline (5)",
+    "lesson_content": [
+      {
+        "id": "P011",
+        "questions": 7
+      }
+    ],
+    "source_ids": [
+      "P011"
+    ],
+    "type": "lesson",
+    "next": "M02-CP1"
+  },
+  "M02-CP1": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_title": "Checkpoint 1: Defining Computer Science",
+    "type": "module_checkpoint",
+    "children_ids": [
+      "L07",
+      "L08",
+      "L09",
+      "L10",
+      "L11"
+    ],
+    "next": "L12"
+  },
+  "L12": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_header": "Computer Science OpenStax",
+    "lesson_title": "Richard Bellman and the Invention of Dynamic Programming (6)",
+    "lesson_content": [
+      {
+        "id": "P012",
+        "questions": 9
+      }
+    ],
+    "source_ids": [
+      "P012"
+    ],
+    "type": "lesson",
+    "next": "L13"
+  },
+  "L13": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_header": "What Is Computer Science?",
+    "lesson_title": "George Forsythe Defines Computer Science and Algorithms (1)",
+    "lesson_content": [
+      {
+        "id": "P013",
+        "questions": 5
+      }
+    ],
+    "source_ids": [
+      "P013"
+    ],
+    "type": "lesson",
+    "next": "L14"
+  },
+  "L14": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_header": "What Is Computer Science?",
+    "lesson_title": "Computer Science Encompasses People and Technology (2)",
+    "lesson_content": [
+      {
+        "id": "P014",
+        "questions": 5
+      }
+    ],
+    "source_ids": [
+      "P014"
+    ],
+    "type": "lesson",
+    "next": "L15"
+  },
+  "L15": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_header": "What Is Computer Science?",
+    "lesson_title": "Debating the Definition and Focus of Computer Science (3)",
+    "lesson_content": [
+      {
+        "id": "P015",
+        "questions": 9
+      }
+    ],
+    "source_ids": [
+      "P015"
+    ],
+    "type": "lesson",
+    "next": "L16"
+  },
+  "L16": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_header": "What Is Computer Science?",
+    "lesson_title": "Military Research and the Origins of Computing Innovations (4)",
+    "lesson_content": [
+      {
+        "id": "P016",
+        "questions": 2
+      }
+    ],
+    "source_ids": [
+      "P016"
+    ],
+    "type": "lesson",
+    "next": "M02-SYNTHESIS"
+  },
+  "M02-SYNTHESIS": {
+    "module_id": "M02",
+    "module_title": "Defining Computer Science",
+    "module_subtitle": "Understand the formalization and core scope of the field.",
+    "lesson_title": "Module Summary: Defining Computer Science",
+    "type": "module_synthesis",
+    "children_ids": [
+      "L07",
+      "L08",
+      "L09",
+      "L10",
+      "L11",
+      "L12",
+      "L13",
+      "L14",
+      "L15",
+      "L16"
+    ],
+    "next": "L17"
+  },
+  "L17": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "What Is a Computer?",
+    "lesson_title": "Hardware Components: Processor, Memory, Network, and Storage (1)",
+    "lesson_content": [
+      {
+        "id": "P017",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P017"
+    ],
+    "type": "lesson",
+    "next": "L18"
+  },
+  "L18": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "What Is a Computer?",
+    "lesson_title": "Digital Electronics and Physical Materials in Computers (2)",
+    "lesson_content": [
+      {
+        "id": "P018",
+        "questions": 9
+      }
+    ],
+    "source_ids": [
+      "P018"
+    ],
+    "type": "lesson",
+    "next": "L19"
+  },
+  "L19": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "What Is a Computer?",
+    "lesson_title": "Early Computers: ENIAC, Vacuum Tubes, and General-Purpose Design (3)",
+    "lesson_content": [
+      {
+        "id": "P019",
+        "questions": 15
+      }
+    ],
+    "source_ids": [
+      "P019"
+    ],
+    "type": "lesson",
+    "next": "L20"
+  },
+  "L20": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "What Is a Computer?",
+    "lesson_title": "Software, Turing Completeness, and Programming Languages (4)",
+    "lesson_content": [
+      {
+        "id": "P020",
+        "questions": 11
+      }
+    ],
+    "source_ids": [
+      "P020"
+    ],
+    "type": "lesson",
+    "next": "L21"
+  },
+  "L21": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "What Is a Computer?",
+    "lesson_title": "Theoretical Computer Science and the Limits of Computation (5)",
+    "lesson_content": [
+      {
+        "id": "P021",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P021"
+    ],
+    "type": "lesson",
+    "next": "M03-CP1"
+  },
+  "M03-CP1": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_title": "Checkpoint 1: Computers and Society",
+    "type": "module_checkpoint",
+    "children_ids": [
+      "L17",
+      "L18",
+      "L19",
+      "L20",
+      "L21"
+    ],
+    "next": "L22"
+  },
+  "L22": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "What Is a Computer?",
+    "lesson_title": "Comparing Human and Computer Capabilities and Limitations (6)",
+    "lesson_content": [
+      {
+        "id": "P022",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P022"
+    ],
+    "type": "lesson",
+    "next": "L23"
+  },
+  "L23": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "What Is a Computer?",
+    "lesson_title": "Evolving Perspectives: Social Values and Hardware in Computing (7)",
+    "lesson_content": [
+      {
+        "id": "P023",
+        "questions": 12
+      }
+    ],
+    "source_ids": [
+      "P023"
+    ],
+    "type": "lesson",
+    "next": "L24"
+  },
+  "L24": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "The Capabilities and Limitations of Computer Science",
+    "lesson_title": "Computers as Tools for Social Change and Education (1)",
+    "lesson_content": [
+      {
+        "id": "P024",
+        "questions": 5
+      }
+    ],
+    "source_ids": [
+      "P024"
+    ],
+    "type": "lesson",
+    "next": "L25"
+  },
+  "L25": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "The Capabilities and Limitations of Computer Science",
+    "lesson_title": "LOGO and Turtle Graphics for Learning Through Programming (2)",
+    "lesson_content": [
+      {
+        "id": "P025",
+        "questions": 13
+      }
+    ],
+    "source_ids": [
+      "P025"
+    ],
+    "type": "lesson",
+    "next": "L26"
+  },
+  "L26": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "The Capabilities and Limitations of Computer Science",
+    "lesson_title": "The Origins and Narrow Focus of Computer Science Education (3)",
+    "lesson_content": [
+      {
+        "id": "P026",
+        "questions": 11
+      }
+    ],
+    "source_ids": [
+      "P026"
+    ],
+    "type": "lesson",
+    "next": "L27"
+  },
+  "L27": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_header": "The Capabilities and Limitations of Computer Science",
+    "lesson_title": "The Ongoing Challenge to Integrate Computers in Learning (4)",
+    "lesson_content": [
+      {
+        "id": "P027",
+        "questions": 4
+      }
+    ],
+    "source_ids": [
+      "P027"
+    ],
+    "type": "lesson",
+    "next": "M03-SYNTHESIS"
+  },
+  "M03-SYNTHESIS": {
+    "module_id": "M03",
+    "module_title": "Computers and Society",
+    "module_subtitle": "Examine the capabilities and social impact of computing.",
+    "lesson_title": "Module Summary: Computers and Society",
+    "type": "module_synthesis",
+    "children_ids": [
+      "L17",
+      "L18",
+      "L19",
+      "L20",
+      "L21",
+      "L22",
+      "L23",
+      "L24",
+      "L25",
+      "L26",
+      "L27"
+    ],
+    "next": "L28"
+  },
+  "L28": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_header": "Computers and Racial Justice",
+    "lesson_title": "Hidden Figures and the Untold Histories in Computing (1)",
+    "lesson_content": [
+      {
+        "id": "P028",
+        "questions": 6
+      }
+    ],
+    "source_ids": [
+      "P028"
+    ],
+    "type": "lesson",
+    "next": "L29"
+  },
+  "L29": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_header": "Computers and Racial Justice",
+    "lesson_title": "Pioneering Black Technologists and Their Erased Contributions (2)",
+    "lesson_content": [
+      {
+        "id": "P029",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P029"
+    ],
+    "type": "lesson",
+    "next": "L30"
+  },
+  "L30": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_header": "Computers and Racial Justice",
+    "lesson_title": "Systemic Barriers and Identity in the Tech Industry (3)",
+    "lesson_content": [
+      {
+        "id": "P030",
+        "questions": 8
+      }
+    ],
+    "source_ids": [
+      "P030"
+    ],
+    "type": "lesson",
+    "next": "L31"
+  },
+  "L31": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_header": "Computers and Racial Justice",
+    "lesson_title": "Building Black-Centered Technologies and Cultural Platforms (4)",
+    "lesson_content": [
+      {
+        "id": "P031",
+        "questions": 9
+      }
+    ],
+    "source_ids": [
+      "P031"
+    ],
+    "type": "lesson",
+    "next": "L32"
+  },
+  "L32": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_header": "Computers and Racial Justice",
+    "lesson_title": "The Digital Divide and Inequitable Access to Technology (5)",
+    "lesson_content": [
+      {
+        "id": "P032",
+        "questions": 13
+      }
+    ],
+    "source_ids": [
+      "P032"
+    ],
+    "type": "lesson",
+    "next": "M04-CP1"
+  },
+  "M04-CP1": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_title": "Checkpoint 1: Computing for Equity",
+    "type": "module_checkpoint",
+    "children_ids": [
+      "L28",
+      "L29",
+      "L30",
+      "L31",
+      "L32"
+    ],
+    "next": "L33"
+  },
+  "L33": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_header": "Computers and Global Development",
+    "lesson_title": "Designing Technology for Underserved Global Communities",
+    "lesson_content": [
+      {
+        "id": "P033",
+        "questions": 12
+      }
+    ],
+    "source_ids": [
+      "P033"
+    ],
+    "type": "lesson",
+    "next": "L34"
+  },
+  "L34": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_header": "Computer Science OpenStax",
+    "lesson_title": "Critiquing Charismatic Technologies for Global Development (1)",
+    "lesson_content": [
+      {
+        "id": "P034",
+        "questions": 15
+      }
+    ],
+    "source_ids": [
+      "P034"
+    ],
+    "type": "lesson",
+    "next": "L35"
+  },
+  "L35": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_header": "Computer Science OpenStax",
+    "lesson_title": "Sociopolitical Challenges in Computing for Global Development (2)",
+    "lesson_content": [
+      {
+        "id": "P035",
+        "questions": 5
+      }
+    ],
+    "source_ids": [
+      "P035"
+    ],
+    "type": "lesson",
+    "next": "L36"
+  },
+  "L36": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_header": "Computer Science OpenStax",
+    "lesson_title": "Design Justice and Building Technology with Communities (3)",
+    "lesson_content": [
+      {
+        "id": "P036",
+        "questions": 6
+      }
+    ],
+    "source_ids": [
+      "P036"
+    ],
+    "type": "lesson",
+    "next": "L37"
+  },
+  "L37": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_header": "Computer Science OpenStax",
+    "lesson_title": "Sharing Technological Progress Across Global Regions (4)",
+    "lesson_content": [
+      {
+        "id": "P037",
+        "questions": 5
+      }
+    ],
+    "source_ids": [
+      "P037"
+    ],
+    "type": "lesson",
+    "next": "M04-SYNTHESIS"
+  },
+  "M04-SYNTHESIS": {
+    "module_id": "M04",
+    "module_title": "Computing for Equity",
+    "module_subtitle": "Analyze technology's role in justice and global development.",
+    "lesson_title": "Module Summary: Computing for Equity",
+    "type": "module_synthesis",
+    "children_ids": [
+      "L28",
+      "L29",
+      "L30",
+      "L31",
+      "L32",
+      "L33",
+      "L34",
+      "L35",
+      "L36",
+      "L37"
+    ],
+    "next": "FINAL_TEST"
+  },
+  "FINAL_TEST": {
+    "lesson_title": "Final Test",
+    "type": "final_test",
+    "next": null
+  },
+  "_master_index": {
+    "P001": "The field of computer science (CS) is the study of computing, which includes all phenomena related to computers, such as the Internet. With foundations in engineering and mathematics, computer science focuses on studying algorithms. An algorithm is a sequence of precise instructions that enables computing. This includes components computers use to process information. By studying and applying algorithms, computer science creates applications and solutions that impact all areas of society. For example, computer science developed the programs that enable online shopping, texting with friends, streaming music, and other technological processes.",
+    "P002": "While computers are common today, they weren’t always this pervasive. For those whose lives have been shaped by computer technology, it can sometimes seem like computer technology is ahistorical: computing often focuses on rapid innovation and improvement, wasting no time looking back and reflecting on the past. Yet the foundations of computer science defined over 50, and as much as 100, years ago very much shape what is possible with computing today.",
+    "P003": "The first computing devices were not at all like the computers we know today. They were physical calculation devices such as the abacus, which first appeared in many societies across the world thousands of years ago. They allowed people to tally, count, or add numbers (). Today, abaci are still used in some situations, such as helping small children learn basic arithmetic, keeping score in games, and as a calculating tool for people with visual impairments. However, abaci are not common today because of the invention of number systems such as the Arabic number system (0, 1, 2, 3, . . .), which included zero and place values that cannot be computed with abaci. The concept of an algorithm was also invented around this time. Algorithms use inputs and a finite number of steps to carry out arithmetic operations like addition, subtraction, multiplication, and division, and produce outputs used in computing. Today’s computers still rely on the same foundations of numbers, calculations, and algorithms, except at the scale of billions of numbers and billions of calculations per second.",
+    "P004": "To introduce a concrete example of an algorithm, let us consider binary search algorithm, which is used to locate a number in a sorted array of integers efficiently. The algorithm operates by repeatedly dividing the search interval in half to perform the search. If the number being searched is less than the integer in the middle of the interval, the interval is narrowed to the lower half. In the alternative, the interval is narrowed to the upper half. The algorithm repeatedly checks until the number is found or the interval is empty.",
+    "P005": "Algorithms may sound complicated, but they can be quite simple. For example, recipes to prepare food are algorithms with precise directions for ingredient amounts, the process to combine these, and the temperatures and cooking methods needed to transform the combined ingredients into a specific dish. The dish is the output produced by following the algorithm of a recipe.",
+    "P006": "The next major development in the evolution of computing occurred in 1614 when John Napier, a Scottish mathematician, developed logarithms, which express exponents by denoting the power that a number must be raised to obtain another value. Logarithms provided a shortcut for making tedious calculations and became the foundation for multiple analog calculating machines invented during the 1600s.",
+    "P007": "Scientists continued to explore different ways to speed up or automate calculations. In the 1820s, English mathematician Charles Babbage invented the Difference Engine with the goal of preventing human errors in manual calculations. The Difference Engine provided a means to automate the calculations of polynomial functions and astronomical calculations.",
+    "P008": "Babbage followed the Difference Engine with his invention of the Analytical Engine. With assistance from Ada Lovelace, the Analytical Engine was program-controlled and included features like an integrated memory and an arithmetic logic unit. Lovelace used punched cards to create sequencing instructions that could be read by the Analytical Engine to automatically perform any calculation included in the programming code. With her work on the Analytical Engine, Lovelace became the world’s first computer programmer.",
+    "P009": "The next major development in computing occurred in the late 1800s when Herman Hollerith, an employee of the U.S. Census Office, developed a machine that could punch cards and count them. In 1890, Hollerith’s invention was used to tabulate and prepare statistics for the U.S. census.",
+    "P010": "By the end of the 1800s and leading into the early 1900s, calculators, adding machines, typewriters, and related machines became more commonplace, setting the stage for the invention of the computer. In the 1940s, multiple computers became available, including IBM’s Harvard Mark 1. These were the forerunners to the advent of the digital computer in the 1950s, which changed everything and evolved into the computers and related technology we have today.",
+    "P011": "Around this time, computer science emerged as an academic discipline rooted in the principles of mathematics, situated primarily in elite institutions, and funded by demand from the military for use in missile guidance systems, airplanes, and other military applications. As computers could execute programs faster than humans, computer science replaced human-powered calculation with computer-powered problem-solving methods. In this way, the earliest academic computer scientists envisioned computer science as a discipline that was far more intellectual and cognitive compared to the manual calculation work that preceded it.",
+    "P012": "Richard Bellman was a significant contributor to this effort. A mathematics professor at Princeton and later at Stanford in the 1940s, Bellman later went to work for the Rand Corporation, where he studied the theory of multistage decision processes. In 1953, Bellman invented dynamic programming,1 which is a mathematical optimization methodology and a technique for computer programming. With dynamic programming, complex problems are divided into more manageable subproblems. Each subproblem is solved, and the results are stored, ultimately resulting in a solution to the overall complex problem.2 With this approach, Bellman helped revolutionize computer programming and enable computer science to become a robust field.",
+    "P013": "The term computer science was popularized by George E. Forsythe in 1961. A mathematician who founded Stanford University’s computer science department, Forsythe defined computer science as “the theory of programming, numerical analysis, data processing, and the design of computer systems.” He also argued that computer science was distinguished from other disciplines by the emphasis on algorithms, which are essential for effective computer programming.3",
+    "P014": "Computer science is not only about the study of how computers work, but also everything surrounding computers, including the people who design computers, the people who write programs that run on computers, the people who test the programs to ensure correctness, and the people who are directly and indirectly affected by computers. In this way, computer science is as much about people and how they work with computers as it is about just computers.",
+    "P015": "Not everyone agrees with this definition. Some people argue that computer science is more about computers or software than the people it affects. However, even if we were to study just the “things” of computer science, the people are still there. When someone designs a computer system, they are thinking about what kinds of programs people might want to run. Typically, effort is made to design the computer system so it is more efficient at running certain kinds of programs. A computer optimized for calculating missile trajectories, for example, won’t be optimized for running social media apps.",
+    "P016": "Many computing innovations were initially developed for military research and communication purposes, including the predecessor to the Internet, the ARPANET",
+    "P017": "While computer science is about much more than just computers, it helps to know a bit more about computers because they are an important component of computer science. All computers are made of physical, real-world material that we refer to as hardware. Hardware—which has four components, including processor, memory, network, and storage—is the computer component that enables computations. The processor can be regarded as the computer’s “brain,” as it follows instructions from algorithms and processes data. The memory is a means of addressing information in a computer by storing it in consistent locations, while the network refers to the various technological devices that are connected and share information. The hardware and physical components of a computer that permanently house a computer’s data are called storage.",
+    "P018": "One way to understand computers is from a hardware perspective: computers leverage digital electronics and the physics of materials used to develop transistors. For example, many of today’s computers rely on the physical properties of a brittle, crystalline metalloid called silicon, which makes it suitable for representing information. The batteries that power many of today’s smartphones and mobile devices rely on lithium, a soft, silvery metal mostly harvested from minerals in Australia, Zimbabwe, and Brazil, as well as from continental brine deposits in Chile, Argentina, and Bolivia. Computer engineers combine these substances to build circuitry and information pathways at the microscopic scale to form the physical basis for modern computers.",
+    "P019": "However, the physical basis of computers was not always silicon. The Electronic Numerical Integrator and Computer (ENIAC) was completed in 1945, making it one of the earliest digital computers. The ENIAC operated on different physical principles. Instead of silicon, the ENIAC used the technology of a vacuum tube, a physical device like a light bulb that was used as memory in early digital computers. When the “light” in the vacuum tube is off, the vacuum tube represents the number 0. When the “light” is on, the vacuum tube represents the number 1. When thousands of vacuum tubes are combined in a logical way, we suddenly have memory. The ENIAC is notable in computer history because it was the first general-purpose computer, meaning that it could run not just a single program but rather any program specified by a programmer. The ENIAC was often run and programmed by women programmers (Figure 1.4). Despite its age and differences in hardware properties, it shares a fundamental and surprising similarity with modern computers. Anything that can be computed on today’s computers can also be computed by the ENIAC given the right circumstances—just trillions of times more slowly.",
+    "P020": "How is this possible? The algorithmic principles that determine how results are computed makes up software. Almost all computers, from the ENIAC to today’s computers, are considered Turing-complete (or Computationally Universal, as opposed to specialized computing devices such as scientific calculators) because they share the same fundamental model for computing results and every computer has the ability to run any algorithm. Alan Mathison Turing was an English mathematician who was highly influential in the development of theoretical computer science, which focuses on the mathematical processes behind software, and provided a formalization of the concepts of algorithm and computation with the Turing machine. A Turing-complete computer stores data in memory (either using vacuum tubes or silicon) and manipulates that data according to a computer program, which is an algorithm that can be run on a computer. These programs are represented using symbols and instructions written in a programming language consisting of symbols and instructions that can be interpreted by the computer. Programs are also stored in memory, which allows programmers to modify and improve programs by changing the instructions.",
+    "P021": "While both hardware and software are important to the practical operation of computers, computer science’s historical roots in mathematics also emphasize a third perspective. Whereas software focuses on the program details for solving problems with computers, theoretical computer science focuses on the mathematical processes behind software. The idea of Turing-completeness is a foundational concept in theoretical computer science, which considers how computers in general—not just the ENIAC or today’s computers, but even tomorrow’s computers that we haven’t yet invented—can solve problems. This theoretical perspective expands computer science knowledge by contributing ideas about (1) whether a problem can be computed by a Turing-complete computer at all, (2) how that problem might be computed using an algorithm, and (3) how quickly or efficiently a computer can run such an algorithm. The answers to these questions suggest the limits of what we can achieve with computers from a technical perspective: Using mathematical ideas, is it possible to use a computer to compute all problems? If the answer to a problem is yes, how much of a computing resource is needed to get the answer?",
+    "P022": "Clearly both humans and computers have their strengths and limitations. An example of a problem that humans can solve but computers struggle with is interpreting subtle emotions or making moral judgments in complex social situations. While computers can process data and recognize patterns, they cannot fully understand the nuances of human emotions or ethics, which often involve context, empathy, and experience. On the flip side, there are tasks that neither computers nor humans can perform, such as accurately predicting chaotic systems like long-term weather patterns. Despite advancements in artificial intelligence (AI), computer functions that perform tasks, such as visual perception and decision-making processes that usually are performed by human intelligence, these problems remain beyond our collective reach due to the inherent unpredictability and complexity of certain natural systems.",
+    "P023": "Theoretical computer science is often emphasized in undergraduate computer science programs because academic computer science emerged from mathematics, often to the detriment of perspectives that center on the social and technical values embodied by applications of computer technology. These perspectives, however, are gradually changing. Just as the design of ARPANET shaped the design of the Internet, computer scientists are also learning that the physical aspects of computer hardware determine what can be efficiently computed. For example, many of today’s artificial intelligence technologies rely on highly specialized computer hardware that is fundamentally different at the physical level compared to the general-purpose programmable silicon that has been the traditional focus of computer science. Organizations that develop human-computer interaction (HCI), a subfield of computer science that emphasizes the social aspects of computation, now host annual conferences that bring together thousands of researchers in academia and professionals in the industry. Computer science education is another subfield that emphasizes the cognitive, social, and communal aspects of learning computer science. Although these human-centered subfields are not yet in every computer science department, their increasing representation reflects computer scientists’ growing desire to serve not only more engaged students, but also a more engaged public in making sense of the values of computer technologies.",
+    "P024": "Computers can be understood as sources, tools, and opportunities for changing social conditions. Many people have used computer science to achieve diverse goals beyond this dominant vision for computer science. For example, consider computers in education.",
+    "P025": "Around the same time that the ARPANET began development in the late 1960s, Wally Feurzeig, Seymour Papert, and Cynthia Solomon designed the LOGO programming language to enable new kinds of computer-mediated expression and communication. Compared to contemporary programming languages such as FORTRAN (FORmula TRANslation System) that emphasized computation toward scientific and engineering applications, LOGO is well known for its use of turtle graphics, whereby programs were used to control the actions of a digital turtle using instructions such as moving forward some number of units and turning left or right some number of degrees. Papert argued that this turtle programming enabled body-syntonic reasoning, a kind of experience that could help students more effectively learn concepts in mathematics such as angles, distance, and geometric shapes by instructing the turtle to draw them, and physics by constructing their own understandings via reasoning through the physical motion of turtle programs by showing concepts of velocity, repeated commands to move forward the same amount; acceleration, by making the turtle move forward in increasing amounts; and even friction, by having the turtle slow down by moving forward by decreasing amounts. In this way, computers could not only be used to further education in computer science, but also offer new, more dynamic ways to learn other subjects. Papert’s ideas have been expanded beyond the realm of mathematics and physics to areas such as the social sciences, where interactive data visualization can help students identify interesting correlations and patterns that precipitated social change and turning points in history while also learning new data fluencies and the limits of data-based approaches.4",
+    "P026": "Yet despite these roots in aspirations for computers as a medium for learning anything and everything, the study of computer science education emerged in the 1970s as a field narrowly concerned with producing more effective software engineers. Higher-education computer science faculty, motivated by the demand for software engineers, designed their computer science curricula to teach the concepts that early computer companies such as IBM desperately needed. These courses had an emphasis on efficiency, performance, and scalability, because a university computer science education was only intended to produce software engineers. We live with the consequences of this design even today: the structure of this textbook inherits the borders between concepts originally imagined in the 1970s when university computer science education was only intended to prepare students for software development jobs. We now know that there are many more roles for computer scientists to play in society—not only software engineers, but also data analysts, product managers, entrepreneurs, political advisors or politicians, environmental engineers, social activists, and scientists across every field from accounting to zoology.",
+    "P027": "Although the role of computers expanded with the introduction of the Internet in the late 1990s, Papert’s vision for computation as a learning medium has been challenging to implement, at least partly because of funding constraints. But as computers evolve, primary and secondary education in the United States is striving for ways to help teachers use computers to more effectively teach all things—not just computers for their own sake, but using computers to learn everything.",
+    "P028": "Our histories so far have centered the interests of White American men in computer science. But there are also countless untold, marginalized histories of people of other backgrounds, races, ethnicities, and genders in computing. The book and movie Hidden Figures shares the stories of important Black women who were not only human computers, but also some of the first computer scientists for the early digital computers that powered human spaceflight at NASA ().",
+    "P029": "In one chapter of Black Software, Charlton McIlwain shares stories from “The Vanguard” of Black men and women who made a mark on computer science in its early years from the 1950s through the 1990s through the rise of personal computing and the Internet, but whose histories have largely been erased by the dominant Silicon Valley narratives. Their accomplishments include leading computer stores and developing early Internet social media platforms, news, and blog websites. For example, Roy L. Clay Sr., a member of the Silicon Valley Engineering Hall of Fame, helped Hewlett-Packard develop its first computer lab and create the company’s first computers. Later, Clay provided information to venture capitalists that motivated them to invest in start-ups such as Intel and Compaq.5 In another example, Mark Dean was an engineer for IBM whose work was instrumental in helping IBM develop the Industry Standard Architecture (ISA) bus, which created a method of connecting a computer’s processor with other components and enabling them to communicate. This led to the creation of PCs, with Dean owning three of the nine patents used to create the original PC.6",
+    "P030": "Yet their efforts were often hampered by the way that computer science failed to center, or even accommodate, Black people. Historically, American Indians and Hispanic people did not have the same access as even Black Americans to computers and higher education. Kamal Al-Mansour, a technical contract negotiator at the NASA Jet Propulsion Lab, worked on space projects while Ronald Reagan was president. He recounts: “It was conflicting . . . doing a gig . . . supporting missiles in the sky, (while) trying to find my own identity and culture . . . JPL was somewhat hostile . . . and I would come home each day [thinking] What did I accomplish that benefited people like me? And the answer every day would be ‘Nothing.’”",
+    "P031": "Al-Mansour would go on to start a new company, AfroLink, finding purpose in creating software that centered on Black and African history and culture. This story of computer technologies in service of African American communities is reflected in the creation of the Afronet (an early social media for connecting Black technologists) and the NetNoir (a website that sought to popularize Black culture). These examples serve as early indicators of the ways that Black technologists invented computer technologies for Black people in the United States. Yet Black Software also raises challenging political implications of the historical exclusion of Black technologists. Black culture on the Internet has greatly influenced mainstream media and culture in the United States, but these Black cultural products are ultimately driving attention and money to dominant platforms such as X and TikTok rather than those that directly benefit Black people, content creators, and entrepreneurs. Computer technologies risk reproducing social inequities through the ways in which they distribute benefits and harms.",
+    "P032": "The digital divide has emerged as a significant issue, as many aspects of society -- including education, employment, and social mobility -- become tied to computing, computer science, and connectivity. The divide refers to the uneven and unequal access and distribution of technology across populations from different geographies, socioeconomic statuses, races, ethnicities, and other differentiators. While technological access generally improves over time, communities within the United States and around the world have different levels of access to high-speed Internet, cell towers, and functioning school computers. Unreliable electricity can also play a significant role in computer and Internet usage. And beyond systemic infrastructure-based differences, individual product or service access can create a divide within communities. For example, if powerful AI-based search and optimization tools are only accessible through high-priced subscriptions, specific populations can be limited in benefiting from those tools.",
+    "P033": "Computer technology, like any other cutting-edge technology, changes the balance of power in society. But access to new technologies is rarely ever equal. Computer science has improved the quality of life for many people who have access to computer technology and the means of controlling it to serve their interests. But for everyone else in the world, particularly people living in the Global South, computer technologies need context-sensitive designs to meet their needs. In the 1990s, for instance, consumer access to the Internet was primarily based on “dial-up” systems that ran on top of public telephone network systems. Yet many parts of the world, even today, lack telephone coverage, let alone Internet connectivity. Research in computers for global development aims to improve the quality of life for people all over the world by designing computer solutions for low-income and underserved populations across the world—not just those living in the wealthiest countries.",
+    "P034": "Computer technologies for global development require designing around unique resource constraints such as a lack of reliable power, limited or nonexistent Internet connectivity, and low literacy. Computer scientists employ a variety of methods drawing from the social sciences to produce effective solutions. However, designing for diverse communities is difficult, particularly when the designers have little direct experience with the people they wish to serve. In The Charisma Machine, Morgan Ames criticizes the One Laptop Per Child (OLPC) project, a nonprofit initiative announced in 2005 by the Massachusetts Institute of Technology Media Lab. The project attempted to bring computer technology in the form of small, sturdy, and cheap laptops that were powered by a hand crank to children in the Global South. Based on her fieldwork in Paraguay, Ames argues that the project failed to achieve its goals for a variety of reasons, such as electricity infrastructure problems, hardware reliability issues, software frustrations, and a lack of curricular materials. Ames argues that “charismatic technologies are deceptive: they make both technological adoption and social change appear straightforward instead of as a difficult process fraught with choices and politics.” When the computers did work, OLPC’s vision for education never truly materialized because children often used the computers for their own entertainment rather than the learning experiences the designers intended. Though Ames’s account of the OLPC project (Figure 1.6) itself has been criticized for presenting an oversimplified narrative, it still represents a valuable argument for the risks and potential pitfalls associated with designing technologies for global development: technology does not act on its own but is embedded in a complicated social context and history.",
+    "P035": "Addressing these risks is not as simple as practicing humility and including communities in the design process. Many challenges in computing for global development are sociopolitical or technopolitical rather than purely technical. For example, carrying out a pilot test to evaluate the effectiveness of a design can appear as favoritism toward the pilot group participants. These issues and social tensions are especially exacerbated in the Global South, where the legacies of imperialism and racial hierarchies continue to produce or expand social inequities and injustices.",
+    "P036": "The identities of people creating computer technologies for global development are ultimately just as important as the technologies they create. In Design Justice, Sasha Costanza-Chock reiterates the call for computer scientists to “build with, not for,” the communities they wish to improve. In this way, Design Justice seeks to address the social justice tensions raised when asking the question, “Who does technology ultimately benefit?” by centering the ingenuity of the marginalized “user” rather than the dominant “designer.”",
+    "P037": "In some cases, underdeveloped countries can quickly catch up without spending the money that was invested to develop the original technologies. For example, we can set up ad hoc networks quickly today and at a portion of the cost in Middle Eastern and African countries using technology that was developed (at a high cost) in the United States and Europe over the past several decades. This means that sometimes, progress in one part of the world can be shared with another part of the world, enabling that area to quickly progress and advance technologically."
+  }
+}

@@ -1,0 +1,1570 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* 🎨 THE VELVET ESPRESSO THEME DEFINITION 
+   Context: Warm Mocha, Amber, Dark Roast
+*/
+:root {
+    /* --- Core Palette Map --- */
+    --c-espresso: #1B1817;
+    --c-dark-roast: #151211;
+    --c-mocha: #272321;
+    --c-parchment: #D6CFC7;
+    --c-amber: #D08770;
+    --c-coffee-stain: #5C524C;
+    --c-terracotta: #D08770;
+    --c-deep-coffee: #8B5E3C;
+
+    /* --- UI Dimensions --- */
+    --ui_input_radius: 8px; /* Soft Square */
+
+    /* --- Primary Button Variables --- */
+    /* Gradient: Terracotta to Coffee */
+    --bt_main: #D08770; 
+    --bt_main_gradient_start: #D08770; 
+    --bt_main_gradient_end: #8B5E3C;
+    --bt_main_border: #8B5E3C;
+    /* Using Dark Roast text on Amber button for better contrast/warmth */
+    --bt_main_text: #151211; 
+    --bt_main_shadow: 0 4px 12px rgba(10, 8, 7, 0.6);
+    
+    /* Hover/Focus States */
+    --bt_main_hover: #E09880; /* Lightened Amber */
+    --bt_main_shadow_hover: 0 6px 16px rgba(208, 135, 112, 0.25); /* Amber glow */
+    --bt_main_active: #6D4C41;
+    --bt_main_focus: #D08770;
+    --bt_main_focus_ring: rgba(208, 135, 112, 0.5);
+    
+    /* Disabled */
+    --bt_main_disabled: #3E3633;
+    --bt_main_text_disabled: #6D635F;
+
+    /* --- Secondary Button Variables --- */
+    --bt_secondary: transparent;
+    --bt_secondary_gradient_start: transparent;
+    --bt_secondary_gradient_end: transparent;
+    --bt_secondary_border: #5C524C; /* Coffee Stain */
+    --bt_secondary_text: #D6CFC7;   /* Warm Parchment */
+    --bt_secondary_shadow: none;
+    
+    /* Secondary Hover/Focus */
+    --bt_secondary_hover: #2C2624;  /* Mocha background */
+    --bt_secondary_shadow_hover: 0 2px 8px rgba(0,0,0,0.4);
+    --bt_secondary_active: #1B1817;
+    --bt_secondary_focus: #2C2624;
+    --bt_secondary_focus_ring: rgba(92, 82, 76, 0.5);
+    
+    /* Secondary Disabled */
+    --bt_secondary_disabled: transparent;
+    --bt_secondary_text_disabled: #4A423E;
+
+    /* --- Progress Bar Variables --- */
+    --prog-bg: #151211; /* Dark Roast Inset */
+    
+    /* HSL Calculation for #D08770 (Amber) */
+    --bar-hue: 14;  
+    --prog-sat: 53%;
+    --prog-light: 63%;
+    
+    --prog_height: 8px; /* Slimmer, more elegant */
+    --prog_radius: 4px;
+    --prog-shadow: 0 0 10px rgba(208, 135, 112, 0.4); /* Candlelight Glow */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   COMPONENT STYLES
+   Selectors preserved. Properties updated for "Velvet Espresso".
+   ───────────────────────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    /* Updated to 135deg per design concept */
+    background: linear-gradient(135deg, var(--bt_main_gradient_start), var(--bt_main_gradient_end)) !important;
+    background-color: var(--bt_main);
+    border: 1px solid var(--bt_main_border);
+    color: var(--bt_main_text) !important;
+    box-shadow: var(--bt_main_shadow);
+    border-radius: var(--ui_input_radius); 
+    font-weight: 600; /* Added weight for legibility on gradient */
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover State */
+button[kind="primary"]:hover {
+    background: linear-gradient(135deg, var(--bt_main_hover), var(--bt_main_gradient_start)) !important; /* Slight shift */
+    border-color: var(--bt_main_hover);
+    box-shadow: var(--bt_main_shadow_hover);
+    transform: translateY(-2px); /* Lift per design concept */
+    color: var(--bt_main_text) !important;
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background: var(--bt_main_active) !important;
+    border-color: var(--bt_main_active);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3); /* Inner shadow for tactile press */
+    transform: scale(0.98); /* Press effect */
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    background-color: var(--bt_main_focus);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--bt_main_focus_ring), 0 2px 8px var(--bt_main_shadow);
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background: var(--bt_main_disabled) !important;
+    border-color: var(--bt_main_disabled);
+    color: var(--bt_main_text_disabled) !important;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 1; /* Reset opacity to let custom colors show */
+}
+
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: transparent;
+    background-color: var(--bt_secondary);
+    border: 1px solid var(--bt_secondary_border);
+    color: var(--bt_secondary_text) !important;
+    box-shadow: var(--bt_secondary_shadow);
+    border-radius: var(--ui_input_radius);
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: var(--bt_secondary_hover);
+    border-color: var(--bt_secondary_text); /* Brighten border on hover */
+    box-shadow: var(--bt_secondary_shadow_hover);
+    transform: translateY(-2px);
+    color: var(--c-amber) !important; /* Text turns Amber on hover */
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: var(--bt_secondary_active);
+    border-color: var(--bt_secondary_active);
+    box-shadow: 0 1px 4px var(--bt_secondary_shadow);
+    transform: scale(0.98);
+}
+
+/* Focus State (keyboard navigation) */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    background-color: var(--bt_secondary_focus);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--bt_secondary_focus_ring), 0 2px 8px var(--bt_secondary_shadow);
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background-color: var(--bt_secondary_disabled);
+    border-color: var(--bt_secondary_text_disabled);
+    color: var(--bt_secondary_text_disabled) !important;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+
+/* Progress Bar */
+.progress-container {
+    background-color: var(--prog-bg) !important;
+    height: var(--prog_height);
+    border-radius: var(--prog_radius);
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5); /* Deeper inset for "carved" look */
+    border: 1px solid #2C2624; /* Subtle border */
+}
+
+.progress-fill {
+    background-color: hsl(var(--bar-hue), var(--prog-sat), var(--prog-light)) !important;
+    box-shadow: var(--prog-shadow) !important;
+    height: 100%;
+    border-radius: var(--prog_radius);
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   0. THE VELVET ESPRESSO PALETTE (DEFINITIONS)
+   ───────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+:root {
+    /* Surfaces */
+    --bg-app: #151211;         /* Dark Roast */
+    --bg-main: #1B1817;        /* Deep Espresso */
+    --bg-card: #272321;        /* Mocha */
+    --bg-input: #12100F;       /* Inset */
+    
+    /* Typography */
+    --text-primary: #D6CFC7;   /* Warm Parchment */
+    --text-secondary: #A39A94; /* Muted Ash */
+    --text-accent: #D08770;    /* Amber/Candlelight */
+    
+    /* Status */
+    --success: #8FBC8F;        /* Matcha Green */
+    --error: #C1666B;          /* Muted Brick */
+    
+    /* Effects */
+    --bt-main-shadow: 0 4px 12px rgba(10, 8, 7, 0.6);
+    --glass-bg: rgba(39, 35, 33, 0.75);
+    --glass-border: rgba(214, 207, 199, 0.1);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    background-color: var(--glass-bg); /* Smoked Glass */
+    backdrop-filter: blur(12px);       /* Frosting effect */
+    -webkit-backdrop-filter: blur(12px);
+    
+    border: 1px solid var(--glass-border); /* Faint parchment outline */
+    border-top: 2px solid var(--text-accent); /* Amber accent on top */
+    
+    box-shadow: var(--bt-main-shadow); /* Warm deep shadow */
+    border-radius: 16px;
+    padding: 2rem 1.5rem; /* Ensure breathable spacing */
+}
+
+/* The Main Title */
+.welcome-title {
+    font-family: 'Merriweather', serif; /* Switch to Serif for "Bookish" feel */
+    font-weight: 700;
+    font-size: 2.2rem;
+    
+    /* Gradient Text: Amber to Parchment */
+    background: linear-gradient(135deg, var(--text-accent) 0%, var(--text-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: var(--text-primary); /* Fallback */
+    
+    text-shadow: none; /* Removed neon glow for a softer finish */
+    margin-bottom: 0.5rem;
+}
+
+/* Icon specific styling within title */
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    color: var(--text-accent); /* Goldenrod/Amber */
+    
+    /* Override gradient text fill for the icon if needed */
+    -webkit-text-fill-color: var(--text-accent); 
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    font-family: 'Merriweather', serif;
+    color: var(--text-secondary); /* Muted Ash */
+    font-size: 1.1rem;
+    font-style: italic; /* Italicized as requested */
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+    text-transform: none; /* Removed uppercase for a softer reading flow */
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    border-color: #3E3633; /* Dark wood/Coffee stain separator */
+    border-bottom-width: 1px;
+    opacity: 0.6;
+    margin: 1.5rem 0;
+}
+
+/* ==========================================================================
+   ☕ THE VELVET ESPRESSO THEME :: VARIABLES
+   ========================================================================== */
+:root {
+    /* --- Core Palette --- */
+    --c-dark-roast: #151211;   /* Sidebar Background */
+    --c-espresso:   #1B1817;   /* Main Background */
+    --c-mocha:      #272321;   /* Card/Active Background */
+    --c-latte:      #3E3633;   /* Borders/Separators */
+    
+    --c-parchment:  #D6CFC7;   /* Primary Text */
+    --c-ash:        #A39A94;   /* Secondary/Icon Text */
+    --c-amber:      #D08770;   /* Accent/Glow */
+    --c-leather:    #8B5E3C;   /* Sub-headers */
+
+    /* --- Sidebar Variables Mapping --- */
+    --sb_background: var(--c-dark-roast);
+    --sb_text: var(--c-parchment);
+    
+    /* Icons & Toggles */
+    --sb_collapse_icon_default: var(--c-ash);
+    --sb_collapse_icon_size: 1.2rem;
+    --sb_collapse_icon_hover: var(--c-amber);
+    --sb_collapse_bg_hover: var(--c-mocha);
+    
+    /* Typography */
+    --sb_title: var(--c-amber);
+    --sb_title_size: 1.5rem;
+    --sb_title_weight: 600;
+    --sb_title_shadow: 0 2px 4px rgba(0,0,0,0.4);
+    --primary-color: var(--c-amber);
+    
+    /* Layout */
+    --sb_separator: var(--c-latte);
+    --sb_separator_margin: 1rem 0;
+    
+    /* Expander / Navigation Headers */
+    --sb_expander_closed_background: transparent;
+    --sb_expander_closed_text: var(--c-ash);
+    --sb_expander_hover_background: var(--c-mocha);
+    --sb_expander_hover_text: var(--c-amber);
+    --sb_expander_open_background: var(--c-mocha);
+    --sb_expander_open_text: var(--c-parchment);
+    
+    /* Sub-concepts (Inner Items) */
+    --sb_header_subconcepts_text: var(--c-leather);
+    --sb_lesson_text_normal: var(--c-ash);
+    --sb_lesson_background: transparent;
+    --sb_lesson_text_hover: var(--c-amber);
+    
+    /* Active State (The "Pill" Effect via Background) */
+    --sb_active_bg_normal: var(--c-mocha);
+    --sb_active_text_normal: var(--c-amber);
+    --sb_active_bg_hover: var(--c-latte);
+    --sb_active_text_hover: var(--c-parchment);
+    
+    /* Shapes & Effects */
+    --sb_radius_default: 8px;
+    --nordic-glow: 0 0 10px rgba(208, 135, 112, 0.3); /* Warm Candle Glow */
+}
+
+/* ==========================================================================
+   EXISTING SELECTORS (UNCHANGED)
+   ========================================================================== */
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--sb_background);
+    color: var(--sb_text);
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: var(--sb_collapse_icon_default) !important;
+    font-size: var(--sb_collapse_icon_size) !important;
+    text-shadow: 0 0 5px rgba(255,255,255,0.05); /* Very subtle dust mote glow */
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: var(--sb_collapse_icon_hover) !important;
+    background-color: var(--sb_collapse_bg_hover) !important;
+    text-shadow: var(--nordic-glow); /* Enhanced candle glow */
+}
+
+/* Sidebar - APP Title */
+.sidebar-title, .card-title {
+    font-size: var(--sb_title_size) !important;
+    font-weight: var(--sb_title_weight) !important;
+    color: var(--sb_title) !important; 
+    text-shadow: var(--sb_title_shadow);
+    letter-spacing: 0.5px;
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons,
+.card-title .material-icons {
+    font-size: inherit;      
+    line-height: inherit;   
+    vertical-align: middle; 
+    color: var(--primary-color);
+    /* THEME REQUEST: Icons gently glowing behind glass */
+    text-shadow: var(--nordic-glow); 
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: var(--sb_separator) !important;
+    margin-top: 5px !important;
+    border: none;
+    height: 1px;
+    opacity: 0.5;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: var(--sb_expander_closed_background) !important;
+    border: none !important;
+    color: var(--sb_expander_closed_text) !important;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: var(--sb_expander_hover_text) !important;
+    background-color: var(--sb_expander_hover_background) !important;
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: var(--sb_expander_open_background) !important;
+    color: var(--sb_expander_open_text) !important;
+    border-radius: var(--sb_radius_default) !important;
+    /* THEME REQUEST: Subtle highlight for active area */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Deep warm shadow */
+}
+
+/* Header for subconcepts */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: var(--sb_header_subconcepts_text) !important; 
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+} 
+
+/* Subconcepts and quick test icon: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: #a39a9482 !important;
+    background-color: var(--sb_lesson_background) !important;
+    font-weight: 400;
+}
+
+/* Subconcepts and quick test icon: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: var(--sb_lesson_text_hover) !important;
+    text-shadow: 0 0 8px rgba(208, 135, 112, 0.5); /* Amber Text glow on hover */
+}
+
+/* Subconcepts: Active Element: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: var(--sb_active_bg_normal) !important;
+    border-radius: var(--sb_radius_default) !important;
+    border-left: 3px solid var(--c-amber) !important; /* Simulating the Pill indicator */
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: var(--sb_active_text_normal) !important;
+    font-weight: 600;
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: var(--sb_active_bg_hover) !important;
+    border-radius: var(--sb_radius_default) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: var(--sb_active_text_hover) !important;
+}
+
+/* 🎨 THEME: THE VELVET ESPRESSO 
+   Core: Warm Mocha, Amber Accents, Parchment Text
+*/
+
+:root {
+    /* --- Palette Definitions --- */
+    --ve-bg-deep:   #151211; /* Dark Roast */
+    --ve-bg-main:   #1B1817; /* Deep Espresso */
+    --ve-bg-card:   #272321; /* Mocha */
+    --ve-bg-input:  #12100F; /* Pressed/Inset */
+    --ve-bg-header: #3E3633; /* Coffee Stain (for tables) */
+    
+    --ve-text-main: #D6CFC7; /* Warm Parchment */
+    --ve-text-dim:  #A39A94; /* Muted Ash */
+    --ve-accent:    #D08770; /* Amber/Candlelight */
+    
+    --ve-shadow:    0 4px 12px rgba(10, 8, 7, 0.6);
+    --ve-border-subtle: rgba(214, 207, 199, 0.1);
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--ve-bg-main);
+    color: var(--ve-text-main);
+}
+
+/* Sidebar Expand Button - Icon (default) */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    /* Amber Icon */
+    color: var(--ve-accent) !important;
+    /* Soft warm glow instead of neon */
+    text-shadow: 0 0 8px rgba(208, 135, 112, 0.4); 
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    /* Brighten to Parchment on hover */
+    color: var(--ve-text-main) !important;
+    background-color: transparent !important;
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: var(--ve-bg-card) !important;
+    /* rounded coaster effect */
+    border-radius: 50%; 
+    box-shadow: var(--ve-shadow);
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: var(--ve-accent); /* Amber */
+    background-color: transparent;
+    font-weight: 400; /* Serif feel usually benefits from lighter weight */
+    font-family: 'Merriweather', serif; /* Optional: if you have serif imported */
+}
+
+/* Lesson Card: Main Area */
+section[data-testid="stMain"] .st-key-lesson_window {
+    /* Mocha Card Background */
+    background-color: var(--ve-bg-card);
+    border-radius: 8px;
+    padding: 2rem; /* Generous "darkspace" padding */
+    box-shadow: var(--ve-shadow); /* Floating effect */
+    border: 1px solid var(--ve-border-subtle);
+}
+
+/* Lesson Card: Strong Text */
+section[data-testid="stMain"] .st-key-lesson_window strong {
+    color: var(--ve-accent); /* Amber emphasis */
+    font-weight: 600;
+}
+
+/* Lesson: Headers */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--ve-accent);
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    margin-top: 1.5rem;
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--ve-accent); /* Amber */
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Lesson Card: Table Headers + text */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--ve-text-main);
+    border: none; /* Removed border per concept */
+    border-bottom: 2px solid var(--ve-bg-header);
+    background-color: var(--ve-bg-header); /* Coffee Stain header */
+}
+
+/* Lesson Card: Table Data + text */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--ve-text-main);
+    border: none; /* Borderless design */
+    border-bottom: 1px solid rgba(62, 54, 51, 0.3); /* Very subtle separator */
+}
+
+/* Scrollbar styling for lesson window */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    /* Dark wood thumb, transparent track */
+    scrollbar-color: #5C524C transparent; 
+}
+
+/* 🎨 THE VELVET ESPRESSO THEME DEFINITIONS
+   Place this at the top of your CSS file.
+*/
+:root {
+    /* --- Core Palette --- */
+    --ve-deep-espresso: #1B1817;
+    --ve-mocha-card:    #2C2624;  /* Default Answer Card */
+    --ve-mocha-select:  #3E3633;  /* Selected/Active */
+    --ve-parchment:     #D6CFC7;  /* Primary Text */
+    --ve-ash:           #A39A94;  /* Secondary/Icons */
+    --ve-amber:         #D08770;  /* Accents/Focus */
+    --ve-coffee-stain:  #5C524C;  /* Borders */
+    --ve-key-shadow:    #0F0D0C;  /* Key drop shadow */
+
+    /* --- Functional Mappings for your Selectors --- */
+    
+    /* Quiz Questions */
+    --question-text:      var(--ve-parchment);
+    
+    /* Quiz Answers */
+    --answer-text:        var(--ve-parchment);
+    --answer-bg:          var(--ve-mocha-card);
+    --answer-border:      var(--ve-coffee-stain); 
+    --answer-letter-text: var(--ve-amber); 
+    
+    /* Keyboard Hints (Typewriter Style) */
+    --kbd-key-bg:         var(--ve-mocha-select);
+    --kbd-key-text:       var(--ve-ash);
+    --kbd-key-border:     #151211; 
+    --kbd-key-shadow:     var(--ve-key-shadow);
+    --kbd-legend-text:    var(--ve-ash);
+}
+
+/* Quiz Test State ──────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question  {
+    color: var(--question-text) !important;
+    background-color: transparent;
+    margin-bottom: 1.5rem; /* Added breathing room for the "Library" feel */
+}
+
+.st-key-question p {
+    font-weight: 700; /* Stronger serif feel */
+    font-size: 1.2rem; /* Increased per design requirement */
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    color: var(--answer-text);
+    background-color: var(--answer-bg);
+    border: 1px solid var(--answer-border); /* "Coffee stain" border */
+    border-radius: 8px;
+    padding: 12px 16px; /* Ensure comfortable touch target */
+    margin-bottom: 8px;
+    transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+    cursor: pointer;
+}
+
+/* HOVER STATE:
+   Since we must keep selectors, we append :hover to the existing attribute selector 
+   to achieve the "Border changes to Amber" effect.
+*/
+[class*="st-key-answer"]:hover {
+    border-color: var(--ve-amber);
+    box-shadow: 0 4px 12px rgba(10, 8, 7, 0.4); /* Soft lift */
+    transform: translateY(-1px);
+}
+
+/* SELECTED STATE (Concept):
+   Streamlit usually adds a specific class for selection. 
+   If you have a specific class for "active", add it here. 
+   Otherwise, this :active pseudo-class handles the click moment.
+*/
+[class*="st-key-answer"]:active, 
+[class*="st-key-answer"][data-selected="true"] {
+    background-color: var(--ve-mocha-select);
+    border-color: var(--ve-amber);
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    color: var(--answer-letter-text);
+    font-weight: 800;
+    margin-right: 8px; /* Space between letter and text */
+}
+
+/* Keyboard Legend */
+.key-hint {
+    font-family: 'Courier New', Courier, monospace; /* Typewriter feel */
+    font-weight: 600;
+    font-size: 0.85em;
+    color: var(--kbd-key-text);
+    background: var(--kbd-key-bg);
+    border: 1px solid var(--kbd-key-border);
+    border-radius: 4px;
+    /* The "Physical Key" depth effect */
+    box-shadow: 0 3px 0 var(--kbd-key-shadow); 
+    padding: 2px 6px;
+    display: inline-block;
+    transform: translateY(-2px); /* Sit slightly up */
+}
+
+.keyboard-legend {
+    color: var(--kbd-legend-text);
+    font-size: 13px;
+    font-family: system-ui, -apple-system, sans-serif;
+    opacity: 0.8;
+    margin-top: 2rem; /* Push to bottom */
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+:root {
+    /* Velvet Espresso Palette Definitions 
+       (Redefined here to ensure they work locally)
+    */
+    --espresso-bg-card: #272321;       /* Mocha */
+    --espresso-bg-inset: #12100F;      /* Darker Roast */
+    --espresso-text-main: #D6CFC7;     /* Warm Parchment */
+    --espresso-text-sub: #A39A94;      /* Muted Ash */
+    --espresso-amber: #D08770;         /* Candlelight Accent */
+    --espresso-matcha: #8FBC8F;        /* Success/Pass */
+    --espresso-brick: #C1666B;         /* Error/Fail */
+    --espresso-wood-border: #5C524C;   /* Coffee Stain Border */
+    --espresso-shadow: 0 4px 12px rgba(10, 8, 7, 0.6);
+    
+    /* Smoked Glass for Overlays */
+    --smoked-glass-bg: rgba(39, 35, 33, 0.85);
+    --smoked-glass-border: rgba(214, 207, 199, 0.1);
+}
+
+/* 1. HERO METRIC BOXES */
+/* Aesthetic: The Professor's Grading Book */
+.feedback-box {
+    background-color: var(--smoked-glass-bg);
+    border: 1px solid var(--smoked-glass-border);
+    backdrop-filter: blur(12px); /* Smoked glass effect */
+    border-radius: 16px;
+    box-shadow: var(--espresso-shadow);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.feedback-box:hover {
+    border-color: var(--espresso-amber);
+    transform: translateY(-2px);
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--espresso-text-sub); /* Muted Ash */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace; /* Monospace/Slab feel */
+    color: var(--espresso-text-main); /* Warm Parchment */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border: 1px solid rgba(143, 188, 143, 0.3); /* Faint Matcha */
+    box-shadow: inset 0 0 20px rgba(143, 188, 143, 0.05);
+    color: var(--espresso-matcha);
+}
+
+.feedback-box.status-failed {
+    border: 1px solid rgba(193, 102, 107, 0.3); /* Faint Brick */
+    box-shadow: inset 0 0 20px rgba(193, 102, 107, 0.05);
+    color: var(--espresso-brick);
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.5rem;
+    opacity: 0.9;
+    /* Color inherits from the specific status class above */
+}
+
+/* 2. QUESTION EXPANDERS */
+
+/* Normal */
+.st-key-feedback_list details div[data-testid="stExpander"] > details > summary {
+    border: none !important;
+    background: transparent !important;
+    border-bottom: 1px solid var(--espresso-wood-border) !important;
+    color: var(--espresso-text-main) !important;
+}
+
+/* Hover */
+.st-key-feedback_list div[data-testid="stExpander"] > details > summary:hover {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 1.0rem;
+    color: var(--espresso-amber) !important; /* Glows Amber */
+    transition: all 0.2s ease;
+    padding: 10px 5px;
+}
+
+.st-key-feedback_list div[data-testid="stExpander"] details[open] > summary {
+    color: var(--espresso-amber) !important; 
+    background-color: rgba(208, 135, 112, 0.05) !important; /* Very faint amber bg */
+}
+
+/* 3. ANSWER COMPARISON CARDS */
+.answer-card {
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    transition: background 0.2s;
+}
+
+/* User's Answer Card - Wrong */
+.answer-card.user-wrong {
+    background-color: rgba(193, 102, 107, 0.1); /* Brick tint 10% */
+    border-color: rgba(193, 102, 107, 0.3);
+    color: var(--espresso-text-main);
+}
+
+/* User's Answer Card - Correct */
+.answer-card.user-correct {
+    background-color: rgba(143, 188, 143, 0.1); /* Matcha tint 10% */
+    border-color: rgba(143, 188, 143, 0.3);
+    color: var(--espresso-matcha);
+}
+
+/* Correct Answer Card (Key) */
+.answer-card.correct-key {
+    background-color: var(--espresso-bg-inset); /* Darker Inset */
+    border: 1px solid var(--espresso-matcha); /* Matcha Border */
+    color: var(--espresso-matcha); /* Glowing Matcha Text */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.answer-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Explanation Box Theme */
+/* Aesthetic: "Note on the side" */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: #231F1D !important; /* Darker Inset */
+    border-left: 4px solid var(--espresso-amber) !important; /* Amber "Tag" */
+    border-radius: 0 6px 6px 0 !important;
+    color: var(--espresso-text-main) !important;
+    font-style: normal !important;
+    line-height: 1.6 !important;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: var(--espresso-amber); /* Amber icon */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The "Alchemy Lab")
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container 
+   Replaced "Nordic Glass" with "Smoked Mocha Glass" 
+*/
+.st-key-generator_card {
+    background-color: rgba(39, 35, 33, 0.9); /* Mocha #272321 with opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(214, 207, 199, 0.1); /* Faint Parchment edge */
+    border-top: 2px solid #D08770; /* Amber/Candlelight Top accent */
+    box-shadow: 0 20px 50px rgba(10, 8, 7, 0.6); /* Deep warm shadow */
+    border-radius: 16px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: #D6CFC7; /* Warm Parchment */
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    border-color: #3E3633 !important; /* Wood grain separator */
+    opacity: 0.5;
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    color: #D08770; /* Amber */
+}
+
+.gen-input-icon {
+    color: #A39A94; /* Muted Ash */
+}
+
+/* Warning Box */
+.generator-warning {
+    color: #C1666B; /* Muted Brick */
+    background: rgba(193, 102, 107, 0.1); /* Faint brick bg */
+    border-radius: 8px;
+    border: 1px solid rgba(193, 102, 107, 0.2);
+}
+
+/* Metric Stats Box 
+   Style: "Inset" into the desk
+*/
+.generator-stat-box {
+    background: #151211; /* Dark Roast (Inset) */
+    border-radius: 8px;
+    border: 1px solid #3E3633; /* Dark Wood border */
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: 1px solid #3E3633;
+}
+
+.stat-label {
+    color: #A39A94; /* Muted Ash */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    color: #D6CFC7; /* Warm Parchment */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-accent {
+    color: #D08770; /* Amber */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-success {
+    color: #8FBC8F; /* Matcha Green */
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Loading/Spinner Icon */
+.spinner-icon {
+    color: #D08770; /* Amber */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform: rotate(360deg); 
+    } 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Console Log 
+   Style: Retro Amber Terminal
+*/
+.generator-console {
+    background: #0F0D0C; /* Almost black */
+    border: 1px solid #3E3633;
+    border-radius: 8px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.8); /* Deep inset shadow */
+}
+
+.generator-console-step {
+    border-bottom: 1px solid #272321; /* Mocha separator */
+}
+
+.generator-console-step:last-child {
+    border-bottom: none;
+}
+
+.console-icon {
+    color: #D08770; /* Amber */
+}
+
+.console-title {
+    color: #D6CFC7; /* Parchment */
+    font-weight: bold;
+}
+
+.console-message {
+    color: #A39A94; /* Ash */
+    font-size: 0.9em;
+    border-left: 2px solid #5C524C; /* Coffee stain line */
+}
+
+/* Completion Screen */
+.completion-header {
+    color: #8FBC8F; /* Matcha Green */
+}
+
+.completion-icon {
+    font-size: 36px;
+}
+
+/* Spinner Animation Color */
+.stVerticalBlock [data-testid="stSpinner"] {
+    color: #D08770 !important; /* Amber */
+}
+
+/* Metric Card Container 
+   Style: Floating Coaster/Card
+*/
+[data-testid="stMetric"] {
+    background-color: #272321; /* Mocha */
+    border: 1px solid #3E3633; /* Wood grain */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(10, 8, 7, 0.4);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect for Metric Card */
+[data-testid="stMetric"]:hover {
+    border-color: #D08770; /* Amber glow on hover */
+    box-shadow: 0 6px 12px rgba(10, 8, 7, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Metric Label (Title) */
+[data-testid="stMetricLabel"] {
+    font-size: 0.85rem !important;
+    color: #A39A94 !important; /* Muted Ash */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+/* Metric Value (Big Number) */
+[data-testid="stMetricValue"] {
+    font-size: 2rem !important;
+    color: #D6CFC7 !important; /* Parchment */
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(208, 135, 112, 0.2); /* Subtle Amber glow */
+}
+
+/* Metric Delta (Change indicator) */
+[data-testid="stMetricDelta"] {
+    font-size: 0.9rem !important;
+    background-color: #151211; /* Dark Roast Pill */
+    padding: 2px 8px;
+    border-radius: 6px;
+    width: fit-content;
+    margin-top: 8px;
+    border: 1px solid #3E3633;
+}
+
+/* Delta Arrow Icon adjustment */
+[data-testid="stMetricDelta"] svg {
+    margin-right: 4px;
+    stroke-width: 3px;
+    /* Note: Streamlit handles the color of the SVG arrow automatically based on positive/negative value, 
+       but the text container is now styled dark. */
+}
+
+/* 🎨 THEME: THE VELVET ESPRESSO 
+   Core Palette Mapping
+*/
+:root {
+    /* --- Core Palette --- */
+    --bg-app: #151211;         /* Dark Roast */
+    --bg-main: #1B1817;        /* Deep Espresso */
+    --bg-card: #272321;        /* Mocha */
+    --bg-input: #12100F;       /* Pressed/Inset */
+    --bg-hover: #2C2624;       /* Soft Hover */
+    
+    --text-primary: #D6CFC7;   /* Warm Parchment */
+    --text-secondary: #A39A94; /* Muted Ash */
+    --text-accent: #D08770;    /* Amber/Candlelight */
+    
+    --border-subtle: #3E3633;  /* Wood grain */
+    --border-accent: #5C524C;  /* Coffee Stain */
+    
+    --shadow-deep: 0 4px 12px rgba(10, 8, 7, 0.6);
+
+    /* --- Component Variables --- */
+    
+    /* Tabs */
+    --ui_tab_inactive_bg: transparent;
+    --ui_tab_inactive_text: var(--text-secondary);
+    --ui_tab_inactive_hover_bg: var(--bg-hover);
+    --ui_tab_active_bg: var(--bg-input); 
+    --ui_tab_active_text: var(--text-primary);
+    --ui_tab_radius: 8px;
+    --ui_tab_padding: 0.5rem 1rem;
+    
+    /* Uploader */
+    --ui_uploader_bg: var(--bg-input);
+    --ui_uploader_text: var(--text-primary);
+    --ui_uploader_border: 2px dashed var(--border-accent);
+    --ui_uploader_radius: 12px;
+    --ui_uploader_icon: var(--text-accent);
+    
+    /* Popover */
+    --ui_popover_bg: var(--bg-card);
+    --ui_popover_border: 1px solid var(--border-accent);
+    --ui_popover_text: var(--text-primary);
+    --ui_popover_width: 250px;
+    
+    /* Dropdowns */
+    --ui_dropdown_closed_bg: var(--bg-input);
+    --ui_dropdown_closed_border: var(--border-subtle);
+    --ui_dropdown_closed_text: var(--text-secondary);
+    
+    --ui_dropdown_open_bg: var(--bg-card);
+    --ui_dropdown_open_border: var(--text-accent);
+    --ui_dropdown_open_text_container: var(--text-primary);
+    --ui_dropdown_open_icon: var(--text-accent);
+    
+    --ui_dropdown_hover_bg: var(--bg-hover);
+    --ui_dropdown_hover_border: var(--border-accent);
+    --ui_dropdown_hover_text: var(--text-primary);
+    
+    --ui_input_radius: 6px;
+
+    /* Dropdown Items (Virtual List) */
+    --ui_list_bg: var(--bg-card);
+    --ui_list_border: 1px solid var(--border-accent);
+    --ui_list_radius: 8px;
+    --ui_list_text: var(--text-secondary);
+    
+    --ui_list_selected_bg: #3E3633;
+    --ui_list_selected_text: var(--text-accent);
+    --ui_list_selected_hover_bg: #4E4440;
+    --ui_list_selected_hover_text: var(--text-accent);
+    
+    --ui_list_scrollbar_thumb: var(--border-accent);
+    --ui_list_scrollbar_track: var(--bg-app);
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: var(--ui_tab_inactive_bg) !important;
+    color: var(--ui_tab_inactive_text) !important;
+    border-radius: var(--ui_tab_radius) !important;
+    padding: var(--ui_tab_padding) !important;
+    margin-right: 5px;
+    border: 1px solid transparent !important; /* Added to prevent layout shift */
+    transition: all 0.2s ease;
+}
+
+/* Tab area: Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: var(--ui_tab_inactive_hover_bg) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Tab area: Active Tab */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--ui_tab_active_bg) !important;
+    color: var(--ui_tab_active_text) !important;
+    border-bottom: none !important;
+    /* CHANGED: Simulating the Amber Glow bottom border using inset shadow */
+    box-shadow: inset 0 -3px 0 0 var(--text-accent) !important; 
+}
+
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: var(--ui_uploader_text);
+    font-family: monospace; /* Optional: adds to technical feel */
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: var(--ui_uploader_text);
+    opacity: 0.6;
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: var(--ui_uploader_bg);
+    border: var(--ui_uploader_border);
+    border-radius: var(--ui_uploader_radius);
+    transition: border-color 0.3s ease;
+}
+
+/* File Dropzone: Hover Effect (Added via property) */
+[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: var(--text-accent);
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    /* Amber tint background */
+    background-color: rgba(208, 135, 112, 0.1); 
+    color: var(--text-accent);
+    border: none;
+}
+
+/* File Dropzone: Icon color */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: var(--ui_uploader_icon);
+    filter: drop-shadow(0 0 8px rgba(208, 135, 112, 0.3)); /* Amber glow */
+}
+
+/* Button Dropdown Popover */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: var(--ui_popover_width) !important;  
+    max-width: var(--ui_popover_width) !important;
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"] {
+    background-color: var(--ui_popover_bg); 
+    box-shadow: var(--shadow-deep) !important; /* Velvet shadow */
+}
+
+/* Button Dropdown Popover: Border */
+[data-testid="stPopoverBody"] {
+    border: var(--ui_popover_border) !important;
+    border-radius: 12px;
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--ui_popover_text) !important;
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+}
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: var(--ui_dropdown_closed_bg) !important;
+    border: 2px solid var(--ui_dropdown_closed_border);
+    border-radius: var(--ui_input_radius) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: var(--ui_dropdown_closed_text) !important;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--ui_dropdown_open_bg) !important;
+    border: 2px solid var(--ui_dropdown_open_border);
+    color: var(--ui_dropdown_open_text_container) !important;
+    border-radius: var(--ui_input_radius) !important;
+    box-shadow: 0 0 10px rgba(208, 135, 112, 0.2); /* Subtle glow */
+}  
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: var(--ui_dropdown_open_icon) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--ui_dropdown_hover_bg) !important;
+    border: 2px solid var(--ui_dropdown_hover_border);
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: var(--ui_dropdown_hover_text) !important;
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: var(--ui_list_bg) !important;
+    border: var(--ui_list_border) !important;
+    border-radius: var(--ui_list_radius) !important;
+    overflow: hidden !important;
+    box-shadow: var(--shadow-deep) !important;
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_text) !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: var(--ui_list_selected_bg) !important;
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_text) !important;
+    font-weight: bold;
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: var(--ui_list_selected_hover_bg) !important;
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_hover_text) !important;
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_list_scrollbar_thumb) transparent;
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: var(--ui_list_scrollbar_track);
+}
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* VELVET ESPRESSO THEME 
+   Aesthetic: "Digital Library at Midnight"
+*/
+
+:root {
+    /* Backgrounds */
+    --bg-app: #151211;
+    --bg-main: #1B1817;
+    --bg-card: #272321;
+    --bg-input: #12100F;
+    
+    /* Typography */
+    --text-primary: #D6CFC7;   /* Warm Parchment */
+    --text-secondary: #A39A94; /* Muted Ash */
+    --text-accent: #D08770;    /* Amber */
+    
+    /* Input Specifics */
+    --ui_input_radius: 6px;
+    --ui_input_bg_normal: #12100F;
+    --ui_input_bg_hover: #161412;
+    --ui_input_bg_focus: #12100F;
+    --ui_input_border_normal: 1px solid #3E3633;
+    --ui_input_border_hover: 1px solid #5C524C;
+    --ui_input_border_focus: 1px solid #D08770;
+    --ui_input_text_normal: #D6CFC7;
+    --ui_input_text_hover: #D08770;
+    --ui_input_label: #A39A94;
+    --ui_input_scrollbar_thumb: #3E3633;
+    --ui_input_step_btn_disabled: #272321;
+    --ui_tooltip_icon: #D08770;
+    
+    /* Shadows */
+    --bt_main_shadow: 0 4px 12px rgba(10, 8, 7, 0.6);
+}
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: var(--ui_input_radius);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.4); /* Enhanced inset for "etched" look */
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: var(--ui_input_bg_normal) !important;
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: var(--ui_input_bg_hover) !important;
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: var(--ui_input_bg_focus) !important;
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--ui_input_text_normal) !important;
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: var(--ui_input_text_hover) !important;
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: var(--ui_input_text_normal) !important;
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: var(--ui_input_border_normal) !important;
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: var(--ui_input_border_hover) !important;
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: var(--ui_input_border_focus) !important;
+    box-shadow: 0 0 0 1px var(--text-accent), var(--bt_main_shadow) !important; /* Amber glow */
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_input_scrollbar_thumb) transparent;
+}
+
+/* Step Down and Up Buttons */
+button[data-testid="stNumberInputStepDown"]:hover,
+button[data-testid="stNumberInputStepUp"]:hover {
+    background-color: #2C2624 !important; /* Hover background as requested */
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: var(--ui_input_step_btn_disabled) !important;
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--ui_tooltip_icon) !important;
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--ui_input_label);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color: #D08770 !important;   
+    font-size: 1.05rem !important;   
+    font-weight: 700 !important;   
+    font-style: normal !important;
+    letter-spacing: 1px !important; 
+    text-shadow: 0 0 10px rgba(208, 135, 112, 0.3) !important; 
+    padding-bottom: 4px !important;
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header
+ {
+    color: #D6CFC7 !important;  
+    font-size: 0.95rem !important;   
+    font-weight: 600 !important;   
+    font-style: normal !important;   
+    letter-spacing: 0.5px !important;  
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color: #A39A94 !important; 
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;  
+    font-style: normal !important;   
+    letter-spacing: 0px !important;  
+    transition: all 0.2s ease !important;
+}
+
+/* Added hover state for the lesson row to make interactive navigation easier */
+[class*="st-key-mastery_cb_"]:hover [data-testid="stMarkdownContainer"] p {
+    color: #D08770 !important; 
+    text-shadow: 0 0 8px rgba(208, 135, 112, 0.4) !important;
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary  {
+    color: #5C524C !important;   
+    opacity: 0.6 !important;  
+    text-shadow: none !important;
+    border-bottom: none !important;
+}

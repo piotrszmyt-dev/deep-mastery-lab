@@ -1,0 +1,24 @@
+# Core framework
+streamlit==1.53.1
+streamlit-float==0.4.0
+streamlit-paste-button==0.1.2
+
+# AI providers
+anthropic==0.82.0
+openai==2.30.0
+google-generativeai==0.8.6
+
+# API / HTTP
+python-dotenv==1.2.1
+
+# Data / parsing
+json-repair==0.58.0
+
+# Async
+anyio==4.12.1
+
+# Python utilities
+titlecase==2.4.1
+
+# Spaced repetition
+fsrs==6.3.1

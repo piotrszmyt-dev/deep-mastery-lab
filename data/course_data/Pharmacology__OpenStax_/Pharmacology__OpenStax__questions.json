@@ -1,0 +1,2920 @@
+{
+  "L08": {
+    "pool": [
+      {
+        "question": "Historically, many medications were derived from plants and other natural materials. A modern pharmaceutical company faces a challenge because these natural sources are not inexhaustible. What specific limitation does this scenario highlight about relying exclusively on natural resources for drug development?",
+        "options": {
+          "A": "They are a finite resource.",
+          "B": "They are frequently ineffective against diseases.",
+          "C": "They are difficult to isolate in pure form.",
+          "D": "They often produce severe side effects."
+        },
+        "target_id": "P008_Q01",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "After the era of isolating pure compounds from plants and natural substances, the field of pharmacology advanced through a new method of creating medicines. This method involves creating drugs through chemical processes in a controlled setting. Which development best describes this advancement?",
+        "options": {
+          "A": "the synthesis of drugs in the laboratory",
+          "B": "the extraction of compounds from moldy bread",
+          "C": "the use of medicinal soils in poultices",
+          "D": "the preparation of herbal mixtures from foxglove"
+        },
+        "target_id": "P008_Q02",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Beyond traditional chemical synthesis, modern drug development now also includes therapeutic agents that are complex molecules produced by living organisms. Which category of such agents has become a major focus in contemporary pharmacology?",
+        "options": {
+          "A": "biologics",
+          "B": "antibiotics",
+          "C": "vaccines",
+          "D": "plant alkaloids"
+        },
+        "target_id": "P008_Q03",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The significant progress in medication development over the last two centuries has led to a profound and broad outcome. Which statement best captures the overarching impact of these advancements on healthcare and science?",
+        "options": {
+          "A": "revolutionized the treatment of disease and our understanding of the human body",
+          "B": "eliminated the need for any further drug discovery",
+          "C": "reduced the cost of all pharmaceutical research",
+          "D": "made natural resource-based drugs completely obsolete"
+        },
+        "target_id": "P008_Q04",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T16:09:55.716957",
+    "pool_size": 4
+  },
+  "L09": {
+    "pool": [
+      {
+        "question": "Which healthcare professional, after evaluating the client's situation, verifies the appropriateness of the requested medication and its dose?",
+        "options": {
+          "A": "The pharmacist",
+          "B": "The physician",
+          "C": "The social worker",
+          "D": "The nurse practitioner"
+        },
+        "target_id": "P009_Q01",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In a hospital setting, which professional assesses the client and the potential effects of the medication before administering it?",
+        "options": {
+          "A": "The nurse",
+          "B": "The physician",
+          "C": "The pharmacist",
+          "D": "The social worker"
+        },
+        "target_id": "P009_Q02",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which member of the healthcare team may recommend the appropriate time for a medication's administration?",
+        "options": {
+          "A": "The pharmacist",
+          "B": "The nurse",
+          "C": "The physician's assistant",
+          "D": "The social worker"
+        },
+        "target_id": "P009_Q03",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "If a client is found to be non-adherent to their medication regimen or cannot afford the drug, which professional is likely to become involved?",
+        "options": {
+          "A": "A social worker",
+          "B": "A pharmacist",
+          "C": "A nurse practitioner",
+          "D": "A physician"
+        },
+        "target_id": "P009_Q04",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the term for the collaborative practice within healthcare professions that is viewed as 'best practice' for delivering client care?",
+        "options": {
+          "A": "Interprofessional (IP) collaboration",
+          "B": "Multidisciplinary coordination",
+          "C": "Unified treatment planning",
+          "D": "Integrated care delivery"
+        },
+        "target_id": "P009_Q05",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which benefit of teamwork is specifically mentioned as resulting from interprofessional collaboration?",
+        "options": {
+          "A": "More efficient use of resources",
+          "B": "Lower costs to the client",
+          "C": "Improved client outcomes",
+          "D": "Reduced staff burnout"
+        },
+        "target_id": "P009_Q06",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who is responsible for ordering the drug indicated to treat the client?",
+        "options": {
+          "A": "The health care provider (physician, physician's assistant, or nurse practitioner)",
+          "B": "The pharmacist",
+          "C": "The nurse",
+          "D": "The social worker"
+        },
+        "target_id": "P009_Q07",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which professional may dispense the medication and complete teaching to the client about it?",
+        "options": {
+          "A": "The pharmacist",
+          "B": "The nurse",
+          "C": "The physician",
+          "D": "The social worker"
+        },
+        "target_id": "P009_Q08",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the pharmacological care of a client, which of these is described as a role that may overlap with others in practice?",
+        "options": {
+          "A": "These health care roles",
+          "B": "The role of the health care provider",
+          "C": "The role of the pharmacist",
+          "D": "The role of the nurse"
+        },
+        "target_id": "P009_Q09",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is described as crucial for delivering the best care to the client among different healthcare professions?",
+        "options": {
+          "A": "Communication between professions",
+          "B": "Strict adherence to protocols",
+          "C": "Advanced medical technology",
+          "D": "Individual professional autonomy"
+        },
+        "target_id": "P009_Q10",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is a potential adverse consequence of inadequate collaboration among healthcare professionals?",
+        "options": {
+          "A": "Adversely affecting the delivery of health care and the safety of the client",
+          "B": "Increased medication costs for the hospital",
+          "C": "Slower diagnosis of client conditions",
+          "D": "Decreased job satisfaction among staff"
+        },
+        "target_id": "P009_Q11",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The nurse administers the drug after performing which critical action?",
+        "options": {
+          "A": "Determining the safety to the client",
+          "B": "Evaluating the appropriateness of the dose",
+          "C": "Ordering the medication",
+          "D": "Dispensing the medication"
+        },
+        "target_id": "P009_Q12",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the context of the healthcare team, what does the pharmacist evaluate and verify?",
+        "options": {
+          "A": "The appropriateness of the requested medication and its dose for the client",
+          "B": "The client's ability to afford the medication",
+          "C": "The nurse's technique for administration",
+          "D": "The diagnosis made by the health care provider"
+        },
+        "target_id": "P009_Q13",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which term is used interchangeably with 'patient' in some healthcare settings?",
+        "options": {
+          "A": "Client",
+          "B": "Consumer",
+          "C": "Recipient",
+          "D": "Beneficiary"
+        },
+        "target_id": "P009_Q14",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who is part of the team that includes other professions and administers medication?",
+        "options": {
+          "A": "The nurse",
+          "B": "The pharmacist",
+          "C": "The health care provider",
+          "D": "The social worker"
+        },
+        "target_id": "P009_Q15",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T17:22:42.106245",
+    "pool_size": 15
+  },
+  "L10": {
+    "pool": [
+      {
+        "question": "In a hospital setting, a clinical team works together to coordinate a patient's care, resulting in fewer errors and a smoother recovery process. Which of the following is described as crucial for effective teamwork among physicians, nurses, and pharmacists?",
+        "options": {
+          "A": "Competence in interprofessional collaboration",
+          "B": "Knowledge of ancient wound treatments",
+          "C": "Ability to isolate pure drugs from natural resources",
+          "D": "Understanding of drug etymology"
+        },
+        "target_id": "P010_Q01",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "A health care organization implements a new team-based model for patient care. Following this change, the organization reports a significant reduction in staff turnover and cases of emotional exhaustion. Which benefit of interprofessional teamwork does this illustrate?",
+        "options": {
+          "A": "Reduces staff burnout",
+          "B": "Improves client outcomes",
+          "C": "Lowers costs to the client and the institution",
+          "D": "Enhances the delivery of holistic care"
+        },
+        "target_id": "P010_Q02",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "A patient with a complex chronic illness receives care from a coordinated team that addresses their physical, emotional, and social needs. This approach to care is a direct result of which benefit of effective teamwork?",
+        "options": {
+          "A": "Enhances the delivery of holistic care",
+          "B": "Improves the efficiency of client care",
+          "C": "Boosts job satisfaction",
+          "D": "Relies on mutual respect and trust"
+        },
+        "target_id": "P010_Q03",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "After adopting a collaborative practice model, a clinic finds that patients experience fewer complications and achieve their treatment goals more consistently. Which primary benefit of interprofessional teamwork is demonstrated?",
+        "options": {
+          "A": "Improves client outcomes",
+          "B": "Lowers costs to the client and the institution",
+          "C": "Requires active listening",
+          "D": "Prevents mistakes through role understanding"
+        },
+        "target_id": "P010_Q04",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "A hospital finance report shows that since implementing structured interprofessional rounds, the average cost per patient admission has decreased. Which benefit of teamwork is directly reflected in this financial outcome?",
+        "options": {
+          "A": "Helps lower costs to the client and the institution",
+          "B": "Improves the efficiency of client care",
+          "C": "Boosts job satisfaction",
+          "D": "Involves embracing each discipline’s roles"
+        },
+        "target_id": "P010_Q05",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "During a team debrief, members express greater fulfillment in their work and a stronger sense of purpose. This positive shift in workplace morale is a known benefit of which practice?",
+        "options": {
+          "A": "Boosts job satisfaction",
+          "B": "Reduces staff burnout",
+          "C": "Improves client outcomes",
+          "D": "Requires a shared identity"
+        },
+        "target_id": "P010_Q06",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In a successful interprofessional team, members report that they have a clear, common purpose and view themselves as a unified group working toward safe patient care. Which element of maintaining competency does this describe?",
+        "options": {
+          "A": "Having a shared identity and committing to safe client care",
+          "B": "Understanding each other's roles to prevent mistakes",
+          "C": "Using active listening during decision-making",
+          "D": "Relying on the synthesis of drugs in the laboratory"
+        },
+        "target_id": "P010_Q07",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "A nurse, pharmacist, and physician hold a case conference where they each actively listen to the others' assessments before jointly deciding on a care plan. This process exemplifies which component of effective interprofessional collaboration?",
+        "options": {
+          "A": "Effective communication and decision-making involves active listening and embracing each discipline’s roles",
+          "B": "Maintaining competency includes understanding team goals",
+          "C": "Interprofessional teamwork improves the efficiency of client care",
+          "D": "Collaboration requires knowledge of early effective remedies"
+        },
+        "target_id": "P010_Q08",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "For an interprofessional team to function smoothly and maintain high standards of care, which of the following is identified as a foundational requirement alongside mutual respect and trust?",
+        "options": {
+          "A": "Competence in interprofessional collaboration",
+          "B": "Knowledge of the first school of pharmacy",
+          "C": "Familiarity with the London Pharmacopoeia",
+          "D": "Understanding the discovery of penicillin"
+        },
+        "target_id": "P010_Q09",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "A health care team consistently meets its objectives for patient safety and quality of care. According to principles of effective teamwork, this success is partly due to members understanding and working toward common aims. Which element of maintaining competency is this?",
+        "options": {
+          "A": "Understanding team goals",
+          "B": "Having a shared identity",
+          "C": "Embracing each discipline’s roles",
+          "D": "Using communication to prevent adverse drug events"
+        },
+        "target_id": "P010_Q10",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T17:22:46.940624",
+    "pool_size": 10
+  },
+  "L01": {
+    "pool": [
+      {
+        "question": "What is the meaning of the word 'pharmacology' based on its Greek etymology?",
+        "options": {
+          "A": "The study of medicine or the biological effects of chemicals on the body.",
+          "B": "The preservation of dry substances in barrels for medicinal use.",
+          "C": "The treatment of infections using moldy bread poultices.",
+          "D": "The documentation of ancient herbal recipes in papyri."
+        },
+        "target_id": "P001_Q01",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is considered the most likely origin of pharmacology according to historical evidence?",
+        "options": {
+          "A": "The use of medicinal plants and herbs to relieve symptoms of diseases.",
+          "B": "The application of medicinal soils to wounds in ancient times.",
+          "C": "The creation of the Ebers papyrus medical document.",
+          "D": "The development of synthetic chemicals in modern laboratories."
+        },
+        "target_id": "P001_Q02",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How were herbal medications historically utilized across civilizations?",
+        "options": {
+          "A": "They were used in most civilizations around the globe dating back to ancient times.",
+          "B": "They were exclusively used in ancient Egypt for religious ceremonies.",
+          "C": "They were first introduced through Anglo-Saxon recipes 1,000 years ago.",
+          "D": "They were limited to treating methicillin-resistant Staphylococcus aureus."
+        },
+        "target_id": "P001_Q03",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How was knowledge about medicinal plant effects traditionally passed down in ancient societies?",
+        "options": {
+          "A": "Through oral tradition from one generation to the next.",
+          "B": "Through written texts like the Ebers papyrus.",
+          "C": "Through standardized medical training programs.",
+          "D": "Through trade routes that exchanged herbal secrets."
+        },
+        "target_id": "P001_Q04",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What characterized ancient individuals' understanding of how herbal treatments worked?",
+        "options": {
+          "A": "They observed the effects but did not know the mechanisms behind them.",
+          "B": "They precisely documented chemical compositions of herbs.",
+          "C": "They relied on divine inspiration to explain effects.",
+          "D": "They understood the antimicrobial properties of molds used in poultices."
+        },
+        "target_id": "P001_Q05",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T19:04:59.748073",
+    "pool_size": 5
+  },
+  "L02": {
+    "pool": [
+      {
+        "question": "Which Old Dutch word, meaning 'dry', is a proposed origin for the word 'drug'?",
+        "options": {
+          "A": "droog",
+          "B": "pharmakon",
+          "C": "logos",
+          "D": "drogue"
+        },
+        "target_id": "P002_Q01",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which Old French term is a proposed origin for the word 'drug'?",
+        "options": {
+          "A": "drogue",
+          "B": "pharmakon",
+          "C": "dry barrels",
+          "D": "opium"
+        },
+        "target_id": "P002_Q02",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the context of etymology, what might the term 'dry barrels' refer to?",
+        "options": {
+          "A": "A method for preserving medicinal plants as dry matter.",
+          "B": "Containers used to hold opium.",
+          "C": "Ancient vessels for storing moldy bread poultices.",
+          "D": "A technique for drying animal products used in medicine."
+        },
+        "target_id": "P002_Q03",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How are the words 'drug' and 'medication' typically used in related texts?",
+        "options": {
+          "A": "Interchangeably.",
+          "B": "'Drug' refers only to illicit substances.",
+          "C": "'Medication' is used exclusively for modern pharmaceuticals.",
+          "D": "'Drug' refers only to substances derived from plants."
+        },
+        "target_id": "P002_Q04",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T19:07:12.409170",
+    "pool_size": 4
+  },
+  "L03": {
+    "pool": [
+      {
+        "question": "In which ancient civilizations was the use of moldy bread poultices for open wounds documented over 2,000 years ago?",
+        "options": {
+          "A": "China, Greece, and Egypt",
+          "B": "Sumer, India, and Rome",
+          "C": "Mesopotamia, Persia, and Assyria",
+          "D": "The Aztec, Maya, and Inca empires"
+        },
+        "target_id": "P003_Q01",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What type of ancient preparation for wounds involved the application of moldy bread?",
+        "options": {
+          "A": "A poultice",
+          "B": "A tincture",
+          "C": "An infusion",
+          "D": "A decoction"
+        },
+        "target_id": "P003_Q02",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "One of the world's oldest preserved medical documents, dating to 1550 BCE, records the use of moldy bread for wounds. What is its name?",
+        "options": {
+          "A": "The Ebers papyrus",
+          "B": "The London Pharmacopoeia",
+          "C": "The Edwin Smith Papyrus",
+          "D": "The Codex Hammurabi"
+        },
+        "target_id": "P003_Q03",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Besides moldy bread, what other type of natural substance was mentioned as being used in ancient wound treatments over 2,000 years ago?",
+        "options": {
+          "A": "Medicinal soils",
+          "B": "Ground animal bones",
+          "C": "Metallic salts",
+          "D": "Dried herbs and roots"
+        },
+        "target_id": "P003_Q04",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "A recently tested Anglo-Saxon recipe for wound treatment is approximately how old?",
+        "options": {
+          "A": "1,000 years old",
+          "B": "500 years old",
+          "C": "2,000 years old",
+          "D": "200 years old"
+        },
+        "target_id": "P003_Q05",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Recent research discovered that an ancient Anglo-Saxon recipe showed effectiveness against which modern antibiotic-resistant bacterium?",
+        "options": {
+          "A": "Methicillin-resistant Staphylococcus aureus (MRSA)",
+          "B": "Vancomycin-resistant Enterococci (VRE)",
+          "C": "Drug-resistant Mycobacterium tuberculosis",
+          "D": "Penicillin-resistant Streptococcus pneumoniae"
+        },
+        "target_id": "P003_Q06",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary historical significance of the use of moldy bread poultices in ancient medicine?",
+        "options": {
+          "A": "It represents an early, possibly antimicrobial, wound treatment.",
+          "B": "It was the first documented use of vaccination.",
+          "C": "It marked the discovery of chemical synthesis for drugs.",
+          "D": "It was the foundation for the development of antibiotics like penicillin."
+        },
+        "target_id": "P003_Q07",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which ancient medical document, dating from 1550 BCE, provides evidence for early pharmacological practices like using moldy bread?",
+        "options": {
+          "A": "The Ebers papyrus",
+          "B": "The writings of Theophrastus",
+          "C": "The first London Pharmacopoeia",
+          "D": "The Hippocratic Corpus"
+        },
+        "target_id": "P003_Q08",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T19:25:29.117708",
+    "pool_size": 8
+  },
+  "L04": {
+    "pool": [
+      {
+        "question": "Which plant is the source of opium, a substance used historically for pain relief and sedation?",
+        "options": {
+          "A": "The poppy plant",
+          "B": "The foxglove plant",
+          "C": "Moldy bread",
+          "D": "The willow tree"
+        },
+        "target_id": "P004_Q01",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which ancient civilizations are specifically mentioned as having used opium for its medicinal effects?",
+        "options": {
+          "A": "The Sumerians and the Greeks",
+          "B": "The Chinese and the Egyptians",
+          "C": "The Romans and the Persians",
+          "D": "The Anglo-Saxons and the Vikings"
+        },
+        "target_id": "P004_Q02",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who is credited with recording the first authentic use of opium?",
+        "options": {
+          "A": "The Greek philosopher Theophrastus",
+          "B": "The English physician William Withering",
+          "C": "The chemist Friedrich Serturner",
+          "D": "The physician Edward Jenner"
+        },
+        "target_id": "P004_Q03",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what century BCE was the first authentic use of opium recorded by Theophrastus?",
+        "options": {
+          "A": "The 3rd century BCE",
+          "B": "The 2nd century BCE",
+          "C": "The 5th century BCE",
+          "D": "The 1st century BCE"
+        },
+        "target_id": "P004_Q04",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What were the primary historical medicinal uses of opium?",
+        "options": {
+          "A": "To relieve pain and for sedation",
+          "B": "To treat heart failure and dropsy",
+          "C": "To create a vaccine for smallpox",
+          "D": "To treat open wounds with antimicrobial effects"
+        },
+        "target_id": "P004_Q05",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T19:28:18.522876",
+    "pool_size": 5
+  },
+  "L05": {
+    "pool": [
+      {
+        "question": "In what year was the London Pharmacopoeia first published?",
+        "options": {
+          "A": "1618",
+          "B": "1550 BCE",
+          "C": "1796",
+          "D": "1804"
+        },
+        "target_id": "P005_Q01",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How many simple drugs did the London Pharmacopoeia contain upon its first publication?",
+        "options": {
+          "A": "Over 1,000",
+          "B": "Over 900",
+          "C": "Over 600",
+          "D": "Over 500"
+        },
+        "target_id": "P005_Q02",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "From which plant did William Withering derive the drug digitalis?",
+        "options": {
+          "A": "Foxglove",
+          "B": "Poppy",
+          "C": "Willow",
+          "D": "Penicillium mold"
+        },
+        "target_id": "P005_Q03",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is digitalis primarily used to treat?",
+        "options": {
+          "A": "Heart disease and rhythm disorders",
+          "B": "Severe pain",
+          "C": "Infectious diseases",
+          "D": "Diabetes"
+        },
+        "target_id": "P005_Q04",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "For which condition, now known as heart failure, did William Withering originally use digitalis?",
+        "options": {
+          "A": "Dropsy",
+          "B": "Smallpox",
+          "C": "Syphilis",
+          "D": "Pneumonia"
+        },
+        "target_id": "P005_Q05",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who developed the first vaccine against smallpox?",
+        "options": {
+          "A": "Edward Jenner",
+          "B": "William Withering",
+          "C": "Alexander Fleming",
+          "D": "Paul Ehrlich"
+        },
+        "target_id": "P005_Q06",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which year did Edward Jenner develop the first smallpox vaccine?",
+        "options": {
+          "A": "1796",
+          "B": "1618",
+          "C": "1804",
+          "D": "1928"
+        },
+        "target_id": "P005_Q07",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What did Edward Jenner's work with the smallpox vaccine establish?",
+        "options": {
+          "A": "That infectious diseases could be controlled with vaccination",
+          "B": "That drugs could be isolated from plants",
+          "C": "That mold has antimicrobial properties",
+          "D": "That chemicals can treat specific microorganisms"
+        },
+        "target_id": "P005_Q08",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the name of the heart treatment developed by William Withering in the late 1700s?",
+        "options": {
+          "A": "Digitalis",
+          "B": "Morphine",
+          "C": "Aspirin",
+          "D": "Insulin"
+        },
+        "target_id": "P005_Q09",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How many preparations and compounds did the London Pharmacopoeia contain upon its first publication?",
+        "options": {
+          "A": "Over 900",
+          "B": "Over 1,000",
+          "C": "Over 600",
+          "D": "Over 1,200"
+        },
+        "target_id": "P005_Q10",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T19:38:04.338786",
+    "pool_size": 10
+  },
+  "L06": {
+    "pool": [
+      {
+        "question": "Approximately how many years ago did the era of modern pharmacology begin?",
+        "options": {
+          "A": "Approximately 200 years ago",
+          "B": "Approximately 500 years ago",
+          "C": "Approximately 1000 years ago",
+          "D": "Approximately 50 years ago"
+        },
+        "target_id": "P006_Q01",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What major development around 200 years ago marked the beginning of modern pharmacology?",
+        "options": {
+          "A": "Chemists could isolate pure chemicals from substances and mixtures.",
+          "B": "The first school of pharmacy was established.",
+          "C": "The first vaccine against smallpox was developed.",
+          "D": "The first medical pharmacopoeia was published."
+        },
+        "target_id": "P006_Q02",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who first isolated morphine from opium?",
+        "options": {
+          "A": "Fredrich Serturner",
+          "B": "William Withering",
+          "C": "Edward Jenner",
+          "D": "Alexander Fleming"
+        },
+        "target_id": "P006_Q03",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "From which natural substance did Fredrich Serturner isolate morphine in the early 1800s?",
+        "options": {
+          "A": "Opium",
+          "B": "Foxglove leaves",
+          "C": "Willow tree bark",
+          "D": "Penicillium mold"
+        },
+        "target_id": "P006_Q04",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What did the isolation of pure drugs from plants allow scientists to do more effectively?",
+        "options": {
+          "A": "Study the drugs' specific actions on the body.",
+          "B": "Create the first synthetic antibiotics in a lab.",
+          "C": "Immediately mass-produce them for widespread public use.",
+          "D": "Understand the genetic basis of disease."
+        },
+        "target_id": "P006_Q05",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How did scientists in the early 1800s often test the effects of newly isolated drugs?",
+        "options": {
+          "A": "By conducting experiments on animals and sometimes on themselves or acquaintances.",
+          "B": "By using sophisticated computer models to simulate effects.",
+          "C": "By administering them exclusively in large-scale clinical trials.",
+          "D": "By consulting ancient medical texts for dosage guidelines."
+        },
+        "target_id": "P006_Q06",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was a potential risk of early chemists testing isolated drugs on themselves or friends?",
+        "options": {
+          "A": "It sometimes led to disastrous results.",
+          "B": "It guaranteed the drug would be approved for public use.",
+          "C": "It was a required step for publishing their findings.",
+          "D": "It immediately proved the drug was completely safe."
+        },
+        "target_id": "P006_Q07",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what year was the first school of pharmacy established?",
+        "options": {
+          "A": "1847",
+          "B": "1618",
+          "C": "1796",
+          "D": "1873"
+        },
+        "target_id": "P006_Q08",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which country was the first school of pharmacy established?",
+        "options": {
+          "A": "Estonia",
+          "B": "England",
+          "C": "Greece",
+          "D": "Germany"
+        },
+        "target_id": "P006_Q09",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the name of the oldest pharmacology journal?",
+        "options": {
+          "A": "Naunyn-Schmiedeberg’s Archives of Pharmacology",
+          "B": "The London Pharmacopoeia",
+          "C": "The Journal of the American Medical Association",
+          "D": "The New England Journal of Medicine"
+        },
+        "target_id": "P006_Q10",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what year was the oldest pharmacology journal first published?",
+        "options": {
+          "A": "1873",
+          "B": "1804",
+          "C": "1847",
+          "D": "1928"
+        },
+        "target_id": "P006_Q11",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the current status of the oldest pharmacology journal, Naunyn-Schmiedeberg’s Archives of Pharmacology?",
+        "options": {
+          "A": "It is still being published today.",
+          "B": "It was discontinued after World War II.",
+          "C": "It merged with another journal in the 1950s.",
+          "D": "It was only published for a decade in the 1870s."
+        },
+        "target_id": "P006_Q12",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T19:44:12.975023",
+    "pool_size": 12
+  },
+  "L07": {
+    "pool": [
+      {
+        "question": "From which natural source was aspirin developed in the 1890s?",
+        "options": {
+          "A": "The bark of the willow tree",
+          "B": "The poppy plant",
+          "C": "The foxglove plant",
+          "D": "Moldy bread"
+        },
+        "target_id": "P007_Q01",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was aspirin originally used to treat?",
+        "options": {
+          "A": "Fevers and mild discomfort",
+          "B": "Heart failure",
+          "C": "Syphilis",
+          "D": "Smallpox"
+        },
+        "target_id": "P007_Q02",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who established the link between diabetes mellitus and the pancreas?",
+        "options": {
+          "A": "Joseph von Mering and Oskar Minkowski",
+          "B": "Frederick Banting and Charles Best",
+          "C": "Paul Ehrlich",
+          "D": "Alexander Fleming"
+        },
+        "target_id": "P007_Q03",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what year was the link between diabetes and the pancreas established?",
+        "options": {
+          "A": "1889",
+          "B": "1909",
+          "C": "1921",
+          "D": "1928"
+        },
+        "target_id": "P007_Q04",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who formulated the first insulin preparation?",
+        "options": {
+          "A": "Frederick Banting and Charles Best",
+          "B": "Joseph von Mering and Oskar Minkowski",
+          "C": "William Withering",
+          "D": "Edward Jenner"
+        },
+        "target_id": "P007_Q05",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what year was the first insulin preparation formulated?",
+        "options": {
+          "A": "1921",
+          "B": "1889",
+          "C": "1909",
+          "D": "1796"
+        },
+        "target_id": "P007_Q06",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who introduced the first treatment for syphilis?",
+        "options": {
+          "A": "Paul Ehrlich",
+          "B": "Alexander Fleming",
+          "C": "Frederick Banting",
+          "D": "Friedrich Serturner"
+        },
+        "target_id": "P007_Q07",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the name of the first chemical treatment for syphilis?",
+        "options": {
+          "A": "Arsphenamine (compound 606)",
+          "B": "Penicillin",
+          "C": "Digitalis",
+          "D": "Morphine"
+        },
+        "target_id": "P007_Q08",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was arsphenamine derived from?",
+        "options": {
+          "A": "Arsenic",
+          "B": "Mold",
+          "C": "Willow bark",
+          "D": "Poppy"
+        },
+        "target_id": "P007_Q09",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why did arsphenamine fall out of use quickly?",
+        "options": {
+          "A": "It had potentially fatal side effects.",
+          "B": "It was not effective against syphilis.",
+          "C": "It was replaced by insulin.",
+          "D": "It was difficult to manufacture."
+        },
+        "target_id": "P007_Q10",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who discovered the antibiotic properties of Penicillium notatum mold?",
+        "options": {
+          "A": "Alexander Fleming",
+          "B": "Paul Ehrlich",
+          "C": "Joseph von Mering",
+          "D": "Frederick Banting"
+        },
+        "target_id": "P007_Q11",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what year did Alexander Fleming discover that Penicillium notatum prevented bacterial growth?",
+        "options": {
+          "A": "1928",
+          "B": "1909",
+          "C": "1889",
+          "D": "1921"
+        },
+        "target_id": "P007_Q12",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What did Alexander Fleming's discovery of Penicillium notatum usher in?",
+        "options": {
+          "A": "The era of antibiotic use",
+          "B": "The era of synthetic drugs",
+          "C": "The era of vaccination",
+          "D": "The era of biologics"
+        },
+        "target_id": "P007_Q13",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What bacterium's growth was prevented by Penicillium notatum in Fleming's discovery?",
+        "options": {
+          "A": "Staphylococcus aureus",
+          "B": "Escherichia coli",
+          "C": "Mycobacterium tuberculosis",
+          "D": "Clostridium difficile"
+        },
+        "target_id": "P007_Q14",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T19:51:24.383077",
+    "pool_size": 14
+  },
+  "L16": {
+    "pool": [
+      {
+        "question": "What is one of the primary drawbacks that limits the use of biologic medications?",
+        "options": {
+          "A": "Their high expense.",
+          "B": "Their simple molecular structure.",
+          "C": "Their origin from plant sources.",
+          "D": "Their oral administration method."
+        },
+        "target_id": "P016_Q01",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Under what condition can biosimilar drugs typically be produced?",
+        "options": {
+          "A": "When the patent on the original biologic drug expires.",
+          "B": "When a drug is first discovered from a natural resource.",
+          "C": "When a nurse identifies a need for a less complex medication.",
+          "D": "When a generic version of a synthetic drug is approved."
+        },
+        "target_id": "P016_Q02",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What are biosimilar drugs designed to be?",
+        "options": {
+          "A": "Synthetically produced drugs with properties similar to a biologic.",
+          "B": "Generic versions of synthetic drugs produced in a laboratory.",
+          "C": "Natural plant-based alternatives to chemical compounds.",
+          "D": "More complex versions of existing monoclonal antibodies."
+        },
+        "target_id": "P016_Q03",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which characteristic do biosimilars share with the original biologic drug they are patterned after?",
+        "options": {
+          "A": "Their mechanism of action and dosing.",
+          "B": "Their exact molecular manufacturing process.",
+          "C": "Their status as a generic medication.",
+          "D": "Their origin from a specific animal product."
+        },
+        "target_id": "P016_Q04",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key economic advantage of biosimilar drugs over the original biologics?",
+        "options": {
+          "A": "They are generally produced at a reduced cost.",
+          "B": "They are developed much faster than generic drugs.",
+          "C": "They eliminate the need for interprofessional collaboration.",
+          "D": "They require no purification or processing."
+        },
+        "target_id": "P016_Q05",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a primary goal of developing and using biosimilar medications?",
+        "options": {
+          "A": "To improve access to biologic therapies while decreasing cost.",
+          "B": "To replace all synthetic drugs created in laboratories.",
+          "C": "To provide more options for oral drug administration.",
+          "D": "To simplify the nurse's role in medication administration."
+        },
+        "target_id": "P016_Q06",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Compared to their reference biologic drugs, biosimilars primarily offer a benefit in terms of what?",
+        "options": {
+          "A": "Cost of therapy.",
+          "B": "Molecular simplicity.",
+          "C": "Speed of development.",
+          "D": "Ease of oral formulation."
+        },
+        "target_id": "P016_Q07",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How do biosimilars contribute to the pharmacological treatment landscape?",
+        "options": {
+          "A": "They provide lower-cost alternatives to expensive biologic drugs.",
+          "B": "They are the first step in developing drugs from natural plants.",
+          "C": "They represent a new class of drugs with entirely novel mechanisms.",
+          "D": "They are primarily used to treat conditions requiring simple analgesics."
+        },
+        "target_id": "P016_Q08",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the relationship between a biosimilar drug and its reference biologic drug regarding therapeutic use?",
+        "options": {
+          "A": "They are intended to be used for similar therapeutic purposes.",
+          "B": "The biosimilar is always more potent than the original biologic.",
+          "C": "They are required to be chemically identical.",
+          "D": "The biosimilar is used only when the biologic causes an allergic reaction."
+        },
+        "target_id": "P016_Q09",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why might the production of a biosimilar be less expensive than the production of the original biologic?",
+        "options": {
+          "A": "The complex purification and processing work for the original has already been pioneered.",
+          "B": "Biosimilars do not require injections or infusions for administration.",
+          "C": "They are developed from more common and cheaper animal sources.",
+          "D": "They are synthesized more quickly than generic medications."
+        },
+        "target_id": "P016_Q10",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:18:51.860055",
+    "pool_size": 10
+  },
+  "L14": {
+    "pool": [
+      {
+        "question": "Heparin, an anticoagulant used to prevent or treat blood clots, is derived from which animal source?",
+        "options": {
+          "A": "Pig intestines",
+          "B": "The pancreas of pigs",
+          "C": "The venom of the Gila monster",
+          "D": "The urine of female horses"
+        },
+        "target_id": "P014_Q01",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Enoxaparin, a medication used to treat blood clots, is made from what animal product?",
+        "options": {
+          "A": "Pig intestines",
+          "B": "Chicken eggs",
+          "C": "Yeast",
+          "D": "Horse urine"
+        },
+        "target_id": "P014_Q02",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Some thyroid medications are classified as porcine derivatives, meaning they are sourced from which animal?",
+        "options": {
+          "A": "Pigs",
+          "B": "Cows",
+          "C": "Horses",
+          "D": "Sheep"
+        },
+        "target_id": "P014_Q03",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Pancrelipase, a digestive enzyme supplement, is often derived from which animal?",
+        "options": {
+          "A": "Pigs",
+          "B": "Cows",
+          "C": "Yeast cells",
+          "D": "Venomous lizards"
+        },
+        "target_id": "P014_Q04",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Conjugated estrogens, used to treat menopausal symptoms like hot flashes, are produced from what source?",
+        "options": {
+          "A": "The urine of female horses",
+          "B": "The venom of the Gila monster",
+          "C": "Pig intestines",
+          "D": "Yeast fermentation"
+        },
+        "target_id": "P014_Q05",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which type of diabetes is treated with the drug exenatide, which can be derived from the Gila monster?",
+        "options": {
+          "A": "Type 2 diabetes",
+          "B": "Type 1 diabetes",
+          "C": "Gestational diabetes",
+          "D": "Prediabetes"
+        },
+        "target_id": "P014_Q06",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The drug exenatide can be synthesized from the saliva or venom of which animal?",
+        "options": {
+          "A": "The Gila monster",
+          "B": "The pig",
+          "C": "The horse",
+          "D": "The chicken"
+        },
+        "target_id": "P014_Q07",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is a common therapeutic medication that originates from an animal source?",
+        "options": {
+          "A": "Heparin (from pig intestines)",
+          "B": "Morphine (from the poppy plant)",
+          "C": "Aspirin (from willow tree bark)",
+          "D": "Penicillin (from mold)"
+        },
+        "target_id": "P014_Q08",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary animal source for the production of the anticoagulant medication heparin?",
+        "options": {
+          "A": "Porcine (pig) intestinal mucosa",
+          "B": "Bovine (cow) pancreas",
+          "C": "Ovine (sheep) thyroid glands",
+          "D": "Equine (horse) urine"
+        },
+        "target_id": "P014_Q09",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following medications is NOT typically derived from an animal source?",
+        "options": {
+          "A": "Morphine (from the poppy plant)",
+          "B": "Heparin (from pig intestines)",
+          "C": "Conjugated estrogens (from horse urine)",
+          "D": "Pancrelipase (from pigs)"
+        },
+        "target_id": "P014_Q10",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Besides pigs and horses, what are other potential animal or biological sources for some common therapeutic drugs?",
+        "options": {
+          "A": "Chicken eggs and yeast",
+          "B": "Foxglove plants and periwinkle plants",
+          "C": "Willow tree bark and poppy plants",
+          "D": "Mold and bacteria"
+        },
+        "target_id": "P014_Q11",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:18:54.009114",
+    "pool_size": 11
+  },
+  "L15": {
+    "pool": [
+      {
+        "question": "What term describes medications like vaccines and monoclonal antibodies that are derived from living sources?",
+        "options": {
+          "A": "Biologics",
+          "B": "Synthetic drugs",
+          "C": "Generic drugs",
+          "D": "Antibiotics"
+        },
+        "target_id": "P015_Q01",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is NOT typically considered a biologic medication?",
+        "options": {
+          "A": "Penicillin",
+          "B": "Antitoxins",
+          "C": "Monoclonal antibodies",
+          "D": "Vaccines"
+        },
+        "target_id": "P015_Q02",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What key scientific disciplines are combined to develop biologic medications?",
+        "options": {
+          "A": "Biomolecular science, immunology, and genetic engineering",
+          "B": "Botany, zoology, and geology",
+          "C": "Chemistry, physics, and mathematics",
+          "D": "Pharmacology, nursing, and surgery"
+        },
+        "target_id": "P015_Q03",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is an example of a cutting-edge biologic therapy?",
+        "options": {
+          "A": "Gene-based therapies",
+          "B": "Herbal supplements",
+          "C": "Generic small-molecule drugs",
+          "D": "Broad-spectrum antibiotics"
+        },
+        "target_id": "P015_Q04",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a primary advantage of biologic therapies for diseases like cancer and autoimmune disorders?",
+        "options": {
+          "A": "More targeted action with potentially fewer side effects",
+          "B": "They are universally less expensive than traditional drugs",
+          "C": "They are always administered orally as a pill",
+          "D": "They do not require specialized manufacturing"
+        },
+        "target_id": "P015_Q05",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How are most biologic medications typically administered to patients?",
+        "options": {
+          "A": "Through infusions or injections",
+          "B": "As topical creams or ointments",
+          "C": "Orally as tablets or capsules",
+          "D": "Through inhalation devices"
+        },
+        "target_id": "P015_Q06",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a common characteristic that contributes to the high cost of biologic drugs?",
+        "options": {
+          "A": "Complex manufacturing and specialized administration methods",
+          "B": "Being sourced from extremely rare plants",
+          "C": "Requiring refrigeration only during transport",
+          "D": "Having a very short shelf life of a few days"
+        },
+        "target_id": "P015_Q07",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which drug is a monoclonal antibody biologic used to treat rheumatoid arthritis?",
+        "options": {
+          "A": "Etanercept (Enbrel)",
+          "B": "Methotrexate",
+          "C": "Aspirin",
+          "D": "Penicillin"
+        },
+        "target_id": "P015_Q08",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Compared to traditional rheumatoid arthritis drugs like methotrexate, how are monoclonal antibody biologics often viewed?",
+        "options": {
+          "A": "As a more favorable and less toxic treatment option",
+          "B": "As equally effective but more convenient to take",
+          "C": "As a first-line treatment with more severe side effects",
+          "D": "As an outdated and less effective therapy"
+        },
+        "target_id": "P015_Q09",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary source material for biologic medications?",
+        "options": {
+          "A": "Living organisms",
+          "B": "Inorganic minerals",
+          "C": "Synthetic chemicals created in a lab",
+          "D": "Purified plant extracts only"
+        },
+        "target_id": "P015_Q10",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following conditions are biologics particularly promising for treating?",
+        "options": {
+          "A": "Autoimmune disorders and cancer",
+          "B": "Common bacterial infections",
+          "C": "Minor aches and pains",
+          "D": "Nutritional deficiencies"
+        },
+        "target_id": "P015_Q11",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What unique feature might some biologic drugs possess regarding how they are delivered to the body?",
+        "options": {
+          "A": "Unique drug-delivery systems",
+          "B": "They are always combined with a generic drug",
+          "C": "They can be absorbed through the skin without assistance",
+          "D": "They are activated by stomach acid"
+        },
+        "target_id": "P015_Q12",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is a true statement about the development of biologics?",
+        "options": {
+          "A": "They are produced through biotechnological processes.",
+          "B": "They are simple chemical compounds easily replicated.",
+          "C": "Their development does not involve genetic techniques.",
+          "D": "They are primarily discovered by chance in nature."
+        },
+        "target_id": "P015_Q13",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a potential drawback of biologic therapies despite their targeted action?",
+        "options": {
+          "A": "High cost and complex administration",
+          "B": "Complete lack of effectiveness",
+          "C": "Causing universal allergic reactions",
+          "D": "Being available over-the-counter without a prescription"
+        },
+        "target_id": "P015_Q14",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "From the options below, which is an example of a biologic derived from an animal source, as mentioned in prior lessons?",
+        "options": {
+          "A": "Heparin (from pig intestines)",
+          "B": "Digitalis (from the foxglove plant)",
+          "C": "Aspirin (from willow bark)",
+          "D": "Penicillin (from mold)"
+        },
+        "target_id": "P015_Q15",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the context of drug administration, which healthcare team member is primarily responsible for administering a biologic infusion in a hospital?",
+        "options": {
+          "A": "The nurse",
+          "B": "The pharmacist",
+          "C": "The social worker",
+          "D": "The physician assistant"
+        },
+        "target_id": "P015_Q16",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:19:26.938192",
+    "pool_size": 16
+  },
+  "L13": {
+    "pool": [
+      {
+        "question": "What are the three broad categories of natural resources from which drugs can originate?",
+        "options": {
+          "A": "Plants, animal products, and inorganic substances",
+          "B": "Plants, minerals, and synthetic chemicals",
+          "C": "Animal products, bacteria, and viruses",
+          "D": "Plants, synthetic chemicals, and biologics"
+        },
+        "target_id": "P013_Q01",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which specific plant is the source of the drug digitalis?",
+        "options": {
+          "A": "The foxglove plant",
+          "B": "The willow tree",
+          "C": "The poppy plant",
+          "D": "The periwinkle plant"
+        },
+        "target_id": "P013_Q02",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "From which plant is the drug vincristine derived?",
+        "options": {
+          "A": "The periwinkle plant",
+          "B": "The foxglove plant",
+          "C": "The poppy plant",
+          "D": "The willow tree"
+        },
+        "target_id": "P013_Q03",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the plant source of the drug morphine?",
+        "options": {
+          "A": "The poppy plant",
+          "B": "The foxglove plant",
+          "C": "The periwinkle plant",
+          "D": "The Chondrodendron tomentosum vine"
+        },
+        "target_id": "P013_Q04",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which geographical region is noted for being home to countless plants with medicinal properties?",
+        "options": {
+          "A": "The Amazon Basin",
+          "B": "The Sahara Desert",
+          "C": "The Himalayan Mountains",
+          "D": "The Australian Outback"
+        },
+        "target_id": "P013_Q05",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary historical use of curare by Indigenous populations in South America?",
+        "options": {
+          "A": "As a paralytic agent on the tips of blow darts for hunting",
+          "B": "As a treatment for heart failure",
+          "C": "As a pain reliever in folk medicine",
+          "D": "As an anticoagulant medication"
+        },
+        "target_id": "P013_Q06",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "From which specific vine is the historical paralytic agent curare derived?",
+        "options": {
+          "A": "Chondrodendron tomentosum",
+          "B": "Digitalis purpurea",
+          "C": "Catharanthus roseus",
+          "D": "Papaver somniferum"
+        },
+        "target_id": "P013_Q07",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key reason meat from an animal hunted with a curare-tipped dart is safe to eat?",
+        "options": {
+          "A": "Curare is not toxic when ingested and digested",
+          "B": "Curare breaks down completely during cooking",
+          "C": "The animal's metabolism neutralizes the toxin",
+          "D": "The dose used is too small to affect humans"
+        },
+        "target_id": "P013_Q08",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the mechanism by which curare affects its prey when used on a blow dart?",
+        "options": {
+          "A": "It causes paralysis when it enters the bloodstream",
+          "B": "It causes immediate heart failure",
+          "C": "It induces a deep sleep",
+          "D": "It acts as a powerful sedative"
+        },
+        "target_id": "P013_Q09",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is a plant-based drug source used in modern medicine?",
+        "options": {
+          "A": "Foxglove (for digitalis)",
+          "B": "Pig intestine (for heparin)",
+          "C": "Horse urine (for conjugated estrogens)",
+          "D": "Chicken eggs (for some vaccines)"
+        },
+        "target_id": "P013_Q10",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is one of the primary historical applications of curare in the field of medicine?",
+        "options": {
+          "A": "As one of the first paralytic agents used in anesthesia",
+          "B": "As the first antibiotic discovered",
+          "C": "As a standard treatment for diabetes",
+          "D": "As a primary drug for rheumatoid arthritis"
+        },
+        "target_id": "P013_Q11",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which plant-based drug is derived from the foxglove plant and used to treat heart conditions?",
+        "options": {
+          "A": "Digitalis",
+          "B": "Vincristine",
+          "C": "Morphine",
+          "D": "Aspirin"
+        },
+        "target_id": "P013_Q12",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What type of effect do ideal drug chemicals aim to have?",
+        "options": {
+          "A": "Desirable therapeutic effects without harmful properties",
+          "B": "Strong effects regardless of toxicity",
+          "C": "Effects that are primarily diagnostic in nature",
+          "D": "Effects that are only preventive and never curative"
+        },
+        "target_id": "P013_Q13",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How can the dosage of a plant-derived chemical affect its properties?",
+        "options": {
+          "A": "A derivative can have therapeutic effects at one dosage and poisonous effects at another",
+          "B": "The dosage has no impact on whether it is therapeutic or poisonous",
+          "C": "A higher dosage always increases its therapeutic benefit",
+          "D": "A lower dosage always makes it completely safe"
+        },
+        "target_id": "P013_Q14",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:19:51.210677",
+    "pool_size": 14
+  },
+  "L18": {
+    "pool": [
+      {
+        "question": "What is the primary definition of a synthetic drug?",
+        "options": {
+          "A": "A chemical compound produced in a laboratory",
+          "B": "A drug derived directly from plant materials",
+          "C": "A medication produced from animal products",
+          "D": "A biological substance made by a living organism"
+        },
+        "target_id": "P018_Q01",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the name and primary medical use of the first synthetic drug, introduced in 1869?",
+        "options": {
+          "A": "Chloral hydrate, a sedative-hypnotic",
+          "B": "Digitalis, a cardiac glycoside",
+          "C": "Morphine, a pain reliever",
+          "D": "Heparin, an anticoagulant"
+        },
+        "target_id": "P018_Q02",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is one method scientists use to create synthetic drugs?",
+        "options": {
+          "A": "Genetically engineering bacteria",
+          "B": "Extracting compounds from venomous lizards",
+          "C": "Harvesting alkaloids from the periwinkle plant",
+          "D": "Purifying hormones from horse urine"
+        },
+        "target_id": "P018_Q03",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key advantage of slightly altering the chemical structure of an existing medication to create a new synthetic drug?",
+        "options": {
+          "A": "It may become more potent or have fewer side effects",
+          "B": "It automatically makes the drug available as a generic",
+          "C": "It guarantees the drug can be administered orally",
+          "D": "It significantly reduces the development time and cost"
+        },
+        "target_id": "P018_Q04",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How do allergic reactions to synthetic drugs typically compare to other types of drugs?",
+        "options": {
+          "A": "Individuals often have fewer allergic reactions",
+          "B": "Allergic reactions are more common and severe",
+          "C": "The rate of allergic reactions is exactly the same",
+          "D": "Allergic reactions only occur with injectable synthetics"
+        },
+        "target_id": "P018_Q05",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following statements about synthetic drugs is accurate?",
+        "options": {
+          "A": "They can be produced commercially by a manufacturer or illegally for illicit use",
+          "B": "They are exclusively used for treating autoimmune disorders and cancer",
+          "C": "They are always more expensive than drugs derived from natural sources",
+          "D": "Their molecular structure is simpler than that of generic drugs"
+        },
+        "target_id": "P018_Q06",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:20:39.046252",
+    "pool_size": 6
+  },
+  "L17": {
+    "pool": [
+      {
+        "question": "Approximately how long can the development of a biosimilar drug take?",
+        "options": {
+          "A": "As long as 10 years",
+          "B": "A couple of years",
+          "C": "1 year",
+          "D": "5 years"
+        },
+        "target_id": "P017_Q01",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the approximate cost to develop a biosimilar drug?",
+        "options": {
+          "A": "Close to $100 million",
+          "B": "$1–2 million",
+          "C": "$10 million",
+          "D": "$500,000"
+        },
+        "target_id": "P017_Q02",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key difference between the molecular structure of biosimilar and generic drugs?",
+        "options": {
+          "A": "Biosimilars have a larger and more complex molecular structure",
+          "B": "Generic drugs have a larger and more complex molecular structure",
+          "C": "Biosimilars are identical copies with identical structures",
+          "D": "Generic drugs are made from living organisms"
+        },
+        "target_id": "P017_Q03",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What must a company demonstrate for a generic drug to gain approval?",
+        "options": {
+          "A": "That the drug is bioequivalent to the brand-name drug",
+          "B": "That the drug is similar to the reference biologic drug",
+          "C": "That the drug has a more complex manufacturing process",
+          "D": "That the drug is derived from a living organism"
+        },
+        "target_id": "P017_Q04",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What must a company demonstrate for a biosimilar drug to gain approval?",
+        "options": {
+          "A": "That the drug is similar to the reference biologic drug",
+          "B": "That the drug is bioequivalent to the brand-name drug",
+          "C": "That the drug has an identical manufacturing process",
+          "D": "That the drug is a synthetic chemical compound"
+        },
+        "target_id": "P017_Q05",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "From what are biosimilar drugs typically made?",
+        "options": {
+          "A": "Living organisms such as yeast or bacteria",
+          "B": "Chemical synthesis in a laboratory",
+          "C": "Plant extracts",
+          "D": "Inorganic compounds"
+        },
+        "target_id": "P017_Q06",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why are biosimilars not considered bioequivalent to their reference biologic?",
+        "options": {
+          "A": "Because of the complex manufacturing processes involved",
+          "B": "Because they are intentionally designed to be less effective",
+          "C": "Because they are made from inorganic compounds",
+          "D": "Because they are generic versions"
+        },
+        "target_id": "P017_Q07",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a primary reason a biosimilar manufacturer cannot use the same cell line as the brand biologic?",
+        "options": {
+          "A": "The specific cell line or protein is proprietary and not available",
+          "B": "Using the same cell line would make the drug a generic",
+          "C": "Biosimilars are required to be made from different species",
+          "D": "It is legally prohibited to copy any part of a biologic drug"
+        },
+        "target_id": "P017_Q08",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Compared to a brand biologic, what must a biosimilar manufacturer create independently?",
+        "options": {
+          "A": "Its own manufacturing process to create a very similar molecule",
+          "B": "An identical copy of the original drug's molecular structure",
+          "C": "A less complex version of the drug",
+          "D": "A drug with a completely different therapeutic effect"
+        },
+        "target_id": "P017_Q09",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How does the development time for a generic drug typically compare to that of a biosimilar?",
+        "options": {
+          "A": "Generic development is much shorter, taking only a couple of years",
+          "B": "Generic development takes longer, around 10 years",
+          "C": "Their development times are approximately the same",
+          "D": "Generic development is not subject to time constraints"
+        },
+        "target_id": "P017_Q10",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How does the development cost for a generic drug typically compare to that of a biosimilar?",
+        "options": {
+          "A": "Generic development costs much less, around $1–2 million",
+          "B": "Generic development costs more, close to $100 million",
+          "C": "Their development costs are approximately the same",
+          "D": "Generic development has no significant costs"
+        },
+        "target_id": "P017_Q11",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What regulatory standard is applied to generic drugs but not typically to biosimilars?",
+        "options": {
+          "A": "Bioequivalence to the brand-name drug",
+          "B": "Similarity to a reference drug",
+          "C": "Proof of being made from a living source",
+          "D": "Requirement for administration by injection"
+        },
+        "target_id": "P017_Q12",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the term for the original biologic drug that a biosimilar is patterned after?",
+        "options": {
+          "A": "The reference drug",
+          "B": "The generic equivalent",
+          "C": "The bioequivalent drug",
+          "D": "The synthetic prototype"
+        },
+        "target_id": "P017_Q13",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:21:00.094989",
+    "pool_size": 13
+  },
+  "L19": {
+    "pool": [
+      {
+        "question": "Which of the following inorganic compounds is used to treat iron-deficiency anemia?",
+        "options": {
+          "A": "Iron",
+          "B": "Aluminum",
+          "C": "Chloral hydrate",
+          "D": "Morphine"
+        },
+        "target_id": "P019_Q01",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a therapeutic use for aluminum and magnesium compounds?",
+        "options": {
+          "A": "Treatment of indigestion, constipation, or diarrhea",
+          "B": "Strengthening of tooth enamel",
+          "C": "Prevention of blood clots",
+          "D": "Treatment of rheumatoid arthritis"
+        },
+        "target_id": "P019_Q02",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which inorganic compounds are known to strengthen tooth enamel and prevent cavities?",
+        "options": {
+          "A": "Fluoride and iodide",
+          "B": "Iron and magnesium",
+          "C": "Heparin and enoxaparin",
+          "D": "Aluminum and chloride"
+        },
+        "target_id": "P019_Q03",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Iron is used therapeutically to treat which specific condition?",
+        "options": {
+          "A": "Iron-deficiency anemia",
+          "B": "Type 2 diabetes",
+          "C": "Rheumatoid arthritis",
+          "D": "Menopausal hot flashes"
+        },
+        "target_id": "P019_Q04",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Therapeutic inorganic compounds are often derived from what type of chemical substances?",
+        "options": {
+          "A": "Salts from chemical components",
+          "B": "Plant-based alkaloids",
+          "C": "Animal-derived proteins",
+          "D": "Synthetically engineered bacteria"
+        },
+        "target_id": "P019_Q05",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary action of fluoride and iodide when used therapeutically?",
+        "options": {
+          "A": "Strengthen the enamel on teeth and prevent cavities",
+          "B": "Treat gastrointestinal disorders",
+          "C": "Act as an anticoagulant",
+          "D": "Function as a sedative-hypnotic"
+        },
+        "target_id": "P019_Q06",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:27:54.278849",
+    "pool_size": 6
+  },
+  "L22": {
+    "pool": [
+      {
+        "question": "What is the definition of enteral medications?",
+        "options": {
+          "A": "Drugs administered into the gastrointestinal (GI) tract.",
+          "B": "Drugs administered by injection.",
+          "C": "Drugs applied to the skin or mucous membranes.",
+          "D": "Drugs derived from living organisms."
+        },
+        "target_id": "P022_Q01",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is a route for administering enteral medications?",
+        "options": {
+          "A": "Orally.",
+          "B": "Intravenously.",
+          "C": "Inhaled as an aerosol into the lungs.",
+          "D": "Applied as a transdermal patch."
+        },
+        "target_id": "P022_Q02",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is NOT a common form for enteral medications?",
+        "options": {
+          "A": "Transdermal patches.",
+          "B": "Capsules.",
+          "C": "Suspensions.",
+          "D": "Syrups."
+        },
+        "target_id": "P022_Q03",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How does the onset of action for enteral medications typically compare?",
+        "options": {
+          "A": "It varies depending on the drug form.",
+          "B": "It is always immediate and complete.",
+          "C": "It is consistently slower than parenteral routes.",
+          "D": "It is consistently faster than percutaneous routes."
+        },
+        "target_id": "P022_Q04",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following should generally NOT be crushed or chewed?",
+        "options": {
+          "A": "Enteric-coated tablets.",
+          "B": "Elixirs.",
+          "C": "Syrups.",
+          "D": "Emulsions."
+        },
+        "target_id": "P022_Q05",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why should time-release capsules generally not be opened and emptied onto food?",
+        "options": {
+          "A": "It will alter how quickly the drug is absorbed.",
+          "B": "It will make the drug inactive.",
+          "C": "It will cause the drug to be absorbed through the skin.",
+          "D": "It will turn the drug into a generic form."
+        },
+        "target_id": "P022_Q06",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a potential consequence of incorrectly opening a time-release capsule?",
+        "options": {
+          "A": "An overdose of medication could result.",
+          "B": "The drug will become a biosimilar.",
+          "C": "It will convert the drug into an inorganic compound.",
+          "D": "It will allow the drug to be administered parenterally."
+        },
+        "target_id": "P022_Q07",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is another potential consequence of incorrectly opening a time-release capsule?",
+        "options": {
+          "A": "A subtherapeutic dose could result.",
+          "B": "The drug will become a synthetic compound.",
+          "C": "It will increase the drug's potency.",
+          "D": "It will allow the drug to be absorbed in the lungs."
+        },
+        "target_id": "P022_Q08",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What should you do if unsure whether a capsule can be opened?",
+        "options": {
+          "A": "It is best to ask before attempting this.",
+          "B": "Crush it and mix it with water.",
+          "C": "Assume all capsules can be opened.",
+          "D": "Open it and administer it rectally."
+        },
+        "target_id": "P022_Q09",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which form of enteral medication is a solid dosage form that may be sustained release?",
+        "options": {
+          "A": "Tablets.",
+          "B": "Elixirs.",
+          "C": "Suspensions.",
+          "D": "Emulsions."
+        },
+        "target_id": "P022_Q10",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Enteral medications can be administered through a tube placed where?",
+        "options": {
+          "A": "In the GI tract.",
+          "B": "In a blood vessel.",
+          "C": "Under the skin.",
+          "D": "Into a muscle."
+        },
+        "target_id": "P022_Q11",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is a liquid form of an enteral medication?",
+        "options": {
+          "A": "Suspension.",
+          "B": "Caplet.",
+          "C": "Lozenge.",
+          "D": "Tablet."
+        },
+        "target_id": "P022_Q12",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a common characteristic of both capsules and tablets as enteral forms?",
+        "options": {
+          "A": "Both may be sustained release.",
+          "B": "Both are always safe to crush.",
+          "C": "Both are derived from animal sources.",
+          "D": "Both have an immediate onset of action."
+        },
+        "target_id": "P022_Q13",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:27:55.513247",
+    "pool_size": 13
+  },
+  "L20": {
+    "pool": [
+      {
+        "question": "What are the three primary categories for the routes of drug administration?",
+        "options": {
+          "A": "Enteral, percutaneous, and parenteral",
+          "B": "Topical, rectal, and intravenous",
+          "C": "Plant-based, animal-based, and synthetic",
+          "D": "Biologics, biosimilars, and generics"
+        },
+        "target_id": "P020_Q01",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Drug administration routes are categorized into three primary types. Which category involves drugs being placed directly into the gastrointestinal tract?",
+        "options": {
+          "A": "Enteral",
+          "B": "Percutaneous",
+          "C": "Parenteral",
+          "D": "Transdermal"
+        },
+        "target_id": "P020_Q02",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:28:08.866482",
+    "pool_size": 2
+  },
+  "L21": {
+    "pool": [
+      {
+        "question": "Which of the following is a drug form included in the percutaneous category of administration?",
+        "options": {
+          "A": "Transdermal patch",
+          "B": "Tablet",
+          "C": "Intravenous injection",
+          "D": "Capsule"
+        },
+        "target_id": "P021_Q01",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What type of drug form, used for wound care, is considered a percutaneous delivery method?",
+        "options": {
+          "A": "Dressings",
+          "B": "Suspensions",
+          "C": "Elixirs",
+          "D": "Lozenges"
+        },
+        "target_id": "P021_Q02",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is an example of a percutaneous drug form that is administered by inhalation?",
+        "options": {
+          "A": "Aerosolized liquids",
+          "B": "Sustained-release capsules",
+          "C": "Syrups",
+          "D": "Emulsions"
+        },
+        "target_id": "P021_Q03",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key characteristic of some percutaneous drug delivery systems regarding drug release?",
+        "options": {
+          "A": "They can deliver medication at a constant amount over a specific time frame.",
+          "B": "They are always absorbed immediately and completely.",
+          "C": "They must be crushed or chewed for proper effect.",
+          "D": "They are primarily metabolized in the liver before taking effect."
+        },
+        "target_id": "P021_Q04",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How can the therapeutic effects of drugs administered via percutaneous methods be affected?",
+        "options": {
+          "A": "The therapeutic effects may last longer depending on the delivery method.",
+          "B": "The therapeutic effects are always shorter in duration than oral medications.",
+          "C": "The therapeutic effects are unpredictable and vary widely.",
+          "D": "The therapeutic effects are always localized and never systemic."
+        },
+        "target_id": "P021_Q05",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is classified as a percutaneous drug form applied to mucous membranes?",
+        "options": {
+          "A": "Ear drops",
+          "B": "Conjugated estrogens",
+          "C": "Monoclonal antibodies",
+          "D": "Enteric-coated tablets"
+        },
+        "target_id": "P021_Q06",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Percutaneous drug forms do NOT typically include which of the following?",
+        "options": {
+          "A": "Drugs injected directly into the bloodstream",
+          "B": "Topical creams and ointments",
+          "C": "Medications delivered via transdermal disks",
+          "D": "Vaginal medications"
+        },
+        "target_id": "P021_Q07",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:28:42.003720",
+    "pool_size": 7
+  },
+  "L12": {
+    "pool": [
+      {
+        "question": "What should a nurse do if the goals of a client's nursing care plan regarding medications are not being reached?",
+        "options": {
+          "A": "Modify the nursing care plan, potentially in collaboration with other health care team members",
+          "B": "Increase the medication dosage independently to achieve the desired effect",
+          "C": "Discontinue all medications and start with a completely new treatment plan",
+          "D": "Refer the client immediately to a specialist without consulting the primary care provider"
+        },
+        "target_id": "P012_Q01",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a crucial action for a nurse when counseling a client about their prescribed medications?",
+        "options": {
+          "A": "Use simple language and avoid medical jargon",
+          "B": "Provide detailed chemical information about the drug's structure",
+          "C": "Focus primarily on the historical development of the medication",
+          "D": "Use complex terminology to emphasize the seriousness of the treatment"
+        },
+        "target_id": "P012_Q02",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How can a nurse best assess a client's understanding of medication instructions?",
+        "options": {
+          "A": "Have the client repeat the instructions back to the nurse",
+          "B": "Administer a written multiple-choice test on pharmacology",
+          "C": "Ask a family member if they think the client understands",
+          "D": "Assume understanding if the client does not ask any questions"
+        },
+        "target_id": "P012_Q03",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why is follow-up with a client critical after medication administration?",
+        "options": {
+          "A": "It is critical to the client's safety and well-being",
+          "B": "It is primarily to document that the drug was administered",
+          "C": "It is only necessary if the medication is derived from a plant source",
+          "D": "It is required to bill the insurance company for the service"
+        },
+        "target_id": "P012_Q04",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key factor in preventing adverse drug events according to safe medication management principles?",
+        "options": {
+          "A": "Communication between interprofessional team members",
+          "B": "Relying solely on the pharmacist's initial drug verification",
+          "C": "Using only medications that are over 100 years old and well-tested",
+          "D": "Administering all medications at the same time each day"
+        },
+        "target_id": "P012_Q05",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What characteristic of the nurse's communication is emphasized when counseling a client about drugs?",
+        "options": {
+          "A": "Speaking clearly",
+          "B": "Speaking quickly to cover all information",
+          "C": "Using technical, discipline-specific language",
+          "D": "Providing instructions primarily in written form"
+        },
+        "target_id": "P012_Q06",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the context of safe medication management, why might a nursing care plan need to be modified?",
+        "options": {
+          "A": "If the established therapeutic goals are not being reached",
+          "B": "If the client requests a change to a more expensive medication",
+          "C": "Whenever a new drug is discovered and brought to market",
+          "D": "As a routine procedure at the end of every shift"
+        },
+        "target_id": "P012_Q07",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Besides speaking clearly and simply, what else should a nurse ensure when counseling a client about medications?",
+        "options": {
+          "A": "Allow plenty of time for the counseling session",
+          "B": "Complete the counseling in under two minutes for efficiency",
+          "C": "Perform the counseling while also completing other nursing tasks",
+          "D": "Delegate the counseling entirely to the pharmacy staff"
+        },
+        "target_id": "P012_Q08",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:33:16.521155",
+    "pool_size": 8
+  },
+  "L11": {
+    "pool": [
+      {
+        "question": "What is described as a major part of the nurse's role in medication management?",
+        "options": {
+          "A": "Knowledge about pharmacology and the various drugs prescribed and administered.",
+          "B": "Directly administering all medications without assistance.",
+          "C": "Collaborating only with physicians on drug orders.",
+          "D": "Focusing solely on documenting medication administration times."
+        },
+        "target_id": "P011_Q01",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What must nurses understand about the drugs they use in clinical practice?",
+        "options": {
+          "A": "Their pharmacotherapeutic effects.",
+          "B": "Their historical origins and ancient uses.",
+          "C": "Their chemical synthesis processes.",
+          "D": "Their economic impact on healthcare costs."
+        },
+        "target_id": "P011_Q02",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What are the intended and desired effects of a medication called?",
+        "options": {
+          "A": "Therapeutic effects.",
+          "B": "Adverse effects.",
+          "C": "Side effects.",
+          "D": "Toxic effects."
+        },
+        "target_id": "P011_Q03",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What term is used for the undesirable effects that a drug may produce?",
+        "options": {
+          "A": "Adverse effects.",
+          "B": "Therapeutic effects.",
+          "C": "Pharmacokinetic effects.",
+          "D": "Synergistic effects."
+        },
+        "target_id": "P011_Q04",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why is pharmacological knowledge crucial for nurses even when they are not directly administering medications?",
+        "options": {
+          "A": "Because it is essential for the client's care.",
+          "B": "To develop new plant-based medications from natural resources.",
+          "C": "To isolate pure drugs from substances like opium.",
+          "D": "To prevent the spread of infectious diseases through vaccination."
+        },
+        "target_id": "P011_Q05",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following pairs correctly identifies the two main types of drug effects that nurses must consider?",
+        "options": {
+          "A": "Therapeutic effects and adverse effects.",
+          "B": "Intended effects and unintended effects.",
+          "C": "Primary effects and secondary effects.",
+          "D": "Desired effects and toxic effects."
+        },
+        "target_id": "P011_Q06",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-19T21:35:03.489657",
+    "pool_size": 6
+  }
+}

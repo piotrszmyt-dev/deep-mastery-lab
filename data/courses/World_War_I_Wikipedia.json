@@ -1,0 +1,442 @@
+{
+  "L01": {
+    "module_id": "M01",
+    "module_title": "The Great War",
+    "module_subtitle": "Exploring the conflict's names, scope, and timeline from 1914 to 1918.",
+    "lesson_header": "World War I",
+    "lesson_title": "The Great War's Global Scale and Human Cost (1)",
+    "lesson_content": [
+      {
+        "id": "P001",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P001"
+    ],
+    "type": "lesson",
+    "next": "L02"
+  },
+  "L02": {
+    "module_id": "M01",
+    "module_title": "The Great War",
+    "module_subtitle": "Exploring the conflict's names, scope, and timeline from 1914 to 1918.",
+    "lesson_header": "World War I",
+    "lesson_title": "Assassination, Alliances, and the Outbreak of War (2)",
+    "lesson_content": [
+      {
+        "id": "P002",
+        "questions": 16
+      }
+    ],
+    "source_ids": [
+      "P002"
+    ],
+    "type": "lesson",
+    "next": "L03"
+  },
+  "L03": {
+    "module_id": "M01",
+    "module_title": "The Great War",
+    "module_subtitle": "Exploring the conflict's names, scope, and timeline from 1914 to 1918.",
+    "lesson_header": "World War I",
+    "lesson_title": "Stalemate, U.S. Entry, and the War's End (3)",
+    "lesson_content": [
+      {
+        "id": "P003",
+        "questions": 16
+      }
+    ],
+    "source_ids": [
+      "P003"
+    ],
+    "type": "lesson",
+    "next": "L04"
+  },
+  "L04": {
+    "module_id": "M01",
+    "module_title": "The Great War",
+    "module_subtitle": "Exploring the conflict's names, scope, and timeline from 1914 to 1918.",
+    "lesson_header": "World War I",
+    "lesson_title": "Peace Treaties and the Remaking of Europe (4)",
+    "lesson_content": [
+      {
+        "id": "P004",
+        "questions": 9
+      }
+    ],
+    "source_ids": [
+      "P004"
+    ],
+    "type": "lesson",
+    "next": "L05"
+  },
+  "L05": {
+    "module_id": "M01",
+    "module_title": "The Great War",
+    "module_subtitle": "Exploring the conflict's names, scope, and timeline from 1914 to 1918.",
+    "lesson_header": "Names",
+    "lesson_title": "Origins of the Name 'First World War'",
+    "lesson_content": [
+      {
+        "id": "P005",
+        "questions": 7
+      }
+    ],
+    "source_ids": [
+      "P005"
+    ],
+    "type": "lesson",
+    "next": "M01-SYNTHESIS"
+  },
+  "M01-SYNTHESIS": {
+    "module_id": "M01",
+    "module_title": "The Great War",
+    "module_subtitle": "Exploring the conflict's names, scope, and timeline from 1914 to 1918.",
+    "lesson_title": "Module Summary: The Great War",
+    "type": "module_synthesis",
+    "children_ids": [
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05"
+    ],
+    "next": "L06"
+  },
+  "L06": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Political and military alliances",
+    "lesson_title": "The European Balance of Power and Bismarck's Germany (1)",
+    "lesson_content": [
+      {
+        "id": "P006",
+        "questions": 8
+      }
+    ],
+    "source_ids": [
+      "P006"
+    ],
+    "type": "lesson",
+    "next": "L07"
+  },
+  "L07": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Political and military alliances",
+    "lesson_title": "Bismarck's Alliance System and the Triple Alliance (2)",
+    "lesson_content": [
+      {
+        "id": "P007",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P007"
+    ],
+    "type": "lesson",
+    "next": "L08"
+  },
+  "L08": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Political and military alliances",
+    "lesson_title": "The Franco-Russian Alliance and the Triple Entente (3)",
+    "lesson_content": [
+      {
+        "id": "P008",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P008"
+    ],
+    "type": "lesson",
+    "next": "L09"
+  },
+  "L09": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Arms race",
+    "lesson_title": "Wilhelm II and the German Naval Ambition (1)",
+    "lesson_content": [
+      {
+        "id": "P009",
+        "questions": 5
+      }
+    ],
+    "source_ids": [
+      "P009"
+    ],
+    "type": "lesson",
+    "next": "M02-CP1"
+  },
+  "M02-CP1": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_title": "Checkpoint 1: Origins of Conflict",
+    "type": "module_checkpoint",
+    "children_ids": [
+      "L06",
+      "L07",
+      "L08",
+      "L09"
+    ],
+    "next": "L10"
+  },
+  "L10": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Arms race",
+    "lesson_title": "The Anglo-German Naval Arms Race and Dreadnought (2)",
+    "lesson_content": [
+      {
+        "id": "P010",
+        "questions": 9
+      }
+    ],
+    "source_ids": [
+      "P010"
+    ],
+    "type": "lesson",
+    "next": "L11"
+  },
+  "L11": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Arms race",
+    "lesson_title": "The Continental Arms Race and Military Spending Surge (3)",
+    "lesson_content": [
+      {
+        "id": "P011",
+        "questions": 11
+      }
+    ],
+    "source_ids": [
+      "P011"
+    ],
+    "type": "lesson",
+    "next": "L12"
+  },
+  "L12": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Conflicts in the Balkans",
+    "lesson_title": "Russian Ambitions and Balkan Instability Before 1914 (1)",
+    "lesson_content": [
+      {
+        "id": "P012",
+        "questions": 6
+      }
+    ],
+    "source_ids": [
+      "P012"
+    ],
+    "type": "lesson",
+    "next": "L13"
+  },
+  "L13": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Conflicts in the Balkans",
+    "lesson_title": "The Bosnian Crisis and Austrian Strategic Fears (2)",
+    "lesson_content": [
+      {
+        "id": "P013",
+        "questions": 7
+      }
+    ],
+    "source_ids": [
+      "P013"
+    ],
+    "type": "lesson",
+    "next": "L14"
+  },
+  "L14": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Conflicts in the Balkans",
+    "lesson_title": "The Balkan League and the First Balkan War (3)",
+    "lesson_content": [
+      {
+        "id": "P014",
+        "questions": 8
+      }
+    ],
+    "source_ids": [
+      "P014"
+    ],
+    "type": "lesson",
+    "next": "M02-CP2"
+  },
+  "M02-CP2": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_title": "Checkpoint 2: Origins of Conflict",
+    "type": "module_checkpoint",
+    "children_ids": [
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L10",
+      "L11",
+      "L12",
+      "L13",
+      "L14"
+    ],
+    "next": "L15"
+  },
+  "L15": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Conflicts in the Balkans",
+    "lesson_title": "The Second Balkan War and Europe's Powder Keg (4)",
+    "lesson_content": [
+      {
+        "id": "P015",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P015"
+    ],
+    "type": "lesson",
+    "next": "L16"
+  },
+  "L16": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Sarajevo assassination",
+    "lesson_title": "The Plot to Assassinate Archduke Franz Ferdinand (1)",
+    "lesson_content": [
+      {
+        "id": "P016",
+        "questions": 9
+      }
+    ],
+    "source_ids": [
+      "P016"
+    ],
+    "type": "lesson",
+    "next": "L17"
+  },
+  "L17": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Sarajevo assassination",
+    "lesson_title": "Gavrilo Princip's Fatal Shots in Sarajevo (2)",
+    "lesson_content": [
+      {
+        "id": "P017",
+        "questions": 6
+      }
+    ],
+    "source_ids": [
+      "P017"
+    ],
+    "type": "lesson",
+    "next": "L18"
+  },
+  "L18": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Sarajevo assassination",
+    "lesson_title": "The Political Impact of the Sarajevo Assassination (3)",
+    "lesson_content": [
+      {
+        "id": "P018",
+        "questions": 6
+      }
+    ],
+    "source_ids": [
+      "P018"
+    ],
+    "type": "lesson",
+    "next": "L19"
+  },
+  "L19": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_header": "Expansion of violence in Bosnia and Herzegovina",
+    "lesson_title": "Anti-Serb Riots and the Schutzkorps Persecution",
+    "lesson_content": [
+      {
+        "id": "P019",
+        "questions": 8
+      }
+    ],
+    "source_ids": [
+      "P019"
+    ],
+    "type": "lesson",
+    "next": "M02-SYNTHESIS"
+  },
+  "M02-SYNTHESIS": {
+    "module_id": "M02",
+    "module_title": "Origins of Conflict",
+    "module_subtitle": "Examines the political tensions, arms races, and crises that led to war.",
+    "lesson_title": "Module Summary: Origins of Conflict",
+    "type": "module_synthesis",
+    "children_ids": [
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "L10",
+      "L11",
+      "L12",
+      "L13",
+      "L14",
+      "L15",
+      "L16",
+      "L17",
+      "L18",
+      "L19"
+    ],
+    "next": "FINAL_TEST"
+  },
+  "FINAL_TEST": {
+    "lesson_title": "Final Test",
+    "type": "final_test",
+    "next": null
+  },
+  "_master_index": {
+    "P001": "World War I,[d] or the First World War (28 July 1914 – 11 November 1918), also known as the Great War, was a global conflict between two coalitions: the Allies (or Entente) and the Central Powers. Major areas of conflict included Europe and the Middle East, as well as parts of Africa and the Asia-Pacific. The war saw important developments in weaponry including tanks, aircraft, artillery, machine guns, and chemical weapons. One of the deadliest conflicts in history, it resulted in an estimated 30 million military casualties, and 8 million civilian deaths from war-related causes and genocide. The movement of large numbers of people was a major factor in the deadly Spanish flu pandemic.",
+    "P002": "The causes of World War I included the rise of the German Empire and decline of the Ottoman Empire, which disturbed the long-standing balance of power in Europe, the exacerbation of imperial rivalries, and an arms race between the great powers. Growing tensions in the Balkans reached a breaking point on 28 June 1914 when Gavrilo Princip, a Bosnian Serb, assassinated Franz Ferdinand, the heir to the Austro-Hungarian throne. Austria-Hungary blamed Serbia, and declared war on 28 July. After Russia mobilised in Serbia's defence, Germany declared war on Russia and France, who had an alliance. The United Kingdom entered the war after Germany invaded Belgium, and the Ottoman Empire joined the Central Powers in November. Germany's strategy in 1914 was to quickly defeat France before transferring its forces to the east, but its advance was halted in September, and by the end of the year the Western Front consisted of a near-continuous line of trenches from the English Channel to Switzerland. The Eastern Front was more dynamic, but neither side gained a decisive advantage, despite costly offensives. Italy, Bulgaria, Romania, Greece and others entered the war from 1915 onward.",
+    "P003": "Major battles, including those at Verdun, the Somme, and Passchendaele, failed to break the stalemate on the Western Front. In April 1917, the United States joined the Allies after Germany resumed unrestricted submarine warfare against Atlantic shipping. Later that year, the Bolsheviks seized power in Russia in the October Revolution; Soviet Russia signed an armistice with the Central Powers in December, followed by a separate peace in March 1918. That month, Germany launched a spring offensive in the west, which despite initial successes left the German Army exhausted and demoralised. The Allied Hundred Days Offensive, beginning in August 1918, caused a collapse of the German front line. Following the Vardar Offensive, Bulgaria signed an armistice in late September. By early November, the Allies had signed armistices with the Ottomans and with Austria-Hungary, leaving Germany isolated. Facing a revolution at home, Kaiser Wilhelm II abdicated on 9 November, and the war ended with the Armistice of 11 November 1918.",
+    "P004": "The Paris Peace Conference of 1919–1920 imposed settlements on the defeated powers. Under the Treaty of Versailles, Germany lost significant territories, was disarmed, and was required to pay large war reparations to the Allies. The dissolution of the Russian, German, Austro-Hungarian, and Ottoman empires led to new national boundaries and the creation of new independent states including Poland, Finland, the Baltic states, Czechoslovakia, and Yugoslavia. The League of Nations was established to maintain world peace, but its failure to manage instability during the interwar period contributed to the outbreak of World War II in 1939.",
+    "P005": "Before World War II, the events of 1914–1918 were commonly referred to as the Great War or simply the World War. In August 1914, The Independent stated of the conflict, \"This is the Great War. It names itself.\" In the decade after its end, many hoped it would be \"the war to end all wars,\" because of its unprecedented destructiveness and death toll. The earliest known use of the term First World War appeared in September 1914, when German biologist and philosopher Ernst Haeckel wrote that the ongoing \"European War\" would become \"the first world war in the full sense of the word.\"",
+    "P006": "For much of the 19th century, the major European powers maintained a tenuous balance of power, known as the Concert of Europe. After 1848, this was challenged by Britain's withdrawal into splendid isolation, the decline of the Ottoman Empire, New Imperialism, and the rise of Prussia under Otto von Bismarck. Victory in the 1870–1871 Franco-Prussian War allowed Bismarck to consolidate a German Empire. After 1871, French policy aimed to avenge this defeat and expand France's colonial empire.",
+    "P007": "In 1873, Bismarck negotiated the League of the Three Emperors, which included Austria-Hungary, Russia, and Germany. After the 1877–1878 Russo-Turkish War, the League was dissolved due to Austrian concerns over the expansion of Russian influence in the Balkans, an area they considered to be of vital strategic interest. Germany and Austria-Hungary then formed the 1879 Dual Alliance, which became the Triple Alliance when Italy joined in 1882. For Bismarck, the purpose of these agreements was to isolate France by ensuring the three empires resolved any disputes among themselves. In 1887, Bismarck set up the Reinsurance Treaty, a secret agreement between Germany and Russia to remain neutral if either were attacked by France or Austria-Hungary.",
+    "P008": "For Bismarck, peace with Russia was the foundation of German foreign policy, but in 1890, he was forced to retire by Wilhelm II. The latter was persuaded not to renew the Reinsurance Treaty by his new Chancellor, Leo von Caprivi. This gave France an opening to agree to the Franco-Russian Alliance in 1894, which was then followed by the 1904 Entente Cordiale with Britain. The Triple Entente was completed by the 1907 Anglo-Russian Convention. While not formal alliances, by settling longstanding colonial disputes in Asia and Africa, British support for France or Russia in any future conflict became a possibility. This was accentuated by British and Russian support for France against Germany during the 1911 Agadir Crisis.",
+    "P009": "German economic and industrial strength continued to expand rapidly post-1871. Backed by Wilhelm II, Admiral Alfred von Tirpitz sought to use this growth to build an Imperial German Navy that could compete with the British Royal Navy. This policy was based on the work of US naval author Alfred Thayer Mahan, who argued that possession of a blue-water navy was vital for global power projection; Tirpitz had his books translated into German, while Wilhelm made them required reading for his advisors and senior military personnel.",
+    "P010": "Bismarck opposed any attempt to compete with the Royal Navy, since he believed Britain would not interfere in Europe as long as its maritime supremacy remained secure. His dismissal in 1890 led to a change in policy and the start of an Anglo-German naval arms race. Despite the vast sums spent by Tirpitz, the launch of HMS Dreadnought in 1906 made every existing battleship obsolete, and gave the British a technological advantage they never relinquished. Ultimately, Germany invested huge resources on creating a navy large enough to antagonise Britain, but not defeat it. In 1911, Chancellor Theobald von Bethmann Hollweg acknowledged defeat, leading to the Rüstungswende or 'armaments turning point', when he switched expenditure from the navy to the army.",
+    "P011": "This decision was driven by German concerns over the speed of Russia's recovery from defeat in the Russo-Japanese War and the subsequent 1905 Russian Revolution. Economic reforms led to a significant post-1908 expansion of railways and transportation infrastructure, particularly in its western border regions. Since Germany and Austria-Hungary relied on faster mobilisation to compensate for their numerical inferiority compared to Russia, the threat posed by the closing of this gap was more important than competing with the Royal Navy. After Germany expanded its standing army by 170,000 troops in 1913, France extended compulsory military service from two to three years, sparking similar measures from the Balkan powers, Italy, the Ottoman Empire and Austria-Hungary. Absolute figures are difficult to calculate due to differences in categorising expenditure since they often omit civilian infrastructure projects like railways which had logistical importance and military use. However, from 1908 to 1913, military spending by the six major European powers increased by over 50% in real terms.",
+    "P012": "The years before 1914 were marked by a series of crises in the Balkans, as other powers sought to benefit from the Ottoman decline. While Pan-Slavic and Orthodox Russia considered itself the protector of Serbia and other Slav states, they preferred the strategically vital Bosporus straits to be controlled by a weak Ottoman government, rather than an ambitious Slav power like Bulgaria. Russia had ambitions in northeastern Anatolia while its clients had overlapping claims in the Balkans. These competing interests divided Russian policy-makers and added to regional instability.",
+    "P013": "Austrian statesmen viewed the Balkans as essential for the continued existence of their Empire and saw Serbian expansion as a direct threat. The 1908–1909 Bosnian Crisis began when Austria annexed the former Ottoman territory of Bosnia and Herzegovina, which it had occupied since 1878. Timed to coincide with the Bulgarian Declaration of Independence from the Ottoman Empire, this unilateral action was denounced by the European powers, but accepted as there was no consensus on how to resolve the situation. Some historians see this as a significant escalation, ending any chance of Austria cooperating with Russia in the Balkans, while also damaging diplomatic relations between Serbia and Italy.",
+    "P014": "Tensions increased after the 1911–1912 Italo-Turkish War demonstrated Ottoman weakness and led to the formation of the Balkan League, an alliance of Serbia, Bulgaria, Montenegro, and Greece. The League quickly overran most of the Ottomans' territory in the Balkans during the 1912–1913 First Balkan War, much to the surprise of outside observers. The Serbian capture of ports on the Adriatic resulted in partial Austrian mobilisation, starting on 21 November 1912, including units along the Russian border in Galicia. The Russian government decided not to mobilise in response, unprepared to precipitate a war.",
+    "P015": "The Great Powers sought to re-assert control through the 1913 Treaty of London, which had created an independent Albania while enlarging the territories of Bulgaria, Serbia, Montenegro and Greece. However, disputes between the victors sparked the 33-day Second Balkan War, when Bulgaria attacked Serbia and Greece on 16 June 1913; it was defeated, losing most of Macedonia to Serbia and Greece, and Southern Dobruja to Romania. The result was that even countries which benefited from the Balkan Wars, such as Serbia and Greece, felt cheated of their \"rightful gains\", while for Austria it demonstrated the apparent indifference with which other powers viewed their concerns, including Germany. This complex mix of resentment, nationalism and insecurity helps explain why the pre-1914 Balkans became known as the \"powder keg of Europe\".",
+    "P016": "On 28 June 1914, Archduke Franz Ferdinand of Austria, heir presumptive to Emperor Franz Joseph I of Austria, visited Sarajevo, the capital of the recently annexed Bosnia and Herzegovina. Cvjetko Popović, Gavrilo Princip, Nedeljko Čabrinović, Trifko Grabež, Vaso Čubrilović (Bosnian Serbs) and Muhamed Mehmedbašić (from the Bosniaks community), from the movement known as Young Bosnia, took up positions along the Archduke's motorcade route, to assassinate him. Supplied with arms by extremists within the Serbian Black Hand intelligence organisation, they hoped his death would free Bosnia from Austrian rule.",
+    "P017": "Čabrinović threw a grenade at the Archduke's car and injured two of his aides. The other assassins were also unsuccessful. An hour later, as Ferdinand was returning from visiting the injured officers in hospital, his car took a wrong turn into a street where Gavrilo Princip was standing. He fired two pistol shots, fatally wounding Ferdinand and his wife Sophie.",
+    "P018": "According to historian Zbyněk Zeman, in Vienna \"the event almost failed to make any impression whatsoever. On 28 and 29 June, the crowds listened to music and drank wine, as if nothing had happened.\" Nevertheless, the impact of the murder of the heir to the throne was significant, and has been described by historian Christopher Clark as a \"9/11 effect, a terrorist event charged with historic meaning, transforming the political chemistry in Vienna\".",
+    "P019": "Austro-Hungarian authorities encouraged subsequent anti-Serb riots in Sarajevo. Violent actions against ethnic Serbs were also organised outside Sarajevo, in other cities in Austro-Hungarian-controlled Bosnia and Herzegovina, Croatia and Slovenia. Austro-Hungarian authorities in Bosnia and Herzegovina imprisoned approximately 5,500 prominent Serbs, 700 to 2,200 of whom died in prison. A further 460 Serbs were sentenced to death. A predominantly Bosniak special militia known as the Schutzkorps was established, and carried out the persecution of Serbs."
+  }
+}

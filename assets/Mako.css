@@ -1,0 +1,1573 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+    /* ─── FF7 PALETTE MAPPING ────────────────────────── */
+    
+    /* Global Shapes */
+    --ui_input_radius: 2px; /* Sharp, industrial corners */
+
+    /* Primary Button (Mako Teal) */
+    --bt_main: #2A7B72;
+    --bt_main_gradient_start: #2A7B72;
+    --bt_main_gradient_end: #1F5C55; /* Very subtle gradient */
+    --bt_main_border: #3AAFA3; /* Lighter border for "inner glow" feel */
+    --bt_main_text: #E0E6ED;
+    --bt_main_shadow: 0 0 10px rgba(42, 123, 114, 0.4); /* Mako Glow */
+    
+    /* Primary States */
+    --bt_main_hover: #34968B;
+    --bt_main_shadow_hover: 0 0 15px rgba(52, 150, 139, 0.6);
+    --bt_main_active: #1D524C;
+    --bt_main_focus: #2A7B72;
+    --bt_main_focus_ring: rgba(42, 123, 114, 0.5);
+    
+    /* Disabled */
+    --bt_main_disabled: #1B2026;
+    --bt_main_text_disabled: #555E69;
+
+    /* Secondary Button (Ghost/Slate) */
+    --bt_secondary: rgba(27, 32, 38, 0.6); /* Glassy dark */
+    --bt_secondary_gradient_start: rgba(27, 32, 38, 0.6);
+    --bt_secondary_gradient_end: rgba(18, 22, 25, 0.8);
+    --bt_secondary_border: #434D59;
+    --bt_secondary_text: #C8D1D9;
+    --bt_secondary_shadow: none;
+
+    /* Secondary States */
+    --bt_secondary_hover: #242A33;
+    --bt_secondary_shadow_hover: 0 0 0 1px #555E69;
+    --bt_secondary_active: #0D1117;
+    --bt_secondary_focus: #1B2026;
+    --bt_secondary_focus_ring: rgba(200, 209, 217, 0.2);
+    --bt_secondary_disabled: transparent;
+    --bt_secondary_text_disabled: #434D59;
+
+    /* Progress Bar */
+    --prog-bg: #0D1117; /* Very dark void */
+    --prog_height: 6px; /* Slimmer, more technical */
+    --prog_radius: 0px; /* Square */
+    --prog-shadow: 0 0 8px rgba(42, 123, 114, 0.5); 
+}
+
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color:       #2A7B72 !important;   /* ← active module colour (Mako Teal) */
+    font-size:   1rem    !important;   /* ← module font size        */
+    font-weight: 700     !important;   /* ← module font weight      */
+    font-style:  normal  !important;   /* ← normal / italic         */
+    letter-spacing: 1px  !important;   /* ← tracking adjustment     */
+    text-transform: uppercase !important; /* ← Shinra OS tech feel  */
+    text-shadow: 0 0 8px rgba(42, 123, 114, 0.4) !important; /* Mako Glow */
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header
+ {
+    color:       #E6EDF3 !important;   /* ← active concept colour (Bright Silver) */
+    font-size:   0.95rem !important;   /* ← concept font size       */
+    font-weight: 600     !important;   /* ← concept font weight     */
+    font-style:  normal  !important;   /* ← normal / italic         */
+    letter-spacing: 0.5px !important;  /* ← tracking adjustment     */
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color:       #C8D1D9 !important;   /* ← active lesson colour (Standard Silver) */
+    font-size:   0.9rem  !important;   /* ← lesson font size        */
+    font-weight: 500     !important;   /* ← lesson font weight      */
+    font-style:  normal  !important;   /* ← normal / italic         */
+    letter-spacing: 0px  !important;   /* ← tracking adjustment     */
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary  {
+    color:       #8B949E !important;   /* ← disabled/inactive colour (Industrial Grey) */
+    opacity:     0.6     !important;   /* ← fades into the panel     */
+    text-shadow: none !important;
+}
+
+/* Main Button ──────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    /* Mako Gradient: Subtle top-down fade */
+    background: linear-gradient(180deg, var(--bt_main_gradient_start), var(--bt_main_gradient_end));
+    background-color: var(--bt_main);
+    
+    /* Technical Border: 1px brighter than bg to pop against dark theme */
+    border: 1px solid var(--bt_main_border);
+    
+    color: var(--bt_main_text);
+    box-shadow: var(--bt_main_shadow);
+    
+    /* FF7 is boxy, using 2px instead of 12px */
+    border-radius: var(--ui_input_radius); 
+    
+    /* Added uppercase and tracking for "Military/SOLDIER" feel */
+    text-transform: uppercase;
+    font-weight: 600;
+    
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+button[kind="primary"]:hover {
+    background-color: var(--bt_main_hover);
+    border-color: #5CDBD3; /* Bright teal border on hover */
+    box-shadow: var(--bt_main_shadow_hover);
+    text-shadow: 0 0 5px rgba(255,255,255,0.4); /* Text glow */
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background: var(--bt_main_active); /* Flatten gradient on click */
+    border-color: var(--bt_main_active);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5); /* Inner shadow for depth */
+    transform: translateY(1px);
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    background-color: var(--bt_main_focus);
+    outline: none;
+    /* Double ring effect */
+    box-shadow: 0 0 0 2px #121619, 0 0 0 4px var(--bt_main_border);
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background: var(--bt_main_disabled);
+    border-color: #2F363D;
+    color: var(--bt_main_text_disabled);
+    box-shadow: none;
+    text-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.8; /* Higher opacity for legibility in low contrast */
+}
+
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: linear-gradient(180deg, var(--bt_secondary_gradient_start), var(--bt_secondary_gradient_end));
+    background-color: var(--bt_secondary);
+    border: 1px solid var(--bt_secondary_border);
+    color: var(--bt_secondary_text);
+    box-shadow: var(--bt_secondary_shadow);
+    border-radius: var(--ui_input_radius);
+    
+    /* Typography match */
+    text-transform: uppercase;
+
+    font-weight: 500;
+    
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: var(--bt_secondary_hover);
+    border-color: var(--bt_main_border); /* Hover turns border Teal */
+    color: #FFFFFF;
+    box-shadow: var(--bt_secondary_shadow_hover);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: var(--bt_secondary_active);
+    border-color: var(--bt_secondary_active);
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.5);
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    background-color: var(--bt_secondary_focus);
+    outline: none;
+    box-shadow: 0 0 0 2px #121619, 0 0 0 4px var(--bt_secondary_text);
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background-color: var(--bt_secondary_disabled);
+    border-color: #2F363D;
+    color: var(--bt_secondary_text_disabled);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Progress Bar ──────────────────────────────────────────── */
+
+.progress-container {
+    background-color: var(--prog-bg) !important;
+    height: var(--prog_height);
+    border-radius: var(--prog_radius);
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 1px solid #2F363D; /* Added structural border */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.progress-fill {
+    /* Forcing the Mako Gradient here regardless of Hue vars */
+    background: linear-gradient(90deg, #2A7B72 0%, #5CDBD3 100%) !important;
+    background-color: #2A7B72 !important; 
+    
+    box-shadow: var(--prog-shadow) !important;
+    height: 100%;
+    border-radius: var(--prog_radius);
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GLOBAL VARIABLES (THE MAKO PALETTE)
+   Place this at the top of your CSS file
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Backgrounds */
+    --ff7-bg-deep:      #121619; /* The void behind the UI */
+    --ff7-bg-surface:   #1B2026; /* Main Card Background */
+    --ff7-bg-glass:     rgba(27, 32, 38, 0.95); /* High opacity glass */
+    
+    /* Text */
+    --ff7-text-primary: #C8D1D9; /* Silver/Grey (Low contrast white) */
+    --ff7-text-muted:   #8B949E; /* Dimmed text */
+    
+    /* Accents */
+    --ff7-acc-mako:     #2A7B72; /* The specific FF7 Teal */
+    --ff7-border-dim:   #2F363D; /* Subtle borders */
+    
+    /* Fonts - 'Rajdhani' is preferred for FF7, fallback to system sans */
+    --ff7-font-head:    'Rajdhani', 'Segoe UI', sans-serif;
+    --ff7-font-body:    'Inter', 'Segoe UI', sans-serif;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    background-color: var(--ff7-bg-glass);
+    
+    /* Flat, industrial border. Thin and sharp. */
+    border: 1px solid var(--ff7-border-dim);
+    
+    /* Top border acts as the "Active Terminal" indicator (Mako Green) */
+    border-top: 2px solid var(--ff7-acc-mako);
+    
+    /* Tighter, darker shadow for a "floating panel" feel rather than soft glow */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    
+    /* Reduced radius. FF7 UI is blocky/industrial, not round. */
+    border-radius: 4px;
+    
+    /* Optional: Add a subtle backdrop blur for the Mako atmosphere */
+    backdrop-filter: blur(8px);
+}
+
+/* The Main Title */
+.welcome-title {
+    font-family: var(--ff7-font-head);
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--ff7-text-primary);
+    
+    /* Changed from blue glow to Mako Green glow */
+    text-shadow: 0 0 12px rgba(42, 123, 114, 0.5); 
+}
+
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    /* The Icon gets the pure accent color */
+    color: var(--ff7-acc-mako);
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    font-family: var(--ff7-font-body);
+    color: var(--ff7-text-muted);
+    font-size: 1rem;
+    letter-spacing: 2px; /* Increased spacing for cinematic feel */
+    opacity: 1; /* Removed opacity, relying on color for hierarchy */
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    /* Very subtle divider */
+    border-color: var(--ff7-border-dim);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   THEME: FF7 MAKO - FLAT DARK
+   Aesthetic: Shinra OS / Industrial / Low Contrast
+   ========================================================================== */
+:root {
+    /* -- PALETTE: Meteor (Backgrounds) -- */
+    --ff7-bg-deep:      #121619; /* Main Void */
+    --ff7-bg-surface:   #1B2026; /* Sidebar/Panels */
+    --ff7-bg-hover:     #242A33; /* Interaction Hover */
+    
+    /* -- PALETTE: Text & Borders -- */
+    --ff7-text-main:    #C8D1D9; /* Silver - Readable */
+    --ff7-text-muted:   #8B949E; /* Industrial Grey */
+    --ff7-border:       #2F363D; /* Structure Lines */
+    
+    /* -- PALETTE: Materia (Accents) -- */
+    --ff7-mako:         #2A7B72; /* Teal - Primary Action */
+    --ff7-mako-dim:     rgba(42, 123, 114, 0.15); /* Subtle background tint */
+    --ff7-limit:        #9E3A3A; /* Red - Limit Break/Active */
+    
+    /* -- EFFECTS -- */
+    --ff7-glow:         0 0 8px rgba(42, 123, 114, 0.5); /* Mako Energy Glow */
+    --ff7-radius:       2px; /* Tech/Blocky feel */
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--ff7-bg-surface) !important;
+    color: var(--ff7-text-main) !important;
+    border-right: 1px solid var(--ff7-border); /* Defining the flat edge */
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: var(--ff7-text-muted) !important;
+    font-size: 24px !important; /* Standardized size */
+    text-shadow: none; /* Clean flat look for default */
+    opacity: 0.8;
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: var(--ff7-mako) !important;
+    background-color: var(--ff7-bg-hover) !important;
+    text-shadow: var(--ff7-glow); /* Mako leak on hover */
+    border-radius: var(--ff7-radius);
+}
+
+/* Sidebar - APP Title */
+.sidebar-title, .card-title {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: var(--ff7-text-main) !important; 
+    text-shadow: none; /* Kept flat */
+    letter-spacing: 1px; /* Industrial feel */
+    font-family: 'Rajdhani', sans-serif; /* Recommended font if avail */
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons,
+.card-title .material-icons  {
+    font-size: inherit;      
+    line-height: inherit;   
+    vertical-align: middle; 
+    color: var(--ff7-mako);
+    /* THEME REQUEST: Icons gently glowing behind glass */
+    text-shadow: var(--ff7-glow); 
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: var(--ff7-border) !important;
+    margin-top: 5px !important;
+    border: none;
+    height: 1px;
+    opacity: 0.5;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: transparent !important; /* Minimalist */
+    border: 1px solid transparent !important;
+    color: var(--ff7-text-muted) !important;
+    transition: all 0.2s ease;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: var(--ff7-text-main) !important;
+    background-color: var(--ff7-bg-hover) !important;
+    border: 1px solid var(--ff7-border) !important; /* Tech border appears */
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: var(--ff7-mako-dim) !important;
+    color: var(--ff7-mako) !important;
+    border-radius: var(--ff7-radius) !important;
+    border-left: 3px solid var(--ff7-mako) !important; /* Identification marker */
+    /* THEME REQUEST: Subtle highlight for active area */
+    box-shadow: none; /* Flattened */
+}
+
+/* Header for subconcepts (The small text inside expanders) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: var(--ff7-text-muted) !important; 
+    text-transform: uppercase;
+    font-size: 0.75em;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    opacity: 0.7;
+} 
+
+/* Subconcepts and quick test icon: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: var(--ff7-text-muted) !important;
+    background-color: transparent !important;
+    border: 1px solid transparent;
+}
+
+/* Subconcepts and quick test icon: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: var(--ff7-text-main) !important;
+    text-shadow: 0 0 5px rgba(255,255,255,0.2); 
+    /* No bg change, just text lighting up like a terminal */
+}
+
+/* Subconcepts: Active Element: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: var(--ff7-mako) !important; /* Solid Mako Block */
+    border-radius: var(--ff7-radius) !important;
+    border: 1px solid var(--ff7-mako) !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: #FFFFFF !important; /* High contrast for active state */
+    font-weight: 600;
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: #388E84 !important; /* Slightly lighter Mako */
+    border-radius: var(--ff7-radius) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: #FFFFFF !important;
+    text-shadow: 0 0 8px rgba(255,255,255,0.5);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME: FF7 MAKO INDUSTRIAL (Flat, Low Contrast, Dark)
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+    /* -- PALETTE DEFINITIONS -- */
+    --ff7-bg-void: #121619;       /* Deepest background */
+    --ff7-bg-card: #1B2026;       /* Surface/Card background */
+    --ff7-bg-hover: #242A33;      /* Interactive hover state */
+    
+    --ff7-text-main: #C8D1D9;     /* Silver-grey (High legibility) */
+    --ff7-text-muted: #8B949E;    /* Subtitles/secondary */
+    --ff7-text-header: #E6EDF3;   /* Bright white for headers */
+    
+    --ff7-accent-mako: #2A7B72;   /* The iconic Mako Teal */
+    --ff7-border-dim: #2F363D;    /* Subtle borders for structure */
+    
+    /* Functional mappings to your existing logic */
+    --main-area-bg: var(--ff7-bg-void);
+    --main-area-text: var(--ff7-text-main);
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--main-area-bg);
+    color: var(--main-area-text);
+    /* Adding a subtle grain/scanline effect if supported, otherwise flat */
+    background-image: linear-gradient(rgba(18, 22, 25, 0.97), rgba(18, 22, 25, 0.97)); 
+}
+
+/* Sidebar Expand Button - Icon (default) */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: var(--ff7-text-muted) !important; /* Low contrast by default */
+    text-shadow: none; /* Removed the glow for a flatter, industrial look */
+    transition: color 0.3s ease;
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: var(--ff7-accent-mako) !important; /* Mako Teal on hover */
+    background-color: transparent !important;
+    text-shadow: 0 0 8px rgba(42, 123, 114, 0.4); /* Slight Mako glow only on hover */
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: transparent !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: var(--ff7-accent-mako); /* Teal Title */
+    background-color: transparent;
+    font-weight: 400; /* Lighter weight fits the sci-fi aesthetic */
+    font-family: 'Rajdhani', 'Roboto Mono', sans-serif; /* Tech feel if available */
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* Lesson Card: Main Area */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: var(--ff7-bg-card);
+    border: 1px solid var(--ff7-border-dim); /* Distinct flat border */
+    border-radius: 2px; /* Sharp corners (Industrial look) */
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Very subtle depth */
+}
+
+/* Lesson Card: Strong Text */
+section[data-testid="stMain"] .st-key-lesson_window strong {
+    color: var(--ff7-accent-mako); /* Highlights are Teal, not White */
+    font-weight: 600;
+}
+
+/* Lesson: Headers */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--ff7-text-header);
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    margin-top: 1.5rem;
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--ff7-text-muted);
+    font-style: normal; /* FF7 style often uses color for emphasis, not slant */
+    border-left: 2px solid var(--ff7-accent-mako); /* Data-log style emphasis */
+    padding-left: 8px;
+    display: inline-block;
+}
+
+/* Lesson Card: Table Headers + text */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--ff7-text-header);
+    border: 1px solid var(--ff7-border-dim);
+    background-color: var(--ff7-bg-hover); /* Slightly lighter header */
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Lesson Card: Table Data + text */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--ff7-text-main);
+    border: 1px solid var(--ff7-border-dim);
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* Scrollbar styling for lesson window */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ff7-accent-mako) var(--ff7-bg-void);
+}
+
+/* Webkit Scrollbar override for Chrome/Safari compatibility */
+.st-key-lesson_window::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.st-key-lesson_window::-webkit-scrollbar-track {
+    background: var(--ff7-bg-void);
+}
+.st-key-lesson_window::-webkit-scrollbar-thumb {
+    background: var(--ff7-accent-mako);
+    border-radius: 2px;
+}
+
+/* ============================================================
+   THEME: FF7 MAKO DARK (Low Contrast)
+   ============================================================ */
+:root {
+    /* CORE PALETTE */
+    --mako-teal:       #2A7B72;  /* The main accent */
+    --shinra-dark:     #121619;  /* Deep background */
+    --shinra-surface:  #1B2026;  /* Card background */
+    --shinra-border:   #2F363D;  /* Low contrast borders */
+    --soldier-silver:  #C8D1D9;  /* Primary text */
+    --faded-grey:      #8B949E;  /* Secondary text */
+    
+    /* MAPPING TO YOUR UI ELEMENTS */
+    --question-text:       #E0E6ED;          /* Slightly brighter than standard text */
+    --answer-text:         var(--soldier-silver);
+    --answer-bg:           var(--shinra-surface);
+    --answer-border:       var(--shinra-border);
+    --answer-letter-text:  var(--mako-teal); /* The A/B/C/D color */
+    
+    /* KEYBOARD HINTS */
+    --kbd-key-text:        var(--soldier-silver);
+    --kbd-key-bg:          #242A33;
+    --kbd-key-border:      #38414D;
+    --kbd-key-shadow:      #0D1117;          /* The dark "3D" side of the key */
+    --kbd-legend-text:     var(--faded-grey);
+}
+
+/* Quiz Test State ──────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question  {
+    color: #e0e6ed8b !important;
+    background-color: transparent;
+    /* Optional: Subtle text shadow for a monitor glow effect */
+    text-shadow: 0 0 10px rgba(42, 123, 114, 0.15); 
+}
+
+.st-key-question p {
+    font-weight: 400 !important; /* Bolder, but not heavy */
+    font-family: 'Rajdhani', 'Segoe UI', sans-serif; /* Tech-feel font if available */
+    letter-spacing: 0.5px;
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    color: var(--answer-text);
+    background-color: var(--answer-bg);
+    
+    /* THEME CHANGE: FF7 is blocky/industrial, so we reduce radius */
+    border-radius: 2px; 
+    
+    /* THEME CHANGE: Flat design needs borders to separate from dark bg */
+    border: 1px solid var(--answer-border); 
+    
+    padding: 12px 16px; /* Ensure breathability */
+    transition: all 0.2s ease; /* smooth hover effects */
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    color: var(--answer-letter-text);
+    font-family: 'Roboto Mono', monospace; /* Tech/Data look */
+    margin-right: 10px;
+    /* Optional: A subtle glow on the letter */
+    text-shadow: 0 0 5px rgba(42, 123, 114, 0.4);
+}
+
+/* Keyboard Legend */
+.key-hint {
+    /* Switched to monospace for the industrial/console feel */
+    font-family: 'JetBrains Mono', 'Roboto Mono', monospace; 
+    font-weight: 500;
+    font-size: 0.85em;
+    
+    color: var(--kbd-key-text);
+    background: var(--kbd-key-bg);
+    border: 1px solid var(--kbd-key-border);
+    
+    /* Sharper corners for keys */
+    border-radius: 4px; 
+    
+    /* Solid shadow, not blurry, to look like a physical key */
+    box-shadow: 0 3px 0 var(--kbd-key-shadow);
+    
+    padding: 2px 6px;
+    vertical-align: middle;
+}
+
+.keyboard-legend {
+    color: var(--kbd-legend-text);
+    font-size: 12px; /* Slightly smaller */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    text-transform: uppercase; /* "Shinra" style headers are usually caps */
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   ADDON: HOVER EFFECTS
+   The original snippet didn't have hovers, but you need them 
+   for the "Interactive" feel. I used the attribute selector
+   to ensure it targets the same elements.
+   ───────────────────────────────────────────────────────────── */
+
+[class*="st-key-answer"]:hover {
+    border-color: var(--mako-teal); /* Glows Teal on hover */
+    background-color: #242A33;      /* Slightly lighter bg */
+    cursor: pointer;
+    transform: translateX(4px);     /* Mechanical movement on hover */
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+:root {
+    /* Mako & Meteor Palette 
+       Remapping old variable names to new FF7 values for compatibility 
+    */
+    --nordic-red: #9E3A3A;    /* Limit Break Red */
+    --nordic-green: #3A7E3A;  /* Materia Green */
+    --nordic-yellow: #C8A54B; /* Chocobo Gold */
+    
+    /* New Theme Specifics */
+    --acc-mako: #2A7B72;      /* Mako Teal */
+    --bg-deep: #121619;       /* Deep Void */
+    --bg-surface: #1B2026;    /* Panel Surface */
+    --text-primary: #C8D1D9;  /* Silver Text */
+    --text-muted: #8B949E;    /* Muted Text */
+    
+    /* Adjusted Glass Variables for "Shinra" Interface */
+    --glass-bg: rgba(27, 32, 38, 0.90); /* Darker, more solid */
+    --glass-border: rgba(42, 123, 114, 0.3); /* Subtle Mako rim */
+}
+
+/* 1. HERO METRIC BOXES (Industrial Glass) */
+.feedback-box {
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(4px); /* Reduced blur for sharper UI */
+    border-radius: 4px; /* Reduced radius: Blocky industrial look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+}
+
+.feedback-box:hover {
+    border-color: var(--acc-mako);
+    background-color: rgba(36, 42, 51, 0.95);
+    transform: translateY(-2px);
+}
+
+.metric-label {
+    font-family: 'Inter', sans-serif; /* Clean header font */
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Wider spacing for sci-fi feel */
+    font-weight: 500;
+}
+
+.metric-value {
+    font-family: 'Roboto Mono', monospace; /* Monospace for data */
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-shadow: 0 0 15px rgba(42, 123, 114, 0.2); /* Slight Mako glow */
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border: 1px solid var(--nordic-green);
+    box-shadow: 0 0 10px rgba(58, 126, 58, 0.1);
+    color: var(--text-primary); /* Keep text silver for readability */
+}
+
+.feedback-box.status-failed {
+    border: 1px solid var(--nordic-red);
+    box-shadow: 0 0 10px rgba(158, 58, 58, 0.1);
+    color: var(--text-primary);
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.0rem; 
+    opacity: 0.8;
+    color: var(--text-muted); /* Muted icons, let borders tell the status */
+}
+
+/* 2. QUESTION EXPANDERS */
+.st-key-feedback_list details {
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+    margin-bottom: 8px;
+}
+
+.st-key-feedback_list summary {
+    font-family: 'Rajdhani', sans-serif; /* Tech font preference */
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.st-key-feedback_list summary:hover {
+    background-color: rgba(42, 123, 114, 0.15) !important; /* Teal tint */
+    color: var(--acc-mako);
+    cursor: pointer;
+}
+
+/* 3. ANSWER COMPARISON CARDS */
+.answer-card {
+    border-radius: 2px; /* Sharp corners */
+    font-size: 0.95rem;
+    border: 1px solid var(--glass-border);
+    background-color: var(--bg-deep); /* Deep void background */
+    margin-top: 8px;
+    padding: 12px;
+}
+
+/* User's Answer Card */
+.answer-card.user-wrong {
+    background-color: rgba(158, 58, 58, 0.1); /* Dark Red Tint */
+    border: 1px solid var(--nordic-red);
+    color: var(--text-primary);
+}
+
+.answer-card.user-correct {
+    background-color: rgba(58, 126, 58, 0.1); /* Dark Green Tint */
+    border: 1px solid var(--nordic-green);
+    color: var(--text-primary);
+}
+
+/* Correct Answer Card (The "Truth" Card) */
+.answer-card.correct-key {
+    background-color: rgba(27, 32, 38, 1);
+    border: 1px dashed var(--nordic-green); /* Dashed to differentiate */
+    color: var(--nordic-green);
+}
+
+.answer-label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Explanation Box Theme */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: var(--bg-surface) !important;
+    border-left: 3px solid var(--acc-mako) !important;
+    border-radius: 2px !important; /* Sharp */
+    color: var(--text-primary) !important;
+    font-family: 'Roboto Mono', monospace !important; /* Terminal style */
+    font-size: 0.9rem !important;
+    font-style: normal !important;
+    line-height: 1.5 !important;
+    padding: 1rem !important;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5); /* Inner shadow for depth */
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: var(--acc-mako);
+    margin-right: 8px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME DEFINITIONS (FF7 MAKO PALETTE)
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Core Backgrounds */
+    --ff7-bg-deep: #121619;       /* Deep Void */
+    --ff7-bg-surface: #1B2026;    /* Card Surface */
+    --ff7-bg-console: #0D1117;    /* Terminal Black */
+    
+    /* Text */
+    --ff7-text-main: #C8D1D9;     /* Silver */
+    --ff7-text-muted: #8B949E;    /* Gunmetal */
+    
+    /* Accents */
+    --ff7-mako: #2A7B72;          /* Primary Teal */
+    --ff7-mako-glow: #2A7B7280;   /* Teal Glow */
+    --ff7-materia: #3A7E3A;       /* Success Green */
+    --ff7-limit: #9E3A3A;         /* Error Red */
+    --ff7-warning: #C8A415;       /* Shinra Gold */
+    
+    /* Borders */
+    --ff7-border: #2F363D;        /* Dim Border */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The "Magic" Box)
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container */
+.st-key-generator_card {
+    background-color: var(--ff7-bg-surface);
+    border: 1px solid var(--ff7-border);
+    border-top: 3px solid var(--ff7-mako); /* Distinctive Mako Top Bar */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    border-radius: 4px; /* Industrial sharp corners */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: var(--ff7-text-main);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(42, 123, 114, 0.4); /* Slight Mako glow */
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    border-color: var(--ff7-border) !important;
+    opacity: 1;
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    color: var(--ff7-mako);
+    text-shadow: 0 0 5px var(--ff7-mako-glow);
+}
+
+.gen-input-icon {
+    color: var(--ff7-mako);
+}
+
+/* Warning Box - "Shinra Alert" Style */
+.generator-warning {
+    color: var(--ff7-warning); 
+    background: rgba(200, 164, 21, 0.05); 
+    border-radius: 2px;
+    border: 1px solid rgba(200, 164, 21, 0.3);
+    border-left: 3px solid var(--ff7-warning);
+}
+
+/* Metric Stats Box */
+.generator-stat-box {
+    background: var(--ff7-bg-deep);
+    border-radius: 2px;
+    border: 1px solid var(--ff7-border);
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: 1px solid var(--ff7-border);
+}
+
+.stat-label {
+    color: var(--ff7-text-muted);
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Consolas', 'Courier New', monospace; /* Tech feel */
+}
+
+.stat-value {
+    color: var(--ff7-text-main);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-accent {
+    color: var(--ff7-mako);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-success {
+    color: var(--ff7-materia);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 0 0 8px rgba(58, 126, 58, 0.4);
+}
+
+/* Loading/Spinner Icon */
+.spinner-icon {
+    color: var(--ff7-mako);
+    animation: spin 1.5s linear infinite;
+    filter: drop-shadow(0 0 4px var(--ff7-mako));
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform: rotate(360deg); 
+    } 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Console Log - "Terminal" Style */
+.generator-console {
+    background: var(--ff7-bg-console);
+    border: 1px solid var(--ff7-border);
+    border-radius: 2px;
+    font-family: 'Courier New', monospace;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8); /* Deep inset */
+}
+
+.generator-console-step {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.generator-console-step:last-child {
+    border-bottom: none;
+}
+
+.console-icon {
+    color: var(--ff7-mako);
+}
+
+.console-title {
+    color: var(--ff7-text-main);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.console-message {
+    color: var(--ff7-text-muted);
+    font-size: 0.9em;
+    border-left: 2px solid var(--ff7-border);
+}
+
+/* Completion Screen */
+.completion-header {
+    color: var(--ff7-materia); 
+}
+
+.completion-icon {
+    font-size: 36px;
+    filter: drop-shadow(0 0 10px rgba(58, 126, 58, 0.5));
+}
+
+/* Spinner Animation Color */
+.stVerticalBlock [data-testid="stSpinner"] {
+    color: var(--ff7-mako) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   METRIC CARDS (System Status Indicators)
+   ───────────────────────────────────────────────────────────── */
+
+/* Metric Card Container */
+[data-testid="stMetric"] {
+    background-color: var(--ff7-bg-surface);
+    border: 1px solid var(--ff7-border);
+    padding: 15px;
+    border-radius: 2px; /* Sharp industrial corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+/* Hover Effect for Metric Card */
+[data-testid="stMetric"]:hover {
+    border-color: var(--ff7-mako); /* Teal highlight */
+    background-color: rgba(42, 123, 114, 0.05); /* Very subtle tint */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transform: translateY(-1px);
+}
+
+/* Metric Label (Title) */
+[data-testid="stMetricLabel"] {
+    font-size: 0.8rem !important;
+    color: var(--ff7-text-muted) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+/* Metric Value (Big Number) */
+[data-testid="stMetricValue"] {
+    font-size: 2rem !important;
+    color: var(--ff7-text-main) !important;
+    font-weight: 500;
+    font-family: 'Rajdhani', sans-serif; /* If available, else inherits */
+    text-shadow: none; /* Keep flat for low contrast feel */
+}
+
+/* Metric Delta (Change indicator) */
+[data-testid="stMetricDelta"] {
+    font-size: 0.85rem !important;
+    background-color: var(--ff7-bg-deep); /* Dark background for pill */
+    padding: 2px 8px;
+    border-radius: 2px;
+    border: 1px solid var(--ff7-border);
+    width: fit-content;
+    margin-top: 8px;
+}
+
+/* Delta Arrow Icon adjustment */
+[data-testid="stMetricDelta"] svg {
+    margin-right: 4px;
+    stroke-width: 2px;
+}
+
+/* =========================================
+   THEME: FF7 MAKO FLAT (Low Contrast Dark)
+   ========================================= */
+:root {
+    /* Palette Definition */
+    --ff7-bg-deep: #121619;       /* Deepest background */
+    --ff7-bg-surface: #1B2026;    /* Card/Panel background */
+    --ff7-bg-hover: #242A33;      /* Hover state */
+    
+    --ff7-text-primary: #C8D1D9;  /* Silver text (High readability) */
+    --ff7-text-muted: #8B949E;    /* Muted text */
+    
+    --ff7-acc-mako: #2A7B72;      /* Primary Teal Accent */
+    --ff7-acc-glow: rgba(42, 123, 114, 0.3); /* Mako Glow */
+    
+    --ff7-border-dim: #2F363D;    /* Subtle borders */
+    --ff7-radius-sm: 2px;         /* Industrial/Sharp corners */
+}
+
+/* =========================================
+   1. TABS: Industrial Switch Style
+   ========================================= */
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: transparent !important; /* Flat look */
+    color: var(--ff7-text-muted) !important;
+    border-radius: var(--ff7-radius-sm) !important;
+    padding: 8px 16px !important;
+    margin-right: 4px;
+    border: 1px solid transparent !important; /* Reserve space to prevent layout shift */
+    transition: all 0.2s ease;
+}
+
+/* Tab area: Inactive Tab - Hover */
+/* Adds a subtle slate background and dim border */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: var(--ff7-bg-hover) !important;
+    color: var(--ff7-text-primary) !important;
+    border-color: var(--ff7-border-dim) !important;
+}
+
+/* Tab area: Active Tab */
+/* Solid Mako Teal block with slight glow */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--ff7-acc-mako) !important;
+    color: #FFFFFF !important; /* White text for contrast against teal */
+    border-bottom: none !important; 
+    box-shadow: 0 0 8px var(--ff7-acc-glow) !important; /* Mako energy glow */
+    border: 1px solid var(--ff7-acc-mako) !important;
+}
+
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* =========================================
+   2. FILE DROPZONE: Tech/Schematic Look
+   ========================================= */
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: var(--ff7-text-primary);
+    font-family: monospace; /* Optional: adds to the tech feel */
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: var(--ff7-text-muted);
+    opacity: 0.7;
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: var(--ff7-bg-deep);
+    border: 1px dashed var(--ff7-border-dim); /* Dashed schematic look */
+    border-radius: var(--ff7-radius-sm);
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    /* Very faint teal tint */
+    background-color: rgba(42, 123, 114, 0.1); 
+    color: var(--ff7-acc-mako);
+    border: 1px solid rgba(42, 123, 114, 0.3);
+    border-radius: var(--ff7-radius-sm);
+}
+
+/* File Dropzone: Icon color */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: var(--ff7-acc-mako);
+    filter: drop-shadow(0 0 5px var(--ff7-acc-glow));
+}
+
+/* =========================================
+   3. POPOVER (Dropdown): Flat Panel
+   ========================================= */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: 250px !important;  
+    max-width: 300px !important;
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"],
+[data-testid="stPopoverBody"] > div {
+    background-color: var(--ff7-bg-surface); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important; /* Deep shadow for depth */
+}
+
+/* Button Dropdown Popover: Border */
+[data-testid="stPopoverBody"] {
+    border: 1px solid var(--ff7-border-dim) !important;
+    border-radius: var(--ff7-radius-sm); /* Sharper corners (2px) instead of 12px */
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--ff7-text-primary) !important;
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+    border-color: var(--ff7-acc-mako) !important;
+}
+
+:root {
+    /* --- FF7 DARK FLAT PALETTE --- */
+    
+    /* Core Backgrounds */
+    --ff7-bg-deep: #121619;       /* The Void */
+    --ff7-bg-surface: #1B2026;    /* Card Surface */
+    --ff7-bg-hover: #242A33;      /* Interactive Hover */
+    
+    /* Mako Energy Accents */
+    --ff7-acc-mako: #2A7B72;      /* Primary Teal (Contrast ~4.9:1) */
+    --ff7-acc-dark: #1A3B38;      /* Darker Teal for selected backgrounds */
+    
+    /* Typography */
+    --ff7-text-silver: #C8D1D9;   /* Main Text */
+    --ff7-text-white: #FFFFFF;    /* Highlight Text */
+    --ff7-border-dim: #2F363D;    /* Subtle Borders */
+
+    /* --- MAPPING TO YOUR UI VARIABLES --- */
+
+    /* Radius: Sharp/Industrial (2px) */
+    --ui_input_radius: 2px;
+    --ui_list_radius: 0px;
+
+    /* Dropdown Closed State */
+    --ui_dropdown_closed_bg: var(--ff7-bg-surface);
+    --ui_dropdown_closed_border: var(--ff7-border-dim);
+    --ui_dropdown_closed_text: var(--ff7-text-silver);
+
+    /* Dropdown Open State (Active) */
+    --ui_dropdown_open_bg: var(--ff7-bg-deep);
+    --ui_dropdown_open_border: var(--ff7-acc-mako);
+    --ui_dropdown_open_text_container: var(--ff7-text-white);
+    --ui_dropdown_open_icon: var(--ff7-acc-mako);
+
+    /* Dropdown Hover State */
+    --ui_dropdown_hover_bg: var(--ff7-bg-hover);
+    --ui_dropdown_hover_border: var(--ff7-text-silver);
+    --ui_dropdown_hover_text: var(--ff7-text-white);
+
+    /* Virtual List (The Popup) */
+    --ui_list_bg: var(--ff7-bg-deep);
+    --ui_list_border: 1px solid var(--ff7-border-dim); /* Full border string */
+    --ui_list_text: var(--ff7-text-silver);
+
+    /* List Item Selected */
+    --ui_list_selected_bg: var(--ff7-acc-dark);
+    --ui_list_selected_text: var(--ff7-text-white);
+
+    /* List Item Hover (while selected) */
+    --ui_list_selected_hover_bg: var(--ff7-acc-mako);
+    --ui_list_selected_hover_text: var(--ff7-text-white);
+
+    /* Scrollbars */
+    --ui_list_scrollbar_thumb: var(--ff7-border-dim);
+    --ui_list_scrollbar_track: var(--ff7-bg-deep);
+}
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: var(--ui_dropdown_closed_bg) !important;
+    border: 1px solid var(--ui_dropdown_closed_border); /* Adjusted to 1px for Flat look */
+    border-radius: var(--ui_input_radius) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: var(--ui_dropdown_closed_text) !important;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--ui_dropdown_open_bg) !important;
+    border: 1px solid var(--ui_dropdown_open_border); /* Adjusted to 1px */
+    color: var(--ui_dropdown_open_text_container) !important;
+    border-radius: var(--ui_input_radius) !important;
+    box-shadow: 0 0 0 1px var(--ui_dropdown_open_border) !important; /* Adds subtle glow weight */
+}  
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: var(--ui_dropdown_open_icon) !important;
+    fill: var(--ui_dropdown_open_icon) !important; /* Ensure icons take color */
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--ui_dropdown_hover_bg) !important;
+    border: 1px solid var(--ui_dropdown_hover_border);
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: var(--ui_dropdown_hover_text) !important;
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: var(--ui_list_bg) !important;
+    border: var(--ui_list_border) !important;
+    border-radius: var(--ui_list_radius) !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important; /* Tightened shadow for flat look */
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_text) !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: var(--ui_list_selected_bg) !important;
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_text) !important;
+    font-weight: 500 !important; /* Reduced from bold to 500 for cleaner look */
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: var(--ui_list_selected_hover_bg) !important;
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_hover_text) !important;
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_list_scrollbar_thumb) transparent;
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: var(--ui_list_scrollbar_track);
+}
+
+:root {
+    /* --- FF7 Theme Palette --- */
+    --c-mako: #2A7B72;          /* Primary Accent (Teal) */
+    --c-mako-dim: #1e4f4a;      /* Darker Mako for borders */
+    --c-mako-glow: rgba(42, 123, 114, 0.25);
+    
+    --c-deep: #0D1117;          /* Deepest Background (Input BG) */
+    --c-surface: #161B22;       /* Hover Background */
+    
+    --c-text-silver: #C9D1D9;   /* Primary Text */
+    --c-text-white: #F0F6FC;    /* Hover Text */
+    --c-border-dim: #30363D;    /* Default Border */
+    --c-muted: #8B949E;         /* Icons/Labels */
+
+    /* --- UI mappings --- */
+    --ui_input_radius: 2px;     /* Blocky/Industrial shape */
+    
+    /* Backgrounds */
+    --ui_input_bg_normal: var(--c-deep);
+    --ui_input_bg_hover: var(--c-surface);
+    --ui_input_bg_focus: var(--c-deep); /* Keep dark on focus to let border shine */
+    
+    /* Text */
+    --ui_input_text_normal: var(--c-text-silver);
+    --ui_input_text_hover: var(--c-text-white);
+    
+    /* Borders */
+    --ui_input_border_normal: 1px solid var(--c-border-dim);
+    --ui_input_border_hover: 1px solid var(--c-mako); /* Mako Hover */
+    --ui_input_border_focus: 1px solid var(--c-mako); /* Mako Focus */
+    
+    /* Misc */
+    --ui_input_scrollbar_thumb: var(--c-border-dim);
+    --ui_input_step_btn_disabled: #21262d;
+    --ui_tooltip_icon: var(--c-muted);
+    --ui_input_label: var(--c-muted);
+}
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: var(--ui_input_radius);
+    /* FF7 Flat Style: Removed deep inset shadow, replaced with subtle border definition */
+    box-shadow: none; 
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: var(--ui_input_bg_normal) !important;
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: var(--ui_input_bg_hover) !important;
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: var(--ui_input_bg_focus) !important;
+    /* Optional: Add a subtle Mako glow here if strict selector limits allow adding properties */
+    box-shadow: 0 0 0 1px var(--c-mako-glow) !important; 
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--ui_input_text_normal) !important;
+    caret-color: var(--c-mako); /* Blinking cursor color */
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: var(--ui_input_text_hover) !important;
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: var(--ui_input_text_normal) !important;
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: var(--ui_input_border_normal) !important;
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: var(--ui_input_border_hover) !important;
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: var(--ui_input_border_focus) !important;
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_input_scrollbar_thumb) transparent;
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: var(--ui_input_step_btn_disabled) !important;
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--ui_tooltip_icon) !important;
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--ui_input_label);
+    font-size: 0.85em; /* Slightly smaller for technical look */
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Shinra-OS style headers */
+    opacity: 0.9;
+}

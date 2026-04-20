@@ -1,0 +1,1650 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* ─────────────────────────────────────────────────────────────
+   THEME VARIABLES: The Phosphophyllite (Mint & Obsidian)
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* 💎 CORE PALETTE */
+    --phos-mint: #9CE5D3;       /* Main Accent */
+    --phos-ice: #B2EBF2;        /* Highlight */
+    --phos-obsidian: #121417;   /* Deep Background */
+    --phos-glass: rgba(156, 229, 211, 0.15); /* Glassy Transparency */
+    
+    /* 🔘 UI DIMENSIONS */
+    --ui_input_radius: 8px;     /* Gem-cut corners (slightly sharper) */
+
+    /* 🟢 PRIMARY BUTTON (The "Prism") */
+    --bt_main: #9CE5D3;
+    --bt_main_gradient_start: #9CE5D3;
+    --bt_main_gradient_end: #80DEEA;  /* Slight shift to cyan */
+    --bt_main_border: rgba(255, 255, 255, 0.4);
+    --bt_main_text: #121417;          /* Dark text for contrast on mint */
+    --bt_main_shadow: 0 4px 15px rgba(156, 229, 211, 0.4); /* Mint Glow */
+    
+    --bt_main_hover: #B2EBF2;
+    --bt_main_shadow_hover: 0 0 25px rgba(156, 229, 211, 0.6); /* Intense Glow */
+    --bt_main_active: #80CBC4;
+    --bt_main_focus_ring: #E0F7FA;
+    --bt_main_disabled: #2C3336;
+    --bt_main_text_disabled: #546E7A;
+
+    /* ⚪ SECONDARY BUTTON (The "Ghost") */
+    --bt_secondary: transparent;
+    --bt_secondary_gradient_start: rgba(156, 229, 211, 0.05);
+    --bt_secondary_gradient_end: rgba(156, 229, 211, 0.01);
+    --bt_secondary_border: rgba(156, 229, 211, 0.3);
+    --bt_secondary_text: #9CE5D3;     /* Mint Text */
+    --bt_secondary_shadow: none;
+    
+    --bt_secondary_hover: rgba(156, 229, 211, 0.1);
+    --bt_secondary_shadow_hover: 0 0 15px rgba(156, 229, 211, 0.2);
+    --bt_secondary_active: rgba(156, 229, 211, 0.05);
+    --bt_secondary_focus_ring: rgba(156, 229, 211, 0.5);
+    --bt_secondary_disabled: transparent;
+    --bt_secondary_text_disabled: #455A64;
+
+    /* 📊 PROGRESS BAR (The "Laser Beam") */
+    --prog-bg: #0F1214;
+    --prog_height: 6px;         /* Sleeker, thinner */
+    --prog_radius: 100px;
+    --bar-hue: 165;             /* Mint Hue */
+    --prog-sat: 65%;
+    --prog-light: 75%;
+    --prog-shadow: 0 0 12px #9CE5D3; /* The Beam Glow */
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   COMPONENT STYLES
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Button ──────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    background: linear-gradient(135deg, var(--bt_main_gradient_start), var(--bt_main_gradient_end));
+    background-color: var(--bt_main);
+    border: 1px solid var(--bt_main_border);
+    color: var(--bt_main_text);
+    box-shadow: var(--bt_main_shadow);
+    border-radius: var(--ui_input_radius);
+    font-weight: 600; /* Added for better readability on mint */
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hover State - "Gem Glint" effect */
+button[kind="primary"]:hover {
+    background: linear-gradient(135deg, #B2EBF2, #9CE5D3); /* Lighter shift */
+    border-color: #E0F7FA;
+    box-shadow: var(--bt_main_shadow_hover);
+    transform: translateY(-2px); /* Slightly higher lift */
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background: var(--bt_main_active);
+    box-shadow: 0 0 5px rgba(156, 229, 211, 0.2);
+    transform: translateY(1px);
+    filter: brightness(0.95);
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    outline: none;
+    border-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(224, 247, 250, 0.3), var(--bt_main_shadow);
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background: var(--bt_main_disabled);
+    border-color: transparent;
+    color: var(--bt_main_text_disabled);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: linear-gradient(180deg, var(--bt_secondary_gradient_start), var(--bt_secondary_gradient_end));
+    background-color: transparent;
+    border: 1px solid var(--bt_secondary_border);
+    color: var(--bt_secondary_text);
+    box-shadow: var(--bt_secondary_shadow);
+    border-radius: var(--ui_input_radius);
+    backdrop-filter: blur(4px); /* Glassy blur */
+    transition: all 0.3s ease;
+}
+
+/* Hover State - "Etched Glass" glow */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: var(--bt_secondary_hover);
+    border-color: var(--phos-mint);
+    color: #E0F7FA;
+    box-shadow: var(--bt_secondary_shadow_hover);
+    transform: translateY(-1px);
+    text-shadow: 0 0 8px rgba(156, 229, 211, 0.6);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: var(--bt_secondary_active);
+    border-color: var(--bt_secondary_border);
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    background-color: var(--bt_secondary_hover);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--phos-mint);
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background-color: transparent;
+    border-color: #37474F;
+    color: var(--bt_secondary_text_disabled);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+/* Progress Bar ──────────────────────────────────────────── */
+
+.progress-container {
+    background-color: var(--prog-bg) !important;
+    height: var(--prog_height);
+    border-radius: var(--prog_radius);
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle container border */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.8);
+}
+
+.progress-fill {
+    /* Using HSL var to allow calculating the Mint color */
+    background-color: hsl(var(--bar-hue), var(--prog-sat), var(--prog-light)) !important;
+    box-shadow: var(--prog-shadow) !important;
+    height: 100%;
+    border-radius: var(--prog_radius);
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional: Add a 'shine' animation to the progress bar for extra polish */
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent
+    );
+    transform: translateX(-100%);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE
+   Theme: Phosphophyllite (Mint Mist & Refractive Obsidian)
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    /* Background: A mix of Abyssal Teal and Liquid Obsidian. 
+       We use high opacity to keep the text readable but allow a slight glass feel.
+    */
+    background: linear-gradient(
+        160deg, 
+        rgba(22, 29, 31, 0.9) 0%,   /* Abyssal Teal */
+        rgba(18, 20, 23, 0.95) 100% /* Liquid Obsidian */
+    );
+    
+    /* Glassmorphism Blur 
+       Essential for the "Gem" look. 
+    */
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+
+    /* Borders:
+       General border is faint mint.
+       Top border is brighter (Fractured Ice) to mimic overhead light hitting a facet.
+    */
+    border: 1px solid rgba(156, 229, 211, 0.1); 
+    border-top: 1px solid rgba(178, 235, 242, 0.3); 
+    
+    /* Shadows:
+       1. Deep drop shadow for elevation.
+       2. Subtle inner mint glow to make the card feel "infused" with light.
+    */
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(156, 229, 211, 0.05);
+        
+    border-radius: 16px;
+    padding: 2rem; /* Ensure content isn't cramped */
+}
+
+/* The Main Title */
+.welcome-title {
+    /* Font: Using a serif here gives it that "Ancient/Mineral" feel 
+       If you lack 'Playfair Display', it falls back to standard Serif.
+    */
+    font-family: 'Playfair Display', Georgia, serif; 
+    font-weight: 700;
+    font-size: 2.5rem;
+    
+    /* Color: Moon Dust (Cool White) */
+    color: #E3F2FD; 
+    
+    /* Text Shadow: A soft, wide Mint glow */
+    text-shadow: 0 0 20px rgba(156, 229, 211, 0.5);
+    letter-spacing: -0.5px;
+}
+
+/* The Icon inside the title */
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    
+    /* Color: Phos Mint */
+    color: #9CE5D3;
+    
+    /* The "Etched Glass" Effect:
+       Instead of a solid shadow, we use a tight, bright glow 
+       that makes the icon look like it's carved into the screen.
+    */
+    filter: drop-shadow(0 0 5px rgba(156, 229, 211, 0.8));
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    /* Color: Muted Blue-Grey to contrast with the bright title */
+    color: #B0BEC5; 
+    
+    font-family: 'Helvetica Neue', sans-serif; /* Keep subtitle clean/modern */
+    font-size: 1rem;
+    letter-spacing: 1.5px; /* Wider spacing for elegance */
+    opacity: 0.9;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    /* Instead of a solid line, use a fading gradient 
+       (Transparent -> Mint -> Transparent)
+    */
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+        to right, 
+        rgba(156, 229, 211, 0), 
+        rgba(156, 229, 211, 0.3), 
+        rgba(156, 229, 211, 0)
+    );
+    margin: 1.5rem 0;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME: PHOSPHOPHYLLITE (Mint Mist & Refractive Obsidian)
+   Palette Definition
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Core Palette */
+    --phos-obsidian: #121417;      /* Deep Liquid Obsidian */
+    --phos-abyssal:  #161D1F;      /* Sidebar Background */
+    --phos-mint:     #9CE5D3;      /* Main Accent */
+    --phos-ice:      #B2EBF2;      /* Highlights */
+    --phos-ghost:    #4DB6AC;      /* Muted/Secondary */
+    --phos-text:     #E3F2FD;      /* Moon Dust Text */
+    
+    /* Variable Mappings for your Selectors */
+    --sb_background: var(--phos-abyssal);
+    --sb_text: var(--phos-text);
+    
+    /* Collapse Button */
+    --sb_collapse_icon_default: var(--phos-ghost);
+    --sb_collapse_icon_size: 1.2rem;
+    --sb_collapse_icon_hover: var(--phos-mint);
+    --sb_collapse_bg_hover: rgba(156, 229, 211, 0.1); /* 10% Mint */
+    
+    /* Title */
+    --sb_title: var(--phos-mint);
+    --sb_title_size: 1.5rem;
+    --sb_title_weight: 700;
+    --sb_title_shadow: 0 0 15px rgba(156, 229, 211, 0.3);
+    
+    /* Expanders */
+    --sb_expander_closed_background: transparent;
+    --sb_expander_closed_text: #90A4AE;
+    --sb_expander_hover_background: rgba(156, 229, 211, 0.05);
+    --sb_expander_hover_text: var(--phos-ice);
+    --sb_expander_open_background: rgba(18, 20, 23, 0.5);
+    --sb_expander_open_text: var(--phos-mint);
+    
+    /* Sub-concepts */
+    --sb_header_subconcepts_text: rgba(156, 229, 211, 0.5); /* 50% opacity per request */
+    
+    /* Lessons */
+    --sb_lesson_text_normal: #B0BEC5;
+    --sb_lesson_background: transparent;
+    --sb_lesson_text_hover: var(--phos-mint);
+    
+    /* Active State (The Prism) */
+    --sb_active_bg_normal: linear-gradient(90deg, rgba(156, 229, 211, 0.15) 0%, transparent 100%);
+    --sb_active_text_normal: var(--phos-mint);
+    --sb_active_bg_hover: linear-gradient(90deg, rgba(156, 229, 211, 0.25) 0%, transparent 100%);
+    --sb_active_text_hover: #FFFFFF;
+    
+    /* Effects */
+    --sb_radius_default: 8px;
+    --phos-glow: 0 0 10px rgba(156, 229, 211, 0.6);
+    --etched-glass-glow: drop-shadow(0 0 2px rgba(156, 229, 211, 0.5));
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SIDEBAR STYLING
+   ───────────────────────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--sb_background);
+    color: var(--sb_text);
+    /* Subtle texture for the sidebar to look like stone */
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.02), transparent);
+    border-right: 1px solid rgba(156, 229, 211, 0.05);
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: var(--sb_collapse_icon_default) !important;
+    font-size: var(--sb_collapse_icon_size) !important;
+    /* THEME: Etched glass effect */
+    filter: drop-shadow(0 0 1px rgba(77, 182, 172, 0.3)); 
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: var(--sb_collapse_icon_hover) !important;
+    background-color: var(--sb_collapse_bg_hover) !important;
+    border: 1px solid rgba(156, 229, 211, 0.3); /* Thin glass border */
+    /* THEME: Stronger mint glow */
+    box-shadow: 0 0 15px rgba(156, 229, 211, 0.2); 
+}
+
+/* Sidebar - APP Title */
+.sidebar-title, .card-title {
+    font-size: var(--sb_title_size) !important;
+    font-weight: var(--sb_title_weight) !important;
+    color: var(--sb_title) !important; 
+    text-shadow: var(--sb_title_shadow);
+    letter-spacing: 1.5px; /* Cinematic spacing */
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons,
+.card-title .material-icons  {
+    font-size: inherit;      
+    line-height: inherit;   
+    vertical-align: middle; 
+    color: var(--phos-mint);
+    /* THEME: Icons gently glowing behind glass */
+    filter: var(--etched-glass-glow);
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    /* THEME: Gradient fade out instead of solid line */
+    background-image: linear-gradient(90deg, transparent, rgba(156, 229, 211, 0.3), transparent) !important;
+    background-color: transparent !important;
+    margin-top: 5px !important;
+    border: none;
+    height: 1px;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: var(--sb_expander_closed_background) !important;
+    border: none !important;
+    color: var(--sb_expander_closed_text) !important;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: var(--sb_expander_hover_text) !important;
+    background-color: var(--sb_expander_hover_background) !important;
+    /* Tiny glow on text */
+    text-shadow: 0 0 5px rgba(178, 235, 242, 0.4); 
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: var(--sb_expander_open_background) !important;
+    color: var(--sb_expander_open_text) !important;
+    border-radius: var(--sb_radius_default) !important;
+    border: 1px solid rgba(156, 229, 211, 0.1) !important;
+    /* THEME: Subtle highlight for active area */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+}
+
+/* Header for subconcepts */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: var(--sb_header_subconcepts_text) !important; 
+    text-transform: uppercase;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-top: 10px;
+} 
+
+/* Subconcepts and quick test icon: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: var(--sb_lesson_text_normal) !important;
+    background-color: var(--sb_lesson_background) !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Subconcepts and quick test icon: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: var(--sb_lesson_text_hover) !important;
+    /* Text glow on hover */
+    text-shadow: 0 0 8px rgba(156, 229, 211, 0.6); 
+    transform: translateX(4px); /* Slight movement */
+}
+
+/* Subconcepts: Active Element: Normal (THE PRISM) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background: var(--sb_active_bg_normal) !important;
+    border-radius: var(--sb_radius_default) !important;
+    border: 1px solid rgba(156, 229, 211, 0.1) !important;
+    /* Left accent bar simulating the gem edge */
+    box-shadow: inset 3px 0 0 var(--phos-mint) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: var(--sb_active_text_normal) !important;
+    font-weight: 600;
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background: var(--sb_active_bg_hover) !important;
+    border-radius: var(--sb_radius_default) !important;
+    box-shadow: inset 4px 0 0 var(--phos-ice), 0 0 15px rgba(156, 229, 211, 0.2) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: var(--sb_active_text_hover) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THE PHOSPHOPHYLLITE THEME (Mint Mist & Refractive Obsidian)
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+    /* 1. Base Colors */
+    --liquid-obsidian: #121417;   /* Main Background */
+    --abyssal-teal:    #161D1F;   /* Sidebar/Panels */
+    --card-surface:    #1A2024;   /* Card Backgrounds */
+    
+    /* 2. Text Colors */
+    --moon-dust:       #E3F2FD;   /* Primary Text (Off-white) */
+    --steel-mist:      #CFD8DC;   /* Secondary Text */
+    --muted-cyan:      #90A4AE;   /* Tertiary/Labels */
+
+    /* 3. The "Phos" Accents */
+    --phos-mint:       #9CE5D3;   /* Primary Accent/Glow */
+    --fractured-ice:   #B2EBF2;   /* Highlights */
+    --ghost-teal:      #4DB6AC;   /* Borders/Subtle Accents */
+    
+    /* 4. Effects */
+    --glass-border:    rgba(156, 229, 211, 0.2);
+    --mint-glow:       0 0 10px rgba(156, 229, 211, 0.4);
+    --text-glow:       0 0 8px rgba(156, 229, 211, 0.3);
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--liquid-obsidian);
+    color: #e3f2fd90 !important;
+    /* Optional: subtle grain or gradient can be added here if needed */
+}
+
+/* Sidebar Expand Button - Icon (default) */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: var(--phos-mint) !important;
+    text-shadow: var(--text-glow);
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: var(--fractured-ice) !important;
+    background-color: transparent !important;
+    text-shadow: 0 0 15px var(--phos-mint); /* Brighter glow on hover */
+    transform: scale(1.1); /* Slight zoom for tactile feel */
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: var(--fractured-ice);
+    background-color: transparent;
+    font-family: 'Playfair Display', serif; /* Suggestion for the "Ancient" feel */
+    font-weight: 300;
+    text-shadow: var(--text-glow);
+    padding-bottom: 10px;
+}
+
+/* Lesson Card: Main Area */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: var(--card-surface);
+    /* Glassmorphism Effect */
+    background-image: linear-gradient(145deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    border-radius: 8px; /* Slightly sharper corners for "gem" feel */
+    padding: 20px;
+}
+
+/* Lesson Card: Strong Text */
+section[data-testid="stMain"] .st-key-lesson_window strong {
+    color: #9ce5d3c3 !important;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
+}
+
+/* Lesson: Headers */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--fractured-ice);
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--ghost-teal);
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Lesson Card: Table Headers + text */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--phos-mint);
+    border: 1px solid var(--glass-border);
+    background-color: rgba(22, 29, 31, 0.8); /* Dark teal tint */
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Lesson Card: Table Data + text */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--steel-mist);
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Very faint border */
+}
+
+/* Scrollbar styling for lesson window */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ghost-teal) var(--abyssal-teal);
+}
+
+/* Webkit Scrollbar support (Chrome/Edge/Safari) */
+.st-key-lesson_window::-webkit-scrollbar {
+    width: 6px;
+}
+.st-key-lesson_window::-webkit-scrollbar-track {
+    background: var(--abyssal-teal);
+}
+.st-key-lesson_window::-webkit-scrollbar-thumb {
+    background-color: var(--ghost-teal);
+    border-radius: 3px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME: PHOSPHOPHYLLITE (Mint Mist & Refractive Obsidian)
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+    /* Core Palette Definition */
+    --phos-obsidian-deep: #121417;   /* Main Void */
+    --phos-obsidian-card: #1E2528;   /* Card Surface */
+    --phos-mint-glow:     #9CE5D3;   /* Main Accent */
+    --phos-mint-dim:      #4DB6AC;   /* Borders/Secondary */
+    --phos-text-moon:     #E3F2FD;   /* Primary Text */
+    --phos-text-muted:    #90A4AE;   /* Secondary Text */
+    
+    /* Functional Mappings for this Snippet */
+    --question-text:      var(--phos-text-moon);
+    
+    --answer-bg:          rgba(30, 37, 40, 0.7); /* Glassy Obsidian */
+    --answer-text:        #CFD8DC;
+    --answer-border:      rgba(156, 229, 211, 0.15); /* Subtle Mint Edge */
+    --answer-letter-text: var(--phos-mint-glow);
+    
+    --kbd-key-bg:         #263238;
+    --kbd-key-text:       #B2EBF2; /* Ice Blue */
+    --kbd-key-border:     #37474F;
+    --kbd-key-shadow:     #101214;
+    --kbd-legend-text:    var(--phos-text-muted);
+}
+
+/* Quiz Test State ──────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question  {
+    color: #90A4AE !important;
+    background-color: transparent;
+    /* Optional: Adds a very subtle glow to the question to make it pop against the black */
+    text-shadow: 0 0 20px rgba(156, 229, 211, 0.1);
+}
+
+.st-key-question p {
+    font-weight: 700; /* Increased slightly for readability */
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    color: var(--answer-text);
+    background-color: var(--answer-bg);
+    /* The "Refractive" Look: Subtle border and backdrop blur */
+    border: 1px solid var(--answer-border);
+    border-radius: 12px; /* Softened edges like polished stone */
+
+    
+    /* Layout & Spacing */
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    
+    /* Smooth transition for when you eventually add hover effects */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    color: #9CE5D3;
+    font-weight: 600;
+    
+}
+
+/* Keyboard Legend */
+.key-hint {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace; /* Tech/Console feel */
+    font-weight: 600;
+    font-size: 0.8em;
+    padding: 2px 6px;
+    
+    color: var(--kbd-key-text);
+    background: var(--kbd-key-bg);
+    
+    /* Mechanical Key Styling */
+    border: 1px solid var(--kbd-key-border);
+    border-radius: 6px;
+    box-shadow: 0 3px 0 var(--kbd-key-shadow); /* Deep shadow for 3D feel */
+    
+    vertical-align: middle;
+    margin: 0 4px;
+}
+
+.keyboard-legend {
+    color: var(--kbd-legend-text);
+    font-size: 13px;
+    font-family: system-ui, -apple-system, sans-serif;
+    opacity: 0.8;
+    margin-top: 20px; /* Spacing from answers */
+    letter-spacing: 0.03em;
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+:root {
+    /* PHOSPHOPHYLLITE PALETTE */
+    /* Core Colors */
+    --phos-mint: #9CE5D3;        /* Main Accent (Success/Active) */
+    --phos-teal: #4DB6AC;        /* Secondary Accent */
+    --phos-cinnabar: #EF5350;    /* Error/Destructive */
+    --phos-ice: #B2EBF2;         /* Highlights */
+    
+    /* Backgrounds & Surfaces */
+    --liquid-obsidian: #121417;  /* Deep Background */
+    --abyssal-teal: #161D1F;     /* Sidebar/Cards */
+    
+    /* Text */
+    --moon-dust: #E3F2FD;        /* Primary Text */
+    --muted-slate: #90A4AE;      /* Secondary Text */
+    
+    /* Glass Effects */
+    --glass-bg: rgba(22, 29, 31, 0.85); /* Darker, deep teal tint */
+    --glass-border: rgba(156, 229, 211, 0.15); /* Subtle mint rim */
+    --glass-shine: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+}
+
+/* 1. HERO METRIC BOXES (Refractive Obsidian Style) */
+.feedback-box {
+    background-color: var(--glass-bg);
+    background-image: var(--glass-shine); /* Adds the gem facet look */
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px); /* Heavier blur for density */
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); /* Deep shadow */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.feedback-box:hover {
+    transform: translateY(-2px);
+    border-color: rgba(156, 229, 211, 0.4); /* Mint rim glows on hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: var(--muted-slate);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--moon-dust);
+    /* Crystalline text glow */
+    text-shadow: 0 0 20px rgba(156, 229, 211, 0.2); 
+    font-family: 'Cinzel', serif; /* Optional: If you have a serif font loaded */
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border: 1px solid rgba(156, 229, 211, 0.5);
+    box-shadow: 0 0 25px rgba(156, 229, 211, 0.15); /* Mint Atmosphere */
+    /* Subtle green tint inside */
+    background: linear-gradient(145deg, rgba(156, 229, 211, 0.1), rgba(22, 29, 31, 0.9)); 
+}
+
+.feedback-box.status-passed .metric-value {
+    color: var(--phos-mint);
+    text-shadow: 0 0 15px var(--phos-mint);
+}
+
+.feedback-box.status-failed {
+    border: 1px solid rgba(239, 83, 80, 0.4);
+    box-shadow: 0 0 25px rgba(239, 83, 80, 0.15); /* Cinnabar Atmosphere */
+    /* Subtle red tint inside */
+    background: linear-gradient(145deg, rgba(239, 83, 80, 0.1), rgba(22, 29, 31, 0.9));
+}
+
+.feedback-box.status-failed .metric-value {
+    color: var(--phos-cinnabar);
+    text-shadow: 0 0 15px var(--phos-cinnabar);
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.5rem;
+    opacity: 1;
+    /* This creates the "Etched in Glass" look */
+    filter: drop-shadow(0 0 8px currentColor); 
+}
+
+/* 2. QUESTION EXPANDERS */
+.st-key-feedback_list details {
+    border: none !important;
+    background: transparent !important;
+    /* Subtle gradient separator */
+    border-bottom: 1px solid rgba(156, 229, 211, 0.1) !important; 
+}
+
+.st-key-feedback_list summary {
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--moon-dust);
+    transition: all 0.2s;
+}
+
+.st-key-feedback_list summary:hover {
+    color: var(--phos-mint);
+    background-color: rgba(156, 229, 211, 0.05) !important;
+    padding-left: 10px; /* Slight movement interaction */
+}
+
+/* 3. ANSWER COMPARISON CARDS */
+.answer-card {
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    backdrop-filter: blur(4px);
+}
+
+/* User's Answer Card - WRONG */
+.answer-card.user-wrong {
+    background-color: rgba(239, 83, 80, 0.08); /* Faint Cinnabar */
+    border-color: rgba(239, 83, 80, 0.3);
+    color: #FFCDD2; /* Light Red Text */
+    box-shadow: inset 0 0 10px rgba(239, 83, 80, 0.05);
+}
+
+/* User's Answer Card - CORRECT */
+.answer-card.user-correct {
+    background-color: rgba(156, 229, 211, 0.08); /* Faint Mint */
+    border-color: rgba(156, 229, 211, 0.3);
+    color: var(--phos-mint);
+    box-shadow: inset 0 0 10px rgba(156, 229, 211, 0.05);
+}
+
+/* Correct Answer Card (The "Answer Key") */
+.answer-card.correct-key {
+    background-color: #0F1214; /* Deepest Obsidian */
+    border: 1px solid var(--phos-mint);
+    color: var(--phos-mint);
+    /* Inner glow to look like a terminal or gem core */
+    box-shadow: inset 0 0 15px rgba(156, 229, 211, 0.1); 
+}
+
+.answer-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Explanation Box Theme */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: rgba(22, 29, 31, 0.6) !important; /* Abyssal Teal */
+    /* The "Prism" Gradient Border on the left */
+    border-left: 3px solid var(--phos-mint) !important;
+    border-radius: 0 8px 8px 0 !important;
+    color: var(--moon-dust) !important;
+    font-style: normal !important;
+    line-height: 1.7 !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: var(--phos-ice);
+    text-shadow: 0 0 5px var(--phos-ice);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THE PHOSPHOPHYLLITE THEME (Mint Mist & Refractive Obsidian)
+   Palette Map:
+   - Obsidian (Bg):   #121417
+   - Abyssal (Card):  #161D1F
+   - Phos Mint:       #9CE5D3 (Main Accent)
+   - Fractured Ice:   #B2EBF2 (Highlight)
+   - Moon Dust:       #E3F2FD (Text)
+   - Cinnabar:        #EF5350 (Error/Warning)
+   ───────────────────────────────────────────────────────────── */
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The "Magic" Box)
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container */
+.st-key-generator_card {
+    background-color: rgba(22, 29, 31, 0.85); /* Abyssal Teal with opacity */
+    backdrop-filter: blur(12px);              /* Frosted Glass effect */
+    border: 1px solid rgba(156, 229, 211, 0.1); /* Subtle mint rim */
+    border-top: 2px solid #9CE5D3;            /* Phos Mint top bar */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6), 
+                0 0 30px rgba(156, 229, 211, 0.05); /* Deep shadow + faint glow */
+    border-radius: 16px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: #E3F2FD; /* Moon Dust */
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(156, 229, 211, 0.2);
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    border-color: rgba(156, 229, 211, 0.2) !important; /* Faint mint line */
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    color: #9CE5D3; /* Phos Mint */
+    filter: drop-shadow(0 0 2px rgba(156, 229, 211, 0.6)); /* Etched glass glow */
+}
+
+.gen-input-icon {
+    color: #80DEEA; /* Cyan Tint */
+    opacity: 0.8;
+}
+
+/* Warning Box */
+.generator-warning {
+    color: #EF5350; /* Cinnabar Red */
+    background: rgba(239, 83, 80, 0.08); 
+    border-radius: 8px;
+    border: 1px solid rgba(239, 83, 80, 0.2);
+    box-shadow: inset 0 0 10px rgba(239, 83, 80, 0.05);
+}
+
+/* Metric Stats Box */
+.generator-stat-box {
+    background: rgba(18, 20, 23, 0.6); /* Liquid Obsidian darken */
+    border-radius: 8px;
+    border: 1px solid rgba(156, 229, 211, 0.1);
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: 1px solid rgba(156, 229, 211, 0.15);
+}
+
+.stat-label {
+    color: #90A4AE; /* Muted Blue-Grey */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    color: #E3F2FD; /* Moon Dust */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-accent {
+    color: #B2EBF2; /* Fractured Ice */
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: 0 0 5px rgba(178, 235, 242, 0.4);
+}
+
+.stat-value-success {
+    color: #9CE5D3; /* Phos Mint */
+    font-weight: bold;
+    font-size: 1.5em;
+    text-shadow: 0 0 8px rgba(156, 229, 211, 0.5);
+}
+
+/* Loading/Spinner Icon */
+.spinner-icon {
+    color: #9CE5D3; /* Phos Mint */
+    animation: spin 2s linear infinite;
+    filter: drop-shadow(0 0 4px rgba(156, 229, 211, 0.8));
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform: rotate(360deg); 
+    } 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Console Log */
+.generator-console {
+    background: #0E1012; /* Deepest Void */
+    border: 1px solid #263238;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.8);
+}
+
+.generator-console-step {
+    border-bottom: 1px solid rgba(156, 229, 211, 0.05);
+}
+
+.generator-console-step:last-child {
+    border-bottom: none;
+}
+
+.console-icon {
+    color: #80DEEA;
+}
+
+.console-title {
+    color: #B2EBF2; /* Fractured Ice */
+    font-weight: bold;
+}
+
+.console-message {
+    color: #90A4AE;
+    font-size: 0.9em;
+    border-left: 2px solid #455A64;
+}
+
+/* Completion Screen */
+.completion-header {
+    color: #9CE5D3; /* Phos Mint */
+    text-shadow: 0 0 15px rgba(156, 229, 211, 0.4);
+}
+
+.completion-icon {
+    font-size: 36px;
+    filter: drop-shadow(0 0 5px rgba(156, 229, 211, 0.6));
+}
+
+/* Spinner Animation Color */
+.stVerticalBlock [data-testid="stSpinner"] {
+    color: #9CE5D3 !important;
+}
+
+/* Metric Card Container */
+[data-testid="stMetric"] {
+    background-color: rgba(22, 29, 31, 0.4); /* Glassy Abyssal */
+    border: 1px solid rgba(156, 229, 211, 0.1); 
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect for Metric Card */
+[data-testid="stMetric"]:hover {
+    border-color: #9CE5D3; /* Phos Mint on hover */
+    box-shadow: 0 6px 15px rgba(156, 229, 211, 0.15); /* Mint glow */
+    transform: translateY(-2px);
+}
+
+/* Metric Label (Title) */
+[data-testid="stMetricLabel"] {
+    font-size: 0.85rem !important;
+    color: #90A4AE !important; /* Muted Grey */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+/* Metric Value (Big Number) */
+[data-testid="stMetricValue"] {
+    font-size: 2rem !important;
+    color: #E3F2FD !important; /* Moon Dust */
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(156, 229, 211, 0.25); /* Subtle gem glow */
+}
+
+/* Metric Delta (Change indicator) */
+[data-testid="stMetricDelta"] {
+    font-size: 0.9rem !important;
+    background-color: rgba(0, 0, 0, 0.4); 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 6px;
+    width: fit-content;
+    margin-top: 8px;
+    color: #B2EBF2 !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME: PHOSPHOPHYLLITE (Mint Mist & Refractive Obsidian)
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+    /* Core Palette Definition */
+    --phos-obsidian: #121417;       /* Deepest Black */
+    --phos-abyssal:  #161D1F;       /* Sidebar/Surface Dark */
+    --phos-mint:     #9CE5D3;       /* Main Accent */
+    --phos-ice:      #B2EBF2;       /* Highlights */
+    --phos-text:     #E3F2FD;       /* Main Text */
+    --phos-muted:    #90A4AE;       /* Secondary Text */
+    
+    /* Derived Component Vars */
+    --phos-glass-border: 1px solid rgba(156, 229, 211, 0.2);
+    --phos-glow-shadow: 0 0 10px rgba(156, 229, 211, 0.15);
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: transparent !important;
+    color: var(--phos-muted) !important;
+    border-radius: 8px !important; /* Softened edges */
+    padding: 0.5rem 1rem !important;
+    margin-right: 5px;
+    border: 1px solid transparent !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Tab area: Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: rgba(156, 229, 211, 0.05) !important; /* Very subtle mint tint */
+    color: var(--phos-mint) !important;
+    border: 1px solid rgba(156, 229, 211, 0.1) !important;
+}
+
+/* Tab area: Active Tab */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: rgba(156, 229, 211, 0.1) !important; /* Glassy background */
+    color: var(--phos-mint) !important;
+    border-bottom: none !important;
+    /* This creates the "Glowing Rim" effect */
+    box-shadow: inset 0 0 0 1px var(--phos-mint), 0 0 15px rgba(156, 229, 211, 0.2) !important;
+    font-weight: 600 !important;
+}
+
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: var(--phos-text);
+    font-family: monospace; /* Adds to the technical/lab feel */
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: var(--phos-muted);
+    opacity: 0.7;
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: var(--phos-obsidian);
+    /* Dashed mint border looks like a scanner area */
+    border: 1px dashed rgba(156, 229, 211, 0.4);
+    border-radius: 12px;
+    transition: border 0.3s ease;
+}
+
+[data-testid="stFileUploaderDropzone"]:hover {
+    border: 1px dashed var(--phos-mint);
+    background-color: rgba(156, 229, 211, 0.02);
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    /* Gradient to look like a gem facet */
+    background-image: linear-gradient(135deg, rgba(156, 229, 211, 0.1) 0%, rgba(178, 235, 242, 0.05) 100%);
+    color: var(--phos-mint);
+    border: 1px solid rgba(156, 229, 211, 0.2);
+    transition: all 0.2s;
+}
+
+[data-testid="stFileUploaderDropzone"] button:hover {
+    background-color: rgba(156, 229, 211, 0.2);
+    box-shadow: 0 0 10px rgba(156, 229, 211, 0.2);
+    border-color: var(--phos-mint);
+}
+
+/* File Dropzone: Icon color */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: var(--phos-mint);
+    /* The "Etched Glass" glow */
+    filter: drop-shadow(0 0 8px rgba(156, 229, 211, 0.6));
+}
+
+/* Button Dropdown Popover */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: 250px !important; /* Set a fixed width or keep your var if you define it */
+    max-width: 300px !important;
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"],
+[data-testid="stPopoverBody"] {
+    background-color: var(--phos-abyssal); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important; /* Deep shadow for depth */
+}
+
+/* Button Dropdown Popover: Border */
+[data-testid="stPopoverBody"] {
+    border: 1px solid rgba(156, 229, 211, 0.2) !important;
+    border-radius: 12px;
+    backdrop-filter: blur(10px); /* Glassmorphism */
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--phos-text) !important;
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: 0 0 0 1px var(--phos-mint) !important;
+    outline: none !important;
+}
+
+:root {
+    /* --- THE PHOSPHOPHYLLITE PALETTE --- */
+    --phos-obsidian: #121417;       /* Deepest Black-Blue */
+    --phos-teal-surface: #1E2528;   /* Card Surface */
+    --phos-mint-bright: #9CE5D3;    /* Primary Accent */
+    --phos-mint-glow: rgba(156, 229, 211, 0.15);
+    --phos-glass-edge: rgba(156, 229, 211, 0.3);
+    --phos-text-main: #E3F2FD;
+    --phos-text-muted: #90A4AE;
+
+    /* --- MAPPING TO YOUR UI VARIABLES --- */
+    --ui_input_radius: 8px;
+    
+    /* DROPDOWN - CLOSED STATE */
+    --ui_dropdown_closed_bg: #161D1F; 
+    --ui_dropdown_closed_border: rgba(156, 229, 211, 0.2); /* Subtle glass scratch */
+    --ui_dropdown_closed_text: var(--phos-text-muted);
+
+    /* DROPDOWN - HOVER STATE */
+    --ui_dropdown_hover_bg: rgba(156, 229, 211, 0.05);
+    --ui_dropdown_hover_border: var(--phos-mint-bright);
+    --ui_dropdown_hover_text: var(--phos-mint-bright);
+
+    /* DROPDOWN - OPEN STATE */
+    --ui_dropdown_open_bg: var(--phos-teal-surface);
+    --ui_dropdown_open_border: var(--phos-mint-bright); 
+    --ui_dropdown_open_text_container: var(--phos-mint-bright);
+    --ui_dropdown_open_icon: var(--phos-mint-bright);
+
+    /* DROPDOWN - LIST ITEMS (POPOVER) */
+    --ui_list_bg: #1E2528;
+    --ui_list_border: 1px solid rgba(156, 229, 211, 0.2);
+    --ui_list_radius: 8px;
+    --ui_list_text: #B0BEC5;
+
+    /* SELECTION STATES */
+    --ui_list_selected_bg: var(--phos-mint-glow);
+    --ui_list_selected_text: var(--phos-mint-bright);
+    --ui_list_selected_hover_bg: rgba(156, 229, 211, 0.25);
+    --ui_list_selected_hover_text: #FFFFFF;
+
+    /* SCROLLBARS */
+    --ui_list_scrollbar_thumb: #37474F;
+    --ui_list_scrollbar_track: transparent;
+}
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: var(--ui_dropdown_closed_bg) !important;
+    /* Changed to 1px for a cleaner "cut glass" look */
+    border: 1px solid var(--ui_dropdown_closed_border); 
+    border-radius: var(--ui_input_radius) !important;
+    transition: all 0.2s ease; /* Added smooth transition for glow effects */
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: var(--ui_dropdown_closed_text) !important;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--ui_dropdown_open_bg) !important;
+    /* Active state gets a Mint glow shadow */
+    box-shadow: 0 0 10px rgba(156, 229, 211, 0.2);
+    border: 1px solid var(--ui_dropdown_open_border);
+    color: var(--ui_dropdown_open_text_container) !important;
+    border-radius: var(--ui_input_radius) !important;
+}  
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: var(--ui_dropdown_open_icon) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--ui_dropdown_hover_bg) !important;
+    border: 1px solid var(--ui_dropdown_hover_border);
+    cursor: pointer;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: var(--ui_dropdown_hover_text) !important;
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: var(--ui_list_bg) !important;
+    border: var(--ui_list_border) !important;
+    border-radius: var(--ui_list_radius) !important;
+    overflow: hidden !important;
+    /* Deep shadow to separate the list from the obsidian background */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7) !important;
+    backdrop-filter: blur(10px); /* Tries to add glass effect if supported */
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_text) !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: var(--ui_list_selected_bg) !important;
+    border-left: 2px solid var(--phos-mint-bright); /* Added a "Gem Facet" indicator */
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_text) !important;
+    font-weight: bold;
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: var(--ui_list_selected_hover_bg) !important;
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_hover_text) !important;
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_list_scrollbar_thumb) transparent;
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: var(--ui_list_scrollbar_track);
+}
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME: PHOSPHOPHYLLITE (Mint Mist & Refractive Obsidian)
+   Definition Block - Paste this at the very top of your CSS
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Core Palette */
+    --phos_obsidian_dark: #0b0d0f;  /* Deepest void for input background */
+    --phos_obsidian_light: #161D1F; /* Slightly lighter for hover */
+    --phos_mint: #9CE5D3;           /* Main Accent */
+    --phos_mint_dim: #4DB6AC;       /* Muted Mint */
+    --phos_text_main: #E3F2FD;      /* Moon Dust White */
+    --phos_text_muted: #90A4AE;     /* Muted Grey-Blue */
+    --phos_border_idle: #263238;    /* Dark Slate */
+    
+    /* Mapped Variables */
+    --ui_input_radius: 8px;
+    
+    /* Backgrounds */
+    --ui_input_bg_normal: var(--phos_obsidian_dark);
+    --ui_input_bg_hover: var(--phos_obsidian_light); 
+    --ui_input_bg_focus: var(--phos_obsidian_dark); 
+
+    /* Text */
+    --ui_input_text_normal: var(--phos_text_main);
+    --ui_input_text_hover: #ffffff;
+    
+    /* Borders - Using full shorthand */
+    --ui_input_border_normal: 1px solid var(--phos_border_idle);
+    --ui_input_border_hover: 1px solid var(--phos_mint_dim);
+    --ui_input_border_focus: 1px solid var(--phos_mint);
+
+    /* Misc */
+    --ui_input_scrollbar_thumb: var(--phos_mint_dim);
+    --ui_input_step_btn_disabled: #37474F;
+    --ui_tooltip_icon: var(--phos_mint);
+    --ui_input_label: var(--phos_text_muted);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   EXISTING SELECTORS (Do not modify selectors)
+   ───────────────────────────────────────────────────────────── */
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: var(--ui_input_radius);
+    /* Deep inset shadow for the "carved stone" look */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5); 
+    transition: all 0.2s ease-in-out; /* Smooth transition for the glow */
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: var(--ui_input_bg_normal) !important;
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: var(--ui_input_bg_hover) !important;
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: var(--ui_input_bg_focus) !important;
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--ui_input_text_normal) !important;
+    caret-color: var(--phos_mint); /* The typing cursor should be mint! */
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: var(--ui_input_text_hover) !important;
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: var(--ui_input_text_normal) !important;
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: var(--ui_input_border_normal) !important;
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: var(--ui_input_border_hover) !important;
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: var(--ui_input_border_focus) !important;
+    /* Added Glow Effect for the "Refractive" feel */
+    box-shadow: 0 0 10px rgba(156, 229, 211, 0.2), inset 0 1px 2px rgba(0,0,0,0.5) !important; 
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_input_scrollbar_thumb) transparent;
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: var(--ui_input_step_btn_disabled) !important;
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--ui_tooltip_icon) !important;
+    filter: drop-shadow(0 0 2px rgba(156, 229, 211, 0.4)); /* Etched glass glow */
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--ui_input_label);
+    font-size: 0.9em;
+    opacity: 0.8;
+    letter-spacing: 0.5px; /* Adds to the clean aesthetic */
+}
+
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color: #9CE5D3 !important;   
+    font-size: 1.05rem !important;   
+    font-weight: 700 !important;   
+    font-style: normal !important;
+    letter-spacing: 1px !important; 
+    text-shadow: 0 0 12px rgba(156, 229, 211, 0.5) !important; 
+    padding-bottom: 4px !important;
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header
+ {
+    color: #E3F2FD !important;  
+    font-size: 0.95rem !important;   
+    font-weight: 600 !important;   
+    font-style: normal !important;   
+    letter-spacing: 0.5px !important;  
+    text-shadow: 0 0 5px rgba(227, 242, 253, 0.2) !important;
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color: #90A4AE !important; 
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;  
+    font-style: normal !important;   
+    letter-spacing: 0px !important;  
+    transition: all 0.2s ease !important;
+}
+
+/* Added hover state for the lesson row to make interactive navigation easier */
+[class*="st-key-mastery_cb_"]:hover [data-testid="stMarkdownContainer"] p {
+    color: #B2EBF2 !important; 
+    text-shadow: 0 0 8px rgba(178, 235, 242, 0.4) !important;
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary  {
+    color: #455A64 !important;   
+    opacity: 0.5 !important;  
+    text-shadow: none !important;
+    border-bottom: none !important;
+}

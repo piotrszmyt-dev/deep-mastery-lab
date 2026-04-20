@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/*
+ | Sidebar Fixes
+ * ----------------------------------------------------------- */
+
+/* Sidebar: Title Centering */
+.sidebar-title {
+    text-align: center !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+}
+
+/* Sidebar: Removing Expander Borders */
+div[data-testid="stExpander"] details {
+    border: none !important;
+}
+
+/* Sidebar: No gap between expanders */
+section[data-testid="stSidebar"] [data-testid="stVerticalBlock"],
+[data-testid="stVerticalBlock"] .st-key-mastery_tree,
+[data-testid="stVerticalBlock"] .st-key-module_review,
+[data-testid="stVerticalBlock"] .st-key-srs_deck_list,
+[data-testid="stVerticalBlock"] div[class*="srs_grouped_elements_"]
+ {
+    gap: 0px !important;
+    padding-top: 0px !important;
+}
+
+
+/* Sidebar: Lesson Tree - Minimising gaps, and left allign */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button {
+    min-height: unset !important;
+    line-height: 1 !important;
+    text-align: left !important;
+    display: block !important;
+    padding-left: 20px !important;
+    margin-top: 5px;
+}
+
+/* Sidebar: Lesson Tree - Left allign of text */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button > div {
+    justify-content: flex-start !important;
+    text-align: left !important;
+}
+
+/* Sidbear: Button - Lesson Header alignment */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled {
+    cursor: default !important;
+    margin-top: 15px !important;  /* Standardowy odstęp nad nagłówkiem */
+    margin-bottom: 2px !important;
+    padding-left: 0px !important;
+    border: none !important;
+}
+
+/* Sidbear: Button - Lesson Header - First Child allignment */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] div[data-testid="stVerticalBlock"] > div:first-of-type button:disabled {
+    margin-top: -15px !important;
+}
+
+/* Sidbear: Button - Progress Bar Margin Fix */
+section[data-testid="stSidebar"] .progress-container {
+    margin-bottom: 35px;
+    margin-top: 5px;
+}
+
+/* Remove Sidebar Scrollbar */
+div[data-testid="stSidebarContent"] {
+    scrollbar-width: 0px;
+    scrollbar-color: transparent transparent;
+}
+
+/*
+ | WELCOME WINDOW / LANDING STATE - LAYOUT
+ * ----------------------------------------------------------- */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    padding: 2rem 1rem; /* Spacing inside the card */
+}
+
+/* The Main Title */
+.welcome-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    
+    /* Flexbox Layout Config */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    margin: 2rem 0;
+}
+
+/*
+ | QUiz Test State
+ * ----------------------------------------------------------- */
+
+/* Quiz Test State: Question text */
+.st-key-question  {
+    margin-bottom: 10px;
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    margin-bottom: 5px;
+}
+
+/* Keyboard Legend (Below primary A B C D button) */
+.key-hint {
+    display: inline-block;
+    padding: 2px 8px;
+    min-width: 24px;
+    text-align: center;
+    margin: 0 4px;
+}
+
+.keyboard-legend {
+    text-align: center;
+    margin: 0 0;
+}
+
+/*
+ | Feedback State
+ * ----------------------------------------------------------- */
+
+/* HERO METRIC BOXES */
+.feedback-box {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+}
+
+/* Hover Motion */
+.feedback-box:hover {
+    transform: translateY(-2px);
+}
+
+.metric-label {
+    margin-bottom: 0.5rem;
+}
+
+.feedback-box .material-icons {
+    margin-bottom: 8px;
+}
+
+/* 2. QUESTION EXPANDERS (Clean List Look) */
+
+/* A. Kill the Gap in the Flex Container */
+.st-key-feedback_list {
+    gap: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* 2. QUESTION EXPANDERS */
+.st-key-feedback_list details {
+    margin-bottom: 0px;
+    gap: 0px;
+}
+
+.st-key-feedback_list summary {
+    padding: 15px 10px !important;
+}
+
+/* 3. ANSWER COMPARISON CARDS (Inside Expander) */
+.comparison-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.answer-card {
+    flex: 1;
+    padding: 12px;
+}
+
+.answer-label {
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Explanation Box Layout */
+[data-testid="stMarkdownContainer"] blockquote {
+    padding: 15px !important;
+    margin-top: 10px !important;
+}
+
+.explanation-box .material-icons {
+    margin-top: 2px; /* Visual tweak to align with text */
+}
+
+/*
+ | COURSE GENERATOR WINDOW (The "Magic" Box)
+ * ----------------------------------------------------------- */
+
+/* Main Card Container */
+.st-key-generator_card {
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    margin: 1.5rem 0 2rem 0 !important;
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    vertical-align: sub !important;
+    margin-right: 8px;
+}
+
+.gen-input-icon {
+    vertical-align: middle;
+}
+
+/* Warning Box */
+.generator-warning {
+    padding: 12px; 
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Metric Stats Box (Flex Container) - FIX FOR COLUMNS */
+.generator-stat-box {
+    padding: 15px;
+    display: flex !important;       /* Force flex layout */
+    flex-direction: row !important; /* Force horizontal alignment */
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Individual Stat Items */
+.stat-item {
+    text-align: center;
+    flex: 1; /* Distribute space evenly */
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    text-align: center;
+    padding-left: 20px;
+    flex: 1;
+}
+
+.stat-label {
+    display: block; /* Ensure breaks work */
+}
+
+/* Loading/Spinner Icon - FIX FOR SPINNING */
+.spinner-icon {
+    display: inline-block; /* Required for transform animation to work on spans */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Console Log */
+.generator-console {
+    padding: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.generator-console-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+}
+
+.console-message {
+    margin-top: 5px;
+    padding-left: 34px;
+}
+
+/* Completion Screen */
+.completion-header {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.completion-icon {
+    vertical-align: middle; 
+    margin-right: 10px;
+}
+
+/*
+ | UI Elements
+ * ----------------------------------------------------------- */
+/* Tab area: Traveling highlight line */
+div[data-baseweb="tab-highlight"] {
+    display: none;
+}
+
+/* Invisible scrollbar in stMain */
+section[data-testid="stMain"]:hover {
+    scrollbar-width: 0px;
+    scrollbar-color: transparent transparent;
+}
+
+/* Gradient on the tab bar removed */
+div[data-baseweb="tab-list"]::after,
+div[data-baseweb="tab-list"]::before {
+    display: none !important;
+    background: none !important;
+}
+
+div[data-baseweb="base-input"] {
+    border-radius: 0px; /* Must stay as 0px */
+}
+
+/* Text Fields: Resize Button */
+textarea::-webkit-resizer {
+    display: none;
+}
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: 500px !important;  
+    max-width: 500px !important;
+}
+
+/* Popover Background Fix */
+div[data-testid="stPopoverBody"] > div {
+        background-color: transparent !important;
+        box-shadow: None !important;
+        border: none !important;
+        
+    }
+
+div[data-testid="stPopoverBody"] {
+    max-height: 500px;
+}
+
+    /* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+}
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+ 
+    /* Remove focus/active outline */
+[data-testid="stPopover"] button:focus,
+[data-testid="stPopover"] button:active,
+[data-testid="stPopover"] button:focus-visible,
+div[data-testid="stDownloadButton"] > button:focus,
+div[data-testid="stDownloadButton"] > button:active,
+div[data-testid="stDownloadButton"] > button:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* st. container topography fix */
+
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] {
+    line-height: 1.6;
+}
+
+/* Modular Scale Typography */
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] h1 {
+    font-size: 2rem !important; /* 36px - Clean, authoritative title */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] h2 {
+    font-size: 1.75rem !important; /* 28px - Primary sections */
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] h3 {
+    font-size: 1.35rem !important; /* ~22px - Sub-sections */
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] h4 {
+    font-size: 1.15rem !important; /* ~18px - Minor details */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #555;
+}
+
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] h5 {
+    font-size: 1rem !important;    /* 16px - Paragraph size but bold */
+    font-weight: 700;
+    font-style: italic;
+}
+
+[data-testid="stMain"] .st-key-lesson_window p {
+text-align: justify;
+text-justify: inter-word; /* Helps the browser distribute space better */
+hyphens: auto;           /* Tells the browser to split words if possible */
+}
+
+/* Mastery Mode fixes ----------------------------------------------------- */
+
+/* tickbox allignment */
+.st-key-mastery_tree [data-testid="stCheckbox"]:not(.st-key-mastery_tree [data-testid="stExpander"] *) {
+            position: relative;
+            top: 5px; 
+            margin: 0px; 
+        }
+
+div[class*="st-key-mastery_cb_"],
+div[class*="st-key-srs_grouped_elements_"]
+ {
+            margin-left: 45px; 
+            margin-top: -15px;
+        }
+
+div[class*="st-key-mastery_concept_"],
+div[class*="st-key-srs_cb_"]
+ {
+            line-height: 2px;
+        }
+
+.st-key-mastery_tree [data-testid="stExpanderDetails"] {
+    padding-top: 0px !important; /* Forces the content right up against the header line */
+}
+
+/* .st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    background-color: #2e7d32 !important; 
+    border-color: #2e7d32 !important;
+} */
+
+.st-key-sidebar_mastery_btn button[kind="tertiary"] {
+    border: 1px solid rgba(255, 255, 255, 0.146);
+}
+
+.st-key-mastery_tree div[data-testid="stExpander"] details[open] summary,
+.st-key-module_review div[data-testid="stExpander"] details[open] summary,
+.st-key-generator_card div[data-testid="stExpander"] details[open] summary, 
+.st-key-srs_deck_list div[data-testid="stExpander"] details[open] summary,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] summary
+{
+    background-color: transparent !important;
+}
+
+/* Module Review in COurse Generator */
+.module-header {
+    margin: 12px 0 20px 0;
+
+}
+
+.st-key-module_review [data-testid="stCheckbox"]:not(.st-key-mastery_tree [data-testid="stExpander"] *) {
+            position: relative;
+            top: 5px; 
+            left: 20px;
+            margin: 0px; 
+        }
+
+.st-key-module_review [data-testid="stExpanderDetails"] {
+    padding-top: 0px;
+    padding-left: 54px;
+}
+
+.learning-item {
+    padding: 2px 0 2px 12px;
+    border-left: 2px solid #ffffff18;
+    margin: 2px 0;
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+span.material-icons.header-icon {
+    position: relative;
+    top: 5px;
+}
+
+.stMetric {
+    margin-top: 15px;
+}
+
+section[data-testid="stMain"] .st-key-lesson_title h3  {
+    margin-top: 0px !important;
+}
+
+[data-testid="stMain"] .st-key-lesson_window [data-testid="stMarkdownContainer"] {
+    margin-top: 0px !important;
+}
+
+.st-key-chunk_review {
+    padding: 5px;
+}
+
+.st-key-module_review [data-testid="stCheckbox"]:not(.st-key-mastery_tree [data-testid="stExpander"] *) {
+            position: relative;
+            top: 5px; 
+            left: 20px;
+            margin: 0px; 
+        }
+
+div[class*="st-key-srs_grp_"] {
+    position: relative;
+    bottom: 2px;
+}
+
+div[class*="srs_grouped_elements_"] div[class*="srs_check_"] {
+    position: relative;
+    bottom: 5px;
+}
+
+div[class*="srs_check_"] 
+{
+    position: relative;
+    bottom: 1px;
+}
+
+div[class*="srs_grouped_elements_"] div[class*="srs_cb_"] {
+    margin: -5px;
+}
+
+.st-key-question p{
+    font-size: 16px;
+}
+
+[class*="st-key-answer"] strong {
+    margin-right: 10px;
+}
+
+section[data-testid="stSidebar"] button[kind="secondary"] {
+    margin-top: 10px;
+}
+
+section[data-testid="stSidebar"] button[kind="tertiary"]:disabled {
+    padding-top: 7px;
+    padding-bottom: 5px;
+}
+
+
+
+
+

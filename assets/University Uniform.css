@@ -1,0 +1,1098 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Main Button ──────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    background: #D4AF37;
+    background-color: #D4AF37;
+    border: 1px solid #D4AF37;
+    color: #12161F; /* Deep navy text for high contrast on gold */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle inner shadow (like pressed velvet) */
+    border-radius: 4px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/*Hover State */
+button[kind="primary"]:hover {
+    background-color: #C4A030;
+    border-color: #C4A030;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.25);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.35);
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    background-color: #D4AF37;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background-color: #665522;
+    border-color: #665522;
+    color: #D1D5DB; /* Muted typography for disabled state */
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: transparent;
+    background-color: transparent;
+    border: 1px solid #3E5C8A;
+    color: #3E5C8A;
+    box-shadow: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: #3E5C8A; /* Solid fill on hover per spec */
+    color: #F5E6CC; /* Cream text for contrast against solid slate blue */
+    border-color: #3E5C8A;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: #2D4366; /* Slightly darker slate blue for pressed state */
+    border-color: #2D4366;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    background-color: transparent;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(62, 92, 138, 0.4);
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background-color: transparent;
+    border-color: #252D3E;
+    color: #252D3E;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Progress Bar ──────────────────────────────────────────── */
+
+.progress-container {
+    background-color: #252D3E !important; /* Darkened Sidebar */
+    height: 12px; 
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.progress-fill {
+    background: #D4AF37 !important; /* Solid Gold */
+    background-color: #D4AF37 !important;
+    box-shadow: none !important; /* Removed luminous glow to fit the traditional theme */
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    background-color: #1A1F2B; /* Sidebar / Card Container */
+    border: 1px solid #252D3E; /* Muted border */
+    border-top: 2px solid #D4AF37; /* Brass gold accent on top */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Refined, deeper shadow */
+    border-radius: 4px; /* Traditional radius */
+}
+
+/* The Main Title */
+.welcome-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #F5E6CC; /* Typography Strong/Headers (Cream/Pale gold) */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Removed neon glow for a classic drop shadow */
+}
+
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    color: #D4AF37; /* Primary Accent (Gold) */
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    color: #D1D5DB; /* Typography (Normal) */
+    font-size: 1rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    border-color: #252D3E; /* Subtle navy separator */
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #1A1F2B; /* Slightly lighter navy */
+    color: #D1D5DB; /* Cool gray, readable */
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: #D4AF37 !important; /* Gold */
+    font-size: 24px !important;
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.2); /* Subtle gold glow */
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: #F5E6CC !important; /* Cream */
+    background-color: #252D3E !important; /* Darkened Sidebar */
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4); 
+}
+
+/* Sidebar - APP Title */
+.sidebar-title, .card-title {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #F5E6CC !important; /* Cream/Pale gold */
+    text-shadow: none;
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons,
+.card-title .material-icons {
+    font-size: inherit;      
+    line-height: inherit;   
+    vertical-align: middle; 
+    color: #D4AF37; /* Gold */
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.3); 
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: #3E5C8A !important; /* Slate blue, muted */
+    margin-top: 5px !important;
+    border: none;
+    height: 1px;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: transparent !important;
+    border: none !important;
+    color: #D1D5DB !important;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: #F5E6CC !important;
+    background-color: #252D3E !important; /* Hover state from spec */
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: #1A1F2B !important;
+    color: #D4AF37 !important;
+    border-radius: 4px !important; /* Traditional square radius */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); /* Subtle inner shadow */
+}
+
+/* Header for subconcepts */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: #3E5C8A !important; /* Slate blue */
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    background: none;
+} 
+
+/* Subconcepts and quick test icon: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: #d1d5db8f !important;
+    background-color: transparent !important;
+}
+
+/* Subconcepts and quick test icon: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: #F5E6CC !important;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4); /* Gold text glow on hover */
+}
+
+/* Subconcepts: Active Element: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: #252D3E !important; 
+    border-radius: 4px !important;
+    border-left: 4px solid #D4AF37 !important; /* Gold border-left per spec */
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: #D4AF37 !important; /* Cream text per spec */
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: #252D3E !important;
+    border-radius: 4px !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: #F5E6CC !important;
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: #12161F; /* Deep, muted navy */
+    color: #D1D5DB;
+}
+
+/* Sidebar Expand Button - Icon (default) */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: #D4AF37 !important; /* Gold */
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: #C4A030 !important; /* Hover Gold */
+    background-color: transparent !important;
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: transparent !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: #D4AF37; /* Cream */
+    background-color: transparent;
+    font-weight: 300;
+}
+
+/* Lesson Card: Main Area */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: #1A1F2B; /* Card Container */
+    border-radius: 4px; /* Traditional radius */
+    padding: 20px;
+}
+
+/* Lesson Card: Strong Text */
+section[data-testid="stMain"] .st-key-lesson_window p strong {
+    color: #d4af37be; /* Cream */
+    font-weight: 700;
+}
+
+/* Lesson: Headers */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: #D4AF37; /* Cream */
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: #D4AF37; /* Gold */
+    font-style: italic;
+}
+
+/* Lesson Card: Table Headers + text */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: #F5E6CC;
+    border: 1px solid #3E5C8A; /* Slate blue */
+    background-color: #252D3E; /* Darkened sidebar color */
+}
+
+/* Lesson Card: Table Data + text */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: #D1D5DB;
+    border: 1px solid #3E5C8A; /* Slate blue */
+}
+
+/* Scrollbar styling for lesson window */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #3E5C8A transparent; /* Slate blue thumb */
+}
+
+/* Quiz Test State ──────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question  {
+    /* Normal typography */
+    color: #D1D5DB !important; 
+    background-color: transparent;
+}
+
+.st-key-question p {
+    font-weight: 600;
+    /* Strong/Headers typography */
+    color: #f5e6ccaf; 
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    /* Normal typography & Card Container background */
+    color: #D1D5DB;
+    background-color: #1A1F2B;
+    /* Traditional square shape per spec */
+    border-radius: 4px; 
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    /* Primary Accent (Golden) */
+    color: #D4AF37; 
+}
+
+/* Keyboard Legend */
+.key-hint {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    color: #F5E6CC;
+    background: #252D3E; /* Darkened sidebar/hover state */
+    border: 1px solid #3E5C8A; /* Slate blue */
+    border-radius: 4px;
+    box-shadow: 0 2px 0 #12161F; /* Deep navy */
+}
+
+.keyboard-legend {
+    color: #D1D5DB;
+    font-size: 13px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+:root {
+    /* Maintained selector to prevent breaking, replaced with Scholar Palette for reference */
+    --scholar-gold: #D4AF37;
+    --scholar-slate: #3E5C8A;
+    --scholar-cream: #F5E6CC;
+    --scholar-navy: #1A1F2B;
+}
+
+/* 1. HERO METRIC BOXES (Traditional / Solid) */
+.feedback-box {
+    background-color: #1A1F2B; /* Sidebar / Card Container */
+    border: 1px solid #3E5C8A; /* Slate blue */
+    /* Removed backdrop-filter for solid velvet/brass aesthetic */
+    border-radius: 4px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease;
+}
+
+.feedback-box:hover {
+    border-color: #D4AF37; /* Gold focus/hover */
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: #D1D5DB;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #F5E6CC;
+    text-shadow: none; /* Removed glassmorphism glow */
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border: 1px solid #D4AF37;
+    box-shadow: inset 0 0 10px rgba(212, 175, 55, 0.1); /* Subtle pressed inner shadow */
+    color: #D4AF37;
+}
+
+.feedback-box.status-failed {
+    border: 1px solid #A04040; /* Muted crimson */
+    box-shadow: inset 0 0 10px rgba(160, 64, 64, 0.1);
+    color: #A04040;
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.5rem;   /* Large Icon */
+    opacity: 0.9;
+}
+
+/* 2. QUESTION EXPANDERS */
+
+/* Normal */
+.st-key-feedback_list details div[data-testid="stExpander"] > details > summary {
+    border: none !important;
+    background: transparent !important;
+    border-bottom: 1px solid #3E5C8A !important;
+}
+
+/* Hover */
+.st-key-feedback_list div[data-testid="stExpander"] > details > summary:hover {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 1.0rem;
+    color: #F5E6CC;
+    background-color: #252D3E !important; /* Expander Module hover */
+    transition: all 0.2s ease;
+    padding: 10px 5px;
+}
+
+
+.st-key-feedback_list div[data-testid="stExpander"] details[open] > summary {
+    color: #F5E6CC; /* Text Cream */
+    background-color: #252D3E !important;
+    border-left: 4px solid #D4AF37 !important; /* Border-left 4px Gold */
+}
+
+/* 3. ANSWER COMPARISON CARDS */
+.answer-card {
+    border-radius: 4px;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+}
+
+/* User's Answer Card */
+.answer-card.user-wrong {
+    background-color: #3D2525; /* Dark crimson */
+    border-color: #A04040;
+    color: #F5E6CC; /* Cream text */
+}
+
+.answer-card.user-correct {
+    background-color: #253D25; /* Dark moss green */
+    border-color: #D4AF37; /* Gold highlight */
+    color: #D4AF37; /* Gold text */
+}
+
+/* Correct Answer Card */
+.answer-card.correct-key {
+    background-color: #253D25; /* Dark moss green */
+    border: 1px solid #D4AF37;
+    color: #D4AF37; /* Gold text */
+}
+
+.answer-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-weight: 700;
+    color: #D1D5DB;
+}
+
+/* Explanation Box Theme */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: #1A1F2B !important; 
+    border-left: 4px solid #D4AF37 !important; /* Traditional gold indicator */
+    border-radius: 0 4px 4px 0 !important;
+    color: #D1D5DB !important;
+    font-style: normal !important;
+    line-height: 1.6 !important;
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: #D4AF37; /* Gold icon */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The "Magic" Box)
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container */
+.st-key-generator_card {
+    background-color: #1A1F2B; /* Card Container */
+    border: 1px solid rgba(62, 92, 138, 0.3); /* Subtle slate blue border */
+    border-top: 2px solid #D4AF37; /* Primary Gold Accent */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    border-radius: 4px; /* Traditional shape */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: #F5E6CC; /* Strong/Headers (Cream) */
+    font-weight: 600;
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    border-color: rgba(212, 175, 55, 0.15) !important; /* Faint gold */
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    color: #D4AF37; /* Primary Gold */
+}
+
+.gen-input-icon {
+    color: #3E5C8A; /* Secondary Accent (Slate Blue) */
+}
+
+/* Warning Box */
+.generator-warning {
+    color: #F5E6CC; /* Cream text */
+    background-color: #3D3010; /* Dark mustard */
+    border-radius: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Metric Stats Box */
+.generator-stat-box {
+    background: #0B0E14; /* Inset dark blue */
+    border-radius: 4px;
+    border: 1px solid rgba(62, 92, 138, 0.2); /* Slate blue tint */
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: 1px solid rgba(62, 92, 138, 0.3);
+}
+
+.stat-label {
+    color: #D1D5DB; /* Typography Normal */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    color: #F5E6CC; /* Cream */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-accent {
+    color: #3E5C8A; /* Slate blue */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-success {
+    color: #D4AF37; /* Passed status (Gold) */
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Loading/Spinner Icon */
+.spinner-icon {
+    color: #D4AF37; /* Gold */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform: rotate(360deg); 
+    } 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Console Log */
+.generator-console {
+    background: #0B0E14; /* Inset dark blue */
+    border: 1px solid #1A1F2B; 
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.generator-console-step {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.05); /* Faint gold */
+}
+
+.generator-console-step:last-child {
+    border-bottom: none;
+}
+
+.console-icon {
+    color: #3E5C8A; /* Slate blue */
+}
+
+.console-title {
+    color: #F5E6CC; /* Cream */
+    font-weight: bold;
+}
+
+.console-message {
+    color: #D1D5DB; /* Normal text */
+    font-size: 0.9em;
+    border-left: 2px solid #3E5C8A; /* Slate blue border */
+}
+
+/* Completion Screen */
+.completion-header {
+    color: #D4AF37; /* Gold highlight */
+}
+
+.completion-icon {
+    font-size: 36px;
+}
+
+/* Spinner Animation Color */
+.stVerticalBlock [data-testid="stSpinner"] {
+    color: #D4AF37 !important; /* Gold */
+}
+
+/* Metric Card Container */
+[data-testid="stMetric"] {
+    background-color: #1A1F2B; /* Card Container */
+    border: 1px solid rgba(62, 92, 138, 0.2); /* Faint slate border */
+    padding: 15px;
+    border-radius: 4px; /* Traditional Square Radius */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect for Metric Card */
+[data-testid="stMetric"]:hover {
+    border-color: #D4AF37; /* Gold focus/hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Metric Label (Title) */
+[data-testid="stMetricLabel"] {
+    font-size: 0.85rem !important;
+    color: #D1D5DB !important; /* Cool gray */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+/* Metric Value (Big Number) */
+[data-testid="stMetricValue"] {
+    font-size: 2rem !important;
+    color: #F5E6CC !important; /* Cream */
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.15); /* Subtle gold glow */
+}
+
+/* Metric Delta (Change indicator) */
+[data-testid="stMetricDelta"] {
+    font-size: 0.9rem !important;
+    background-color: #0B0E14; /* Inset dark blue */
+    padding: 2px 8px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-top: 8px;
+}
+
+/* Delta Arrow Icon adjustment */
+[data-testid="stMetricDelta"] svg {
+    margin-right: 4px;
+    stroke-width: 3px;
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: #1A1F2B !important; /* Sidebar / Card Container */
+    color: #D1D5DB !important; /* Typography (Normal) */
+    border-radius: 4px !important; /* Traditional Shape */
+    padding: 0.5rem 1rem !important; /* Standard safe fallback padding */
+    margin-right: 5px;
+}
+
+/* Tab area: Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: #252D3E !important; /* Hover state from Expander spec */
+}
+
+/* Tab area: Active Tab */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: #252D3E !important; /* Active state background */
+    color: #F5E6CC !important; /* Typography (Strong/Headers) */
+    border-bottom: none !important; /* Removed border bottom for pill style */
+    box-shadow: 0 0 0 1px #D4AF37 inset !important; /* Replaced old active ring with Primary Gold */
+}
+
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: #D1D5DB; /* Typography (Normal) */
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: #D1D5DB;
+    opacity: 0.7;
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: #0B0E14; /* Input Inset dark blue */
+    border: 1px dashed #3E5C8A; /* Secondary Accent slate blue */
+    border-radius: 4px; /* Traditional shape */
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    background-color: rgba(62, 92, 138, 0.1); /* Slate blue with transparency */
+    color: #D4AF37; /* Primary Gold */
+    border: none;
+}
+
+/* File Dropzone: Icon color */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: #D4AF37; /* Primary Gold */
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.4)); /* Gold shadow */
+}
+
+/* Button Dropdown Popover */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: 300px !important;  /* Standard fallback width */
+    max-width: 300px !important;
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"] {
+    background-color: #1A1F2B; /* Sidebar / Card Container */
+    box-shadow: none !important;
+}
+
+/* Button Dropdown Popover: Border */
+[data-testid="stPopoverBody"] {
+    border: 1px solid #3E5C8A !important; /* Muted Slate blue */
+    border-radius: 4px; /* Updated from 12px to match your 4px traditional spec */
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: #D1D5DB !important; /* Typography (Normal) */
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+}
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: #0B0E14 !important; /* Input Fields Background */
+    border: 2px solid #3E5C8A; /* Muted Slate blue */
+    border-radius: 4px !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: #D1D5DB !important; /* Typography (Normal) */
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: #0B0E14 !important;
+    border: 2px solid #D4AF37; /* Input Focus Border (Gold glow) */
+    color: #F5E6CC !important; /* Typography (Strong) */
+    border-radius: 4px !important;
+}  
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: #D4AF37 !important; /* Primary Gold */
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: #1A1F2B !important; /* Subtle lift to Container Navy */
+    border: 2px solid #D4AF37; /* Hover border Gold */
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: #F5E6CC !important; /* Typography (Strong) */
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: #1A1F2B !important; /* Card Container Navy */
+    border: 1px solid #3E5C8A !important; /* Slate Blue */
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5) !important;
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: #D1D5DB !important; /* Typography (Normal) */
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: #3E5C8A !important; /* Secondary Accent (Slate blue) */
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: #F5E6CC !important; /* Typography (Strong/Headers) */
+    font-weight: bold;
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: #252D3E !important; /* Navigation Hover State */
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: #D4AF37 !important; /* Gold */
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: #3E5C8A transparent; /* Slate blue thumb */
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: #12161F; /* Primary Background */
+}
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: 4px; /* Traditional shape */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.4); /* Deepened shadow for "velvet pressed" look */
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: #0B0E14 !important; /* Inset dark blue */
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: #12161F !important; /* Deep navy subtle lift */
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: #0B0E14 !important;
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: #D1D5DB !important; /* Typography Normal (Cool gray) */
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: #F5E6CC !important; /* Cream on hover for readability */
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: #F5E6CC !important; /* Cream on focus */
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: 1px solid #1A1F2B !important; /* Sidebar Navy for low contrast */
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: 1px solid #3E5C8A !important; /* Slate blue */
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: 1px solid #D4AF37 !important; /* Gold glow */
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.4) !important; /* Gold glow shadow effect */
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #3E5C8A transparent; /* Slate blue */
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: #665522 !important; /* Dimmed gold */
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: #D4AF37 !important; /* Gold */
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: #D1D5DB; /* Typography Normal */
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color:       #F5E6CC !important;   /* Pale gold / Cream */
+    font-size:   1rem    !important;   
+    font-weight: 700     !important;   
+    font-style:  normal  !important;   
+    letter-spacing: 0.5px !important; 
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3) !important; /* Subtle brass glow */
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header
+ {
+    color:       #F5E6CC !important;  /* Cream */
+    font-size:   0.95rem !important;   
+    font-weight: 600     !important;   
+    font-style:  normal  !important;   
+    letter-spacing: 0px  !important;  
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color:       #D1D5DB !important; /* Cool gray */
+    font-weight: 400     !important;  
+    font-style:  normal  !important;   
+    letter-spacing: 0px  !important;  
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary  {
+    color:       #3E5C8A !important;   /* Slate blue for disabled elements */
+    opacity:     0.5     !important;  
+    text-shadow: none !important;
+}

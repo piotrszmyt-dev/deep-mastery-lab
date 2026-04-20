@@ -1,0 +1,1212 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Main Button ──────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    background: #1C1C1A; /* Surface Dark */
+    border: 1px solid #D1CABC; /* NieR Sand Primary */
+    color: #D1CABC;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Subtle Material Elevation */
+    border-radius: 2px; /* Sharp geometric edges */
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover State */
+button[kind="primary"]:hover {
+    background-color: #D1CABC; /* Fill with Sand */
+    color: #121211; /* Inverted Text (Base Black) */
+    border-color: #D1CABC;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background-color: #B5AE9E; /* Slightly darker sand for click pressure */
+    color: #121211;
+    border-color: #B5AE9E;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    background-color: #1C1C1A;
+    color: #D1CABC;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(209, 202, 188, 0.3), 0 2px 4px rgba(0, 0, 0, 0.5); /* Sand focus ring */
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background-color: transparent;
+    border: 1px dashed #8A8883; /* Dashed mechanical border */
+    color: #8A8883;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: transparent;
+    border: 1px solid #3A3A36; /* Earthy dark gray */
+    color: #8A8883; /* Dimmed beige */
+    box-shadow: none;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: rgba(209, 202, 188, 0.05); /* Faint sand overlay */
+    border-color: #D1CABC; /* Borders pop to active Sand */
+    color: #D1CABC;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: rgba(209, 202, 188, 0.1);
+    border-color: #B5AE9E;
+    color: #B5AE9E;
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(138, 136, 131, 0.4);
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background-color: transparent;
+    border: 1px dashed #3A3A36;
+    color: #3A3A36;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+
+/* Progress Bar ──────────────────────────────────────────── */
+
+.progress-container {
+    background-color: #121211 !important; /* Base black/brown */
+    height: 8px; /* Fixed height since var is missing */
+    border: 1px solid #3A3A36; /* Hollow geometric outline */
+    border-radius: 0px; /* Perfectly sharp */
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    box-shadow: none;
+}
+
+.progress-fill {
+    background-color: #D1CABC !important; /* Solid NieR Sand fill */
+    box-shadow: none !important;
+    height: 100%;
+    border-radius: 0px;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    background-color: rgba(22, 22, 21, 0.85); /* Dark charcoal with slight transparency */
+    backdrop-filter: blur(10px); /* Clean glassmorphism effect */
+    border: 1px solid rgba(85, 82, 75, 0.3); /* Earthy, low-contrast border */
+    border-top: 2px solid #DCCBA3; /* NieR Sand accent on top for a structured look */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6); /* Grounded, realistic shadow */
+    border-radius: 4px; /* Sharp, book-like corners instead of bubbly 16px */
+    padding: 32px; /* Generous padding for an elegant layout */
+}
+
+/* The Main Title */
+.welcome-title {
+    font-size: 2.4rem !important;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif !important;
+    font-weight: 600 !important;
+    color: #EAE6DC !important; /* Brightest bone white for the title */
+    letter-spacing: 0.5px;
+    text-shadow: none;
+}
+
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    color: #DCCBA3; /* NieR Sand accent color */
+    vertical-align: middle; /* Ensures icon aligns nicely with the serif text */
+    margin-right: 10px;
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    color: #AFAAA0; /* Dimmed earthy gray */
+    font-family: 'Inter', 'Helvetica Neue', sans-serif; /* Clean sans to contrast the title */
+    font-size: 0.65rem;
+    letter-spacing: 2px; /* Wide tracking for a cinematic/UI feel */
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    border: none;
+    border-top: 1px solid rgba(220, 203, 163, 0.15); /* Faint sand divider instead of white */
+    margin: 20px 0;
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #0E0D0C; /* Very dark, earthy charcoal for UI depth */
+    color: #C4C0B8; /* Standard muted off-white */
+    border-right: 1px solid #2A2925; /* Subtle book-binding divider */
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: #8A8883 !important; /* Muted idle state */
+    font-size: 1.2rem !important;
+    text-shadow: none; /* Removed neon glow for matte academic finish */
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: #DCCBA3 !important; /* NieR Sand pop on hover */
+    background-color: transparent !important;
+    text-shadow: none; 
+}
+
+/* Sidebar - APP Title */
+.sidebar-title, .card-title {
+    font-size: 1.4rem !important;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif !important;
+    font-weight: 600 !important;
+    color: #EAE6DC !important; /* Brightest bone white for the title */
+    letter-spacing: 0.5px;
+    text-shadow: none;
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons,
+.card-title .material-icons {
+    font-size: inherit;      
+    line-height: inherit;   
+    vertical-align: middle; 
+    color: #DCCBA3; /* Accent color to draw the eye */
+    text-shadow: none; /* Stripped glass/glow effect */
+    margin-right: 8px;
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: #2A2925 !important; /* Very subtle earthy divider */
+    margin-top: 15px !important;
+    border: none;
+    height: 1px;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: transparent !important;
+    border: none !important;
+    color: #C4C0B8 !important;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: #EAE6DC !important; /* Brighten text on hover */
+    background-color: #1E1D1B !important; /* Subtle UI surface lift */
+    border-radius: 4px !important;
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: #1E1D1B !important;
+    color: #DCCBA3 !important; /* Emphasize open category with Sand/Gold */
+    border-radius: 4px !important;
+    box-shadow: none; /* Removed heavy shadow, relying on flat color contrast */
+}
+
+/* Header for subconcepts */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: #8a8883c2 !important; /* Recessed text */
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.75em;
+    letter-spacing: 1.5px; /* Wide tracking for technical/academic index feel */
+    margin-top: 10px;
+} 
+
+/* Subconcepts and quick test icon: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: #afaaa077 !important;
+    background-color: transparent !important;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Subconcepts and quick test icon: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: #EAE6DC !important;
+    text-shadow: none; /* Clean typography, no glow */
+}
+
+/* Subconcepts: Active Element: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: rgba(220, 203, 163, 0.08) !important; /* Very faint Sand tint */
+    border-radius: 4px !important;
+    border-left: 3px solid #DCCBA3 !important; /* Sharp left indicator line */
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: #dccba3cc !important; /* Active text pops in Sand/Gold */
+    font-weight: 600;
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: rgba(220, 203, 163, 0.15) !important; /* Slightly stronger tint */
+    border-radius: 4px !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: #EAE6DC !important; /* Brightens on hover to confirm interaction */
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: #161615; /* Slightly lighter than sidebar to create hierarchy */
+    color: #C4C0B8;
+}
+
+/* Sidebar Expand Button - Icon (default) */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: #8A8883 !important; /* Matches collapse button default */
+    text-shadow: none;
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: #DCCBA3 !important; /* Sand pop on hover */
+    background-color: transparent !important;
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: transparent !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: #DCCBA3; /* Bright, clean bone color */
+    background-color: transparent;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif; /* Clean sans for chapter titles */
+    font-weight: 400;
+    padding-bottom: 8px;
+}
+
+/* Lesson Card: Main Area */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: #161615; /* Deep, warm charcoal */
+    border-radius: 4px; /* Sharp, book-like edges */
+    padding: 30px; /* Generous padding for academic text */
+    font-family: 'Lora', 'Georgia', serif; /* Classic academic serif font */
+    font-size: 1.1rem;
+    line-height: 1.7; /* High readability for long texts */
+    color: #c4c0b8b9; /* Muted, low-contrast text to reduce eye strain */
+    border: 1px solid rgba(85, 82, 75, 0.3); /* Very subtle, earthy border */
+}
+
+/* Lesson Card: Strong Text */
+section[data-testid="stMain"] .st-key-lesson_window p strong {
+    color: #dccba3d8; /* NieR Sand/Gold - This creates the "pop" */
+    font-weight: 600;
+}
+
+/* Lesson: Headers */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: #eae6dcb5;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif; /* Contrast with serif body */
+    font-weight: 700;
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    margin-top: 1.5em; /* Breathing room above headers */
+    margin-bottom: 0.5em;
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: #AFAAA0; /* Slightly dimmed but distinct from body text */
+    font-style: italic;
+    font-family: 'Lora', 'Georgia', serif; 
+}
+
+/* Lesson Card: Table Headers + text */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: #EAE6DC;
+    border-bottom: 2px solid #55524B; /* Traditional academic table style (heavy bottom border) */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    font-family: 'Inter', sans-serif; /* Clean sans for data headers */
+    font-weight: 600;
+    padding: 12px 8px;
+    text-align: left;
+}
+
+/* Lesson Card: Table Data + text */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: #C4C0B8;
+    border-bottom: 1px solid #3A3935; /* Subtle row dividers only */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px 8px;
+}
+
+/* Scrollbar styling for lesson window */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #55524B transparent;
+}
+
+/* Quiz Test State ──────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question  {
+    color: #eae6dca9 !important; /* Bright bone for high legibility */
+    background-color: transparent;
+    font-family: 'Lora', 'Georgia', serif; /* Ties back to the academic lesson text */
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(85, 82, 75, 0.3); /* Subtle printed separator */
+    margin-bottom: 24px;
+}
+
+.st-key-question p {
+    font-weight: 500; /* Distinctly bolder than body text */
+    font-size: 1.25em;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    color: #C4C0B8; /* Muted text for low-contrast comfort */
+    background-color: #1A1A19; /* Very subtle elevation from base dark */
+    border: 1px solid #3A3935; /* Earthy, structural border */
+    border-radius: 4px; /* Sharp, book-like edges */
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif; /* Clean UI font for answers */
+    font-size: 1.05rem;
+    transition: all 0.2s ease; /* Prepares it for any hover states you might add */
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    color: #DCCBA3; /* NieR Sand - Draws the eye immediately */
+    font-family: 'Space Mono', 'Fira Code', monospace; /* Subtle terminal/typewriter feel */
+    font-weight: 700;
+    font-size: 1.15em;
+    margin-right: 12px;
+}
+
+/* Keyboard Legend */
+.key-hint {
+    font-family: 'Space Mono', 'Fira Code', monospace; /* Mechanical font for keys */
+    font-weight: 600;
+    font-size: 0.85em;
+    color: #DCCBA3; /* Sand accent */
+    background: #121211; /* Deepest background color */
+    border: 1px solid #55524B; /* Visible earthy border */
+    border-radius: 3px; /* Sharp corners for a physical key look */
+    box-shadow: 0 2px 0 #3A3935; /* Crisp, flat shadow instead of blurry */
+    padding: 2px 6px;
+    margin: 0 4px;
+    text-transform: uppercase;
+}
+
+.keyboard-legend {
+    color: #8A8883; /* Dimmed secondary text */
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    text-align: right; /* Tucks the legend neatly out of the way */
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+
+/* 1. HERO METRIC BOXES (Academic / Flattened) */
+.feedback-box {
+    background-color: #161615; /* Solid deep charcoal, no glass blur */
+    border: 1px solid #3A3935; /* Crisp, earthy border */
+    border-radius: 4px; /* Sharp, book-like edges */
+    box-shadow: none; /* Removed shadows for flat print feel */
+    transition: border-color 0.2s ease;
+    padding: 16px;
+}
+
+.feedback-box:hover {
+    border-color: #55524B;
+}
+
+.metric-label {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.85rem;
+    color: #AFAAA0; /* Muted silver/sand */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.metric-value {
+    font-family: 'Lora', 'Georgia', serif; /* Serif for elegant numbers */
+    font-size: 2.2rem;
+    font-weight: 400; /* Lighter weight for print elegance */
+    color: #EAE6DC; /* Bone white */
+    text-shadow: none; /* Removed glow */
+}
+
+/* Status Specifics - Using muted earthy tones */
+.feedback-box.status-passed {
+    border: 1px solid rgba(107, 112, 92, 0.5); /* Muted Olive */
+    color: #6B705C;
+}
+
+.feedback-box.status-failed {
+    border: 1px solid rgba(140, 79, 74, 0.5); /* Muted Rust Red */
+    color: #8C4F4A;
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.5rem;   
+    opacity: 0.8; /* Slightly dimmed to match low contrast */
+}
+
+/* 2. QUESTION EXPANDERS (Index/Directory Style) */
+
+/* Normal */
+.st-key-feedback_list details div[data-testid="stExpander"] > details > summary {
+    border: none !important;
+    background: transparent !important;
+    border-bottom: 1px solid #3A3935 !important;
+    font-family: 'Lora', 'Georgia', serif; /* Questions read like book text */
+    color: #C4C0B8;
+    padding: 12px 5px;
+}
+
+/* Hover */
+.st-key-feedback_list div[data-testid="stExpander"] > details > summary:hover {
+    color: #DCCBA3; /* NieR Sand highlight */
+    background-color: rgba(255, 255, 255, 0.02) !important;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    /* Removed font-weight/size changes on hover to prevent layout shifting */
+}
+
+/* Open State */
+.st-key-feedback_list div[data-testid="stExpander"] details[open] > summary {
+    color: #EAE6DC; /* Brighten to active reading state */
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border-bottom: 1px solid #55524B !important;
+}
+
+/* 3. ANSWER COMPARISON CARDS */
+.answer-card {
+    border-radius: 4px;
+    font-size: 1rem; /* Slightly larger for readability */
+    font-family: 'Lora', 'Georgia', serif;
+    border: 1px solid transparent;
+    padding: 12px;
+    line-height: 1.6;
+}
+
+/* User's Answer Card */
+.answer-card.user-wrong {
+    background-color: rgba(140, 79, 74, 0.05); /* Very faint Rust tint */
+    border-left: 3px solid #8C4F4A; /* Print-style margin highlight */
+    color: #C4C0B8;
+}
+
+.answer-card.user-correct {
+    background-color: rgba(107, 112, 92, 0.05); /* Very faint Olive tint */
+    border-left: 3px solid #6B705C;
+    color: #EAE6DC;
+}
+
+/* Correct Answer Card (The "Key") */
+.answer-card.correct-key {
+    background-color: #121211;
+    border: 1px solid #55524B;
+    border-left: 3px solid #DCCBA3; /* Highlight the actual truth in NieR Sand */
+    color: #EAE6DC;
+}
+
+.answer-label {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #AFAAA0;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Explanation Box Theme (Academic Pull-Quote) */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: #161615 !important;
+    border-left: 3px solid #DCCBA3 !important; /* Sand highlight */
+    border-radius: 0 4px 4px 0 !important;
+    color: #C4C0B8 !important;
+    font-family: 'Lora', 'Georgia', serif !important;
+    font-style: normal !important;
+    line-height: 1.7 !important;
+    padding: 16px 20px !important;
+    margin-top: 16px !important;
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: #DCCBA3; /* Matches the left border */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The "Magic" Box)
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container */
+.st-key-generator_card {
+    background-color: #161615; /* Solid warm charcoal, no glassmorphism */
+    border: 1px solid #55524B; /* Earthy, printed-style border */
+    border-top: 3px solid #DCCBA3; /* Academic accent line in NieR Sand */
+    box-shadow: none; /* Removed heavy shadows for a flat, print-like look */
+    border-radius: 4px; /* Sharp corners */
+    animation: fadeIn 0.5s ease-in-out;
+    padding: 24px;
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: #EAE6DC; /* Bright bone text */
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    border-color: #3A3935 !important; /* Subtle dark divider */
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    color: #DCCBA3; /* NieR Sand */
+}
+
+.gen-input-icon {
+    color: #AFAAA0; /* Dimmed beige for secondary icons */
+}
+
+/* Warning Box */
+.generator-warning {
+    color: #8C4F4A; /* YoRHa Rust / Muted Red */
+    background: rgba(140, 79, 74, 0.05); /* Very faint tinted background */
+    border-radius: 4px;
+    border: 1px solid rgba(140, 79, 74, 0.3);
+    padding: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Metric Stats Box */
+.generator-stat-box {
+    background: #121211; /* Darker inset background */
+    border-radius: 4px;
+    border: 1px solid #3A3935;
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: 1px solid #3A3935;
+}
+
+.stat-label {
+    color: #AFAAA0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    color: #EAE6DC;
+    font-family: 'Lora', 'Georgia', serif; /* Serif for reading final numbers */
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.stat-value-accent {
+    color: #DCCBA3;
+    font-family: 'Lora', 'Georgia', serif;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.stat-value-success {
+    color: #6B705C; /* Machine Green / Muted Olive */
+    font-family: 'Lora', 'Georgia', serif;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+/* Loading/Spinner Icon */
+.spinner-icon {
+    color: #DCCBA3; /* NieR Sand */
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform: rotate(360deg); 
+    } 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(5px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Console Log - Styled like a system terminal */
+.generator-console {
+    background: #0D0D0C; /* Purest dark for terminal feel */
+    border: 1px solid #3A3935;
+    border-radius: 4px;
+    font-family: 'Space Mono', 'Fira Code', 'Courier New', monospace; /* Technical font */
+    box-shadow: none;
+    padding: 10px;
+}
+
+.generator-console-step {
+    border-bottom: 1px dashed #3A3935; /* Dashed lines for technical look */
+    padding: 8px 0;
+}
+
+.generator-console-step:last-child {
+    border-bottom: none;
+}
+
+.console-icon {
+    color: #DCCBA3;
+}
+
+.console-title {
+    color: #EAE6DC;
+    font-weight: 600;
+}
+
+.console-message {
+    color: #AFAAA0;
+    font-size: 0.9em;
+    border-left: 2px solid #55524B;
+    padding-left: 8px;
+    margin-top: 4px;
+}
+
+/* Completion Screen */
+.completion-header {
+    color: #6B705C; /* Success Olive */
+    font-family: 'Inter', sans-serif;
+}
+
+.completion-icon {
+    font-size: 36px;
+    color: #6B705C;
+}
+
+/* Spinner Animation Color */
+.stVerticalBlock [data-testid="stSpinner"] {
+    color: #DCCBA3 !important;
+}
+
+/* Metric Card Container */
+[data-testid="stMetric"] {
+    background-color: #161615; /* Solid background */
+    border: 1px solid #3A3935; /* Subtle border */
+    padding: 16px;
+    border-radius: 4px; /* Sharp corners */
+    box-shadow: none; /* Flat academic style */
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover Effect for Metric Card */
+[data-testid="stMetric"]:hover {
+    border-color: #DCCBA3; /* Border highlights to sand instead of glowing */
+    background-color: #1C1C1A; /* Slight surface lift */
+    transform: none; /* Removed the physical float to stay grounded */
+}
+
+/* Metric Label (Title) */
+[data-testid="stMetricLabel"] {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.75rem !important;
+    color: #AFAAA0 !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+/* Metric Value (Big Number) */
+[data-testid="stMetricValue"] {
+    font-family: 'Inter', sans-serif !important; /* Kept sans-serif here for clean data visualization */
+    font-size: 1.8rem !important;
+    color: #EAE6DC !important;
+    font-weight: 500;
+    text-shadow: none; /* Removed neon glow */
+}
+
+/* Metric Delta (Change indicator) */
+[data-testid="stMetricDelta"] {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.85rem !important;
+    background-color: #121211; /* Inset dark background */
+    border: 1px solid #3A3935;
+    padding: 2px 6px;
+    border-radius: 2px; /* Very sharp pill */
+    width: fit-content;
+    margin-top: 8px;
+}
+
+/* Delta Arrow Icon adjustment */
+[data-testid="stMetricDelta"] svg {
+    margin-right: 4px;
+    stroke-width: 2px;
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: transparent !important;
+    color: #AFAAA0 !important; /* Dimmed text */
+    font-family: 'Inter', 'Helvetica Neue', sans-serif !important;
+    font-weight: 400 !important;
+    border-radius: 4px !important; /* Sharp, geometric radius */
+    padding: 8px 16px !important;
+    margin-right: 5px;
+    transition: all 0.2s ease;
+}
+
+/* Tab area: Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: #EAE6DC !important;
+}
+
+/* Tab area: Active Tab */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: rgba(220, 203, 163, 0.08) !important; /* Faint sand background */
+    color: #DCCBA3 !important; /* NieR Sand/Gold */
+    font-weight: 600 !important;
+    border-bottom: none !important; 
+    box-shadow: 0 0 0 1px #DCCBA3 inset !important; /* Sand accent ring */
+}
+    
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: #EAE6DC;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: #AFAAA0;
+    opacity: 0.8;
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: #161615; /* Charcoal surface */
+    border: 1px dashed #55524B; /* Earthy, subtle dashed border */
+    border-radius: 4px;
+    padding: 20px;
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    background-color: rgba(220, 203, 163, 0.05); /* Faint sand */
+    color: #DCCBA3; /* NieR Sand text */
+    border: 1px solid rgba(220, 203, 163, 0.3);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+}
+
+[data-testid="stFileUploaderDropzone"] button:hover {
+    background-color: rgba(220, 203, 163, 0.15);
+    border: 1px solid #DCCBA3;
+}
+
+/* File Dropzone: Icon color */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: #DCCBA3;
+    filter: drop-shadow(0 0 4px rgba(220, 203, 163, 0.2)); /* Faint sand glow */
+}
+
+/* Button Dropdown Popover */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: auto !important;  
+    max-width: 400px !important; /* Replaced variable with standard max */
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"] {
+    background-color: #161615 !important; 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.8) !important; /* Deeper shadow for depth */
+}
+
+/* Button Dropdown Popover: Border */
+[data-testid="stPopoverBody"] {
+    border: 1px solid #3A3935 !important;
+    border-radius: 4px !important; /* Geometric corners */
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: #C4C0B8 !important;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+}
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: #161615 !important;
+    border: 1px solid #3A3935 !important; /* Thinner 1px border for elegance */
+    border-radius: 4px !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: #C4C0B8 !important;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: #1C1C1A !important;
+    border: 1px solid #DCCBA3 !important; /* Sand highlight when active */
+    color: #EAE6DC !important;
+    border-radius: 4px !important;
+}  
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: #DCCBA3 !important; /* Sand icon */
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: #1C1C1A !important;
+    border: 1px solid #55524B !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: #EAE6DC !important;
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: #161615 !important;
+    border: 1px solid #3A3935 !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6) !important;
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: #C4C0B8 !important;
+    font-family: 'Inter', sans-serif;
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: rgba(220, 203, 163, 0.08) !important; /* Faint sand */
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: #DCCBA3 !important;
+    font-weight: 600;
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: rgba(220, 203, 163, 0.15) !important;
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: #EAE6DC !important;
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: #55524B transparent;
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: #121211;
+}
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: 2px; /* Sharp, refined edges */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4); /* Deeper inset shadow for a "recessed" letterpress look */
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: #121211 !important; /* Darker than the card surface to create depth */
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: #1A1A18 !important; /* Gentle lift on hover */
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: #161615 !important;
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: #C4C0B8 !important; /* Muted academic text */
+    font-family: 'Inter', 'Helvetica Neue', sans-serif !important; /* Clean sans for data entry */
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: #EAE6DC !important; /* Brightens up slightly */
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: #DCCBA3 !important; /* NieR Sand color for active typing */
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: 1px solid #3A3935 !important; /* Earthy, low-contrast border */
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: 1px solid #55524B !important; 
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: 1px solid #DCCBA3 !important; /* NieR Sand emphasis when active */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(220, 203, 163, 0.15) !important; /* Subtle inner shadow + faint outer glow */
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #55524B transparent;
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: #3A3935 !important; /* Pushed into the background */
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: #AFAAA0 !important; /* Soft, muted icon */
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: #AFAAA0;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; /* Gives a structured, index-like academic feel */
+    opacity: 0.9;
+    margin-bottom: 4px;
+}
+
+/* ============================================================
+   MASTERY MODE COURSE TREE (Academic Syllabus Style)
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color:       #DCCBA3 !important; /* NieR Sand to indicate interactive high-level header */
+    font-family: 'Inter', 'Helvetica Neue', sans-serif !important;
+    font-size:   1.05rem !important;   
+    font-weight: 600     !important;   
+    font-style:  normal  !important;   
+    letter-spacing: 0.5px !important; 
+    text-transform: uppercase !important; /* Book-style chapter feel */
+    text-shadow: none !important; /* Removed neon glow for academic crispness */
+    border-bottom: 1px solid rgba(220, 203, 163, 0.15) !important; /* Very faint underline */
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header {
+    color:       #EAE6DC !important; /* Crisp bone white */  
+    font-family: 'Inter', 'Helvetica Neue', sans-serif !important;
+    font-size:   0.95rem !important;   
+    font-weight: 500     !important;   
+    font-style:  normal  !important;   
+    letter-spacing: 0.2px !important;  
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color:       #C4C0B8 !important; /* Muted reading text */
+    font-family: 'Lora', 'Georgia', serif !important; /* Serif to match the lesson body text */
+    font-size:   0.95rem !important;
+    font-weight: 400     !important;  
+    font-style:  normal  !important;   
+    letter-spacing: 0px  !important;  
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary {
+    color:       #6B665A !important; /* Dimmed, earthy taupe */  
+    font-style:  italic  !important; /* Academic convention for unavailable items */
+    opacity:     0.55    !important;  
+    text-shadow: none    !important;
+    border-bottom: none  !important;
+}

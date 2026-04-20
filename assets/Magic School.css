@@ -1,0 +1,1388 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+    /* Core Palette */
+    --bg_deep: #1A1B23;
+    --surface_card: #252733;
+    --text_primary: #BFC6D4;
+    --text_muted: #787E91;
+    
+    /* Accents */
+    --accent_crystal: #79D1EA;
+    --accent_scholar: #E2C08D;
+    
+    /* UI Specific */
+    --ui_input_radius: 4px; /* Sharper edges for that tactical/academic look */
+}
+
+/* Main Button ──────────────────────────────────────────── */
+
+/* Default State - Tactical Crystal Look */
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    background: var(--accent_crystal) !important;
+    background-color: var(--accent_crystal) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--bg_deep) !important; /* High contrast on the primary action */
+    box-shadow: none !important;
+    border-radius: var(--ui_input_radius) !important; 
+    font-weight: 600 !important;
+    letter-spacing: 0.03em !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-transform: uppercase; /* Academic/Military feel */
+    font-size: 0.85rem;
+}
+
+/* Hover State - Subtle Brighten */
+button[kind="primary"]:hover {
+    background-color: #9EE2F5 !important;
+    border-color: #9EE2F5 !important;
+    box-shadow: 0 0 12px rgba(121, 209, 234, 0.3) !important;
+    transform: none !important; /* Keeps it flat and stable */
+}
+
+/* Active State - Pressed Tactical Feel */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background-color: var(--accent_crystal) !important;
+    transform: scale(0.97) !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+/* Focus State - The "Scholar Gold" Glow */
+button[kind="primary"]:focus {
+    background-color: var(--accent_crystal) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px var(--bg_deep), 0 0 0 4px var(--accent_scholar) !important;
+}
+
+/* Disabled State - Ghostly/Muted */
+button[kind="primary"]:disabled {
+    background-color: rgba(120, 126, 145, 0.2) !important;
+    border-color: transparent !important;
+    color: var(--text_muted) !important;
+    box-shadow: none !important;
+    cursor: not-allowed !important;
+    opacity: 0.4 !important;
+}
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State - Inset Archive Look */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: var(--surface_card) !important;
+    background-color: var(--surface_card) !important;
+    border: 1px solid var(--text_muted) !important;
+    color: var(--text_primary) !important;
+    box-shadow: none !important;
+    border-radius: var(--ui_input_radius) !important; 
+    transition: all 0.2s ease !important;
+    font-weight: 500 !important;
+}
+
+/* Hover State - Border Highlight */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: #2A2F41 !important;
+    border-color: var(--accent_crystal) !important;
+    color: var(--accent_crystal) !important;
+    transform: none !important;
+}
+
+/* Active State */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: var(--bg_deep) !important;
+    transform: scale(0.98) !important;
+}
+
+/* Focus State - Scholar Gold Ring */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px var(--bg_deep), 0 0 0 4px var(--accent_scholar) !important;
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background-color: rgba(37, 39, 51, 0.5) !important;
+    border-color: rgba(120, 126, 145, 0.2) !important;
+    color: var(--text_muted) !important;
+    opacity: 0.5 !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE (SCHOLAR'S ARCHIVE THEME)
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    /* Flat Surface background with low-contrast depth */
+    background-color: #252733; 
+    
+    /* Tactical border: Thin and muted to avoid high-contrast jarring */
+    border: 1px solid rgba(120, 126, 145, 0.3);
+    
+    /* Academic Gold Accent: Top border only for a "Premium Grimoire" feel */
+    border-top: 2px solid #E2C08D; 
+    
+    /* Soft shadow to keep the 'Flat' aesthetic without losing hierarchy */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 4px; /* Sharper corners for a tactical/FF menu look */
+    padding: 2rem;
+}
+
+/* The Main Title - Switched to Serif for the Academic look */
+.welcome-title {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 400; /* Serif looks more 'Academic' when not overly bold */
+    font-size: 2.4rem;
+    color: #E2C08D; /* Scholar Gold */
+    letter-spacing: 0.5px;
+    /* Low-glow effect using the gold tone to maintain 4.5:1 readability */
+    text-shadow: 0 0 8px rgba(226, 192, 141, 0.2); 
+    margin-bottom: 0.5rem;
+}
+
+/* The Icon - Using Crystal Cyan for the 'Eye Candy' contrast */
+.welcome-title .material-icons {
+    font-size: 2.2rem;
+    color: #79D1EA; /* Crystal Cyan */
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    color: #787E91; /* Muted Grey */
+    font-size: 0.85rem;
+    letter-spacing: 2px; /* Increased tracking for the 'Archive' label look */
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Custom Divider: Thin and subtle to divide sections without adding visual noise */
+.st-key-welcome_card hr {
+    border: 0;
+    border-top: 1px solid rgba(120, 126, 145, 0.2);
+    margin: 1.5rem 0;
+}
+
+/* 🏛️ SCHOLAR'S ARCHIVE THEME VARIABLES */
+:root {
+    /* Base Colors */
+    --sb_background: #16161E;
+    --sb_text: #BFC6D4;
+    --sb_title: #E2C08D; /* Scholar Gold */
+    --sb_separator: rgba(120, 126, 145, 0.2);
+    
+    /* Functional Accents */
+    --crystal_cyan: #79D1EA;
+    --mako_glow: rgba(121, 209, 234, 0.15);
+    
+    /* Sidebar States */
+    --sb_expander_closed_background: transparent;
+    --sb_expander_hover_background: #1E202E;
+    --sb_expander_open_background: #1A1B23;
+    
+    /* Navigation Items */
+    --sb_lesson_text_normal: #787E91;
+    --sb_lesson_text_hover: #BFC6D4;
+    --sb_active_bg_normal: rgba(121, 209, 234, 0.08);
+    --sb_active_bg_hover: rgba(121, 209, 234, 0.15);
+    --sb_active_text_normal: #79D1EA;
+    --sb_active_text_hover: #9EE2F5;
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* Background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--sb_background);
+    color: var(--sb_text);
+    border-right: 1px solid var(--sb_separator);
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: var(--sb_lesson_text_normal) !important;
+    transition: color 0.3s ease;
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: var(--crystal_cyan) !important;
+    background-color: var(--sb_expander_hover_background) !important;
+    /* Subtle Final Fantasy "Mako" glow */
+    text-shadow: 0 0 8px rgba(121, 209, 234, 0.5); 
+}
+
+/* Sidebar - APP Title */
+.sidebar-title, .card-title  {
+    font-family: 'Georgia', 'Times New Roman', serif  !important;;
+    font-weight: 500  !important; /* Serif looks more 'Academic' when not overly bold */
+    font-size: 2rem  !important;
+    color: #E2C08D  !important; /* Scholar Gold */
+    letter-spacing: 0.5px  !important;
+    /* Low-glow effect using the gold tone to maintain 4.5:1 readability */
+    text-shadow: 0 0 8px rgba(226, 192, 141, 0.2)  !important;
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons,
+.card-title .material-icons {
+    font-size: 2.2rem !important;
+    color: #79D1EA  !important; /* Crystal Cyan */
+    vertical-align: middle  !important;
+    margin-right: 12px  !important;
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: var(--sb_separator) !important;
+    margin-top: 5px !important;
+    height: 1px;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: var(--sb_expander_closed_background) !important;
+    color: var(--sb_text) !important;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: var(--sb_title) !important;
+    background-color: var(--sb_expander_hover_background) !important;
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: var(--sb_expander_open_background) !important;
+    color: var(--sb_title) !important;
+    border-bottom: 1px solid var(--sb_separator);
+    box-shadow: none !important; /* Kept flat for the aesthetic */
+}
+
+/* Header for subconcepts (Academic Labels) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: var(--sb_lesson_text_normal) !important; 
+    text-transform: uppercase;
+    font-size: 0.75rem !important;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-top: 10px;
+} 
+
+/* Subconcepts and quick test icon: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: var(--sb_lesson_text_normal) !important;
+    background-color: transparent !important;
+    transition: all 0.2s ease;
+}
+
+/* Subconcepts and quick test icon: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: var(--sb_lesson_text_hover) !important;
+    text-shadow: 0 0 5px rgba(191, 198, 212, 0.3);
+}
+
+/* Subconcepts: Active Element: Normal (The Tactical Highlight) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: var(--sb_active_bg_normal) !important;
+    border-left: 3px solid var(--crystal_cyan) !important; /* Tactical marker */
+    border-radius: 0 4px 4px 0 !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: var(--sb_active_text_normal) !important;
+    font-weight: 600;
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: var(--sb_active_bg_hover) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: var(--sb_active_text_hover) !important;
+}
+
+/* Scholar's Archive - FF Tactical Theme ────────────────────────── */
+
+:root {
+    /* Theme Variables mapped to the concept */
+    --main-area-bg: #1A1B23;
+    --main-area-text: #BFC6D4;
+    --surface-card: #252733;
+    
+    /* Eye Candy Accents */
+    --accent-crystal: #79D1EA;  /* Cyan */
+    --accent-scholar: #E2C08D;  /* Gold */
+    --accent-magic: #BB9AF7;    /* Violet */
+    --muted-border: rgba(120, 126, 145, 0.25);
+    --crystal-glow: 0 0 10px rgba(121, 209, 234, 0.15);
+}
+
+/* Scholar's Archive - Theme Variables */
+:root {
+    /* 4.5:1 Contrast Ratio Compliant Colors */
+    --main-area-bg: #1A1B23;      /* Deep Archive Navy */
+    --main-area-text: #BFC6D4;    /* Soft Silver (Primary Text) */
+    --surface-card: #252733;      /* Flat Surface Elevation */
+    --muted-border: #3D4150;      /* Low-contrast separator */
+    
+    /* Eye Candy Accents (Tactical/Magic) */
+    --accent-crystal: #79D1EA;    /* Mako Cyan (Primary Action/Strong) */
+    --accent-scholar: #E2C08D;    /* Parchment Gold (Headers/Importance) */
+    --accent-magic: #BB9AF7;      /* Aether Violet (Emphasis/Italics) */
+}
+
+/* Main Area ──────────────────────────────────────────── */
+
+/* Main Area & Header */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--main-area-bg) !important;
+    color: var(--main-area-text) !important;
+    font-family: 'Inter', 'Segoe UI', serif; /* Hybrid look */
+}
+
+/* Sidebar Expand Button - Flat Tactical Look */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: var(--accent-crystal) !important;
+    /* Removed text-shadow for a cleaner, flat academic look */
+}
+
+/* Sidebar Expand Button - Hover State */
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: rgba(121, 209, 234, 0.1) !important;
+    border: 1px solid var(--accent-crystal);
+    border-radius: 4px;
+}
+
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: #FFFFFF !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title (Scholar Gold / Academic Serif feel) */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: var(--accent-scholar) !important;
+    background-color: transparent;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-family: 'Georgia', serif; /* Adds the academic touch */
+}
+
+/* Lesson Card: Main Area (Flat Surface) */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: var(--surface-card) !important;
+    border: 1px solid var(--muted-border) !important;
+    border-radius: 2px; /* Sharper corners for tactical feel */
+    padding: 24px;
+    line-height: 1.7; /* Increased for long-form reading */
+    color: var(--main-area-text);
+}
+
+/* Lesson Card: Strong Text (Crystal Highlight) */
+section[data-testid="stMain"] .st-key-lesson_window strong {
+    color: #79d2ea9e !important;
+    font-weight: 600;
+}
+
+/* Lesson: Headers (Underlined Scholar Style) */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--accent-scholar) !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    padding-bottom: 8px;
+    font-family: 'Georgia', serif;
+}
+
+/* Lesson Card: Italic Text (Magic Violet) */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--accent-magic) !important;
+    font-style: italic;
+    padding: 0 2px;
+}
+
+/* Lesson Card: Table Headers */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--accent-crystal) !important;
+    border: 1px solid var(--muted-border) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important; /* Inset effect */
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Lesson Card: Table Data */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--main-area-text) !important;
+    border: 1px solid var(--muted-border) !important;
+    padding: 10px;
+}
+
+/* Scrollbar styling for lesson window (Minimalist Ghost) */
+.st-key-lesson_window::-webkit-scrollbar {
+    width: 6px;
+}
+
+.st-key-lesson_window::-webkit-scrollbar-thumb {
+    background: var(--muted-border);
+    border-radius: 10px;
+}
+
+.st-key-lesson_window:hover::-webkit-scrollbar-thumb {
+    background: var(--accent-crystal);
+}
+
+/* Scholar's Archive Theme Variables */
+:root {
+    --question-text: #E2C08D;      /* Scholar Gold (Academic Header) */
+    --answer-text: #BFC6D4;        /* Primary Silver-Gray */
+    --answer-bg: #252733;          /* Surface Level 1 (Flat) */
+    --answer-letter-text: #79D1EA; /* Crystal Blue (Eye Candy) */
+    
+    /* Keyboard Hints */
+    --kbd-key-text: #1A1B23;       /* Dark Background for contrast */
+    --kbd-key-bg: #787E91;         /* Muted Slate */
+    --kbd-key-border: #4A4D5E;
+    --kbd-key-shadow: #16161E;
+    --kbd-legend-text: #787E91;    /* Muted Labels */
+}
+
+/* Quiz Test State ──────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question {
+    color: #79d2ea9e !important;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(120, 126, 145, 0.2); /* Thin menu separator */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.st-key-question p {
+    font-weight: 400 !important; /* Medium-bold for readability */
+    line-height: 1.5;
+    /* Optional: Add a subtle Serif font here for the Academic look */
+    font-family: 'serif', system-ui; 
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    color: var(--answer-text);
+    background-color: var(--answer-bg);
+    border-radius: 4px; /* Sharper, more tactical radius */
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    padding: 12px 16px;
+}
+
+/* Hover effect to simulate menu selection */
+[class*="st-key-answer"]:hover {
+    border-color: var(--answer-letter-text);
+    background-color: rgba(121, 209, 234, 0.05); /* Faint blue glow */
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    color: var(--answer-letter-text);
+    font-family: monospace; /* Tactical/Console look */
+    text-shadow: 0 0 8px rgba(121, 209, 234, 0.3); /* Soft magical glow */
+}
+
+/* Keyboard Legend */
+.key-hint {
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-weight: 700;
+    font-size: 0.75em;
+    color: var(--kbd-key-text);
+    background: var(--kbd-key-bg);
+    border: 1px solid var(--kbd-key-border);
+    border-radius: 3px;
+    padding: 2px 6px;
+    box-shadow: 0 2px 0 var(--kbd-key-shadow);
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.keyboard-legend {
+    color: var(--kbd-legend-text);
+    font-size: 12px;
+    font-family: system-ui, -apple-system, sans-serif;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+:root {
+    /* Final Fantasy Academic Palette */
+    --ff-bg-deep: #1A1B23;
+    --ff-surface: #252733;
+    --ff-text-primary: #BFC6D4; /* 4.5:1 contrast against surface */
+    --ff-text-muted: #787E91;
+    
+    /* Eye Candy Accents */
+    --ff-crystal: #79D1EA;  /* Cyan focus */
+    --ff-scholar: #E2C08D;  /* Gold headers */
+    --ff-magic: #BB9AF7;    /* Violet lore */
+    --ff-ruby: #F7768E;     /* Soft red error */
+    --ff-leaf: #9ECE6A;     /* Soft green success */
+    
+    /* Borders & Dividers */
+    --ff-border: rgba(120, 126, 145, 0.2);
+    --ff-border-bright: rgba(121, 209, 234, 0.3);
+}
+
+/* 1. HERO METRIC BOXES (Tactical Flat Style) */
+.feedback-box {
+    background-color: var(--ff-surface);
+    border: 1px solid var(--ff-border);
+    backdrop-filter: none; /* Moving away from glass to Flat Academic */
+    border-radius: 4px;    /* Sharper corners for tactical feel */
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); /* Hard flat shadow */
+    transition: all 0.2s ease;
+}
+
+.feedback-box:hover {
+    border-color: var(--ff-crystal);
+    transform: translateY(-2px);
+}
+
+.metric-label {
+    font-family: 'serif', 'EB Garamond', Georgia; /* Academic look */
+    font-size: 0.9rem;
+    color: var(--ff-scholar); /* Using Gold for labels */
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.metric-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400; /* Cleaner, lighter weight */
+    color: var(--ff-text-primary);
+    text-shadow: none;
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border-left: 4px solid var(--ff-leaf);
+    color: var(--ff-leaf);
+}
+
+.feedback-box.status-failed {
+    border-left: 4px solid var(--ff-ruby);
+    color: var(--ff-ruby);
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2rem;
+    opacity: 0.8;
+    color: inherit; /* Inherit green or red from parent status */
+}
+
+/* 2. QUESTION EXPANDERS (Menu List Style) */
+.st-key-feedback_list details {
+    border: none !important;
+    background: transparent !important;
+    border-bottom: 1px solid var(--ff-border) !important;
+    margin-bottom: 4px;
+}
+
+.st-key-feedback_list summary {
+    font-family: 'serif', 'EB Garamond';
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--ff-text-primary);
+    padding: 12px 8px;
+    transition: background 0.2s;
+}
+
+.st-key-feedback_list summary:hover {
+    background-color: rgba(121, 209, 234, 0.05) !important; /* Crystal tint */
+    color: var(--ff-crystal);
+}
+
+/* 3. ANSWER COMPARISON CARDS (Flat UI) */
+.answer-card {
+    border-radius: 2px; /* Very sharp */
+    font-size: 0.95rem;
+    border: 1px solid var(--ff-border);
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* User's Answer Card */
+.answer-card.user-wrong {
+    background-color: rgba(247, 118, 142, 0.05); /* Very subtle Ruby */
+    border-color: var(--ff-ruby);
+    color: var(--ff-text-primary);
+}
+
+.answer-card.user-correct {
+    background-color: rgba(158, 206, 106, 0.05); /* Very subtle Leaf */
+    border-color: var(--ff-leaf);
+    color: var(--ff-text-primary);
+}
+
+/* Correct Answer Card (The "Objective Truth" / Gold) */
+.answer-card.correct-key {
+    background-color: var(--ff-surface);
+    border: 1px solid var(--ff-scholar);
+    color: var(--ff-scholar);
+    box-shadow: inset 0 0 10px rgba(226, 192, 141, 0.05);
+}
+
+.answer-label {
+    font-family: 'sans-serif';
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Explanation Box Theme (The "Lore" Box) */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: #1E202E !important; /* Slightly darker than surface */
+    border-left: 2px solid var(--ff-magic) !important;
+    border-right: 1px solid var(--ff-border) !important;
+    border-top: 1px solid var(--ff-border) !important;
+    border-bottom: 1px solid var(--ff-border) !important;
+    border-radius: 0px !important;
+    color: var(--ff-text-primary) !important;
+    font-style: italic !important;
+    line-height: 1.7 !important;
+    padding: 1.5rem !important;
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: var(--ff-magic); /* Magic Violet icon */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The Scholar's Forge)
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container - Flat Academic Style */
+.st-key-generator_card {
+    background-color: #252733; /* Surface Color */
+    border: 1px solid rgba(120, 126, 145, 0.3);
+    border-top: 3px solid #E2C08D; /* Scholar Gold Accent */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Softer shadow for flat look */
+    border-radius: 8px; /* Sharper, more tactical radius */
+    animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: #E2C08D; /* Scholar Gold */
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-family: 'serif', 'EB Garamond', Georgia; /* Academic feel */
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    border-color: rgba(120, 126, 145, 0.2) !important;
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.1em !important;
+    color: #79D1EA; /* Crystal Cyan */
+}
+
+.gen-input-icon {
+    color: #787E91; /* Muted Slate */
+}
+
+/* Warning Box - Deep Wine/Ruby Aesthetic */
+.generator-warning {
+    color: #F7768E; 
+    background: rgba(247, 118, 142, 0.08); 
+    border-radius: 4px;
+    border: 1px solid rgba(247, 118, 142, 0.2);
+}
+
+/* Metric Stats Box */
+.generator-stat-box {
+    background: #1E202E; /* Inset Background */
+    border-radius: 6px;
+    border: 1px solid rgba(120, 126, 145, 0.1);
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: 1px solid rgba(120, 126, 145, 0.2);
+}
+
+.stat-label {
+    color: #787E91; /* Muted */
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.stat-value {
+    color: #BFC6D4; /* Primary Text */
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.stat-value-accent {
+    color: #79D1EA; /* Crystal Cyan */
+    font-weight: 600;
+}
+
+.stat-value-success {
+    color: #E2C08D; /* Gold for "Mastery" */
+    font-weight: 700;
+    font-size: 1.4em;
+    text-shadow: 0 0 10px rgba(226, 192, 141, 0.2);
+}
+
+/* Loading/Spinner Icon */
+.spinner-icon {
+    color: #79D1EA;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin { 
+    100% { transform: rotate(360deg); } 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(5px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Console Log - The "Magical Script" look */
+.generator-console {
+    background: #1A1B23; /* Deepest Navy */
+    border: 1px solid #2A2F41;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.generator-console-step {
+    border-bottom: 1px solid rgba(120, 126, 145, 0.05);
+}
+
+.console-icon {
+    color: #BB9AF7; /* Magic Violet for log icons */
+}
+
+.console-title {
+    color: #BFC6D4;
+    font-weight: 500;
+}
+
+.console-message {
+    color: #787E91;
+    font-size: 0.85em;
+    border-left: 2px solid #3B4261;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+/* Completion Screen */
+.completion-header {
+    color: #E2C08D; 
+}
+
+/* Spinner Animation Color */
+.stVerticalBlock [data-testid="stSpinner"] {
+    color: #79D1EA !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   METRIC CARDS (Final Fantasy Tactical Menu Style)
+   ───────────────────────────────────────────────────────────── */
+
+[data-testid="stMetric"] {
+    background-color: #252733; 
+    border: 1px solid rgba(120, 126, 145, 0.2); 
+    padding: 15px;
+    border-radius: 4px; /* Tactical flat corners */
+    box-shadow: none; /* Flat style */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover Effect for Metric Card */
+[data-testid="stMetric"]:hover {
+    background-color: #2A2F41;
+    border-color: #79D1EA;
+}
+
+/* Metric Label (Title) */
+[data-testid="stMetricLabel"] {
+    font-size: 0.75rem !important;
+    color: #787E91 !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Metric Value (Big Number) */
+[data-testid="stMetricValue"] {
+    font-size: 1.8rem !important;
+    color: #BFC6D4 !important;
+    font-weight: 500;
+    font-family: 'serif', Georgia;
+}
+
+/* Metric Delta (Change indicator) */
+[data-testid="stMetricDelta"] {
+    font-size: 0.85rem !important;
+    background-color: #1A1B23; 
+    border: 1px solid rgba(120, 126, 145, 0.1);
+    padding: 2px 10px;
+    border-radius: 2px;
+    color: #79D1EA !important; /* Forces low contrast cyan */
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* 🏛️ Scholar's Archive Theme Variables */
+:root {
+    /* Base Tones */
+    --bg-deep: #1A1B23;
+    --surface-card: #252733;
+    --surface-inset: #1E202E;
+    
+    /* Text Tones (Targeting 4.5:1 Ratio) */
+    --text-primary: #BFC6D4;
+    --text-muted: #787E91;
+    
+    /* Eye Candy Accents (Tactical FF Style) */
+    --accent-crystal: #79D1EA;
+    --accent-scholar: #E2C08D;
+    --accent-magic: #BB9AF7;
+    
+    /* Component Specs */
+    --prog-radius: 4px; /* Tactical/Academic sharp-roundness */
+    --prog-height: 8px;
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Progress Bar Container */
+/* We use a deep inset look to mimic the tactical "trench" menus of FF */
+.progress-container {
+    background-color: var(--surface-inset) !important;
+    height: var(--prog-height) !important;
+    border-radius: var(--prog-radius) !important;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    /* Subtle inner border instead of heavy shadow for the 'Flat' look */
+    border: 1px solid rgba(120, 126, 145, 0.2); 
+    overflow: hidden; /* Ensures the fill doesn't bleed out of radius */
+    box-shadow: none !important; 
+}
+
+/* Progress Bar Fill */
+/* Using the "Crystal" accent for a clean, eye-candy look that remains legible */
+.progress-fill {
+    background-color: var(--accent-crystal) !important;
+    
+    /* A very subtle flat gradient gives it a "magical energy" feel without being 3D */
+    background-image: linear-gradient(
+        90deg, 
+        var(--accent-crystal) 0%, 
+        var(--accent-magic) 100%
+    ) !important;
+    
+    /* Remove heavy glows for the academic aesthetic; use a soft edge highlight instead */
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    
+    height: 100% !important;
+    border-radius: var(--prog-radius) 0 0 var(--prog-radius);
+    transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1); /* Smoother, tactical transition */
+}
+
+/* Tab area: Inactive Tab - Muted Scholar */
+button[data-baseweb="tab"] {
+    background-color: transparent !important;
+    color: #787E91 !important; /* Muted Text */
+    border-radius: 4px 4px 0 0 !important;
+    padding: var(--ui_tab_padding) !important;
+    margin-right: 8px;
+    border: none !important;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.03em;
+}
+
+/* Tab area: Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: #2A2F41 !important;
+    color: #BFC6D4 !important; /* Lighten slightly */
+}
+
+/* Tab area: Active Tab - Scholar Gold Highlight */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: #252733 !important; /* Surface color */
+    color: #E2C08D !important; /* Scholar Gold */
+    border-bottom: 2px solid #E2C08D !important; /* Flat tactical underline */
+    box-shadow: none !important;
+}
+
+/* Tab area: Bottom tab border removal */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text & Instructions */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: #BFC6D4; /* Primary Silver-Gray */
+    font-weight: 500;
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: #787E91; /* Muted */
+    font-size: 0.85em;
+}
+
+/* File Dropzone: Archive Slot Container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: #1E202E;
+    border: 1px dashed #787E91 !important; /* Academic dashed look */
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: #79D1EA !important; /* Crystal glow on hover */
+}
+
+/* File Dropzone: "Browse files" button - Flat Tactical */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    background-color: rgba(121, 209, 234, 0.05) !important;
+    color: #79D1EA !important;
+    border: 1px solid rgba(121, 209, 234, 0.2) !important;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+}
+
+/* File Dropzone: Icon color - Magic Violet */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: #BB9AF7; /* Magic Accent */
+    filter: drop-shadow(0 0 3px rgba(187, 154, 247, 0.2));
+}
+
+/* --- SCHOLAR'S ARCHIVE THEME VARIABLES --- */
+:root {
+    /* Backgrounds */
+    --ui_bg_deep: #1A1B23;
+    --ui_surface: #252733;
+    --ui_surface_hover: #2E313F;
+    --ui_input_bg: #1E202E;
+    
+    /* Accents (Eye Candy) */
+    --ui_crystal: #79D1EA;
+    --ui_scholar_gold: #E2C08D;
+    --ui_magic_violet: #BB9AF7;
+    
+    /* Text */
+    --ui_text_main: #BFC6D4; /* Verified 4.5:1+ Contrast */
+    --ui_text_muted: #787E91;
+    
+    /* Functional mappings for your selectors */
+    --ui_dropdown_closed_bg: var(--ui_surface);
+    --ui_dropdown_closed_border: #414558;
+    --ui_dropdown_closed_text: var(--ui_text_main);
+    
+    --ui_dropdown_open_bg: var(--ui_input_bg);
+    --ui_dropdown_open_border: var(--ui_scholar_gold);
+    --ui_dropdown_open_icon: var(--ui_scholar_gold);
+    
+    --ui_dropdown_hover_bg: var(--ui_surface_hover);
+    --ui_dropdown_hover_border: var(--ui_crystal);
+    --ui_dropdown_hover_text: var(--ui_crystal);
+    
+    --ui_list_bg: var(--ui_bg_deep);
+    --ui_list_border: 1px solid #414558;
+    --ui_list_text: var(--ui_text_main);
+    --ui_list_selected_bg: #2A2F41;
+    --ui_list_selected_text: var(--ui_crystal);
+    --ui_list_scrollbar_thumb: #3B3F51;
+    
+    --ui_popover_bg: var(--ui_surface);
+    --ui_popover_border: 1px solid var(--ui_scholar_gold);
+    --ui_popover_text: var(--ui_text_main);
+    
+    --ui_input_radius: 4px; /* Tactical flat look */
+}
+
+/* --- DROPDOWN MENU --- */
+
+/* Outer container */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Clickable AREA CLOSED - Container */
+[data-baseweb="select"] > div {
+    background-color: var(--ui_dropdown_closed_bg) !important;
+    border: 1px solid var(--ui_dropdown_closed_border) !important;
+    border-radius: var(--ui_input_radius) !important;
+    transition: all 0.2s ease;
+}
+
+/* Clickable AREA CLOSED - Text & Icon */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: var(--ui_dropdown_closed_text) !important;
+}
+
+/* Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--ui_dropdown_open_bg) !important;
+    border: 1px solid var(--ui_dropdown_open_border) !important;
+    border-radius: var(--ui_input_radius) !important;
+}  
+
+/* Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: var(--ui_dropdown_open_icon) !important;
+}
+
+/* Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--ui_dropdown_hover_bg) !important;
+    border: 1px solid var(--ui_dropdown_hover_border) !important;
+}
+
+/* Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: var(--ui_dropdown_hover_text) !important;
+}
+
+/* --- DROPDOWN ITEMS --- */
+
+/* Reset backgrounds */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* List background and outer border (Tactical Window) */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: var(--ui_list_bg) !important;
+    border: var(--ui_list_border) !important;
+    border-radius: var(--ui_input_radius) !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4) !important;
+}
+
+/* List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_text) !important;
+    transition: color 0.1s ease !important;
+    font-size: 0.95rem;
+}
+
+/* Item: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: var(--ui_list_selected_bg) !important;
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_text) !important;
+    font-weight: 600 !important;
+}
+
+/* Item: HOVER (General) */
+[role="option"]:hover {
+    background-color: var(--ui_surface_hover) !important;
+}
+
+[role="option"]:hover div[class*="e1bi6yfx1"] {
+    color: var(--ui_scholar_gold) !important;
+}
+
+/* Scrollbar styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_list_scrollbar_thumb) transparent;
+}
+
+/* --- BUTTON DROPDOWN POPOVER --- */
+
+/* Popover: Width & Layout */
+[data-testid="stPopoverBody"] {
+    width: var(--ui_popover_width) !important;  
+    max-width: var(--ui_popover_width) !important;
+}
+
+/* Popover: Background & Border */
+[data-testid="stPopoverBody"],
+[data-testid="stPopoverBody"] > div {
+    background-color: var(--ui_popover_bg) !important; 
+}
+
+[data-testid="stPopoverBody"] {
+    border: var(--ui_popover_border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+
+/* Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--ui_popover_text) !important;
+    line-height: 1.6;
+}
+
+/* Focus reset */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+    border-color: var(--ui_crystal) !important;
+}
+
+/* --- Scholar's Archive Theme Variables --- */
+:root {
+    /* Backgrounds */
+    --ui_input_bg_normal: #1E202E;      /* Deep Archive Slate */
+    --ui_input_bg_hover: #252733;       /* Slightly lifted surface */
+    --ui_input_bg_focus: #1E202E;       /* Keep focus flat */
+    
+    /* Borders */
+    --ui_input_border_normal: 1px solid rgba(120, 126, 145, 0.4); 
+    --ui_input_border_hover: 1px solid rgba(121, 209, 234, 0.5);  /* Crystal Blue tint */
+    --ui_input_border_focus: 1px solid #79D1EA;                   /* Pure Crystal Blue */
+    
+    /* Text & Accents */
+    --ui_input_text_normal: #BFC6D4;    /* Soft Silver (4.5:1 Contrast) */
+    --ui_input_text_hover: #FFFFFF;     /* Pure highlight on hover */
+    --ui_input_label: #E2C08D;          /* Scholar Gold */
+    --ui_input_radius: 4px;             /* Sharp, tactical FF radius */
+    
+    /* Elements */
+    --ui_input_scrollbar_thumb: #787E91;
+    --ui_input_step_btn_disabled: #343746;
+    --ui_tooltip_icon: #79D1EA;
+}
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: var(--ui_input_radius);
+    /* Subtle inner glow rather than a heavy shadow for that 'Magical Slate' look */
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1); 
+    transition: all 0.2s ease-in-out;
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: var(--ui_input_bg_normal) !important;
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: var(--ui_input_bg_hover) !important;
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: var(--ui_input_bg_focus) !important;
+    /* Subtle outer glow in Crystal Blue to mimic FF selection */
+    box-shadow: 0 0 8px rgba(121, 209, 234, 0.15);
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--ui_input_text_normal) !important;
+    font-family: 'Inter', sans-serif; /* Clean academic sans-serif */
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: var(--ui_input_text_hover) !important;
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: var(--ui_input_text_normal) !important;
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: var(--ui_input_border_normal) !important;
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: var(--ui_input_border_hover) !important;
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: var(--ui_input_border_focus) !important;
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_input_scrollbar_thumb) transparent;
+}
+
+/* Step Down and Up Buttons - Tactical Arrow Look */
+button[data-testid="stNumberInputStepDown"] svg,
+button[data-testid="stNumberInputStepUp"] svg {
+    fill: var(--ui_input_text_normal) !important;
+    transition: fill 0.2s;
+}
+
+button[data-testid="stNumberInputStepDown"]:hover svg,
+button[data-testid="stNumberInputStepUp"]:hover svg {
+    fill: var(--ui_accent_crystal) !important;
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: var(--ui_input_step_btn_disabled) !important;
+    opacity: 0.5;
+}
+
+/* Tooltip Icon - The 'Mako' Glow */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--ui_tooltip_icon) !important;
+    filter: drop-shadow(0 0 2px rgba(121, 209, 234, 0.4));
+}
+
+/* Input field labels: The Academic Header */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--ui_input_label);
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase; /* Tactical menu style */
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+}
+
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color: #5E81AC !important;   
+    font-size: 1.05rem !important;   
+    font-weight: 700 !important;   
+    font-style: normal !important;
+    letter-spacing: 1px !important; 
+    text-shadow: 0 0 10px rgba(94, 129, 172, 0.4) !important; 
+    padding-bottom: 4px !important;
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header
+ {
+    color: #ECEFF4 !important;  
+    font-size: 0.95rem !important;   
+    font-weight: 600 !important;   
+    font-style: normal !important;   
+    letter-spacing: 0.5px !important;  
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color: #A0AAB4 !important; 
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;  
+    font-style: normal !important;   
+    letter-spacing: 0px !important;  
+    transition: color 0.2s ease !important;
+}
+
+/* Added hover state for the lesson row to make interactive navigation easier */
+[class*="st-key-mastery_cb_"]:hover [data-testid="stMarkdownContainer"] p {
+    color: #D8DEE9 !important; 
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary  {
+    color: #4C566A !important;   
+    opacity: 0.6 !important;  
+    text-shadow: none !important;
+    border-bottom: none !important;
+}

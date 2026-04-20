@@ -1,0 +1,52 @@
+# Environment variables (NEVER commit API keys!)
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Streamlit cache
+.streamlit/
+
+# Progress/state files (optional - if you don't want to track these)
+*.pkl
+progress/
+cache/
+/old/
+/Old/
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Personal dev files
+daily_summary.md
+CLAUDE.md
+
+# OS files
+.DS_Store
+Thumbs.db
+EOF
+
+data/keys.json
+
+# Runtime data — personal, sensitive, or build artifacts
+data/settings/
+data/srs_data/
+data/debug/
+
+# Course data — only demo courses are tracked
+data/course_data/*
+!data/course_data/Computer_Science_OpenStax/
+!data/course_data/Pharmacology__OpenStax_/
+!data/course_data/World_War_I_Wikipedia/
+
+# Course syllabi — only demo courses are tracked
+data/courses/*
+!data/courses/Computer_Science_OpenStax.json
+!data/courses/Pharmacology__OpenStax_.json
+!data/courses/World_War_I_Wikipedia.json

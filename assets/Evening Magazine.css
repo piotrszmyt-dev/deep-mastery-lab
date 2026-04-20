@@ -1,0 +1,1122 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* Main Button ──────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    background: #995C5C;
+    background-color: #995C5C;
+    border: 1px solid #995C5C;
+    color: #1C1B1A;
+    box-shadow: none;
+    border-radius: 0px; /* Sharp corners */
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover State */
+button[kind="primary"]:hover {
+    background-color: #AD6E6E;
+    border-color: #AD6E6E;
+    box-shadow: none;
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background-color: #995C5C;
+    border-color: #995C5C;
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    background-color: #995C5C;
+    outline: none;
+    box-shadow: 0 0 0 3px #3E3A39; /* Muted print column separator */
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background-color: #4A4544;
+    border-color: #4A4544;
+    color: #CECBBE;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: transparent;
+    background-color: transparent;
+    border: 1px solid #cecbbe42;
+    color: #cecbbeca;
+    box-shadow: none;
+    border-radius: 0px; /* Sharp corners */
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: #3E3A39; /* Subtle contrast against background */
+    border-color: #CECBBE;
+    box-shadow: none;
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: #262423;
+    border-color: #CECBBE;
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    background-color: transparent;
+    outline: none;
+    box-shadow: 0 0 0 3px #3E3A39;
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background-color: transparent;
+    border-color: #4A4544;
+    color: #4A4544;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Progress Bar ────────────────────────────────────────────── */
+.progress-container {
+    background-color: #3E3A39 !important;
+    height: 12px; /* Hardcoded fallback size */
+    border-radius: 0px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    box-shadow: none; /* Flat print style */
+}
+
+.progress-fill {
+    background-color: #995C5C !important;
+    box-shadow: none !important;
+    height: 100%;
+    border-radius: 0px;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    background-color: #262423; /* Card Container */
+    border: 1px solid #3E3A39;
+    border-top: 3px solid #995C5C; /* Editorial red ink highlight on top */
+    box-shadow: none; /* Removed shadow for print feel */
+    border-radius: 0px;
+}
+
+/* The Main Title */
+.welcome-title {
+    font-family: 'Merriweather', 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #EBE8DB; /* Strong Headers */
+    text-shadow: none; /* Removed neon glow effect */
+}
+
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    color: #995C5C;
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    color: #CECBBE;
+    font-family: 'Merriweather', 'Playfair Display', serif;
+    font-size: 1rem;
+    letter-spacing: 0px;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    border-color: #3E3A39;
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #262423; /* Sidebar / Card Container */
+    color: #CECBBE; /* Secondary Accent (Newsprint) */
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: #CECBBE !important;
+    font-size: 1.2rem !important; /* Fixed size to replace variable */
+    text-shadow: none; /* Removed glow for flat print style */
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: #995C5C !important; /* Editorial Ink */
+    background-color: transparent !important;
+    text-shadow: none; 
+}
+
+/* Sidebar - APP Title */
+.sidebar-title, .card-title {
+    font-family: "Merriweather", "Playfair Display", serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #EBE8DB !important; /* Strong/Headers text */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons,
+.card-title .material-icons {
+    font-size: inherit;      
+    line-height: inherit;   
+    vertical-align: middle; 
+    color: #995C5C; /* Editorial Ink */
+    text-shadow: none; 
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: #3E3A39 !important; /* Thin print columns */
+    margin-top: 5px !important;
+    border: none;
+    height: 1px;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: #262423 !important;
+    border: none !important;
+    color: #CECBBE !important;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: #EBE8DB !important;
+    background-color: #3E3A39 !important;
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: #262423 !important;
+    color: #EBE8DB !important;
+    border-radius: 0px !important; /* Sharp corners */
+    box-shadow: none; /* Flat print aesthetic */
+}
+
+/* Header for subconcepts */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: #807C78 !important; /* Muted gray */
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    background: none;
+} 
+
+/* Subconcepts and quick test icon: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: #CECBBE !important;
+    background-color: transparent !important;
+}
+
+/* Subconcepts and quick test icon: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: #995C5C !important; /* Editorial Red */
+    text-shadow: none; 
+}
+
+/* Subconcepts: Active Element: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: #3E3A39 !important; /* Sidebar Separators color */
+    border-radius: 0px !important; /* Sharp corners */
+    border-left: 4px solid #995C5C !important; /* Selected state highlight */
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: #EBE8DB !important;
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: #4A4544 !important; /* Disabled color used as slight hover contrast */
+    border-radius: 0px !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: #EBE8DB !important;
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: #1C1B1A; /* Primary Background */
+    color: #CECBBE; /* Eggshell Text */
+}
+
+/* Sidebar Expand Button - Icon (default) */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: #995C5C !important;
+    text-shadow: none;
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: #AD6E6E !important; /* Hover Editorial Red */
+    background-color: transparent !important;
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: transparent !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    font-family: "Merriweather", "Playfair Display", serif !important;
+    color: #EBE8DB;
+    background-color: transparent;
+    font-weight: 700;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5); /* Title shadow applied */
+    padding-bottom: 10px;
+}
+
+/* Lesson Card: Main Area (Magazine Dark Mode Styling) */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: #262423; /* Magazine page background */
+    border-radius: 0px; /* Sharp corners */
+    border: 1px solid #3E3A39; /* Thin page border */
+    padding: 30px 40px; /* Wider padding for editorial feel */
+    box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.4), 
+                inset 0 0 60px rgba(0, 0, 0, 0.1); /* Depth shadow to lift page */
+    font-family: "Merriweather", "Playfair Display", serif !important;
+    line-height: 1.7; /* Better readability for large text blocks */
+}
+
+/* Lesson Card: Strong Text */
+section[data-testid="stMain"] .st-key-lesson_window p strong {
+    color: #995C5C; /* Editorial Ink Red */
+    font-weight: 700;
+}
+
+/* Lesson: Headers */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    font-family: "Merriweather", "Playfair Display", serif !important;
+    text-transform: none !important;
+    color: #995C5C !important; /* Editorial Ink Red */
+    font-weight: 800;
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: #CECBBE;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Lesson Card: Table Headers + text */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: #EBE8DB; /* Strong Headers */
+    border: 1px solid #3E3A39;
+    background-color: #1C1B1A;
+    font-family: "Merriweather", "Playfair Display", serif !important;
+    padding: 10px;
+}
+
+/* Lesson Card: Table Data + text */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: #CECBBE;
+    border: 1px solid #3E3A39;
+    padding: 10px;
+}
+
+/* Scrollbar styling for lesson window */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #3E3A39 transparent;
+}
+
+
+/* Quiz Test State ──────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question  {
+    color: #807C78 !important; /* Low contrast muted gray */
+    background-color: transparent;
+    font-family: "Merriweather", "Playfair Display", serif !important;
+}
+
+.st-key-question p {
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    color: #807C78; /* Low contrast muted gray */
+    background-color: #262423; /* Container warm gray/brown */
+    border-radius: 0px; /* Sharp corners */
+    font-family: "Merriweather", "Playfair Display", serif;
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    color: #995C5C; /* Editorial Red */
+}
+
+/* Keyboard Legend */
+.key-hint {
+    font-family: "Merriweather", "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    color: #807C78; /* Muted gray */
+    background: #1C1B1A;
+    border: 1px solid #3E3A39; /* Thin print columns */
+    border-radius: 0px;
+    box-shadow: none; /* Removed shadow for flat print look */
+}
+
+.keyboard-legend {
+    color: #807C78; /* Muted gray */
+    font-size: 13px;
+    font-family: "Merriweather", "Playfair Display", serif;
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+
+
+/* 1. HERO METRIC BOXES (Print Style) */
+.feedback-box {
+    background-color: #262423;
+    border: 1px solid #3E3A39;
+    backdrop-filter: none; /* Removed glassmorphism */
+    border-radius: 0px; /* Sharp corners */
+    box-shadow: none;
+    transition: transform 0.2s ease;
+}
+
+.feedback-box:hover {
+    border-color: #807C78;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: #807C78;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    font-family: "Merriweather", "Playfair Display", serif;
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #EBE8DB; /* Strong Headers */
+    text-shadow: none; /* Removed glow */
+    font-family: "Merriweather", "Playfair Display", serif;
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border: 1px solid #3E3A39;
+    box-shadow: none;
+    color: #EBE8DB; /* Minimalist text in muted cream */
+}
+
+.feedback-box.status-failed {
+    border: 1px solid #995C5C;
+    box-shadow: none;
+    color: #995C5C; /* Editorial Ink */
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.5rem;
+    opacity: 0.9;
+}
+
+/* 2. QUESTION EXPANDERS */
+
+/* Normal */
+.st-key-feedback_list details div[data-testid="stExpander"] > details > summary {
+    border: none !important;
+    background: transparent !important;
+    border-bottom: 1px solid #3E3A39 !important; /* Thin print columns */
+    font-family: "Merriweather", "Playfair Display", serif;
+    color: #CECBBE;
+}
+
+/* Hover */
+.st-key-feedback_list div[data-testid="stExpander"] > details > summary:hover {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 1.0rem;
+    color: #EBE8DB; /* Strong Headers */
+    transition: all 0.2s ease;
+    padding: 10px 5px;
+}
+
+.st-key-feedback_list div[data-testid="stExpander"] details[open] > summary {
+    color: #EBE8DB;
+    background-color: #262423 !important;
+}
+
+/* 3. ANSWER COMPARISON CARDS */
+.answer-card {
+    border-radius: 0px; /* Sharp corners */
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    font-family: "Merriweather", "Playfair Display", serif;
+}
+
+/* User's Answer Card */
+.answer-card.user-wrong {
+    background-color: #1C1B1A;
+    border-color: #995C5C;
+    color: #995C5C; /* Editorial Ink */
+}
+
+.answer-card.user-correct {
+    background-color: #1C1B1A;
+    border-color: #3E3A39;
+    color: #CECBBE; /* Newsprint Eggshell */
+}
+
+/* Correct Answer Card */
+.answer-card.correct-key {
+    background-color: #262423;
+    border: 1px solid #EBE8DB;
+    color: #EBE8DB; /* Strong Serif */
+}
+
+.answer-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-weight: 700;
+    color: #807C78;
+}
+
+/* Explanation Box Theme */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: #262423 !important;
+    border-left: 3px solid #995C5C !important; /* Editorial Red line */
+    border-radius: 0px !important; /* Sharp corners */
+    color: #CECBBE !important; /* Eggshell text */
+    font-style: normal !important;
+    line-height: 1.6 !important;
+    font-family: "Merriweather", "Playfair Display", serif !important;
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: #995C5C; /* Editorial Ink */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The "Magic" Box)
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container */
+.st-key-generator_card {
+    background-color: #262423; /* Sidebar / Card Container */
+    border: 1px solid #3E3A39; /* Thin print columns */
+    border-top: 2px solid #995C5C; /* Editorial Ink */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border-radius: 0px; /* Sharp corners */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: #EBE8DB; /* Strong text */
+    font-family: 'Merriweather', 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    border-color: #3E3A39 !important; /* Sidebar Separators */
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    color: #995C5C;
+}
+
+.gen-input-icon {
+    color: #995C5C; 
+}
+
+/* Warning Box */
+.generator-warning {
+    color: #995C5C; 
+    background: #1C1B1A; 
+    border-radius: 0px;
+    border: 1px solid #3E3A39;
+}
+
+/* Metric Stats Box */
+.generator-stat-box {
+    background: #1C1B1A;
+    border-radius: 0px;
+    border: 1px solid #3E3A39;
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: 1px solid #3E3A39;
+}
+
+.stat-label {
+    color: #807C78; /* Muted gray */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    color: #EBE8DB;
+    font-family: 'Merriweather', 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-accent {
+    color: #995C5C;
+    font-family: 'Merriweather', 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-success {
+    color: #CECBBE; /* Muted cream for Passed state */
+    font-family: 'Merriweather', 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Loading/Spinner Icon */
+.spinner-icon {
+    color: #995C5C;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform: rotate(360deg); 
+    } 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Console Log */
+.generator-console {
+    background: #1C1B1A;
+    border: 1px solid #3E3A39;
+    border-radius: 0px;
+    font-family: 'Courier New', monospace; /* Keeping monospace for console readability */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.generator-console-step {
+    border-bottom: 1px solid #3E3A39;
+}
+
+.generator-console-step:last-child {
+    border-bottom: none;
+}
+
+.console-icon {
+    color: #995C5C;
+}
+
+.console-title {
+    color: #EBE8DB;
+    font-family: 'Merriweather', 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.console-message {
+    color: #CECBBE;
+    font-size: 0.9em;
+    border-left: 2px solid #3E3A39;
+}
+
+/* Completion Screen */
+.completion-header {
+    color: #EBE8DB; 
+    font-family: 'Merriweather', 'Playfair Display', serif;
+}
+
+.completion-icon {
+    font-size: 36px;
+    color: #995C5C;
+}
+
+/* Spinner Animation Color */
+.stVerticalBlock [data-testid="stSpinner"] {
+    color: #995C5C !important;
+}
+
+/* Metric Card Container */
+[data-testid="stMetric"] {
+    background-color: #262423; 
+    border: 1px solid #3E3A39; 
+    padding: 15px;
+    border-radius: 0px; /* Sharp corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect for Metric Card */
+[data-testid="stMetric"]:hover {
+    border-color: #995C5C; /* Left border highlight logic */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Metric Label (Title) */
+[data-testid="stMetricLabel"] {
+    font-size: 0.85rem !important;
+    color: #807C78 !important; /* Muted gray */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+/* Metric Value (Big Number) */
+[data-testid="stMetricValue"] {
+    font-size: 2rem !important;
+    color: #EBE8DB !important;
+    font-family: 'Merriweather', 'Playfair Display', serif !important;
+    font-weight: 700;
+    text-shadow: none; /* Removed neon glow */
+}
+
+/* Metric Delta (Change indicator) */
+[data-testid="stMetricDelta"] {
+    font-size: 0.9rem !important;
+    background-color: #1C1B1A; 
+    padding: 2px 8px;
+    border-radius: 0px;
+    width: fit-content;
+    margin-top: 8px;
+    color: #CECBBE !important;
+}
+
+/* Delta Arrow Icon adjustment */
+[data-testid="stMetricDelta"] svg {
+    margin-right: 4px;
+    stroke-width: 3px;
+    color: #995C5C; 
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: #1C1B1A !important;
+    color: #CECBBE !important;
+    border-radius: 0px !important;
+    padding: 0.5rem 1rem !important;
+    margin-right: 5px;
+}
+
+/* Tab area: Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: #262423 !important;
+}
+
+/* Tab area: Active Tab */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: #262423 !important;
+    color: #EBE8DB !important;
+    border-bottom: none !important; /* Removed border bottom for pill style */
+    box-shadow: 0 0 0 1px #995C5C inset;
+    font-family: "Merriweather", "Playfair Display", serif !important;
+}
+    
+
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: #CECBBE;
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: #CECBBE;
+    opacity: 0.7;
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: #262423;
+    border: 1px dashed #3E3A39;
+    border-radius: 0px;
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    background-color: transparent;
+    color: #CECBBE;
+    border: 1px solid #CECBBE;
+    border-radius: 0px;
+}
+
+/* File Dropzone: Icon color */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: #995C5C;
+    filter: none;
+}
+
+/* Button Dropdown Popover */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: 300px !important;  
+    max-width: 300px !important;
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"] {
+    background-color: #262423; 
+    box-shadow: none !important;
+}
+
+/* Button Dropdown Popover: Border */
+[data-testid="stPopoverBody"] {
+    border: 1px solid #3E3A39 !important;
+    border-radius: 0px;
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: #CECBBE !important;
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+}
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: #1C1B1A !important;
+    border: 2px solid #3E3A39;
+    border-radius: 0px !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: #CECBBE !important;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: #262423 !important;
+    border: 2px solid #995C5C;
+    color: #EBE8DB !important;
+    border-radius: 0px !important;
+}  
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: #995C5C !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: #262423 !important;
+    border: 2px solid #995C5C;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: #EBE8DB !important;
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: #262423 !important;
+    border: 1px solid #3E3A39 !important;
+    border-radius: 0px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 20px rgba(28, 27, 26, 0.8) !important;
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: #CECBBE !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: #1C1B1A !important;
+    border-left: 3px solid #995C5C !important;
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: #EBE8DB !important;
+    font-weight: bold;
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: #3E3A39 !important;
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: #EBE8DB !important;
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: #3E3A39 transparent;
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: #1C1B1A;
+}
+
+
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: 0px; /* Sharp corners */
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2); /* Inset shadow for "pressed" look */
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: #1C1B1A !important; /* Dark, warm charcoal */
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: #262423 !important; /* Slightly lighter, warm gray/brown */
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: #262423 !important;
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: #CECBBE !important; /* Aged paper / Eggshell */
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: #EBE8DB !important; /* Stronger eggshell for hover */
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: #CECBBE !important; 
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: 1px solid #3E3A39 !important; /* Thin print columns / sharp borders */
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: 1px solid #CECBBE !important; /* Outlined Secondary Accent */
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: 1px solid #995C5C !important; /* Editorial Ink highlight */
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #4A4544 transparent; /* Disabled button gray for thumb */
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: #4A4544 !important; /* Disabled gray */
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: #807C78 !important; /* Muted gray */
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: #CECBBE;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color:       #EBE8DB !important; /* Strong headers */
+    font-family: "Merriweather", "Playfair Display", serif !important; /* Editorial Serif */
+    font-size:   1rem    !important;   
+    font-weight: 700     !important;   
+    font-style:  normal  !important;   
+    letter-spacing: 0.5px !important; 
+    text-shadow: none !important; /* Removed neon-like shadow to match newspaper print */
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header
+ {
+    color:       #EBE8DB !important; /* Strong headers */
+    font-family: "Merriweather", "Playfair Display", serif !important; /* Editorial Serif */
+    font-size:   0.95rem !important;   
+    font-weight: 600     !important;   
+    font-style:  normal  !important;   
+    letter-spacing: 0px  !important;  
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color:       #CECBBE !important; /* Normal text */
+    font-weight: 400     !important;  
+    font-style:  normal  !important;   
+    letter-spacing: 0px  !important;  
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary  {
+    color:       #4A4544 !important; /* Disabled gray */
+    opacity:     0.6     !important;  
+    text-shadow: none !important;
+}

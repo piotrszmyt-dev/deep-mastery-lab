@@ -1,0 +1,1598 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* 💎 THE DIAMOND SPECTRAL THEME VARIABLES */
+:root {
+    /* Core Colors */
+    --bg-starless: #1A1A1B;
+    --bg-surface: #222225;
+    
+    /* Text */
+    --text-diamond: #E0E0E6;
+    --text-silver: #9CA3AF;
+    
+    /* The Prism Gradient (Violet -> Blue -> Teal) */
+    --gradient-prism: linear-gradient(135deg, #7F7FD5, #86A8E7, #91EAE4);
+    
+    /* Primary Button Vars */
+    --bt_main: #222225;
+    --bt_main_hover: #2A2A2E;
+    --bt_main_active: #1A1A1B;
+    --bt_main_text: #E0E0E6;
+    --bt_main_shadow: 0 0 15px rgba(127, 127, 213, 0.15); /* Soft Violet Glow */
+    --bt_main_shadow_hover: 0 0 20px rgba(145, 234, 228, 0.25); /* Teal Glow */
+    --bt_main_focus_ring: rgba(145, 234, 228, 0.5);
+    
+    /* Secondary Button Vars */
+    --bt_secondary: transparent;
+    --bt_secondary_border: #333336;
+    --bt_secondary_hover: rgba(255, 255, 255, 0.03);
+    --bt_secondary_text: #9CA3AF;
+    --bt_secondary_text_hover: #E0E0E6;
+    
+    /* Progress Vars */
+    --prog-bg: #000000;
+    --prog_height: 6px;
+    --prog_radius: 10px;
+}
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color:       var(--accent-ice, #91EAE4) !important;   /* ← active module colour    */
+    font-size:   1rem    !important;   /* ← module font size        */
+    font-weight: 700     !important;   /* ← module font weight      */
+    font-style:  normal  !important;   /* ← normal / italic         */
+    letter-spacing: 0.5px !important;  /* ← tracking adjustment     */
+    text-shadow: 0 0 12px rgba(145, 234, 228, 0.3) !important; /* Prism/Ice glow */
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header
+ {
+    color:       var(--text-diamond, #E0E0E6) !important;   /* ← active concept colour   */
+    font-size:   0.95rem !important;   /* ← concept font size       */
+    font-weight: 600     !important;   /* ← concept font weight     */
+    font-style:  normal  !important;   /* ← normal / italic         */
+    letter-spacing: 0px  !important;   /* ← tracking adjustment     */
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color:       var(--text-diamond, #E0E0E6) !important;   /* ← active lesson colour    */
+    font-size:   0.9rem  !important;   /* ← lesson font size        */
+    font-weight: 400     !important;   /* ← lesson font weight      */
+    font-style:  normal  !important;   /* ← normal / italic         */
+    letter-spacing: 0px  !important;   /* ← tracking adjustment     */
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary {
+    color:       var(--text-silver, #9CA3AF) !important;   /* ← disabled/inactive colour */
+    opacity:     0.5     !important;   /* ← fades into background    */
+    text-shadow: none !important;
+}
+/* Main Button ──────────────────────────────────────────── */
+/* CONCEPT: "Gemstone in the rough" - Dark button with a glowing prism border */
+
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    /* This double-layer background creates the gradient border effect */
+    background: 
+        linear-gradient(#222225, #222225) padding-box,
+        var(--gradient-prism) border-box; 
+    border: 1px solid transparent; /* Required for the gradient border to show */
+    
+    color: var(--bt_main_text);
+    box-shadow: var(--bt_main_shadow);
+    border-radius: 12px;
+    
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Hover State */
+button[kind="primary"]:hover {
+    background: 
+        linear-gradient(#2A2A2E, #2A2A2E) padding-box, 
+        linear-gradient(135deg, #91EAE4, #86A8E7, #7F7FD5) border-box; /* Reverses gradient on hover */
+    
+    border-color: transparent; /* Keeps the gradient border logic */
+    box-shadow: var(--bt_main_shadow_hover);
+    color: #FFFFFF; /* Pure white on hover */
+    transform: translateY(-1px);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Diamond dust glow */
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background: var(--bg-starless);
+    border-color: #5D7BCD; /* Solid Sapphire border on click */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    transform: translateY(1px);
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    background-color: var(--bt_main);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--bg-starless), 0 0 0 4px var(--bt_main_focus_ring);
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background: #222225;
+    border: 1px solid #333;
+    color: #555;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+
+/* Secondary Button ──────────────────────────────────────────── */
+/* CONCEPT: "Ghost Glass" - Minimalist, metallic text */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: transparent;
+    background-color: transparent;
+    border: 1px solid var(--bt_secondary_border);
+    color: var(--bt_secondary_text);
+    box-shadow: none;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: var(--bt_secondary_hover);
+    border-color: #555; /* Slightly lighter grey */
+    color: var(--bt_secondary_text_hover);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-shadow: 0 0 5px rgba(255,255,255,0.2);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: rgba(255,255,255,0.05);
+    border-color: #666;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+    transform: translateY(0);
+}
+
+/* Focus State */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    background-color: transparent;
+    outline: none;
+    border-color: #86A8E7; /* Pale Blue focus */
+    box-shadow: 0 0 0 1px #86A8E7;
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background-color: transparent;
+    border-color: #2A2A2E;
+    color: #444;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+/* Progress Bar ──────────────────────────────────────────── */
+/* CONCEPT: "Spectral Flow" */
+
+.progress-container {
+    background-color: var(--prog-bg) !important;
+    height: var(--prog_height);
+    border-radius: var(--prog_radius);
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: 1px solid #333; /* Dark container border */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.8);
+}
+
+.progress-fill {
+    /* Overriding HSL logic to use the Prism Gradient */
+    background: var(--gradient-prism) !important; 
+    box-shadow: 0 0 10px rgba(134, 168, 231, 0.4) !important; /* Blueish glow */
+    height: 100%;
+    border-radius: var(--prog_radius);
+    transition: width 0.5s ease-in-out;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE (DIAMOND SPECTRAL)
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    /* Glassmorphism: Deep dark glass */
+    background: rgba(34, 34, 37, 0.70);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    /* The Prism Edge: Subtle white border with a colored top accent */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(134, 168, 231, 0.5); /* Soft Pale Blue top light */
+    
+    /* Depth & Inner Glow */
+    box-shadow: 
+        0 4px 30px rgba(0, 0, 0, 0.5), /* Deep shadow for lift */
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05), /* Inner sharp edge */
+        inset 0 0 20px rgba(127, 127, 213, 0.05); /* Faint Violet inner glow */
+        
+    border-radius: 16px;
+}
+
+/* The Main Title */
+.welcome-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    
+    /* Diamond Dust White */
+    color: #E0E0E6; 
+    
+    /* Crystalline Glow - sharp and white/blue */
+    text-shadow: 0 0 20px rgba(224, 224, 230, 0.15), 
+                 0 0 10px rgba(145, 234, 228, 0.1);
+}
+
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    
+    /* The Gemstone Accent (Ice/Sapphire) */
+    color: #91EAE4; 
+    
+    /* Prism Glow around the icon */
+    text-shadow: 0 0 15px rgba(127, 127, 213, 0.5);
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    /* Muted Silver */
+    color: #9CA3AF; 
+    
+    font-size: 1rem;
+    letter-spacing: 1.5px; /* Widened for technical feel */
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    /* A very faint violet/grey line */
+    border-color: rgba(127, 127, 213, 0.15);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ============================================================ */
+/* 💎 THEME: DIAMOND SPECTRAL (Iridescent Monochrome)           */
+/* ============================================================ */
+:root {
+    /* --- PALETTE DEFINITIONS --- */
+    --ds-starless: #1A1A1B;         /* Deepest background */
+    --ds-surface:  #222225;         /* Card/Surface background */
+    --ds-diamond:  #E0E0E6;         /* Primary Text (Diamond Dust) */
+    --ds-silver:   #9CA3AF;         /* Secondary Text (Muted Metal) */
+    --ds-prism-via: #86A8E7;        /* Middle of prism gradient (Pale Blue) */
+    
+    /* --- GLOWS & SHADOWS --- */
+    --ds-glow-subtle: 0 0 10px rgba(134, 168, 231, 0.15);
+    --ds-glow-active: 0 0 15px rgba(145, 234, 228, 0.3); /* Spectral Cyan Glow */
+    --ds-shadow-glass: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+    /* --- MAPPING TO YOUR SELECTORS --- */
+    
+    /* Sidebar Base */
+    --sb_background: var(--ds-starless);
+    --sb_text: var(--ds-silver);
+    
+    /* Collapse Button */
+    --sb_collapse_icon_default: #55555A;
+    --sb_collapse_icon_size: 1.2rem;
+    --sb_collapse_icon_hover: var(--ds-diamond);
+    --sb_collapse_bg_hover: rgba(255, 255, 255, 0.05);
+    
+    /* App Title */
+    --sb_title_size: 1.8rem;
+    --sb_title_weight: 700;
+    --sb_title: var(--ds-diamond);
+    --sb_title_shadow: 0 2px 4px rgba(0,0,0,0.5);
+    --primary-color: var(--ds-prism-via); /* Icon color */
+    --nordic-glow: var(--ds-glow-subtle);
+
+    /* Separators */
+    --sb_separator: #2E2E31; /* Extremely subtle line */
+    --sb_separator_margin: 24px;
+
+    /* Expanders (Modules) */
+    --sb_expander_closed_background: transparent;
+    --sb_expander_closed_text: var(--ds-silver);
+    
+    --sb_expander_hover_background: rgba(255, 255, 255, 0.03);
+    --sb_expander_hover_text: var(--ds-diamond);
+    
+    --sb_expander_open_background: var(--ds-surface);
+    --sb_expander_open_text: var(--ds-diamond);
+    --sb_radius_default: 8px;
+
+    /* Sub-concepts (Headers) */
+    --sb_header_subconcepts_text: #5A5A60; /* Dark Grey, recessed */
+
+    /* Lesson/Test Buttons (Inactive) */
+    --sb_lesson_text_normal: #888890;
+    --sb_lesson_background: transparent;
+    --sb_lesson_text_hover: var(--ds-diamond);
+    
+    /* Active State (The Prism Effect) */
+    --sb_active_bg_normal: #282830;
+    --sb_active_text_normal: var(--ds-diamond);
+    --sb_active_bg_hover: #2E2E36;
+    --sb_active_text_hover: #FFFFFF;
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--sb_background);
+    color: var(--sb_text);
+    border-right: 1px solid rgba(255,255,255,0.02); /* Added very faint edge */
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: var(--sb_collapse_icon_default) !important;
+    font-size: var(--sb_collapse_icon_size) !important;
+    text-shadow: 0 0 5px rgba(255,255,255,0.05); 
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: var(--sb_collapse_icon_hover) !important;
+    background-color: var(--sb_collapse_bg_hover) !important;
+    text-shadow: 0 0 12px rgba(145, 234, 228, 0.6); /* Spectral Cyan flash */
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* Sidebar - APP Title */
+.sidebar-title, .card-title {
+    font-size: var(--sb_title_size) !important;
+    font-weight: var(--sb_title_weight) !important;
+    color: var(--sb_title) !important; 
+    text-shadow: var(--sb_title_shadow);
+    letter-spacing: -0.5px;
+}
+
+/* Sidebar - APP Title Icon */
+/* Sidebar - APP Title Icon (Gently glowing behind glass) */
+.sidebar-title .material-icons,
+.card-title .material-icons {
+    font-size: inherit;      
+    line-height: inherit;   
+    vertical-align: middle; 
+    color: var(--primary-color);
+    text-shadow: var(--nordic-glow); 
+    opacity: 0.9;
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: var(--sb_separator) !important;
+    margin-top: var(--sb_separator_margin) !important;
+    margin-top: 15px !important;
+    border: none;
+    height: 1px;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: var(--sb_expander_closed_background) !important;
+    border: 1px solid transparent !important; /* Preserves layout for hover transition */
+    color: var(--sb_expander_closed_text) !important;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: var(--sb_expander_hover_text) !important;
+    background-color: var(--sb_expander_hover_background) !important;
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: var(--sb_expander_open_background) !important;
+    color: var(--sb_expander_open_text) !important;
+    border-radius: var(--sb_radius_default) !important;
+    border: 1px solid rgba(255,255,255,0.05) !important; /* Glassy border */
+    /* THEME REQUEST: Subtle highlight for active area */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+}
+
+/* Header for subconcepts */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: var(--sb_header_subconcepts_text) !important; 
+    text-transform: uppercase;
+    font-size: 0.75em;
+    letter-spacing: 1.5px; /* Wider tracking for technical feel */
+    font-weight: 600;
+    opacity: 0.8;
+} 
+
+/* Subconcepts and quick test icon: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: var(--sb_lesson_text_normal) !important;
+    background-color: var(--sb_lesson_background) !important;
+    border: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Subconcepts and quick test icon: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: var(--sb_lesson_text_hover) !important;
+    /* Diamond Dust Glow */
+    text-shadow: 0 0 8px rgba(224, 224, 230, 0.6); 
+    transform: translateX(4px); /* Subtle movement to the right */
+}
+
+/* Subconcepts: Active Element: Normal */
+/* This is where we create the "Prism" border effect */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: var(--sb_active_bg_normal) !important;
+    border-radius: var(--sb_radius_default) !important;
+    border: 1px solid rgba(134, 168, 231, 0.2) !important; /* Faint blue border */
+    /* Left border prism effect simulated via Box Shadow */
+    box-shadow: inset 3px 0 0 0 #86A8E7, 0 0 15px rgba(0,0,0,0.3) !important; 
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: var(--sb_active_text_normal) !important;
+    font-weight: 600;
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: var(--sb_active_bg_hover) !important;
+    border-radius: var(--sb_radius_default) !important;
+    border-color: rgba(145, 234, 228, 0.4) !important;
+    /* Brighter prism glow on hover */
+    box-shadow: inset 3px 0 0 0 #91EAE4, 0 0 20px rgba(145, 234, 228, 0.15) !important; 
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: var(--sb_active_text_hover) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME: DIAMOND SPECTRAL (Iridescent Monochrome)
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Backgrounds */
+    --ds-bg-starless: #1A1A1B;       /* Deepest void */
+    --ds-bg-surface:  #222225;       /* Card surface */
+    --ds-bg-glass:    rgba(34, 34, 37, 0.6);
+
+    /* Typography */
+    --ds-text-diamond: #E0E0E6;      /* Main text (Off-white) */
+    --ds-text-bright:  #ffffff70;      /* Headers */
+    --ds-text-silver:  #9CA3AF;      /* Secondary/Italic */
+
+    /* Accents & Prism Effects */
+    --ds-prism-grad:   linear-gradient(135deg, #7F7FD5 0%, #86A8E7 50%, #91EAE4 100%);
+    --ds-accent-cyan:  #91EAE4;      /* Strong text / Focus */
+    --ds-accent-sapphire: #7A8BC9;   /* Table Headers */
+    --ds-border-glass: rgba(255, 255, 255, 0.08);
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area - The Starless Night Background */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--ds-bg-starless);
+    color: var(--ds-text-diamond);
+}
+
+/* Sidebar Expand Button - Icon (default) */
+/* Concept: A faint gemstone gleam */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: var(--ds-text-silver) !important;
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+/* Concept: Lights up with the "Ice" color */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: var(--ds-accent-cyan) !important;
+    background-color: transparent !important;
+    text-shadow: 0 0 8px rgba(145, 234, 228, 0.6); /* Glow effect */
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: transparent !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+/* Concept: Iridescent Text (Gradient Text) */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    background: var(--ds-prism-grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback */
+    font-weight: 600;   /* Slightly bolder to show the gradient */
+    letter-spacing: 0.5px;
+}
+
+/* Lesson Card: Main Area */
+/* Concept: A sheet of dark glass */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: var(--ds-bg-surface);
+    border: 1px solid var(--ds-border-glass);
+    border-top: 1px solid #3d3d42; /* Subtle top highlight */
+    border-radius: 8px; /* Slightly softer corners */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* Lesson Card: Strong Text */
+/* Concept: "Ice" Highlight - High Contrast for Learning */
+section[data-testid="stMain"] .st-key-lesson_window strong {
+    color: var(--ds-accent-sapphire);
+    font-weight: 700;
+    text-shadow: 0 0 1px rgba(145, 234, 228, 0.3); /* Subtle bloom */
+}
+
+/* Lesson: Headers */
+/* Concept: Pure Diamond White */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--ds-text-bright);
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    margin-top: 1em;
+}
+
+/* Lesson Card: Italic Text */
+/* Concept: Silver / Metallic */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--ds-text-silver);
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Lesson Card: Table Headers + text */
+/* Concept: Dark surface with Sapphire text */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--ds-accent-sapphire);
+    border-bottom: 1px solid var(--ds-border-glass) !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: rgba(0,0,0,0.2);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Lesson Card: Table Data + text */
+/* Concept: Clean, minimal lines */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--ds-text-diamond);
+    border-bottom: 1px solid var(--ds-border-glass);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 12px 8px;
+}
+
+/* Scrollbar styling for lesson window */
+/* Concept: Thin Grey line */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #444 transparent;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME VARIABLES: Diamond Spectral
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Backgrounds */
+    --bg-void:     #1A1A1B;  /* Deepest black-grey */
+    --bg-surface:  #252529;  /* Card background */
+    --bg-hover:    #2E2E33;  /* Hover state */
+    
+    /* Text */
+    --text-diamond: #E0E0E6; /* Main white */
+    --text-silver:  #9CA3AF; /* Muted text */
+    
+    /* Accents (The Spectral Colors) */
+    --accent-ice:   #91EAE4; /* Ice Blue - High Visibility */
+    --accent-violet:#7F7FD5; /* Soft Violet */
+    --accent-ruby:  #CD5D6F; /* Error/Ruby */
+    
+    /* Borders & Shadows */
+    --border-dim:   rgba(255, 255, 255, 0.08);
+    --border-light: rgba(255, 255, 255, 0.15);
+    --shadow-glow:  0 0 15px rgba(145, 234, 228, 0.1); 
+}
+
+/* ─────────────────────────────────────────────────────────────
+   QUIZ TEST STATE
+   ───────────────────────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+/* WE STYLE: Diamond White with a subtle glow */
+.st-key-question  {
+    color:  #e0e0e69b !important;
+    background-color: transparent;
+    /* Subtle glow for the "Crystal" effect */
+    text-shadow: 0 0 1px rgba(255,255,255,0.2); 
+}
+
+.st-key-question p {
+    font-weight: 500; /* Crisp but not chunky */
+    font-size: 1.2em; /* Slightly larger for readability */
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+}
+
+/* Quiz Test State: Answer text */
+/* WE STYLE: Dark surface card with thin borders */
+[class*="st-key-answer"] {
+    color: var(--text-silver);
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-dim);
+    border-radius: 8px;
+    padding: 12px 16px; /* Added padding for breathability */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover Effect: Border lights up "Ice Blue" and text brightens */
+[class*="st-key-answer"]:hover {
+    background-color: var(--bg-hover);
+    border-color: var(--accent-ice);
+    color: var(--text-diamond);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Lift effect */
+    cursor: pointer;
+}
+
+/* Quiz Test State: Answer letter (A B C D) & Strong Text */
+/* WE STYLE: "Ice Blue" for maximum distinction */
+[class*="st-key-answer"] strong,
+.st-key-question strong {
+    color: var(--accent-ice);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* Keyboard Legend (The "Engraved" Look) */
+.key-hint {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace; /* Tech feel */
+    font-weight: 600;
+    font-size: 0.85em;
+    
+    color: var(--text-diamond);
+    background: #2A2A2E; /* Slightly lighter than void */
+    
+    /* The 3D Keycap Look */
+    border: 1px solid #3F3F46;
+    border-bottom-width: 2px; /* Thicker bottom for 3D effect */
+    border-radius: 6px;
+    box-shadow: 0 2px 0 #151515; /* Deep shadow underneath */
+    
+    padding: 2px 6px;
+    margin: 0 2px;
+}
+
+.keyboard-legend {
+    color: var(--text-silver);
+    font-size: 13px;
+    font-family: system-ui, -apple-system, sans-serif;
+    opacity: 0.8;
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+:root {
+    /* DIAMOND SPECTRAL PALETTE */
+    
+    /* Backgrounds */
+    --bg-starless: #1A1A1B;       /* Deepest Void */
+    --bg-surface: #222225;        /* Card Surface */
+    --glass-bg: rgba(34, 34, 37, 0.70); /* Darker, clearer glass */
+    
+    /* Text */
+    --text-diamond: #E0E0E6;      /* Main Text (Diamond Dust) */
+    --text-silver: #9CA3AF;       /* Muted Text */
+    
+    /* Gemstone Accents */
+    --accent-ruby: #CD5D6F;       /* Failed / Error */
+    --accent-emerald: #5DCD96;    /* Passed / Success */
+    --accent-sapphire: #5D7BCD;   /* Info / Lessons */
+    --accent-amethyst: #9D5DCD;   /* Settings / Insight */
+    
+    /* Prism/Spectral Effects */
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --glow-passed: 0 0 15px rgba(93, 205, 150, 0.15);
+    --glow-failed: 0 0 15px rgba(205, 93, 111, 0.15);
+}
+
+/* 1. HERO METRIC BOXES (The Jewel Cases) */
+.feedback-box {
+    background-color: var(--glass-bg);
+    border: 1px solid var(--border-subtle);
+    backdrop-filter: blur(12px); /* High blur for premium feel */
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px; /* Slightly sharper than 16px */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.feedback-box:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(46, 46, 50, 0.8);
+    transform: translateY(-2px);
+}
+
+.metric-label {
+    font-family: 'Inter', sans-serif; /* Assumed font */
+    font-size: 0.75rem;
+    color: var(--text-silver);
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Wide tracking for technical feel */
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.metric-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 300; /* Thin font looks more "crystalline" */
+    color: var(--text-diamond);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.15); /* Diamond Glow */
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border: 1px solid var(--accent-emerald);
+    box-shadow: var(--glow-passed);
+    color: var(--accent-emerald);
+}
+
+/* Override text color inside passed box to keep label silver */
+.feedback-box.status-passed .metric-label {
+    color: var(--text-silver); 
+}
+.feedback-box.status-passed .metric-value {
+    color: var(--accent-emerald);
+}
+
+.feedback-box.status-failed {
+    border: 1px solid var(--accent-ruby);
+    box-shadow: var(--glow-failed);
+    color: var(--accent-ruby);
+}
+
+.feedback-box.status-failed .metric-value {
+    color: var(--accent-ruby);
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.0rem;
+    opacity: 1;
+    /* To make the icon look like a gem, we can use text-shadow */
+    text-shadow: 0 0 10px currentColor; 
+}
+
+/* 2. QUESTION EXPANDERS */
+
+/* Normal */
+.st-key-feedback_list details div[data-testid="stExpander"] > details > summary {
+    border: none !important;
+    background: transparent !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+    color: var(--text-silver) !important;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.st-key-feedback_list div[data-testid="stExpander"] > details > summary:hover {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 1.0rem;
+    color: var(--text-diamond) !important;
+    background: linear-gradient(90deg, rgba(255,255,255,0.03) 0%, transparent 100%) !important;
+    padding-left: 12px; /* Slight movement on hover */
+}
+
+/* Open State */
+.st-key-feedback_list div[data-testid="stExpander"] details[open] > summary {
+    color: var(--accent-sapphire) !important; /* Gemstone Blue */
+    text-shadow: 0 0 8px rgba(93, 123, 205, 0.4);
+    background-color: transparent !important;
+    border-bottom: 1px solid var(--accent-sapphire) !important;
+}
+
+/* 3. ANSWER COMPARISON CARDS */
+.answer-card {
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    backdrop-filter: blur(5px);
+}
+
+/* User's Answer Card - WRONG */
+.answer-card.user-wrong {
+    background-color: rgba(205, 93, 111, 0.05); /* Faint Ruby Tint */
+    border-left: 2px solid var(--accent-ruby);   /* Solid Ruby bar */
+    color: var(--text-silver);
+}
+
+/* User's Answer Card - CORRECT */
+.answer-card.user-correct {
+    background-color: rgba(93, 205, 150, 0.05); /* Faint Emerald Tint */
+    border-left: 2px solid var(--accent-emerald); /* Solid Emerald bar */
+    color: var(--text-diamond);
+}
+
+/* Correct Answer Key (The Solution) */
+.answer-card.correct-key {
+    background-color: var(--bg-starless); /* Deep contrast */
+    border: 1px solid var(--accent-emerald); /* Sharp Emerald Border */
+    color: var(--accent-emerald);
+    box-shadow: inset 0 0 10px rgba(93, 205, 150, 0.1); /* Inner Glow */
+}
+
+.answer-label {
+    font-size: 0.70rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Explanation Box Theme - The "Prism" Insight */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: rgba(30, 30, 35, 0.5) !important;
+    border-left: 2px solid var(--accent-amethyst) !important; /* Amethyst for Wisdom/Explanation */
+    border-radius: 0 6px 6px 0 !important;
+    color: var(--text-diamond) !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    line-height: 1.6 !important;
+    box-shadow: inset 10px 0 20px -10px rgba(157, 93, 205, 0.1); /* Subtle violet spill */
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: var(--accent-amethyst);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   THEME DEFINITIONS: DIAMOND SPECTRAL
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* Backgrounds */
+    --ds-bg-void: #1A1A1B;       /* Starless Night */
+    --ds-bg-surface: #222225;    /* Dark Card Surface */
+    --ds-bg-console: #0F0F10;    /* Pure Black Console */
+    
+    /* Typography */
+    --ds-text-diamond: #E0E0E6;  /* Diamond Dust White */
+    --ds-text-silver: #9CA3AF;   /* Muted Silver */
+    
+    /* The Prism (Gradients & Accents) */
+    --ds-grad-prism: linear-gradient(135deg, #7F7FD5, #86A8E7, #91EAE4);
+    --ds-color-ice: #91EAE4;     /* Ice Blue */
+    --ds-color-violet: #7F7FD5;  /* Soft Violet */
+    
+    /* Gemstones (Status) */
+    --ds-ruby: #CD5D6F;          /* Error/Warning */
+    --ds-emerald: #5DCD96;       /* Success */
+    --ds-sapphire: #5D7BCD;      /* Info/Accents */
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The "Magic" Box)
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container */
+.st-key-generator_card {
+    background-color: var(--ds-bg-surface);
+    /* Fallback border */
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    /* The Prism Effect on top border */
+    border-top: 2px solid transparent;
+    border-image: var(--ds-grad-prism) 1;
+    
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    border-radius: 12px; /* Slightly sharper radius for crystalline feel */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: var(--ds-text-diamond);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Separator Line - Subtle Ice Blue tint */
+.st-key-generator_card hr {
+    border-color: rgba(145, 234, 228, 0.1) !important;
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    background: var(--ds-grad-prism);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gen-input-icon {
+    color: var(--ds-color-ice); /* Frozen Ice Blue */
+    opacity: 0.8;
+}
+
+/* Warning Box - Desaturated Ruby */
+.generator-warning {
+    color: var(--ds-ruby); 
+    background: rgba(205, 93, 111, 0.05); 
+    border-radius: 6px;
+    border: 1px solid rgba(205, 93, 111, 0.2);
+}
+
+/* Metric Stats Box */
+.generator-stat-box {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+.stat-label {
+    color: var(--ds-text-silver);
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.stat-value {
+    color: var(--ds-text-diamond);
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.stat-value-accent {
+    color: var(--ds-sapphire);
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.stat-value-success {
+    color: var(--ds-emerald);
+    font-weight: 600;
+    font-size: 1.5em;
+    text-shadow: 0 0 10px rgba(93, 205, 150, 0.2);
+}
+
+/* Loading/Spinner Icon */
+.spinner-icon {
+    color: var(--ds-color-violet);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform: rotate(360deg); 
+    } 
+}
+
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
+
+/* Console Log - The "Void" */
+.generator-console {
+    background: var(--ds-bg-console);
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    box-shadow: inset 0 2px 10px rgba(0,0,0,0.8);
+}
+
+.generator-console-step {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.generator-console-step:last-child {
+    border-bottom: none;
+}
+
+.console-icon {
+    color: var(--ds-color-ice);
+}
+
+.console-title {
+    color: var(--ds-text-diamond);
+    font-weight: 600;
+}
+
+.console-message {
+    color: var(--ds-text-silver);
+    font-size: 0.9em;
+    /* The left bar is the prism violet */
+    border-left: 2px solid var(--ds-color-violet);
+}
+
+/* Completion Screen */
+.completion-header {
+    color: var(--ds-emerald); 
+}
+
+.completion-icon {
+    font-size: 36px;
+    filter: drop-shadow(0 0 8px rgba(93, 205, 150, 0.4));
+}
+
+/* Spinner Animation Color */
+.stVerticalBlock [data-testid="stSpinner"] {
+    color: var(--ds-color-ice) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   METRIC CARD (Streamlit Override)
+   ───────────────────────────────────────────────────────────── */
+
+/* Metric Card Container */
+[data-testid="stMetric"] {
+    background-color: var(--ds-bg-surface);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px; /* Sharp corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect for Metric Card - The Prism Glow */
+[data-testid="stMetric"]:hover {
+    border-color: var(--ds-color-violet);
+    box-shadow: 0 0 15px rgba(127, 127, 213, 0.15); /* Subtle Violet Glow */
+    transform: translateY(-2px);
+}
+
+/* Metric Label (Title) */
+[data-testid="stMetricLabel"] {
+    font-size: 0.85rem !important;
+    color: var(--ds-text-silver) !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+/* Metric Value (Big Number) */
+[data-testid="stMetricValue"] {
+    font-size: 2rem !important;
+    color: var(--ds-text-diamond) !important;
+    font-weight: 600;
+    /* Optional: Makes the text look like it has a faint gradient sheen */
+    background: linear-gradient(to bottom, #FFFFFF, #E0E0E6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Metric Delta (Change indicator) */
+[data-testid="stMetricDelta"] {
+    font-size: 0.9rem !important;
+    background-color: rgba(255, 255, 255, 0.05); /* Glass pill */
+    padding: 2px 8px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-top: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Delta Arrow Icon adjustment */
+[data-testid="stMetricDelta"] svg {
+    margin-right: 4px;
+    stroke-width: 2.5px;
+}
+
+:root {
+    /* 1. Core Palette */
+    --ds-starless: #1A1A1B;       /* Deepest Void */
+    --ds-surface: #222225;        /* Card Surface */
+    --ds-surface-hover: #2A2A2E;  /* Slight lift */
+    
+    /* 2. Typography */
+    --ds-diamond: #E0E0E6;        /* Primary Text (Off-White) */
+    --ds-silver: #9CA3AF;         /* Secondary Text */
+    --ds-dim: #5A5A60;            /* Disabled/Placeholder */
+
+    /* 3. The Prism Accents */
+    --ds-violet: #7F7FD5;         /* Soft Violet */
+    --ds-ice: #91EAE4;            /* Cyan/Ice */
+    --ds-sapphire: #5D7BCD;       /* Deep Blue */
+    
+    /* 4. Component Specifics */
+    --ds-glass-border: 1px solid rgba(255, 255, 255, 0.08);
+    --ds-prism-glow: 0 0 10px rgba(127, 127, 213, 0.15);
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: transparent !important;
+    color: var(--ds-silver) !important;
+    border-radius: 6px !important; /* Slightly sharper radius */
+    padding: 0.5rem 1rem !important;
+    margin-right: 5px;
+    border: 1px solid transparent !important;
+    transition: all 0.2s ease;
+}
+
+/* Tab area: Inactive Tab - Hover */
+/* Adds a ghostly white glow, like breath on glass */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    color: var(--ds-diamond) !important;
+}
+
+/* Tab area: Active Tab */
+/* The "Gemstone" state - Dark surface with a sharp Ice Blue highlight */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--ds-surface) !important;
+    color: var(--ds-diamond) !important;
+    border-bottom: none !important;
+    /* This creates the "Prism" inset border effect */
+    box-shadow: inset 0 0 0 1px var(--ds-violet), 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: var(--ds-diamond);
+    font-weight: 500;
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: var(--ds-silver);
+    opacity: 0.7;
+    font-family: monospace; /* Adds to the technical feel */
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: rgba(34, 34, 37, 0.5); /* Semi-transparent surface */
+    border: 1px dashed var(--ds-dim); /* Subtle dashed border */
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover effect for Dropzone (Prism shift) */
+[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: var(--ds-ice);
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+/* Styling this as the "Secondary Ghost Button" */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    background-color: rgba(145, 234, 228, 0.05); /* Faint Ice tint */
+    color: var(--ds-ice);
+    border: 1px solid rgba(145, 234, 228, 0.1);
+    transition: all 0.2s;
+}
+
+[data-testid="stFileUploaderDropzone"] button:hover {
+    background-color: rgba(145, 234, 228, 0.1);
+    box-shadow: 0 0 8px rgba(145, 234, 228, 0.1);
+}
+
+/* File Dropzone: Icon color */
+/* The Sapphire Gemstone accent */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: var(--ds-sapphire);
+    filter: drop-shadow(0 0 8px rgba(93, 123, 205, 0.4));
+}
+
+/* Button Dropdown Popover */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: 250px !important;  
+    max-width: 300px !important;
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"] {
+    background-color: var(--ds-surface); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important; /* Deep shadow */
+}
+
+/* Button Dropdown Popover: Border */
+/* Thin glass border */
+[data-testid="stPopoverBody"] {
+    border: var(--ds-glass-border) !important;
+    border-radius: 12px;
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--ds-silver) !important;
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: 0 0 0 2px var(--ds-violet) !important; /* Violet focus ring */
+    outline: none !important;
+}
+
+/* =========================================
+   💎 DIAMOND SPECTRAL THEME VARIABLES
+   ========================================= */
+:root {
+    /* Core Palette */
+    --ds-starless: #1A1A1B;       /* Deep Void */
+    --ds-surface: #222225;        /* Card Surface */
+    --ds-input-bg: #151516;       /* Recessed Input */
+    --ds-diamond: #E0E0E6;        /* Primary Text */
+    --ds-silver: #9CA3AF;         /* Secondary Text */
+    
+    /* The Spectral Prism (Gradient colors broken down) */
+    --ds-prism-violet: #7F7FD5;
+    --ds-prism-blue: #86A8E7;
+    --ds-prism-teal: #91EAE4;
+    
+    /* UI Mappings */
+    --ui_input_radius: 4px;       /* Sharp but safe */
+    
+    /* Dropdown - Closed State */
+    --ui_dropdown_closed_bg: var(--ds-input-bg);
+    --ui_dropdown_closed_border: #333335; 
+    --ui_dropdown_closed_text: var(--ds-silver);
+    
+    /* Dropdown - Hover State */
+    --ui_dropdown_hover_bg: #1E1E20;
+    --ui_dropdown_hover_border: #555555;
+    --ui_dropdown_hover_text: var(--ds-diamond);
+    
+    /* Dropdown - Open State (The Prism Effect) */
+    --ui_dropdown_open_bg: var(--ds-starless);
+    --ui_dropdown_open_border: var(--ds-prism-blue); /* Blue glow */
+    --ui_dropdown_open_text_container: var(--ds-diamond);
+    --ui_dropdown_open_icon: var(--ds-prism-violet);
+    
+    /* Dropdown - The List (Popover) */
+    --ui_list_bg: var(--ds-surface);
+    --ui_list_border: 1px solid #333335;
+    --ui_list_radius: 4px;
+    --ui_list_text: var(--ds-silver);
+    
+    /* List Items */
+    --ui_list_selected_bg: rgba(127, 127, 213, 0.15); /* Faint Violet tint */
+    --ui_list_selected_text: var(--ds-prism-teal);    /* Cyan text for active */
+    --ui_list_selected_hover_bg: rgba(127, 127, 213, 0.25);
+    --ui_list_selected_hover_text: #FFFFFF;
+    
+    /* Scrollbars */
+    --ui_list_scrollbar_thumb: #444449;
+    --ui_list_scrollbar_track: transparent;
+}
+
+/* =========================================
+   COMPONENT STYLING
+   ========================================= */
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: var(--ui_dropdown_hover_bg) !important;
+    border: 1px solid var(--ui_dropdown_closed_border); /* Changed to 1px for sharpness */
+    border-radius: var(--ui_input_radius) !important;
+    transition: all 0.2s ease;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: var(--ui_dropdown_closed_text) !important;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--ui_dropdown_open_bg) !important;
+    border: 1px solid var(--ui_dropdown_open_border); /* Changed to 1px */
+    color: var(--ui_dropdown_open_text_container) !important;
+    border-radius: var(--ui_input_radius) !important;
+    
+    /* The Prism Glow Effect */
+    box-shadow: 0 0 10px rgba(134, 168, 231, 0.25) !important; 
+}  
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: var(--ui_dropdown_open_icon) !important;
+    fill: var(--ui_dropdown_open_icon) !important; /* Ensures SVG icons color correctly */
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--ui_dropdown_hover_bg) !important;
+    border: 1px solid var(--ui_dropdown_hover_border); /* Changed to 1px */
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: var(--ui_dropdown_hover_text) !important;
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: var(--ui_list_bg) !important;
+    border: var(--ui_list_border) !important;
+    border-radius: var(--ui_list_radius) !important;
+    overflow: hidden !important;
+    /* Deep shadow to lift it off the background */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.7) !important; 
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_text) !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: var(--ui_list_selected_bg) !important;
+    border-left: 2px solid var(--ds-prism-violet) !important; /* Prism indicator */
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_text) !important;
+    font-weight: 500; /* refined bold */
+}
+
+/* Dropdown Items: HOVER (General hover, not just selected) */
+[role="option"]:hover {
+   background-color: rgba(255,255,255,0.05) !important;
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: var(--ui_list_selected_hover_bg) !important;
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: var(--ui_list_selected_hover_text) !important;
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui_list_scrollbar_thumb) transparent;
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: var(--ui_list_scrollbar_track);
+}
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* 💎 Theme: Diamond Spectral (Iridescent Monochrome) */
+:root {
+    /* Core Backgrounds */
+    --ds_bg_starless: #1A1A1B;
+    --ds_bg_recessed: #0F0F10; /* Darker slot for inputs */
+    
+    /* Text */
+    --ds_text_diamond: #E0E0E6; /* Main white */
+    --ds_text_silver: #9CA3AF;  /* Muted grey */
+    
+    /* Prism Accents */
+    --ds_border_subtle: #333335;
+    --ds_border_hover: #55555A;
+    --ds_prism_focus: #91EAE4; /* Ice Blue Focus */
+    --ds_prism_glow: rgba(145, 234, 228, 0.25);
+    
+    /* UI Specs */
+    --ds_radius: 6px;
+}
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: var(--ds_radius);
+    /* Deep inset shadow to make the input feel like a cut gem slot */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6); 
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    /* Very dark, recessed background */
+    background-color: var(--ui_dropdown_hover_bg) !important;
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    /* Slightly lighter on hover */
+    background-color: var(--ds_bg_starless) !important;
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: var(--ds_bg_recessed) !important;
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--ds_text_diamond) !important;
+    caret-color: var(--ds_prism_focus) !important; /* Cursor color */
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: #FFFFFF !important; /* Pure white on hover */
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: var(--ds_text_diamond) !important;
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: 1px solid var(--ds_border_subtle) !important;
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: 1px solid var(--ds_border_hover) !important;
+}
+
+/* Text Fields: Global border Color (Focus) */
+/* This creates the 'Prism' effect when you click inside */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: 1px solid var(--ds_prism_focus) !important;
+    box-shadow: 0 0 10px var(--ds_prism_glow) !important; /* Soft Ice Blue Glow */
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: #3F3F46 transparent; /* Dark grey thumb, transparent track */
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: #2E2E31 !important; /* Very dark grey, barely visible */
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--ds_text_silver) !important;
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--ds_text_silver);
+    font-size: 0.9em;
+    opacity: 0.8;
+    letter-spacing: 0.5px; /* Slight tracking for technical feel */
+}

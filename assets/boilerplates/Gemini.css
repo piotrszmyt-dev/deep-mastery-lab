@@ -1,0 +1,977 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* ─────────────────────────────────────────────────────────────
+   BARE BONES THEME TEMPLATE
+   Start by editing the colors in the :root "Core Palette" section.
+   ───────────────────────────────────────────────────────────── */
+:root {
+    /* ─── 1. CORE PALETTE (Edit these to change the whole theme) ─── */
+    --theme-primary: #5E81AC;       /* Main Accent Color */
+    --theme-primary-dim: #4C6A8F;   /* Darker/Muted accent for gradients */
+    
+    --theme-bg-main: #1E2227;       /* Main App Background */
+    --theme-bg-sidebar: #15191E;    /* Sidebar Background */
+    --theme-bg-secondary: #2E3440;  /* Secondary elements (cards, inputs) */
+    --theme-bg-tertiary: #262B31;   /* Tertiary elements (lists, pressed) */
+
+    --theme-text-main: #A0AAB4;     /* Standard Text */
+    --theme-text-bright: #ECEFF4;   /* Headings / Highlighted Text */
+    --theme-text-dim: #687385;      /* Subtitles / Placeholders */
+
+    --theme-success: #A3BE8C;       /* Success State (Green) */
+    --theme-error: #BF616A;         /* Error State (Red) */
+    --theme-warning: #EBCB8B;       /* Warning State (Yellow) */
+
+    /* ─── 2. COMPONENT MAPPINGS (Advanced Tuning) ─── */
+    
+    /* Global Glows & Shadows */
+    --global-glow-color: rgba(94, 129, 172, 0.4);
+    --global-shadow-light: rgba(0,0,0,0.2);
+    --global-shadow-dark: rgba(0,0,0,0.4);
+
+    /* Layout Colors */
+    --main-area-bg: var(--theme-bg-main);
+    --main-area-text: var(--theme-text-main);
+    --sb_background: var(--theme-bg-sidebar);
+    --sb_text: var(--theme-text-main);
+
+    /* Primary Buttons */
+    --bt_main: var(--theme-primary);
+    --bt_main_gradient_start: var(--theme-primary);
+    --bt_main_gradient_end: var(--theme-primary-dim);
+    --bt_main_border: transparent;
+    --bt_main_text: var(--theme-text-bright);
+    --bt_main_shadow: 0 4px 6px var(--global-shadow-light);
+    --bt_main_shadow_hover: 0 6px 12px var(--global-glow-color);
+    --bt_main_hover: var(--theme-primary-dim);
+    --bt_main_active: var(--theme-primary-dim);
+    --bt_main_focus: var(--theme-primary);
+    --bt_main_disabled: var(--theme-bg-secondary);
+    --bt_main_text_disabled: var(--theme-text-dim);
+
+    /* Secondary Buttons */
+    --bt_secondary: var(--theme-bg-secondary);
+    --bt_secondary_gradient_start: var(--theme-bg-secondary);
+    --bt_secondary_gradient_end: var(--theme-bg-tertiary);
+    --bt_secondary_border: var(--theme-bg-tertiary);
+    --bt_secondary_text: var(--theme-text-main);
+    --bt_secondary_shadow: 0 2px 4px var(--global-shadow-light);
+    --bt_secondary_hover: var(--theme-bg-tertiary);
+    --bt_secondary_active: var(--theme-bg-sidebar);
+
+    /* Sidebar Elements */
+    --sb_title: var(--theme-text-bright);
+    --sb_separator: var(--theme-bg-secondary);
+    --sb_expander_closed_bg: transparent;
+    --sb_expander_open_bg: rgba(94, 129, 172, 0.1); /* Low opacity primary */
+    --sb_active_bg: rgba(94, 129, 172, 0.15);
+    
+    /* Inputs & UI */
+    --ui_input_bg: var(--theme-bg-tertiary);
+    --ui_input_border: transparent;
+    --ui_input_border_focus: var(--theme-primary);
+    --ui_radius: 12px;
+    
+    /* Progress Bars */
+    --prog-bg: var(--theme-bg-secondary);
+    --bar-hue: 213; /* HSL Hue for progress bar */
+    --prog-sat: 32%;
+    --prog-light: 52%;
+
+    /* Feedback States */
+    --glass-bg: rgba(46, 52, 64, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CSS STYLING - DO NOT MODIFY SELECTORS BELOW
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Button ──────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"] {
+    background: linear-gradient(180deg, var(--bt_main_gradient_start), var(--bt_main_gradient_end));
+    background-color: var(--bt_main);
+    border: 1px solid var(--bt_main_border);
+    color: var(--bt_main_text);
+    box-shadow: var(--bt_main_shadow);
+    border-radius: var(--ui_radius);
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/*Hover State */
+button[kind="primary"]:hover {
+    background-color: var(--bt_main_hover);
+    border-color: var(--bt_main_hover);
+    box-shadow: var(--bt_main_shadow_hover);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background-color: var(--bt_main_active);
+    border-color: var(--bt_main_active);
+    box-shadow: var(--bt_main_shadow);
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    background-color: var(--bt_main_focus);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(94, 129, 172, 0.5), 0 2px 8px var(--bt_main_shadow);
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background-color: var(--bt_main_disabled);
+    border-color: var(--bt_main_disabled);
+    color: var(--bt_main_text_disabled);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"] {
+    background: linear-gradient(180deg, var(--bt_secondary_gradient_start), var(--bt_secondary_gradient_end));
+    background-color: var(--bt_secondary);
+    border: 1px solid var(--bt_secondary_border);
+    color: var(--bt_secondary_text);
+    box-shadow: var(--bt_secondary_shadow);
+    border-radius: var(--ui_radius);
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+section[data-testid="stMain"] button[kind="secondary"]:hover {
+    background-color: var(--bt_secondary_hover);
+    border-color: var(--bt_secondary_hover);
+    box-shadow: 0 4px 8px var(--global-shadow-dark);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active {
+    background-color: var(--bt_secondary_active);
+    border-color: var(--bt_secondary_active);
+    box-shadow: 0 1px 4px var(--bt_secondary_shadow);
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+section[data-testid="stMain"] button[kind="secondary"]:focus {
+    background-color: var(--bt_secondary_hover);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(160, 170, 180, 0.3), 0 2px 8px var(--bt_secondary_shadow);
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled {
+    background-color: var(--bt_secondary);
+    border-color: var(--bt_secondary_border);
+    color: var(--bt_main_text_disabled);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--theme-primary);
+    box-shadow: 0 0 30px var(--global-shadow-dark);
+    border-radius: 16px;
+    padding: 2rem 1rem;
+}
+
+/* The Main Title */
+.welcome-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--theme-text-bright);
+    text-shadow: 0 0 15px var(--global-glow-color);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    color: var(--theme-primary);
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    text-align: center;
+    color: var(--theme-text-main);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    margin: 2rem 0;
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--sb_background);
+    color: var(--sb_text);
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: var(--theme-text-main) !important;
+    font-size: 24px !important;
+    text-shadow: 0 0 5px rgba(255,255,255,0.1);
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: var(--theme-primary) !important;
+    background-color: rgba(94, 129, 172, 0.1) !important;
+    text-shadow: 0 0 10px var(--global-glow-color);
+}
+
+/* Sidebar - APP Title */
+.sidebar-title {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: var(--sb_title) !important; 
+    text-shadow: 0 2px 4px var(--global-shadow-dark);
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons {
+    font-size: inherit;      
+    line-height: inherit;   
+    vertical-align: middle; 
+    color: var(--theme-primary);
+    text-shadow: 0 0 10px var(--global-glow-color);
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: var(--sb_separator) !important;
+    margin-top: 20px !important;
+    border: none;
+    height: 1px;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: var(--sb_expander_closed_bg) !important;
+    border: none !important;
+    color: var(--theme-text-main) !important;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: var(--theme-text-bright) !important;
+    background-color: rgba(255,255,255,0.03) !important;
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: var(--sb_expander_open_bg) !important;
+    color: var(--theme-primary) !important;
+    border-radius: var(--ui_radius) !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+}
+
+/* Header for subconcepts */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: var(--theme-text-dim) !important; 
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+} 
+
+/* Subconcepts and quick test icon: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: var(--theme-text-main) !important;
+    background-color: transparent !important;
+}
+
+/* Subconcepts and quick test icon: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: var(--theme-primary) !important;
+    text-shadow: 0 0 8px var(--global-glow-color);
+}
+
+/* Subconcepts: Active Element: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: var(--sb_active_bg) !important;
+    border-radius: var(--ui_radius) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: var(--theme-primary) !important;
+}
+
+/* Subconcepts: Active Element: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: rgba(94, 129, 172, 0.25) !important;
+    border-radius: var(--ui_radius) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: var(--theme-text-bright) !important;
+}
+
+/* Sidebar Scrollbar */
+div[data-testid="stSidebarContent"]:hover {
+    scrollbar-width: 0px;
+    scrollbar-color: red red;
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--main-area-bg);
+    color: var(--main-area-text);
+}
+
+/* Sidebar Expand Button - Icon (default) */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: var(--theme-primary) !important;
+    text-shadow: 0 0 10px var(--global-glow-color);
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: var(--theme-text-bright) !important;
+    background-color: transparent !important;
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: transparent !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: var(--theme-text-bright);
+    background-color: transparent;
+    font-weight: 300;
+}
+
+/* Lesson Card: Main Area */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Lesson Card: Strong Text */
+section[data-testid="stMain"] .st-key-lesson_window strong {
+    color: var(--theme-text-bright);
+    font-weight: 700;
+}
+
+/* Lesson: Headers */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--theme-primary);
+    letter-spacing: 0.5px;
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--theme-primary-dim);
+    font-style: italic;
+}
+
+/* Lesson Card: Table Headers + text */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--theme-text-bright);
+    border: 1px solid var(--theme-bg-secondary);
+    background-color: rgba(0,0,0,0.2);
+}
+
+/* Lesson Card: Table Data + text */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--theme-text-main);
+    border: 1px solid var(--theme-bg-secondary);
+}
+
+/* Scrollbar styling for lesson window */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--theme-bg-secondary) transparent;
+}
+
+/* Quiz Test State ──────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question  {
+    color: var(--theme-text-bright) !important;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.st-key-question p {
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    color: var(--theme-text-main);
+    background-color: var(--theme-bg-tertiary); /* was --answer-bg */
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    color: var(--theme-primary);
+}
+
+/* Keyboard Legend (Bellow primary A B C D button ──────────── */
+
+/* Keyboard Legend */
+.key-hint {
+    display: inline-block;
+    padding: 2px 8px;
+    min-width: 24px;
+    text-align: center;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    color: var(--theme-text-main);
+    background: var(--theme-bg-secondary);
+    border: 1px solid var(--theme-bg-secondary);
+    border-radius: 4px;
+    box-shadow: 0 2px 0 var(--theme-bg-sidebar);
+    margin: 0 4px;
+}
+
+.keyboard-legend {
+    color: var(--theme-text-dim);
+    font-size: 13px;
+    text-align: center;
+    margin: 8px 0;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+
+/* 1. HERO METRIC BOXES (Glassmorphism) */
+.feedback-box {
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    box-shadow: 0 4px 6px var(--global-shadow-light);
+    transition: transform 0.2s ease;
+}
+
+.feedback-box:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255,255,255,0.1);
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--theme-text-main);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--theme-text-bright);
+    text-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border: 1px solid rgba(163, 190, 140, 0.3);
+    box-shadow: 0 0 15px rgba(163, 190, 140, 0.1);
+    color: var(--theme-success);
+}
+
+.feedback-box.status-failed {
+    border: 1px solid rgba(191, 97, 106, 0.3);
+    box-shadow: 0 0 15px rgba(191, 97, 106, 0.1);
+    color: var(--theme-error);
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.5rem;   /* Large Icon */
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+/* 2. QUESTION EXPANDERS (Clean List Look) */
+
+/* A. Kill the Gap in the Flex Container */
+.st-key-feedback_list {
+    gap: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/* 2. QUESTION EXPANDERS */
+.st-key-feedback_list details {
+    border: none !important;
+    background: transparent !important;
+    margin-bottom: 0px;
+    gap: 0px;
+    border-bottom: 1px solid var(--sb_separator) !important;
+}
+
+.st-key-feedback_list summary {
+    padding: 15px 10px !important;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+.st-key-feedback_list summary:hover {
+    background-color: rgba(255,255,255,0.02) !important;
+}
+
+/* 3. ANSWER COMPARISON CARDS (Inside Expander) */
+.comparison-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.answer-card {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+}
+
+/* User's Answer Card */
+.answer-card.user-wrong {
+    background-color: rgba(191, 97, 106, 0.1);
+    border-color: rgba(191, 97, 106, 0.3);
+    color: var(--theme-text-main);
+}
+
+.answer-card.user-correct {
+    background-color: rgba(163, 190, 140, 0.1);
+    border-color: rgba(163, 190, 140, 0.3);
+    color: var(--theme-text-bright);
+}
+
+/* Correct Answer Card (Always Greenish) */
+.answer-card.correct-key {
+    background-color: rgba(46, 52, 64, 0.8);
+    border: 1px solid var(--theme-success);
+    color: var(--theme-success);
+}
+
+.answer-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 4px;
+    font-weight: 700;
+    display: block;
+}
+
+/* Explanation Box */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border-left: 3px solid var(--theme-primary) !important;
+    padding: 15px !important;
+    border-radius: 0 8px 8px 0 !important;
+    color: var(--theme-text-main) !important;
+    font-style: normal !important; 
+    line-height: 1.6 !important;
+    margin-top: 10px !important;
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: var(--theme-primary);
+    margin-top: 2px;
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Progress Bar */
+.progress-container {
+    background-color: var(--prog-bg) !important;
+    height: 8px;
+    border-radius: 12px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.progress-fill {
+    background-color: hsl(var(--bar-hue), var(--prog-sat), var(--prog-light)) !important;
+    box-shadow: 0 0 10px var(--global-glow-color) !important;
+    height: 100%;
+    border-radius: 12px;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: transparent !important;
+    color: var(--theme-text-dim) !important;
+    border-radius: var(--ui_radius) !important;
+    padding: 8px 16px !important;
+    margin-right: 5px;
+}
+
+/* Tab area: Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: rgba(255,255,255,0.05) !important;
+}
+
+/* Tab area: Active Tab */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: rgba(94, 129, 172, 0.1) !important;
+    color: var(--theme-primary) !important;
+    border-bottom: none !important;
+    box-shadow: 0 0 0 1px var(--theme-primary) inset;
+}
+    
+/* Tab area: Traveling highlight line */
+div[data-baseweb="tab-highlight"] {
+    display: none;
+}
+
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: var(--theme-text-main);
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: var(--theme-text-main);
+    opacity: 0.7;
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: rgba(255,255,255,0.02);
+    border: 1px dashed var(--theme-text-dim);
+    border-radius: var(--ui_radius);
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    background-color: rgba(94, 129, 172, 0.1);
+    color: var(--theme-primary);
+    border: none;
+}
+
+/* File Dropzone: Icon color */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: var(--theme-primary);
+    filter: drop-shadow(0 0 5px var(--global-glow-color));
+}
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: var(--ui_input_bg) !important;
+    border: 2px solid transparent;
+    border-radius: var(--ui_radius) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: var(--theme-text-main) !important;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--theme-bg-secondary) !important;
+    border: 2px solid var(--theme-primary);
+    color: var(--theme-text-bright) !important;
+    border-radius: var(--ui_radius) !important;
+}  
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"], 
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: var(--theme-primary) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--theme-bg-secondary) !important;
+    border: 2px solid var(--theme-primary-dim);
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"], 
+[data-baseweb="select"]:hover svg {
+    color: var(--theme-text-bright) !important;
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: var(--theme-bg-tertiary) !important;
+    border: 1px solid var(--theme-bg-secondary) !important;
+    border-radius: var(--ui_radius) !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 20px var(--global-shadow-dark) !important;
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: var(--theme-text-main) !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: rgba(94, 129, 172, 0.2) !important;
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: var(--theme-primary) !important;
+    font-weight: bold;
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: rgba(94, 129, 172, 0.3) !important;
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: var(--theme-text-bright) !important;
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--theme-primary-dim) transparent;
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: var(--theme-bg-tertiary);
+}
+
+/* Button Dropdown Popover */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: 200px !important;  
+    max-width: 200px !important;
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"],
+[data-testid="stPopoverBody"] > div {
+    background-color: var(--theme-bg-secondary); 
+    box-shadow: none !important;
+}
+
+/* Button Dropdown Popover: Border */
+[data-testid="stPopoverBody"] {
+    border: 1px solid var(--theme-bg-tertiary) !important;
+    border-radius: 12px;
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--theme-text-main) !important;
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+}
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: var(--ui_radius);
+    box-shadow: inset 0 1px 2px var(--global-shadow-light);
+}
+
+div[data-baseweb="base-input"] {
+    border-radius: 0px; /* Must stay as 0px */
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: var(--ui_input_bg) !important;
+} 
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: var(--theme-bg-secondary) !important;
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: var(--theme-bg-secondary) !important;
+}
+
+/* Text Fields: Global Text input Color */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--theme-text-main) !important;
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: var(--theme-text-bright) !important;
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: var(--theme-text-main) !important;
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: 1px solid transparent !important;
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: 1px solid var(--theme-primary) !important;
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: 1px solid var(--theme-primary) !important;
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--theme-primary-dim) transparent;
+}
+
+/* Text Fields: Resize Button */
+textarea::-webkit-resizer {
+    display: none;
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: var(--theme-bg-secondary) !important;
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--theme-primary-dim) !important;
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--theme-text-main);
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* Various Fixes ──────────────────────────────────────────── */
+
+/* Invisible scrollbar in stMain */
+section[data-testid="stMain"]:hover {
+    scrollbar-width: 0px;
+    scrollbar-color: transparent transparent;
+}
+
+/* Gradient on the tab bar removed */
+div[data-baseweb="tab-list"]::after,
+div[data-baseweb="tab-list"]::before {
+    display: none !important;
+    background: none !important;
+}

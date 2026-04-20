@@ -1,0 +1,1509 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* ============================================================
+   TIER 1 — PRIMITIVES  (only these change per theme)
+   ============================================================ */
+:root {
+
+  /* ── ACCENT  (peach-gold hair → pressed copper) ─────────── */
+  --color-accent:       #F1BDA2;
+  --color-accent-light: #FFD7AE;
+  --color-accent-dark:  #C08D7C;
+  --color-accent-text:  #22202C;   /* dark navy text ON accent backgrounds */
+
+  /* ── NEUTRAL SURFACE SCALE  (dark jacket palette) ────────── */
+  --color-neutral-0:   #1c1a24;    /* page background */
+  --color-neutral-50:  #23222a;    /* surface: cards, panels, sidebar */
+  --color-neutral-100: #2A2932;    /* inset: text field normal bg */
+  --color-neutral-200: #32323D;    /* raised: hover surfaces */
+  --color-neutral-300: #47445A;    /* borders, dividers, scrollbars */
+  --color-neutral-400: #6B6882;    /* disabled text and icons */
+  --color-neutral-500: #8B8799;    /* muted / secondary text */
+  --color-neutral-700: #CFCBAC;    /* standard readable text (warm cream) */
+  --color-neutral-900: #FAFFFD;    /* strongest text */
+
+  /* ── ERROR  (racing red) ──────────────────────────────────── */
+  --color-error:        #C72F31;
+
+  /* ── TYPOGRAPHY ──────────────────────────────────────────── */
+  --font-sans:  sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono:  'Courier New', monospace;
+
+  /* ── RADII  (slightly rounder than E-INKed) ──────────────── */
+  --radius-sm:   4px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  --radius-xl:   12px;
+  --radius-pill: 9999px;
+
+  /* ── SHADOWS  (warm, diffuse — velvet under gold) ────────── */
+  --shadow-sm:    1px 1px 4px  rgba(34,32,44,0.4);
+  --shadow-md:    2px 4px 8px  rgba(34,32,44,0.5);
+  --shadow-lg:    0 8px 20px   rgba(34,32,44,0.6);
+  --shadow-xl:    0 20px 50px  rgba(34,32,44,0.7);
+  --shadow-focus: 0 0 0 2px var(--color-neutral-0), 0 0 0 4px var(--color-accent-dark);
+  --shadow-glow:  0 0 12px rgba(241, 189, 162, 0.2);
+
+  /* ── BUTTON GRADIENT  (peach top → copper bottom = raised gold) */
+  --btn-gradient-start: var(--color-accent-light);
+  --btn-gradient-end:   var(--color-accent-dark);
+
+  /* ── TEXTURE ─────────────────────────────────────────────── */
+  --texture-surface: none;
+
+  /* ── SPECIAL DECORATIONS ─────────────────────────────────── */
+  --color-stripe-a:    #839ADB;   /* blue ribbon — progress bar stripes */
+  --color-stripe-b:    #FAFFFD;   /* near-white  — progress bar stripes */
+  --color-border-band: #C72F31;   /* racing red  — featured window top border */
+
+  /* ── PROGRESS BAR ─────────────────────────────────────────── */
+  --prog-track-bg:     var(--color-neutral-300);
+  --prog-track-radius: var(--radius-sm);
+  --prog-track-height: 10px;
+
+  --prog-fill-bg:      var(--color-stripe-a);
+  --prog-fill-pattern: repeating-linear-gradient(-45deg, var(--color-stripe-a), var(--color-stripe-a) 8px, var(--color-stripe-b) 8px, var(--color-stripe-b) 16px);
+  --prog-fill-shadow:  0 0 8px rgba(131, 154, 219, 0.3);
+  --prog-fill-radius:  var(--radius-sm);
+
+  /* ============================================================
+     TIER 2 — COMPONENT TOKENS  (same mapping across all themes)
+     ============================================================ */
+
+  /* ── BUTTON — PRIMARY ─────────────────────────────────────── */
+  --btn-pri-bg:            var(--color-accent);
+  --btn-pri-bg-hover:      var(--color-accent-light);
+  --btn-pri-bg-active:     var(--color-accent-dark);
+  --btn-pri-bg-focus:      var(--color-accent);
+  --btn-pri-bg-disabled:   var(--color-neutral-50);
+
+  --btn-pri-border:          var(--color-accent);
+  --btn-pri-border-hover:    var(--color-accent-light);
+  --btn-pri-border-active:   var(--color-accent-dark);
+  --btn-pri-border-disabled: var(--color-neutral-300);
+
+  --btn-pri-text:            var(--color-accent-text);
+  --btn-pri-text-disabled:   var(--color-neutral-400);
+
+  --btn-pri-shadow:          var(--shadow-md);
+  --btn-pri-shadow-hover:    var(--shadow-lg);
+  --btn-pri-focus-ring:      var(--shadow-focus);
+  --btn-pri-radius:          var(--radius-md);
+
+  /* ── BUTTON — SECONDARY ───────────────────────────────────── */
+  --btn-sec-border-color:    var(--color-neutral-300);   /* default: dim ghost border */
+  --btn-sec-border-hover:    var(--color-stripe-a);   /* hover: brightens to readable text */
+  --btn-sec-border-active:   var(--color-neutral-500);
+  --btn-sec-border-disabled: var(--color-neutral-300);
+
+  --btn-sec-text:            var(--color-neutral-500);   /* muted by default */
+  --btn-sec-text-hover:      var(--color-stripe-a);   /* brightens on hover */
+  --btn-sec-text-disabled:   var(--color-neutral-400);
+
+  --btn-sec-bg-active:       var(--color-neutral-50);    /* subtle fill on click */
+
+  --btn-sec-shadow-hover:    var(--shadow-sm);
+  --btn-sec-focus-ring:      var(--shadow-focus);
+  --btn-sec-radius:          var(--radius-md);
+
+  /* ── WINDOW CARD  (welcome, generator, srs — shared) ─────── */
+  --window-bg:            var(--color-neutral-50);
+  --window-texture:       var(--texture-surface);
+  --window-border:        1px solid var(--color-neutral-200);
+  --window-border-top:    2px solid var(--color-border-band);  /* accent top edge */
+  --window-border-right:  var(--window-border);               /* set to none or a custom value to override */
+  --window-border-bottom: var(--window-border);
+  --window-border-left:   var(--window-border);
+  --window-radius:        var(--radius-xl);
+  --window-shadow:        var(--shadow-xl);
+  --window-header:        var(--color-neutral-700);
+  --window-divider:       var(--color-neutral-300);
+
+  /* ── APP TITLE  (welcome card + sidebar — shared) ─────────── */
+  --app-title-color:      var(--color-accent);        /* peach gold */
+  --app-title-weight:     700;
+  --app-title-shadow:     var(--shadow-glow);
+  --app-title-icon-color: var(--color-stripe-a);      /* blue ribbon */
+
+  /* ── SIDEBAR ─────────────────────────────────────────────── */
+  --sb-bg:                  var(--color-neutral-50);
+  --sb-border-right:        none;   /* e.g. 2px solid var(--color-border-band) for accent edge */
+
+  /* collapse / expand icon */
+  --sb-icon:                var(--color-neutral-400);
+  --sb-icon-hover:          var(--color-accent);
+  --sb-icon-bg-hover:       var(--color-neutral-200);
+
+  --sb-separator:           var(--color-border-band);
+
+  /* module expander rows */
+  --sb-expander-bg:         var(--color-neutral-50);
+  --sb-expander-text:       var(--color-neutral-500);   /* dimmed */
+  --sb-expander-hover-bg:   var(--color-neutral-200);
+  --sb-expander-hover-text: var(--color-accent);         /* hover = active color */
+  --sb-expander-open-text:  var(--color-stripe-a);      /* blue ribbon */
+
+  /* section label (uppercase subtitle) */
+  --sb-label-text:          var(--color-neutral-400);   /* most dimmed */
+
+  /* lesson items */
+  --sb-item-text:           var(--color-neutral-400);   /* dimmed */
+  --sb-item-hover-text:     var(--color-accent);         /* hover = active color */
+
+  /* active item */
+  --sb-active-text:         var(--color-stripe-a);
+  --sb-active-bg:           none;
+  --sb-active-border-left:  3px solid var(--color-border-band);   /* set to none to disable */
+  --sb-active-radius:       var(--radius-sm);
+
+  /* expander borders */
+  --sb-expander-border:           none;                                  /* general expander border; override to add outline */
+  --sb-expander-open-border-left: 3px solid var(--color-stripe-a);      /* set to none to disable */
+
+  /* ── MAIN AREA ──────────────────────────────────────────────── */
+  --main-bg:                    var(--color-neutral-0);
+  --main-text:                  var(--color-neutral-400);
+  --main-expand-icon:           var(--color-neutral-500);
+  --main-expand-icon-hover:     var(--color-neutral-900);
+
+  /* ── LESSON TITLE ───────────────────────────────────────────── */
+  --lesson-title-color:         var(  --color-stripe-a);  /* racing red */
+  --lesson-title-border-left:   none;
+  --lesson-title-font:          var(--font-serif);
+  --lesson-title-font-weight:   400;
+
+  /* ── LESSON CARD ────────────────────────────────────────────── */
+  --lc-bg:                      var(--color-neutral-50);
+  --lc-text:                    var(--color-neutral-500);   /* body text inside the card */
+  --lc-border:                  1px solid var(--color-neutral-300);
+  --lc-radius:                  var(--radius-md);
+  --lc-shadow:                  var(--shadow-md);
+
+  --lc-stripe-width:            4px;                       /* width of left accent strip */
+  --lc-stripe-size:             8px;                       /* height of each colour band  */
+  --lc-stripe-a:                var(--color-stripe-a);     /* blue ribbon */
+  --lc-stripe-b:                var(--color-stripe-b);     /* near-white  */
+
+  --lc-strong-color:            var(--color-stripe-a);     /* bold = blue ribbon */
+  --lc-header-color:            var(--color-accent);
+  --lc-italic-color:            var(--color-neutral-500);
+  --lc-table-header-bg:         var(--color-neutral-0);
+  --lc-table-header-color:      var(--color-neutral-900);
+  --lc-table-data-color:        var(--color-neutral-700);
+  --lc-table-border:            1px solid var(--color-neutral-300);
+  --lc-scrollbar-color:         var(--color-neutral-300);
+
+  /* ── QUIZ TEST ──────────────────────────────────────────────── */
+  --quiz-question-color:        var(--color-neutral-500);
+
+  --quiz-answer-bg:             var(--color-neutral-50);
+  --quiz-answer-text:           var(--color-neutral-500);
+  --quiz-answer-radius:         var(--radius-sm);
+  --quiz-answer-border:         1px solid transparent;
+  --quiz-answer-border-hover:   1px solid var(--color-neutral-500);
+  --quiz-answer-letter-color:   var(--color-border-band);        /* blue ribbon — A B C D */
+
+  --quiz-key-bg:                var(--color-accent);          /* peach gold chip */
+  --quiz-key-text:              var(--color-accent-text);     /* dark text on peach */
+  --quiz-key-border:            1px solid var(--color-accent-dark);
+  --quiz-key-radius:            var(--radius-sm);
+  --quiz-key-shadow:            var(--shadow-sm);
+  --quiz-legend-text:           var(--color-neutral-500);
+
+  /* ── FEEDBACK ───────────────────────────────────────────────── */
+  --fb-box-bg:                  var(--color-neutral-50);
+  --fb-box-border:              1px solid var(--color-neutral-300);
+  --fb-box-radius:              var(--radius-sm);
+  --fb-box-shadow:              var(--shadow-sm);
+  --fb-label-color:             var(--color-neutral-500);
+  --fb-value-color:             var(--color-neutral-900);
+
+  /* passed / failed status variants */
+  --fb-status-passed-border:        1px solid var(--color-stripe-a);
+  --fb-status-passed-border-top:    3px solid var(--color-stripe-a);   /* blue accent top edge */
+  --fb-status-passed-shadow:        var(--shadow-glow);
+  --fb-status-passed-color:         var(--color-stripe-a);
+  --fb-status-failed-border:        1px solid var(--color-neutral-300);
+  --fb-status-failed-border-top:    3px solid var(--color-error);      /* red accent top edge */
+  --fb-status-failed-color:         var(--color-neutral-500);
+
+  /* question expanders */
+  --fb-expander-divider:        1px solid var(--color-neutral-300);
+  --fb-expander-hover-color:    var(--color-neutral-900);
+  --fb-expander-hover-bg:       var(--color-neutral-200);
+  --fb-expander-open-color:     var(--color-stripe-a);         /* blue ribbon when open */
+  --fb-expander-open-bg:        var(--color-neutral-50);
+
+  /* answer comparison cards */
+  --fb-answer-radius:           var(--radius-sm);
+  --fb-answer-wrong-bg:         var(--color-neutral-50);
+  --fb-answer-wrong-border:     1px dotted var(--color-error); /* racing red dotted */
+  --fb-answer-wrong-color:      var(--color-neutral-500);
+  --fb-answer-correct-bg:       var(--color-neutral-50);
+  --fb-answer-correct-border:   1px solid var(--color-stripe-a); /* blue = correct */
+  --fb-answer-correct-color:    var(--color-neutral-900);
+  --fb-answer-key-bg:           var(--color-stripe-a);           /* solid blue = the answer */
+  --fb-answer-key-border:       1px solid var(--color-stripe-a);
+  --fb-answer-key-color:        var(--color-accent-text);
+
+  /* explanation blockquote */
+  --fb-blockquote-bg:           var(--color-neutral-50);
+  --fb-blockquote-border-left:  3px solid var(--color-neutral-300);
+  --fb-blockquote-color:        var(--color-neutral-700);
+  --fb-blockquote-icon-color:   var(--color-neutral-500);
+
+  /* ── GENERATOR WINDOW ──────────────────────────────────────── */
+  --gen-header-icon-color:      var(--color-stripe-a);
+  --gen-input-icon-color:       var(--color-neutral-500);
+
+  /* warning box */
+  --gen-warning-color:          var(--color-neutral-700);
+  --gen-warning-bg:             var(--color-neutral-50);
+  --gen-warning-stripe-a:       var(--color-neutral-300);
+  --gen-warning-stripe-b:       var(--color-neutral-400);
+
+  /* stat boxes */
+  --gen-stat-box-bg:            var(--color-neutral-50);
+  --gen-stat-box-border:        1px solid var(--color-neutral-300);
+  --gen-stat-divider:           1px solid var(--color-neutral-300);
+  --gen-stat-label-color:       var(--color-neutral-500);
+  --gen-stat-value-color:       var(--color-neutral-900);
+  --gen-stat-accent-color:      var(--color-stripe-a);
+  --gen-stat-success-color:     var(--color-accent);
+
+  /* spinner */
+  --gen-spinner-color:          var(--color-neutral-500);
+
+  /* console */
+  --gen-console-bg:             var(--color-neutral-0);
+  --gen-console-border:         1px solid var(--color-neutral-300);
+  --gen-console-shadow:         inset 0 2px 5px rgba(34,32,44,0.3);
+  --gen-console-step-divider:   1px dotted var(--color-neutral-300);
+  --gen-console-icon-color:     var(--color-stripe-a);
+  --gen-console-title-color:    var(--color-neutral-900);
+  --gen-console-msg-color:      var(--color-neutral-700);
+  --gen-console-msg-border:     2px solid var(--color-neutral-300);
+
+  /* completion */
+  --gen-completion-header-color: var(--color-neutral-900);
+  --gen-completion-icon-color:   var(--color-accent);            /* peach for success */
+
+  /* stMetric card */
+  --gen-metric-bg:              var(--color-neutral-50);
+  --gen-metric-border:          1px solid var(--color-neutral-300);
+  --gen-metric-border-hover:    var(--color-stripe-a);
+  --gen-metric-shadow:          var(--shadow-sm);
+  --gen-metric-label-color:     var(--color-neutral-500);
+  --gen-metric-value-color:     var(--color-neutral-900);
+  --gen-metric-delta-bg:        var(--color-neutral-200);
+  --gen-metric-delta-color:     var(--color-neutral-900);
+
+  /* ── UI ELEMENTS ────────────────────────────────────────────── */
+
+  /* tabs */
+  --ui-tab-bg:                  var(--color-neutral-50);
+  --ui-tab-text:                var(--color-neutral-500);
+  --ui-tab-hover-bg:            var(--color-neutral-200);
+  --ui-tab-active-bg:           var(--color-neutral-0);
+  --ui-tab-active-text:         var(--color-neutral-900);
+  --ui-tab-active-ring:         var(--color-stripe-a);       /* blue inset outline */
+
+  /* file dropzone */
+  --ui-drop-text:               var(--color-neutral-500);
+  --ui-drop-bg:                 var(--color-neutral-50);
+  --ui-drop-border:             2px dotted var(--color-neutral-300);
+  --ui-drop-btn-color:          var(--color-neutral-500);
+  --ui-drop-btn-border:         1px solid var(--color-neutral-500);
+
+  /* popover */
+  --ui-popover-bg:              var(--color-neutral-50);
+  --ui-popover-border:          1px solid var(--color-neutral-300);
+  --ui-popover-shadow:          var(--shadow-lg);
+  --ui-popover-text:            var(--color-neutral-700);
+
+  /* dropdown — closed */
+  --ui-dd-bg:                   var(--color-neutral-0);
+  --ui-dd-border:               1px solid var(--color-neutral-300);
+  --ui-dd-text:                 var(--color-neutral-500);
+  /* dropdown — hover */
+  --ui-dd-hover-bg:             var(--color-neutral-50);
+  --ui-dd-hover-border:         1px solid var(--color-neutral-500);
+  --ui-dd-hover-text:           var(--color-neutral-900);
+  /* dropdown — open */
+  --ui-dd-open-border:          1px solid var(--color-stripe-a);
+  --ui-dd-open-text:            var(--color-stripe-a);       /* blue ribbon when open */
+  /* dropdown — items list */
+  --ui-dd-list-bg:              var(--color-neutral-50);
+  --ui-dd-list-border:          1px solid var(--color-neutral-300);
+  --ui-dd-list-shadow:          var(--shadow-lg);
+  --ui-dd-item-text:            var(--color-accent-light);
+  --ui-dd-selected-bg:          var(--color-stripe-a);       /* blue selected */
+  --ui-dd-selected-text:        var(--color-accent-text);    /* dark on blue */
+  --ui-dd-scrollbar:            var(--color-neutral-300);
+
+  /* text fields */
+  --ui-input-bg:                var(--color-neutral-0);
+  --ui-input-bg-hover:          var(--color-neutral-50);
+  --ui-input-text:              var(--lc-stripe-a);
+  --ui-input-text-hover:        var(--color-neutral-900);
+  --ui-input-border:            1px solid var(--color-neutral-300);
+  --ui-input-border-hover:      1px solid var(--color-neutral-500);
+  --ui-input-border-focus:      1px solid var(--color-stripe-a);   /* blue focus ring */
+  --ui-input-shadow:            inset 0 1px 2px rgba(34,32,44,0.2);
+  --ui-input-scrollbar:         var(--color-neutral-300);
+  --ui-input-disabled-icon:     var(--color-neutral-300);
+
+  /* labels & tooltip */
+  --ui-label-color:             var(--color-neutral-500);
+  --ui-tooltip-color:           var(--color-neutral-500);
+  --ui-h4-color:                var(--sb-label-text);      /* h4 in markdown — menu/settings headers */
+
+  /* ── MASTERY / SRS TREE ─────────────────────────────────────── */
+  --tree-module-color:          var(--color-stripe-a);      /* active module header */
+  --tree-concept-color:         var(--color-neutral-500);   /* active concept group */
+  --tree-lesson-color:          var(--color-neutral-400);   /* active lesson row */
+  --tree-disabled-color:        var(--color-neutral-200);   /* disabled at all levels */
+
+}
+
+
+/* Main Button ──────────────────────────────────────────── */
+
+/* Default State */
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    background: linear-gradient(180deg, var(--btn-gradient-start), var(--btn-gradient-end));
+    background-color: var(--btn-pri-bg);
+    border: 1px solid var(--btn-pri-border);
+    color: var(--btn-pri-text);
+    box-shadow: var(--btn-pri-shadow);
+    border-radius: var(--btn-pri-radius);
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover State */
+button[kind="primary"]:hover {
+    background-color: var(--btn-pri-bg-hover);
+    border-color: var(--btn-pri-border-hover);
+    box-shadow: var(--btn-pri-shadow-hover);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background-color: var(--btn-pri-bg-active);
+    border-color: var(--btn-pri-border-active);
+    box-shadow: var(--btn-pri-shadow);
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+button[kind="primary"]:focus {
+    background-color: var(--btn-pri-bg-focus);
+    outline: none;
+    box-shadow: var(--btn-pri-focus-ring);
+}
+
+/* Disabled State */
+button[kind="primary"]:disabled {
+    background-color: var(--btn-pri-bg-disabled);
+    border-color: var(--btn-pri-border-disabled);
+    color: var(--btn-pri-text-disabled);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+
+/* Secondary Button ──────────────────────────────────────────── */
+
+/* Default State */
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: transparent;
+    background-color: transparent;
+    border: 1px solid var(--btn-sec-border-color);
+    color: var(--btn-sec-text);
+    box-shadow: none;
+    border-radius: var(--btn-sec-radius);
+    transition: all 0.2s ease;
+}
+
+/* Hover State */
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: transparent;
+    border-color: var(--btn-sec-border-hover);
+    color: var(--btn-sec-text-hover);
+    box-shadow: var(--btn-sec-shadow-hover);
+    transform: translateY(-1px);
+}
+
+/* Active State (clicked) */
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: var(--btn-sec-bg-active);
+    border-color: var(--btn-sec-border-active);
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Focus State (keyboard navigation) */
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    background-color: transparent;
+    outline: none;
+    box-shadow: var(--btn-sec-focus-ring);
+}
+
+/* Disabled State */
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled {
+    background-color: transparent;
+    border-color: var(--btn-sec-border-disabled);
+    color: var(--btn-sec-text-disabled);
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+
+/* Progress Bar ──────────────────────────────────────────── */
+.progress-container {
+    background-color: var(--prog-track-bg) !important;
+    height: var(--prog-track-height);
+    border-radius: var(--prog-track-radius);
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.progress-fill {
+    background-color: var(--prog-fill-bg) !important;
+    background-image: var(--prog-fill-pattern) !important;
+    box-shadow: var(--prog-fill-shadow) !important;
+    height: 100%;
+    border-radius: var(--prog-fill-radius);
+    transition: width 0.5s ease-out;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE (Imitating E-Ink Screen)
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container using the key defined in app.py */
+.st-key-welcome_card {
+    background-color: var(--window-bg);
+    background-image: var(--window-texture);
+    border: var(--window-border);
+    border-top: var(--window-border-top);
+    border-right: var(--window-border-right);
+    border-bottom: var(--window-border-bottom);
+    border-left: var(--window-border-left);
+    box-shadow: var(--window-shadow);
+    border-radius: var(--window-radius);
+}
+
+/* The Main Title — hero size, welcome screen only */
+.welcome-title {
+    font-family: var(--font-sans);
+    font-weight: var(--app-title-weight);
+    font-size: 2.2rem;
+    color: var(--app-title-color);
+    text-shadow: var(--app-title-shadow);
+}
+
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    color: var(--app-title-icon-color);
+}
+
+/* Card Title — secondary windows (generator, srs), same colors, smaller */
+.card-title {
+    font-family: var(--font-sans);
+    font-weight: var(--app-title-weight);
+    font-size: 1.4rem;
+    color: var(--app-title-color);
+    text-shadow: var(--app-title-shadow);
+}
+
+.card-title .material-icons {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    color: var(--app-title-icon-color);
+}
+
+/* The Subtitle */
+.welcome-subtitle {
+    color: #B0B0B0; /* Standard E-Ink Text */
+    font-size: 1rem;
+    letter-spacing: 1px;
+    opacity: 1; /* Removed transparency to rely on actual color depth */
+    text-transform: uppercase;
+}
+
+/* Custom Divider override for this card */
+.st-key-welcome_card hr {
+    border: none;
+    border-top: 1px solid var(--window-divider);
+    margin-bottom: 40px;
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* background color of sidebar */
+section[data-testid="stSidebar"] {
+    background-color: var(--sb-bg);
+    border-right: var(--sb-border-right);
+}
+
+/* Sidebar Collapse Button - Icon (default) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: var(--sb-icon) !important;
+    font-size: 24px !important;
+}
+
+/* Sidebar Collapse Button - Icon (hover) */
+div[data-testid="stSidebarCollapseButton"] button:hover,
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"]:hover {
+    color: var(--sb-icon-hover) !important;
+    background-color: var(--sb-icon-bg-hover) !important;
+}
+
+/* Sidebar - APP Title */
+.sidebar-title {
+    font-family: var(--font-sans) !important;
+    font-size: 1.5rem !important;
+    font-weight: var(--app-title-weight) !important;
+    color: var(--app-title-color) !important;
+    text-shadow: var(--app-title-shadow);
+}
+
+/* Sidebar - APP Title Icon */
+.sidebar-title .material-icons {
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: middle;
+    color: var(--app-title-icon-color);
+    text-shadow: none; /* Removed Nordic glow */
+}
+
+/* Separator Line in Sidebar */
+section[data-testid="stSidebar"] hr {
+    background-color: var(--sb-separator) !important;
+    margin-top: 15px !important;
+    border: none;
+    height: 1px;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: var(--sb-expander-bg) !important;
+    border: var(--sb-expander-border) !important;
+    color: var(--sb-expander-text) !important;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: var(--sb-expander-hover-text) !important;
+    background-color: var(--sb-expander-hover-bg) !important;
+}
+
+/* Expander Module Title - Open */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: var(--sb-expander-bg) !important;
+    color: var(--sb-expander-open-text) !important;
+    border-radius: var(--sb-active-radius) !important;
+    border-left: var(--sb-expander-open-border-left) !important;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Section label (uppercase subtitle — most dimmed) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: var(--sb-label-text) !important;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    background: none;
+}
+
+/* Lesson Items: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: var(--sb-item-text) !important;
+    background-color: transparent !important;
+}
+
+/* Lesson Items: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover {
+    color: var(--sb-item-hover-text) !important;
+}
+
+/* Active Item: Normal */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: var(--sb-active-bg) !important;
+    border-radius: var(--sb-active-radius) !important;
+    border-left: var(--sb-active-border-left) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: var(--sb-active-text) !important;
+}
+
+/* Active Item: Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: var(--sb-active-bg) !important;
+    border-radius: var(--sb-active-radius) !important;
+    border-left: var(--sb-active-border-left) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover p {
+    color: var(--sb-active-text) !important;
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+}
+
+/* Sidebar Expand Button - Icon (default) */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: var(--main-expand-icon) !important;
+    text-shadow: none;
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: var(--main-expand-icon-hover) !important;
+    background-color: transparent !important;
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: transparent !important;
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: var(--lesson-title-color);
+    font-family: var(--lesson-title-font);
+    background-color: transparent;
+    font-weight: var(--lesson-title-font-weight);
+    border-left: var(--lesson-title-border-left);
+    padding-left: 10px;
+}
+
+/* Lesson Card: Main Area (The Screen) */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: var(--lc-bg);
+    /* Racing stripe: narrow repeating gradient pinned to left edge (preserves border-radius) */
+    background-image: repeating-linear-gradient(
+        to bottom,
+        var(--lc-stripe-a) 0px,
+        var(--lc-stripe-a) var(--lc-stripe-size),
+        var(--lc-stripe-b) var(--lc-stripe-size),
+        var(--lc-stripe-b) calc(var(--lc-stripe-size) * 2)
+    );
+    background-size: var(--lc-stripe-width) 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    color: var(--lc-text);
+    border-radius: var(--lc-radius);
+    padding: 30px;
+    border: var(--lc-border);
+    box-shadow: var(--lc-shadow);
+}
+
+/* Lesson Card: Strong Text */
+section[data-testid="stMain"] .st-key-lesson_window p strong {
+    color: var(--lc-strong-color);
+    font-weight: 900;
+}
+
+/* Lesson: Headers */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--lc-header-color);
+    font-family: var(--font-sans);
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--lc-italic-color);
+    font-style: italic;
+}
+
+/* Lesson Card: Table Headers + text */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--lc-table-header-color);
+    border: var(--lc-table-border);
+    background-color: var(--lc-table-header-bg);
+}
+
+/* Lesson Card: Table Data + text */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--lc-table-data-color);
+    border: var(--lc-table-border);
+}
+
+/* Scrollbar styling for lesson window */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--lc-scrollbar-color) transparent;
+}
+
+/* Quiz Test State ──────────────────────────────────────────── */
+
+/* Quiz Test State: Question text */
+.st-key-question  {
+    color: var(--quiz-question-color) !important;
+    background-color: transparent;
+}
+
+.st-key-question p {
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+/* Quiz Test State: Answer text */
+[class*="st-key-answer"] {
+    color: var(--quiz-answer-text);
+    background-color: var(--quiz-answer-bg);
+    border-radius: var(--quiz-answer-radius);
+    border: var(--quiz-answer-border);
+    transition: border 0.2s ease;
+}
+
+/* Hover state */
+[class*="st-key-answer"]:hover {
+    border: var(--quiz-answer-border-hover);
+}
+
+/* Quiz Test State: Answer letter (A B C D) */
+[class*="st-key-answer"] strong {
+    color: var(--quiz-answer-letter-color);
+}
+
+/* Keyboard Legend */
+.key-hint {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    font-size: 0.85em;
+    color: var(--quiz-key-text);
+    background: var(--quiz-key-bg);
+    border: var(--quiz-key-border);
+    border-radius: var(--quiz-key-radius);
+    box-shadow: var(--quiz-key-shadow);
+}
+
+.keyboard-legend {
+    color: var(--quiz-legend-text);
+    font-size: 13px;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+
+/* 1. HERO METRIC BOXES */
+.feedback-box {
+    background-color: var(--fb-box-bg);
+    border: var(--fb-box-border);
+    border-radius: var(--fb-box-radius);
+    box-shadow: var(--fb-box-shadow);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.feedback-box:hover {
+    border-color: var(--color-neutral-500);
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--fb-label-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--fb-value-color);
+    text-shadow: none;
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border: var(--fb-status-passed-border);
+    border-top: var(--fb-status-passed-border-top);
+    box-shadow: var(--fb-status-passed-shadow);
+    color: var(--fb-status-passed-color);
+}
+
+.feedback-box.status-failed {
+    border: var(--fb-status-failed-border);
+    border-top: var(--fb-status-failed-border-top);
+    box-shadow: none;
+    color: var(--fb-status-failed-color);
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.5rem;
+    opacity: 0.9;
+}
+
+/* 2. QUESTION EXPANDERS */
+
+/* Normal */
+.st-key-feedback_list details div[data-testid="stExpander"] > details > summary {
+    border: none !important;
+    background: transparent !important;
+    border-bottom: var(--fb-expander-divider) !important;
+}
+
+/* Hover */
+.st-key-feedback_list div[data-testid="stExpander"] > details > summary:hover {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 1.0rem;
+    color: var(--fb-expander-hover-color);
+    background-color: var(--fb-expander-hover-bg) !important;
+    transition: all 0.2s ease;
+    padding: 10px 5px;
+}
+
+/* Open */
+.st-key-feedback_list div[data-testid="stExpander"] details[open] > summary {
+    color: var(--fb-expander-open-color);
+    background-color: var(--fb-expander-open-bg) !important;
+}
+
+/* 3. ANSWER COMPARISON CARDS */
+.answer-card {
+    border-radius: var(--fb-answer-radius);
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+}
+
+/* User's Answer Card (Failed) */
+.answer-card.user-wrong {
+    background-color: var(--fb-answer-wrong-bg);
+    border: var(--fb-answer-wrong-border);
+    color: var(--fb-answer-wrong-color);
+}
+
+/* User's Answer Card (Passed) */
+.answer-card.user-correct {
+    background-color: var(--fb-answer-correct-bg);
+    border: var(--fb-answer-correct-border);
+    color: var(--fb-answer-correct-color);
+}
+
+/* Correct Answer Card (Always highlight) */
+.answer-card.correct-key {
+    background-color: var(--fb-answer-key-bg);
+    border: var(--fb-answer-key-border);
+    color: var(--fb-answer-key-color);
+}
+
+.answer-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-weight: 700;
+}
+
+/* Explanation Box Theme */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: var(--fb-blockquote-bg) !important;
+    border-left: var(--fb-blockquote-border-left) !important;
+    border-radius: 0 4px 4px 0 !important;
+    color: var(--fb-blockquote-color) !important;
+    font-style: normal !important;
+    line-height: 1.6 !important;
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: var(--fb-blockquote-icon-color);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The "Magic" Box)
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container */
+.st-key-generator_card {
+    background-color: var(--window-bg);
+    background-image: var(--window-texture);
+    border: var(--window-border);
+    border-top: var(--window-border-top);
+    border-right: var(--window-border-right);
+    border-bottom: var(--window-border-bottom);
+    border-left: var(--window-border-left);
+    box-shadow: var(--window-shadow);
+    border-radius: var(--window-radius);
+    animation: eInkFadeIn 0.5s ease-in-out;
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    border-color: var(--window-divider) !important;
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    color: var(--gen-header-icon-color);
+}
+
+.gen-input-icon {
+    color: var(--gen-input-icon-color);
+}
+
+/* Warning Box */
+.generator-warning {
+    color: var(--gen-warning-color);
+    background: linear-gradient(var(--gen-warning-bg), var(--gen-warning-bg)) padding-box,
+                repeating-linear-gradient(45deg, var(--gen-warning-stripe-a), var(--gen-warning-stripe-a) 10px, var(--gen-warning-stripe-b) 10px, var(--gen-warning-stripe-b) 20px) border-box;
+    border-radius: var(--radius-sm);
+    border: 3px solid transparent;
+}
+
+/* Metric Stats Box */
+.generator-stat-box {
+    background: var(--gen-stat-box-bg);
+    border-radius: var(--radius-sm);
+    border: var(--gen-stat-box-border);
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: var(--gen-stat-divider);
+}
+
+.stat-label {
+    color: var(--gen-stat-label-color);
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    color: var(--gen-stat-value-color);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-accent {
+    color: var(--gen-stat-accent-color);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.stat-value-success {
+    color: var(--gen-stat-success-color);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Loading/Spinner Icon - Segmented/Stepped Rotation */
+.spinner-icon {
+    color: var(--gen-spinner-color);
+    animation: eInkSpin 1.2s steps(8, end) infinite;
+}
+
+@keyframes eInkSpin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform: rotate(360deg); 
+    } 
+}
+
+/* Ghosting fade in */
+@keyframes eInkFadeIn { 
+    0% { opacity: 0; filter: contrast(0.5); }
+    50% { filter: contrast(1.5); }
+    100% { opacity: 1; filter: contrast(1); } 
+}
+
+/* Console Log */
+.generator-console {
+    background: var(--gen-console-bg);
+    border: var(--gen-console-border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    box-shadow: var(--gen-console-shadow);
+}
+
+.generator-console-step {
+    border-bottom: var(--gen-console-step-divider);
+}
+
+.generator-console-step:last-child {
+    border-bottom: none;
+}
+
+.console-icon {
+    color: var(--gen-console-icon-color);
+}
+
+.console-title {
+    color: var(--gen-console-title-color);
+    font-weight: bold;
+}
+
+.console-message {
+    color: var(--gen-console-msg-color);
+    font-size: 0.9em;
+    border-left: var(--gen-console-msg-border);
+}
+
+/* Completion Screen */
+.completion-header {
+    color: var(--gen-completion-header-color);
+}
+
+.completion-icon {
+    font-size: 36px;
+    color: var(--gen-completion-icon-color);
+}
+
+/* Spinner Animation Color */
+.stVerticalBlock [data-testid="stSpinner"] {
+    color: var(--gen-spinner-color) !important;
+}
+
+/* Metric Card Container */
+[data-testid="stMetric"] {
+    background-color: var(--gen-metric-bg);
+    border: var(--gen-metric-border);
+    padding: 15px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--gen-metric-shadow);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect for Metric Card */
+[data-testid="stMetric"]:hover {
+    border-color: var(--gen-metric-border-hover);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+/* Metric Label (Title) */
+[data-testid="stMetricLabel"] {
+    font-size: 0.85rem !important;
+    color: var(--gen-metric-label-color) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+/* Metric Value (Big Number) */
+[data-testid="stMetricValue"] {
+    font-size: 2rem !important;
+    color: var(--gen-metric-value-color) !important;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+/* Metric Delta (Change indicator) */
+[data-testid="stMetricDelta"] {
+    font-size: 0.9rem !important;
+    background-color: var(--gen-metric-delta-bg);
+    color: var(--gen-metric-delta-color) !important;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    width: fit-content;
+    margin-top: 8px;
+}
+
+/* Delta Arrow Icon adjustment */
+[data-testid="stMetricDelta"] svg {
+    margin-right: 4px;
+    stroke-width: 3px;
+    color: var(--gen-metric-delta-color) !important;
+}
+
+/* UI Elements ──────────────────────────────────────────── */
+
+/* Tab area: Inactive Tab */
+button[data-baseweb="tab"] {
+    background-color: var(--ui-tab-bg) !important;
+    color: var(--ui-tab-text) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: 8px 16px !important;
+    margin-right: 5px;
+}
+
+/* Tab area: Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: var(--ui-tab-hover-bg) !important;
+}
+
+/* Tab area: Active Tab */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--ui-tab-active-bg) !important;
+    color: var(--ui-tab-active-text) !important;
+    border-bottom: none !important;
+    box-shadow: 0 0 0 1px var(--ui-tab-active-ring) inset;
+}
+
+/* Tab area: Bottom tab border */
+div[data-baseweb="tab-border"] {
+    display: none;
+}
+
+/* File Dropzone: Text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: var(--ui-drop-text);
+}
+
+/* File Dropzone: File size limit text */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span + span {
+    color: var(--ui-drop-text);
+    opacity: 0.7;
+}
+
+/* File Dropzone: Style the dropzone container */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: var(--ui-drop-bg);
+    border: var(--ui-drop-border);
+    border-radius: var(--radius-sm);
+}
+
+/* File Dropzone: Make the "Browse files" button full width */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    background-color: transparent;
+    color: var(--ui-drop-btn-color);
+    border: var(--ui-drop-btn-border);
+    border-radius: var(--radius-sm);
+}
+
+/* File Dropzone: Icon color */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: var(--ui-drop-text);
+    filter: none;
+}
+
+/* Button Dropdown Popover */
+
+/* Button Dropdown Popover: Width adjustment */
+[data-testid="stPopoverBody"] {
+    width: max-content !important;  
+    max-width: 100% !important;
+}
+
+/* Button Dropdown Popover: Background */
+[data-testid="stPopoverBody"] {
+    background-color: var(--ui-popover-bg);
+    box-shadow: var(--ui-popover-shadow) !important;
+}
+
+/* Button Dropdown Popover: Border */
+[data-testid="stPopoverBody"] {
+    border: var(--ui-popover-border) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+/* Button Dropdown Popover: Text Color */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--ui-popover-text) !important;
+}
+
+/* Button Dropdown Popover: Buttons fix */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+}
+
+/* Dropdown Menu */
+
+/* Dropdown Menu: Outer container  */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED  - Container */
+[data-baseweb="select"] > div {
+    background-color: var(--ui-dd-bg) !important;
+    border: var(--ui-dd-border) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text */
+[data-baseweb="select"] div[class*="st-ct"],
+[data-baseweb="select"] svg {
+    color: var(--ui-dd-text) !important;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Container */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--ui-dd-hover-bg) !important;
+    border: var(--ui-dd-open-border) !important;
+    color: var(--ui-dd-open-text) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+/* Dropdown Menu: Clickable AREA OPEN - Text/Icon */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) div[class*="st-ct"],
+[data-baseweb="select"]:has(input[aria-expanded="true"]) svg {
+    color: var(--ui-dd-open-text) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Container:hover */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--ui-dd-hover-bg) !important;
+    border: var(--ui-dd-hover-border) !important;
+}
+
+/* Dropdown Menu: Clickable AREA CLOSED - Text:hover */
+[data-baseweb="select"]:hover div[class*="st-ct"],
+[data-baseweb="select"]:hover svg {
+    color: var(--ui-dd-hover-text) !important;
+}
+
+/* Dropdown Items */
+
+/* Dropdown Items: Background list items reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]) [data-no-focus-lock="true"],
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div,
+[data-testid="stSelectboxVirtualDropdown"] > div > div {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px;
+}
+
+/* Dropdown Items list: background and outer border */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background: var(--ui-dd-list-bg) !important;
+    border: var(--ui-dd-list-border) !important;
+    border-radius: var(--radius-sm) !important;
+    overflow: hidden !important;
+    box-shadow: var(--ui-dd-list-shadow) !important;
+}
+
+/* Dropdown Items: List text color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: var(--ui-dd-item-text) !important;
+    transition: color 0.15s ease !important;
+}
+
+/* Dropdown Items: SELECTED */
+[role="option"][aria-selected="true"] {
+    background-color: var(--ui-dd-selected-bg) !important;
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: var(--ui-dd-selected-text) !important;
+    font-weight: bold;
+}
+
+/* Dropdown Items: HOVER (selected) */
+[role="option"][aria-selected="true"]:hover {
+    background-color: var(--color-stripe-a) !important;
+    filter: brightness(0.9);
+}
+
+[role="option"][aria-selected="true"]:hover div[class*="e1bi6yfx1"] {
+    color: var(--ui-dd-selected-text) !important;
+}
+
+/* Dropdown Items: scrollbar color and styling */
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui-dd-scrollbar) transparent;
+}
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    background: transparent;
+}
+
+/* --- SIDEBAR LAYOUT FIXES --- */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* Text Fields: ──────────────────────────────────────────── */
+
+/* Text Fields: Global border Radius */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: var(--radius-sm);
+    box-shadow: var(--ui-input-shadow);
+}
+
+/* Text Fields: Global Text field Background Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-baseweb="base-input"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: var(--ui-input-bg) !important;
+}
+
+/* Text Fields: Background Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover {
+    background-color: var(--ui-input-bg-hover) !important;
+}
+
+/* Text Fields: Background Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within {
+    background-color: var(--ui-input-bg-hover) !important;
+}
+
+/* Text Fields: Global Text input Color */
+textarea,
+div[data-baseweb="base-input"] > input,
+button[aria-label="Show password text"],
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--ui-input-text) !important;
+}
+
+textarea:hover,
+div[data-baseweb="base-input"] > input:hover,
+button[aria-label="Show password text"]:hover {
+    color: var(--ui-input-text-hover) !important;
+}
+
+textarea:focus,
+div[data-baseweb="base-input"] > input:focus {
+    color: var(--ui-input-text) !important;
+}
+
+/* Text Fields: Global border Color (Normal) */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border: var(--ui-input-border) !important;
+}
+
+/* Text Fields: Global border Color (Hover) */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-testid="stTextAreaRootElement"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border: var(--ui-input-border-hover) !important;
+}
+
+/* Text Fields: Global border Color (Focus) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-testid="stTextAreaRootElement"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border: var(--ui-input-border-focus) !important;
+}
+
+/* Text Fields: Scrollbar */
+textarea:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ui-input-scrollbar) transparent;
+}
+
+/* Step Down and Up Disabled buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: var(--ui-input-disabled-icon) !important;
+}
+
+/* Tooltip Icon */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--ui-tooltip-color) !important;
+}
+
+/* Input field labels: colors */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--ui-label-color);
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* h4 in markdown — menu/settings section headers */
+[data-testid="stMarkdownContainer"] h4 {
+    color: var(--ui-h4-color) !important;
+    text-transform: none !important;
+}
+
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary {
+    color:       var(--tree-module-color) !important;
+    font-size:   1rem    !important;
+    font-weight: 700     !important;
+    font-style:  normal  !important;
+    letter-spacing: 0.5px !important;
+    text-shadow: none !important;
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header {
+    color:       var(--tree-concept-color) !important;
+    font-size:   0.95rem !important;
+    font-weight: 600     !important;
+    font-style:  normal  !important;
+    letter-spacing: 0px  !important;
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p {
+    color:       var(--tree-lesson-color) !important;
+    font-weight: 400     !important;
+    font-style:  normal  !important;
+    letter-spacing: 0px  !important;
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary {
+    color:       var(--tree-disabled-color) !important;
+    opacity:     0.6     !important;
+    text-shadow: none !important;
+}

@@ -1,0 +1,4480 @@
+{
+  "L06": {
+    "pool": [
+      {
+        "question": "In what year did John Napier, a Scottish mathematician, develop logarithms?",
+        "options": {
+          "A": "1614",
+          "B": "1620s",
+          "C": "1820s",
+          "D": "Thousands of years ago"
+        },
+        "target_id": "P006_Q01",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary function of a logarithm in mathematics?",
+        "options": {
+          "A": "To express the exponent a number must be raised to in order to obtain another value",
+          "B": "To add or subtract numbers using a sequence of precise steps",
+          "C": "To serve as a memory unit in a mechanical computer",
+          "D": "To break down a problem by repeatedly dividing a search interval in half"
+        },
+        "target_id": "P006_Q02",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What major practical benefit did the invention of logarithms provide?",
+        "options": {
+          "A": "A shortcut for making tedious calculations",
+          "B": "A means to automate polynomial function calculations",
+          "C": "A system for programming using punched cards",
+          "D": "A visual aid for learning basic arithmetic"
+        },
+        "target_id": "P006_Q03",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What important role did logarithms play in the 1600s?",
+        "options": {
+          "A": "They became the foundation for multiple analog calculating machines",
+          "B": "They were the first algorithm for binary search",
+          "C": "They led directly to the invention of the abacus",
+          "D": "They were used as the first integrated memory units"
+        },
+        "target_id": "P006_Q04",
+        "source_ids": [
+          "P006"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:34:23.799984",
+    "pool_size": 4
+  },
+  "L05": {
+    "pool": [
+      {
+        "question": "What is a common everyday example of an algorithm?",
+        "options": {
+          "A": "A recipe for preparing food",
+          "B": "A binary search on a sorted list",
+          "C": "An abacus for counting",
+          "D": "A logarithm table for calculations"
+        },
+        "target_id": "P005_Q01",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the context of algorithms, what does a recipe provide?",
+        "options": {
+          "A": "Precise directions for ingredient amounts, combining steps, and cooking methods",
+          "B": "A means to automate astronomical calculations",
+          "C": "A shortcut for performing tedious mathematical operations",
+          "D": "A sequence for efficiently searching a sorted array"
+        },
+        "target_id": "P005_Q02",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the final output produced by following the algorithm of a recipe?",
+        "options": {
+          "A": "A specific dish",
+          "B": "A sorted list of numbers",
+          "C": "A calculated polynomial value",
+          "D": "A logarithmic scale"
+        },
+        "target_id": "P005_Q03",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How can algorithms, as a general concept, be characterized?",
+        "options": {
+          "A": "They can be quite simple, like everyday instructions.",
+          "B": "They are always complex and require advanced mathematics.",
+          "C": "They are exclusively related to modern digital computers.",
+          "D": "They were first invented in the 1600s with logarithms."
+        },
+        "target_id": "P005_Q04",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is a key characteristic of an algorithm as demonstrated by a recipe?",
+        "options": {
+          "A": "It is a sequence of instructions designed to produce a specific outcome.",
+          "B": "It is a physical tool used for manual calculation.",
+          "C": "It is a theoretical mathematical concept without practical steps.",
+          "D": "It is a historical artifact from the 1820s for automating functions."
+        },
+        "target_id": "P005_Q05",
+        "source_ids": [
+          "P005"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:34:29.493333",
+    "pool_size": 5
+  },
+  "L01": {
+    "pool": [
+      {
+        "question": "What is the primary focus of study within the field of computer science?",
+        "options": {
+          "A": "Algorithms",
+          "B": "Computer hardware engineering",
+          "C": "The history of ancient calculation tools",
+          "D": "The principles of electricity and circuitry"
+        },
+        "target_id": "P001_Q01",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How is an algorithm best defined?",
+        "options": {
+          "A": "A sequence of precise instructions that enables computing",
+          "B": "A physical device like an abacus used for counting",
+          "C": "A specific type of computer programming language",
+          "D": "The foundational hardware of a modern computer"
+        },
+        "target_id": "P001_Q02",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following statements correctly defines the field of computer science?",
+        "options": {
+          "A": "It is the study of computing, including all phenomena related to computers.",
+          "B": "It is the study of the historical development of number systems.",
+          "C": "It is solely the application of mathematics to solve theoretical problems.",
+          "D": "It is the engineering discipline focused only on building computer hardware."
+        },
+        "target_id": "P001_Q03",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What foundational disciplines is computer science built upon?",
+        "options": {
+          "A": "Engineering and mathematics",
+          "B": "Biology and chemistry",
+          "C": "Linguistics and philosophy",
+          "D": "Art and design"
+        },
+        "target_id": "P001_Q04",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What do algorithms provide for the components of a computer?",
+        "options": {
+          "A": "The instructions to process information",
+          "B": "The physical electricity to power the system",
+          "C": "The raw materials for manufacturing",
+          "D": "The historical context for their operation"
+        },
+        "target_id": "P001_Q05",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a primary outcome of studying and applying algorithms in computer science?",
+        "options": {
+          "A": "Creating applications and solutions that impact all areas of society",
+          "B": "Inventing new number systems to replace old ones",
+          "C": "Documenting the complete history of technological devices",
+          "D": "Manufacturing the physical components for all electronic devices"
+        },
+        "target_id": "P001_Q06",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is an example of a technological process enabled by computer science?",
+        "options": {
+          "A": "Streaming music online",
+          "B": "Building an abacus",
+          "C": "Discovering the concept of zero",
+          "D": "Formulating the laws of thermodynamics"
+        },
+        "target_id": "P001_Q07",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What broad category of phenomena does computer science study?",
+        "options": {
+          "A": "All phenomena related to computers, such as the Internet",
+          "B": "Only the mathematical theory behind computation",
+          "C": "Exclusively the social impacts of early calculation tools",
+          "D": "Solely the physical architecture of microprocessors"
+        },
+        "target_id": "P001_Q08",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What enables computing to occur, according to a core principle of computer science?",
+        "options": {
+          "A": "Algorithms",
+          "B": "The Arabic number system",
+          "C": "The invention of the abacus",
+          "D": "The study of ahistorical innovation"
+        },
+        "target_id": "P001_Q09",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "By creating applications, what scope of impact does computer science have?",
+        "options": {
+          "A": "It impacts all areas of society.",
+          "B": "It impacts only the field of software development.",
+          "C": "It impacts only academic research in mathematics.",
+          "D": "It impacts only the entertainment industry."
+        },
+        "target_id": "P001_Q10",
+        "source_ids": [
+          "P001"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:35:01.644469",
+    "pool_size": 10
+  },
+  "L03": {
+    "pool": [
+      {
+        "question": "What type of device was one of the first computing tools used thousands of years ago?",
+        "options": {
+          "A": "A physical calculation device like the abacus",
+          "B": "An electronic digital computer",
+          "C": "A mechanical loom",
+          "D": "A slide rule"
+        },
+        "target_id": "P003_Q01",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which ancient tool was used for tallying, counting, or adding numbers?",
+        "options": {
+          "A": "The abacus",
+          "B": "The astrolabe",
+          "C": "The compass",
+          "D": "The sundial"
+        },
+        "target_id": "P003_Q02",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which situations is the abacus still used today?",
+        "options": {
+          "A": "Teaching children arithmetic, keeping score in games, and aiding people with visual impairments",
+          "B": "High-frequency trading and weather forecasting",
+          "C": "Programming modern computers and designing software",
+          "D": "Constructing buildings and engineering bridges"
+        },
+        "target_id": "P003_Q03",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why is the abacus not commonly used for calculation today?",
+        "options": {
+          "A": "The invention of number systems with zero and place values that cannot be computed with abaci",
+          "B": "It was too expensive to manufacture and maintain",
+          "C": "It was replaced by the invention of the printing press",
+          "D": "It could only perform multiplication and division"
+        },
+        "target_id": "P003_Q04",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which number system's introduction, including zero and place values, reduced the reliance on the abacus?",
+        "options": {
+          "A": "The Arabic number system",
+          "B": "The Roman numeral system",
+          "C": "The binary number system",
+          "D": "The hexadecimal number system"
+        },
+        "target_id": "P003_Q05",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What key features did the Arabic number system introduce that the abacus could not handle?",
+        "options": {
+          "A": "Zero and place values",
+          "B": "Negative numbers and fractions",
+          "C": "Irrational numbers and algebra",
+          "D": "Decimals and percentages"
+        },
+        "target_id": "P003_Q06",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Around what time was the concept of an algorithm invented?",
+        "options": {
+          "A": "Around the time of the invention of the Arabic number system",
+          "B": "During the Industrial Revolution in the 18th century",
+          "C": "With the creation of the first electronic computer in the 20th century",
+          "D": "During the Renaissance in the 15th century"
+        },
+        "target_id": "P003_Q07",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is an algorithm?",
+        "options": {
+          "A": "A sequence of precise instructions that uses inputs and a finite number of steps to produce outputs",
+          "B": "A type of computer hardware component",
+          "C": "A programming language used for web development",
+          "D": "A data structure for organizing information"
+        },
+        "target_id": "P003_Q08",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What do algorithms use to carry out operations like addition and subtraction?",
+        "options": {
+          "A": "Inputs and a finite number of steps",
+          "B": "Electrical circuits and transistors",
+          "C": "Magnetic tape and punch cards",
+          "D": "Analog signals and continuous data"
+        },
+        "target_id": "P003_Q09",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What kind of operations can algorithms perform?",
+        "options": {
+          "A": "Arithmetic operations like addition, subtraction, multiplication, and division",
+          "B": "Only logical operations like AND, OR, and NOT",
+          "C": "Only sorting and searching operations",
+          "D": "Only graphical rendering and audio processing"
+        },
+        "target_id": "P003_Q10",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What do algorithms produce after carrying out their steps?",
+        "options": {
+          "A": "Outputs used in computing",
+          "B": "Hardware components for computers",
+          "C": "New programming languages",
+          "D": "Electrical power"
+        },
+        "target_id": "P003_Q11",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What foundational elements do today's computers still rely on?",
+        "options": {
+          "A": "Numbers, calculations, and algorithms",
+          "B": "Only silicon chips and electricity",
+          "C": "Only software and user interfaces",
+          "D": "Only the internet and networks"
+        },
+        "target_id": "P003_Q12",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How do today's computers differ from ancient calculation tools in terms of scale?",
+        "options": {
+          "A": "They perform billions of numbers and billions of calculations per second",
+          "B": "They are much larger in physical size",
+          "C": "They use fewer steps to perform calculations",
+          "D": "They are made from different materials like plastic and metal"
+        },
+        "target_id": "P003_Q13",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of these is an example of a physical calculation device from ancient times?",
+        "options": {
+          "A": "The abacus",
+          "B": "The ENIAC",
+          "C": "The Turing machine",
+          "D": "The analytical engine"
+        },
+        "target_id": "P003_Q14",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary function of the first computing devices like the abacus?",
+        "options": {
+          "A": "To tally, count, or add numbers",
+          "B": "To store and retrieve digital information",
+          "C": "To perform complex mathematical simulations",
+          "D": "To connect to the internet"
+        },
+        "target_id": "P003_Q15",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of these statements about the abacus is true?",
+        "options": {
+          "A": "It first appeared in many societies across the world thousands of years ago",
+          "B": "It was invented in the 20th century as a precursor to the computer",
+          "C": "It is primarily used today for advanced scientific research",
+          "D": "It can compute numbers using the Arabic number system's place values"
+        },
+        "target_id": "P003_Q16",
+        "source_ids": [
+          "P003"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:35:07.737402",
+    "pool_size": 16
+  },
+  "L04": {
+    "pool": [
+      {
+        "question": "What is the primary purpose of the binary search algorithm?",
+        "options": {
+          "A": "To locate a specific number in a sorted array of integers.",
+          "B": "To sort an unsorted array of integers.",
+          "C": "To perform arithmetic operations like addition and subtraction.",
+          "D": "To prepare a dish by following a recipe's directions."
+        },
+        "target_id": "P004_Q01",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How does the binary search algorithm repeatedly operate to find a target number?",
+        "options": {
+          "A": "By dividing the search interval in half and narrowing the focus.",
+          "B": "By checking each element in the array sequentially from start to finish.",
+          "C": "By using an abacus to tally and count numbers.",
+          "D": "By using logarithms to calculate exponents."
+        },
+        "target_id": "P004_Q02",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In binary search, when does the algorithm narrow the search interval to the lower half?",
+        "options": {
+          "A": "When the target number is less than the integer at the middle of the current interval.",
+          "B": "When the target number is greater than the integer at the middle of the current interval.",
+          "C": "When the array is unsorted.",
+          "D": "When the target number is equal to the first integer in the array."
+        },
+        "target_id": "P004_Q03",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key characteristic of the input data required for the binary search algorithm?",
+        "options": {
+          "A": "The array of integers must be sorted.",
+          "B": "The array of integers can be in any random order.",
+          "C": "The array must contain only numbers represented by Arabic numerals.",
+          "D": "The array must be of a fixed, small size."
+        },
+        "target_id": "P004_Q04",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How does binary search determine which half of the interval to search next if the target is not in the middle?",
+        "options": {
+          "A": "It compares the target value to the middle element and chooses the lower or upper half accordingly.",
+          "B": "It always searches the upper half first for speed.",
+          "C": "It uses a random number to decide which half to check.",
+          "D": "It follows a predetermined recipe of steps unrelated to the data."
+        },
+        "target_id": "P004_Q05",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "When does the binary search algorithm terminate its search?",
+        "options": {
+          "A": "When the target number is found or when the search interval becomes empty.",
+          "B": "When it has performed a fixed number of steps, regardless of the result.",
+          "C": "When it reaches the end of the array in a sequential manner.",
+          "D": "When the array is fully sorted into ascending order."
+        },
+        "target_id": "P004_Q06",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the fundamental principle that allows binary search to be efficient?",
+        "options": {
+          "A": "It repeatedly halves the search space, drastically reducing the number of elements to check.",
+          "B": "It uses a physical tool like an abacus to speed up calculations.",
+          "C": "It relies on logarithms to perform complex exponent calculations quickly.",
+          "D": "It transforms ingredients into a finished dish through precise steps."
+        },
+        "target_id": "P004_Q07",
+        "source_ids": [
+          "P004"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:35:10.859368",
+    "pool_size": 7
+  },
+  "L02": {
+    "pool": [
+      {
+        "question": "Were computers always as widespread and common in daily life as they are in the modern era?",
+        "options": {
+          "A": "No, computers were not always pervasive.",
+          "B": "Yes, computers have always been a common part of society.",
+          "C": "Computers were more common in ancient times than they are today.",
+          "D": "Computers became pervasive only after the invention of the internet."
+        },
+        "target_id": "P002_Q01",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why might someone perceive computer technology as having little historical context?",
+        "options": {
+          "A": "Because computing focuses on rapid innovation and rarely looks back at the past.",
+          "B": "Because computer science has no significant historical events.",
+          "C": "Because it is based on ancient tools like the abacus.",
+          "D": "Because algorithms have always been the same throughout history."
+        },
+        "target_id": "P002_Q02",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "When were the foundational concepts of computer science largely defined?",
+        "options": {
+          "A": "Over 50 to 100 years ago.",
+          "B": "Thousands of years ago with early calculation devices.",
+          "C": "Primarily in the last two decades.",
+          "D": "During the Renaissance period."
+        },
+        "target_id": "P002_Q03",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How do the historical foundations of computer science influence contemporary computing?",
+        "options": {
+          "A": "They shape what is possible with computing today.",
+          "B": "They are mostly irrelevant to modern technology.",
+          "C": "They only affect the design of hardware components.",
+          "D": "They have been completely superseded by new innovations."
+        },
+        "target_id": "P002_Q04",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is an accurate statement about the historical pervasiveness of computers?",
+        "options": {
+          "A": "Computers are common today but were not always pervasive.",
+          "B": "Computers have been equally pervasive throughout human history.",
+          "C": "Computers were first invented for personal use and became widespread quickly.",
+          "D": "The pervasiveness of computers declined after the initial invention."
+        },
+        "target_id": "P002_Q05",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What timeframe is associated with the foundational developments that shape modern computer science?",
+        "options": {
+          "A": "50 to 100 years ago.",
+          "B": "Since the invention of the abacus thousands of years ago.",
+          "C": "Beginning with the creation of the first programming languages in the 1950s.",
+          "D": "Only in the 21st century with the rise of the internet."
+        },
+        "target_id": "P002_Q06",
+        "source_ids": [
+          "P002"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:35:24.375088",
+    "pool_size": 6
+  },
+  "L08": {
+    "pool": [
+      {
+        "question": "What was the name of the machine that Charles Babbage designed after the Difference Engine?",
+        "options": {
+          "A": "The Analytical Engine",
+          "B": "The Hollerith Machine",
+          "C": "The Harvard Mark 1",
+          "D": "The Difference Engine"
+        },
+        "target_id": "P008_Q01",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which individual is credited as the world's first computer programmer for their work on the Analytical Engine?",
+        "options": {
+          "A": "Ada Lovelace",
+          "B": "Charles Babbage",
+          "C": "Herman Hollerith",
+          "D": "John Napier"
+        },
+        "target_id": "P008_Q02",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What method did Ada Lovelace use to create sequencing instructions for the Analytical Engine?",
+        "options": {
+          "A": "Punched cards",
+          "B": "Binary code",
+          "C": "A recipe",
+          "D": "Logarithms"
+        },
+        "target_id": "P008_Q03",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following was a key feature of Babbage's Analytical Engine?",
+        "options": {
+          "A": "An integrated memory and an arithmetic logic unit",
+          "B": "The use of vacuum tubes for processing",
+          "C": "A system based solely on manual calculation",
+          "D": "A design to tabulate census data"
+        },
+        "target_id": "P008_Q04",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What characterized the Analytical Engine's method of operation?",
+        "options": {
+          "A": "It was program-controlled.",
+          "B": "It was powered by steam.",
+          "C": "It was an analog calculating machine.",
+          "D": "It could only perform one fixed calculation."
+        },
+        "target_id": "P008_Q05",
+        "source_ids": [
+          "P008"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:53:37.215968",
+    "pool_size": 5
+  },
+  "L07": {
+    "pool": [
+      {
+        "question": "Who is credited with inventing the Difference Engine in the 1820s?",
+        "options": {
+          "A": "Charles Babbage",
+          "B": "John Napier",
+          "C": "Ada Lovelace",
+          "D": "Herman Hollerith"
+        },
+        "target_id": "P007_Q01",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "During which decade did Charles Babbage invent the Difference Engine?",
+        "options": {
+          "A": "The 1820s",
+          "B": "The 1610s",
+          "C": "The 1890s",
+          "D": "The 1700s"
+        },
+        "target_id": "P007_Q02",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary purpose of Charles Babbage's Difference Engine?",
+        "options": {
+          "A": "To prevent human errors in manual calculations",
+          "B": "To execute binary search algorithms",
+          "C": "To process census data",
+          "D": "To compute logarithms"
+        },
+        "target_id": "P007_Q03",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which calculations did the Difference Engine automate?",
+        "options": {
+          "A": "Polynomial functions and astronomical calculations",
+          "B": "Cooking recipes",
+          "C": "Binary search operations",
+          "D": "Logarithmic functions"
+        },
+        "target_id": "P007_Q04",
+        "source_ids": [
+          "P007"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:54:23.322649",
+    "pool_size": 4
+  },
+  "L09": {
+    "pool": [
+      {
+        "question": "Who developed the punch card machine used for tabulating the 1890 U.S. census?",
+        "options": {
+          "A": "Herman Hollerith",
+          "B": "Charles Babbage",
+          "C": "Ada Lovelace",
+          "D": "John Napier"
+        },
+        "target_id": "P009_Q01",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Where was Herman Hollerith employed when he developed his punch card machine?",
+        "options": {
+          "A": "U.S. Census Office",
+          "B": "IBM",
+          "C": "Harvard University",
+          "D": "The U.S. Department of Defense"
+        },
+        "target_id": "P009_Q02",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary function of Herman Hollerith's punch card machine?",
+        "options": {
+          "A": "To punch cards and count them",
+          "B": "To perform binary search algorithms",
+          "C": "To calculate logarithms",
+          "D": "To automate polynomial calculations"
+        },
+        "target_id": "P009_Q03",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what year was Herman Hollerith's punch card machine first used to tabulate the U.S. census?",
+        "options": {
+          "A": "1890",
+          "B": "1820",
+          "C": "1614",
+          "D": "1944"
+        },
+        "target_id": "P009_Q04",
+        "source_ids": [
+          "P009"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:54:07.773689",
+    "pool_size": 4
+  },
+  "L11": {
+    "pool": [
+      {
+        "question": "Upon what academic foundation did computer science emerge as a discipline?",
+        "options": {
+          "A": "The principles of mathematics.",
+          "B": "The practical engineering of physical machines.",
+          "C": "The theory of dynamic programming.",
+          "D": "The study of ancient calculating tools."
+        },
+        "target_id": "P011_Q01",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Where were the earliest academic programs in computer science primarily established?",
+        "options": {
+          "A": "In elite institutions.",
+          "B": "In public community colleges.",
+          "C": "Within corporate research divisions.",
+          "D": "At military training academies."
+        },
+        "target_id": "P011_Q02",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was a primary driver for the funding of early computer science research and development?",
+        "options": {
+          "A": "Military demand for applications like missile guidance and airplanes.",
+          "B": "Consumer demand for personal entertainment devices.",
+          "C": "Commercial needs for business accounting software.",
+          "D": "The requirements of the U.S. Census Bureau."
+        },
+        "target_id": "P011_Q03",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What fundamental shift did the advent of computer science represent in problem-solving?",
+        "options": {
+          "A": "Replacing human-powered calculation with computer-powered methods.",
+          "B": "Replacing mechanical calculators with electronic typewriters.",
+          "C": "Replacing analog machines with purely manual calculations.",
+          "D": "Replacing programming with theoretical mathematics."
+        },
+        "target_id": "P011_Q04",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How did early academic computer scientists primarily view their new discipline?",
+        "options": {
+          "A": "As a far more intellectual and cognitive field than manual calculation.",
+          "B": "As an extension of electrical engineering and hardware design.",
+          "C": "As a primarily vocational skill for operating machines.",
+          "D": "As a branch of library science for data organization."
+        },
+        "target_id": "P011_Q05",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In its initial academic form, computer science was most closely aligned with which existing field?",
+        "options": {
+          "A": "Mathematics.",
+          "B": "Mechanical engineering.",
+          "C": "Linguistics.",
+          "D": "Business administration."
+        },
+        "target_id": "P011_Q06",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which sector's needs significantly influenced the direction and resources of early computer science?",
+        "options": {
+          "A": "The military.",
+          "B": "The publishing industry.",
+          "C": "The agricultural sector.",
+          "D": "The healthcare industry."
+        },
+        "target_id": "P011_Q07",
+        "source_ids": [
+          "P011"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:54:10.564724",
+    "pool_size": 7
+  },
+  "L10": {
+    "pool": [
+      {
+        "question": "What types of machines became more commonplace by the end of the 1800s and early 1900s, setting the stage for the invention of the computer?",
+        "options": {
+          "A": "Calculators, adding machines, typewriters, and related machines",
+          "B": "Difference Engines, Analytical Engines, and log tables",
+          "C": "Missile guidance systems and dynamic programming models",
+          "D": "Abaci and mechanical counting devices"
+        },
+        "target_id": "P010_Q01",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following became available in the 1940s as a forerunner to the digital computer?",
+        "options": {
+          "A": "IBM's Harvard Mark 1",
+          "B": "Charles Babbage's Analytical Engine",
+          "C": "Herman Hollerith's punch card machine",
+          "D": "Richard Bellman's dynamic programming model"
+        },
+        "target_id": "P010_Q02",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What major technological shift evolved from the forerunner computers of the 1940s?",
+        "options": {
+          "A": "The advent of the digital computer in the 1950s",
+          "B": "The invention of the abacus and number systems",
+          "C": "The creation of the first academic computer science departments",
+          "D": "The development of the binary search algorithm"
+        },
+        "target_id": "P010_Q03",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which decade did the advent of the digital computer fundamentally change technology?",
+        "options": {
+          "A": "The 1950s",
+          "B": "The 1890s",
+          "C": "The 1940s",
+          "D": "The 1820s"
+        },
+        "target_id": "P010_Q04",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the IBM Harvard Mark 1?",
+        "options": {
+          "A": "A computer that became available in the 1940s",
+          "B": "A mechanical calculator invented in the 1600s",
+          "C": "The first machine to use punched cards for the U.S. census",
+          "D": "The computer on which dynamic programming was first implemented"
+        },
+        "target_id": "P010_Q05",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The increased availability of machines like calculators and typewriters in the late 1800s and early 1900s set the stage for what subsequent invention?",
+        "options": {
+          "A": "The computer",
+          "B": "The abacus",
+          "C": "Logarithms",
+          "D": "The concept of an algorithm"
+        },
+        "target_id": "P010_Q06",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What directly evolved into the computers and related technology we have today?",
+        "options": {
+          "A": "The digital computers of the 1950s, which were preceded by forerunners in the 1940s",
+          "B": "The manual calculation methods using abaci and log tables",
+          "C": "The punched card systems used for census data in the 1890s",
+          "D": "The mathematical optimization techniques developed in the 1950s"
+        },
+        "target_id": "P010_Q07",
+        "source_ids": [
+          "P010"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:54:24.505532",
+    "pool_size": 7
+  },
+  "L13": {
+    "pool": [
+      {
+        "question": "Who popularized the term 'computer science' in 1961?",
+        "options": {
+          "A": "George E. Forsythe",
+          "B": "Charles Babbage",
+          "C": "Richard Bellman",
+          "D": "Herman Hollerith"
+        },
+        "target_id": "P013_Q01",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What academic discipline did George E. Forsythe help define and popularize in 1961?",
+        "options": {
+          "A": "Computer Science",
+          "B": "Dynamic Programming",
+          "C": "Numerical Analysis",
+          "D": "Data Processing"
+        },
+        "target_id": "P013_Q02",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which university's computer science department was founded by George E. Forsythe?",
+        "options": {
+          "A": "Stanford University",
+          "B": "Princeton University",
+          "C": "Harvard University",
+          "D": "The Rand Corporation"
+        },
+        "target_id": "P013_Q03",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "According to George Forsythe's 1961 definition, computer science encompasses the theory of programming, numerical analysis, data processing, and what else?",
+        "options": {
+          "A": "The design of computer systems",
+          "B": "The study of human-computer interaction",
+          "C": "The automation of calculations",
+          "D": "The theory of multistage decision processes"
+        },
+        "target_id": "P013_Q04",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What did George Forsythe argue was the essential element that distinguished computer science from other disciplines?",
+        "options": {
+          "A": "An emphasis on algorithms",
+          "B": "A foundation in hardware engineering",
+          "C": "A focus on military applications",
+          "D": "The use of punched cards for programming"
+        },
+        "target_id": "P013_Q05",
+        "source_ids": [
+          "P013"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:56:47.871112",
+    "pool_size": 5
+  },
+  "L16": {
+    "pool": [
+      {
+        "question": "For what initial purpose were many early computing innovations, such as the ARPANET, primarily developed?",
+        "options": {
+          "A": "Military research and communication purposes",
+          "B": "Academic research in elite universities",
+          "C": "Commercial business data processing",
+          "D": "Government census and statistics"
+        },
+        "target_id": "P016_Q01",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What major network, developed for military research and communication, was a direct predecessor to the modern Internet?",
+        "options": {
+          "A": "The ARPANET",
+          "B": "The World Wide Web",
+          "C": "The Harvard Mark 1 network",
+          "D": "Hollerith's census tabulation network"
+        },
+        "target_id": "P016_Q02",
+        "source_ids": [
+          "P016"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:56:53.873150",
+    "pool_size": 2
+  },
+  "L15": {
+    "pool": [
+      {
+        "question": "According to some debates about the field, what do critics argue is the primary focus of computer science?",
+        "options": {
+          "A": "Computers or software, rather than the people it affects",
+          "B": "The people who design and use computers, rather than the hardware",
+          "C": "The theory of algorithms and programming, to the exclusion of applications",
+          "D": "Military applications and research funding sources"
+        },
+        "target_id": "P015_Q01",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What remains a relevant factor even if computer science is studied solely from the perspective of its 'things' like systems and software?",
+        "options": {
+          "A": "The involvement and considerations of people",
+          "B": "The physical laws governing electricity and semiconductors",
+          "C": "The historical development of mathematical theory",
+          "D": "The commercial marketing of technology products"
+        },
+        "target_id": "P015_Q02",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "When a designer creates a computer system, what is a typical consideration they must account for?",
+        "options": {
+          "A": "The kinds of programs people might want to run",
+          "B": "The aesthetic appeal of the computer's physical case",
+          "C": "The political affiliations of potential users",
+          "D": "The cost of raw materials for future upgrades"
+        },
+        "target_id": "P015_Q03",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a common goal when designing a computer system for efficiency?",
+        "options": {
+          "A": "Optimizing it to run certain kinds of programs better",
+          "B": "Making it equally efficient at running every possible type of program",
+          "C": "Minimizing the use of all mathematical algorithms",
+          "D": "Ensuring it cannot be used for military purposes"
+        },
+        "target_id": "P015_Q04",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "A computer system optimized for calculating missile trajectories would likely not be well-optimized for running what?",
+        "options": {
+          "A": "Social media applications",
+          "B": "Advanced mathematical simulations",
+          "C": "Basic arithmetic operations",
+          "D": "Early 20th-century tabulating machines"
+        },
+        "target_id": "P015_Q05",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What illustrates the concept that computer system design is influenced by anticipated human use?",
+        "options": {
+          "A": "A system designed for missile trajectories is not ideal for social media apps",
+          "B": "All computers use the same basic four hardware components",
+          "C": "Punched cards were used to program the Analytical Engine",
+          "D": "The term 'computer science' was popularized in 1961"
+        },
+        "target_id": "P015_Q06",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which statement reflects a point of contention in defining the scope of computer science?",
+        "options": {
+          "A": "Whether the field is more about the technology itself or the people involved with it",
+          "B": "Whether computers are capable of executing programs faster than humans",
+          "C": "Whether algorithms are essential for effective programming",
+          "D": "Whether hardware components can be physically touched"
+        },
+        "target_id": "P015_Q07",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why is the human element considered inseparable from the study of computer systems?",
+        "options": {
+          "A": "Designers inherently consider human needs and potential uses",
+          "B": "Computers were invented solely for military research purposes",
+          "C": "Software cannot function without direct human operation every second",
+          "D": "The price of computers is determined by consumer demand alone"
+        },
+        "target_id": "P015_Q08",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a direct consequence of tailoring a computer's architecture for a specific task?",
+        "options": {
+          "A": "It may become less efficient for other, different types of tasks",
+          "B": "It automatically becomes the most powerful computer for all tasks",
+          "C": "It requires the use of dynamic programming techniques",
+          "D": "It eliminates the need for programmers and testers"
+        },
+        "target_id": "P015_Q09",
+        "source_ids": [
+          "P015"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:57:00.718228",
+    "pool_size": 9
+  },
+  "L12": {
+    "pool": [
+      {
+        "question": "Who is credited with inventing dynamic programming?",
+        "options": {
+          "A": "Richard Bellman",
+          "B": "Charles Babbage",
+          "C": "Ada Lovelace",
+          "D": "George Forsythe"
+        },
+        "target_id": "P012_Q01",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which year was dynamic programming invented?",
+        "options": {
+          "A": "1953",
+          "B": "1940",
+          "C": "1961",
+          "D": "1890"
+        },
+        "target_id": "P012_Q02",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is dynamic programming primarily described as?",
+        "options": {
+          "A": "A mathematical optimization methodology and computer programming technique",
+          "B": "A search algorithm for sorted arrays",
+          "C": "A method for automating polynomial calculations",
+          "D": "A definition of computer science"
+        },
+        "target_id": "P012_Q03",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "At which institution did Richard Bellman work when he invented dynamic programming?",
+        "options": {
+          "A": "The Rand Corporation",
+          "B": "Princeton University",
+          "C": "Stanford University",
+          "D": "IBM"
+        },
+        "target_id": "P012_Q04",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What area of study did Richard Bellman focus on at the Rand Corporation?",
+        "options": {
+          "A": "The theory of multistage decision processes",
+          "B": "The development of logarithms",
+          "C": "The design of computer systems",
+          "D": "The tabulation of census data"
+        },
+        "target_id": "P012_Q05",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How does dynamic programming solve complex problems?",
+        "options": {
+          "A": "By dividing them into manageable subproblems and storing results",
+          "B": "By using punched cards for sequencing instructions",
+          "C": "By repeatedly dividing search intervals in half",
+          "D": "By emphasizing algorithms and people"
+        },
+        "target_id": "P012_Q06",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was Richard Bellman's occupation before working at the Rand Corporation?",
+        "options": {
+          "A": "A mathematics professor",
+          "B": "A computer programmer",
+          "C": "A census office employee",
+          "D": "A mathematician at Babbage's project"
+        },
+        "target_id": "P012_Q07",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was a significant outcome of the invention of dynamic programming?",
+        "options": {
+          "A": "It helped revolutionize computer programming and enabled computer science to become a robust field",
+          "B": "It led to the first automated calculating machine",
+          "C": "It defined computer science as a discipline",
+          "D": "It introduced the use of punched cards in computing"
+        },
+        "target_id": "P012_Q08",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a core technique used in dynamic programming?",
+        "options": {
+          "A": "Storing solutions to subproblems for reuse",
+          "B": "Using binary search for efficiency",
+          "C": "Programming with punched cards",
+          "D": "Integrating memory and arithmetic logic units"
+        },
+        "target_id": "P012_Q09",
+        "source_ids": [
+          "P012"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:57:34.711840",
+    "pool_size": 9
+  },
+  "L14": {
+    "pool": [
+      {
+        "question": "What does computer science encompass?",
+        "options": {
+          "A": "Computers and the people involved with them, such as designers, programmers, testers, and affected individuals.",
+          "B": "Only the hardware and software components of computing systems.",
+          "C": "The mathematical theories behind algorithms and data processing.",
+          "D": "The historical development of calculating machines and early computers."
+        },
+        "target_id": "P014_Q01",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which statement best describes the scope of computer science?",
+        "options": {
+          "A": "It is as much about people and their interaction with computers as it is about the computers themselves.",
+          "B": "It focuses exclusively on the efficiency and optimization of computer systems.",
+          "C": "It is rooted primarily in military research and applications.",
+          "D": "It concerns only the programming and testing of software applications."
+        },
+        "target_id": "P014_Q02",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In computer science, who are considered part of the broader context beyond just computers?",
+        "options": {
+          "A": "People who design, write programs for, test programs, and are affected by computers.",
+          "B": "Only the engineers who build computer hardware.",
+          "C": "Only the end-users who operate computer applications.",
+          "D": "Only the scientists who develop theoretical models."
+        },
+        "target_id": "P014_Q03",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is equally emphasized in computer science alongside the study of computers?",
+        "options": {
+          "A": "The people and how they work with computers.",
+          "B": "The software development lifecycle.",
+          "C": "The cognitive aspects of problem-solving.",
+          "D": "The economic impact of technological innovations."
+        },
+        "target_id": "P014_Q04",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Besides understanding how computers function, what else is a critical aspect of computer science?",
+        "options": {
+          "A": "The involvement of people in designing, programming, testing, and being impacted by computers.",
+          "B": "The ability to perform complex calculations quickly.",
+          "C": "The knowledge of historical figures like Charles Babbage and Ada Lovelace.",
+          "D": "The application of computers in military and communication systems."
+        },
+        "target_id": "P014_Q05",
+        "source_ids": [
+          "P014"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:57:41.194426",
+    "pool_size": 5
+  },
+  "L18": {
+    "pool": [
+      {
+        "question": "Many of today's computers rely on the physical properties of which brittle, crystalline metalloid to represent information?",
+        "options": {
+          "A": "Silicon",
+          "B": "Lithium",
+          "C": "Copper",
+          "D": "Aluminum"
+        },
+        "target_id": "P018_Q01",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary soft, silvery metal used in the batteries that power smartphones and mobile devices?",
+        "options": {
+          "A": "Lithium",
+          "B": "Silicon",
+          "C": "Gold",
+          "D": "Tin"
+        },
+        "target_id": "P018_Q02",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "From which major type of deposit in South America is lithium harvested, alongside mineral sources?",
+        "options": {
+          "A": "Continental brine deposits",
+          "B": "Volcanic rock formations",
+          "C": "Underground coal seams",
+          "D": "Oceanic saltwater"
+        },
+        "target_id": "P018_Q03",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which Australian country is listed as a source for the minerals from which lithium is harvested?",
+        "options": {
+          "A": "Australia",
+          "B": "Canada",
+          "C": "India",
+          "D": "South Africa"
+        },
+        "target_id": "P018_Q04",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the context of modern computer hardware, what do engineers combine substances like silicon and lithium to build at a microscopic scale?",
+        "options": {
+          "A": "Circuitry and information pathways",
+          "B": "Vacuum tube memory units",
+          "C": "Mechanical calculation gears",
+          "D": "Magnetic tape storage"
+        },
+        "target_id": "P018_Q05",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What physical property is silicon, the material used in many modern computers, primarily described as?",
+        "options": {
+          "A": "Brittle and crystalline",
+          "B": "Soft and malleable",
+          "C": "Liquid at room temperature",
+          "D": "Highly magnetic"
+        },
+        "target_id": "P018_Q06",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the name of the metal, harvested from brine deposits in Chile and Argentina, that is crucial for modern mobile device batteries?",
+        "options": {
+          "A": "Lithium",
+          "B": "Cobalt",
+          "C": "Nickel",
+          "D": "Platinum"
+        },
+        "target_id": "P018_Q07",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which African nation is mentioned as a source of mineral deposits for lithium?",
+        "options": {
+          "A": "Zimbabwe",
+          "B": "Nigeria",
+          "C": "Egypt",
+          "D": "Kenya"
+        },
+        "target_id": "P018_Q08",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "From a hardware perspective, modern computers leverage the physics of materials to build what?",
+        "options": {
+          "A": "Digital electronics",
+          "B": "Mechanical calculators",
+          "C": "Analog sound processors",
+          "D": "Optical projection systems"
+        },
+        "target_id": "P018_Q09",
+        "source_ids": [
+          "P018"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:58:43.360472",
+    "pool_size": 9
+  },
+  "L19": {
+    "pool": [
+      {
+        "question": "In what year was the ENIAC completed?",
+        "options": {
+          "A": "1945",
+          "B": "1953",
+          "C": "1961",
+          "D": "1970"
+        },
+        "target_id": "P019_Q01",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which technology did the ENIAC use for its memory, representing 0 and 1 through its states?",
+        "options": {
+          "A": "Vacuum tubes",
+          "B": "Silicon transistors",
+          "C": "Magnetic core memory",
+          "D": "Lithium-ion batteries"
+        },
+        "target_id": "P019_Q02",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary reason the ENIAC is notable in computer history?",
+        "options": {
+          "A": "It was the first general-purpose computer.",
+          "B": "It was the first computer to use silicon.",
+          "C": "It was the smallest computer of its time.",
+          "D": "It was designed specifically for social media applications."
+        },
+        "target_id": "P019_Q03",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How does the ENIAC's computational capability compare to that of modern computers?",
+        "options": {
+          "A": "It can compute anything modern computers can, just much more slowly.",
+          "B": "It could only run a single, fixed program.",
+          "C": "It was faster at calculating missile trajectories than modern PCs.",
+          "D": "It could not perform arithmetic operations."
+        },
+        "target_id": "P019_Q04",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What physical principle did the ENIAC use to represent binary data in its memory?",
+        "options": {
+          "A": "The on/off state of a vacuum tube's light.",
+          "B": "The magnetic polarity of a metal core.",
+          "C": "The electrical charge in a silicon transistor.",
+          "D": "The chemical state of a lithium battery."
+        },
+        "target_id": "P019_Q05",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following best describes the ENIAC's design in terms of program execution?",
+        "options": {
+          "A": "General-purpose, capable of running any program specified by a programmer.",
+          "B": "Specialized for numerical analysis only.",
+          "C": "Designed exclusively for military encryption tasks.",
+          "D": "Limited to running programs stored on punch cards."
+        },
+        "target_id": "P019_Q06",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What did the 'light' in a vacuum tube represent when it was on in the ENIAC?",
+        "options": {
+          "A": "The number 1",
+          "B": "The number 0",
+          "C": "An error state",
+          "D": "The processor was idle"
+        },
+        "target_id": "P019_Q07",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which material, commonly used in modern computers, was NOT the basis for the ENIAC's hardware?",
+        "options": {
+          "A": "Silicon",
+          "B": "Glass",
+          "C": "Metal",
+          "D": "Plastic"
+        },
+        "target_id": "P019_Q08",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was a key component used as memory in the ENIAC?",
+        "options": {
+          "A": "Vacuum tubes",
+          "B": "Hard disk drives",
+          "C": "Random Access Memory (RAM) chips",
+          "D": "Magnetic tape"
+        },
+        "target_id": "P019_Q09",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "By what principle could thousands of vacuum tubes in the ENIAC combine to form memory?",
+        "options": {
+          "A": "They were connected in a logical way to represent data.",
+          "B": "They stored data as heat patterns.",
+          "C": "They used sound waves to encode information.",
+          "D": "They were arranged in a geometric pattern for visual storage."
+        },
+        "target_id": "P019_Q10",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What fundamental computing concept allows the ENIAC and modern computers to solve the same set of problems?",
+        "options": {
+          "A": "They are both general-purpose, Turing-complete machines.",
+          "B": "They both use the same programming languages.",
+          "C": "They both have identical processing speeds.",
+          "D": "They were both funded by the same military agency."
+        },
+        "target_id": "P019_Q11",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who were often the operators and programmers of the ENIAC?",
+        "options": {
+          "A": "Women",
+          "B": "Exclusively mathematicians from Princeton",
+          "C": "The engineers who built it",
+          "D": "Military personnel only"
+        },
+        "target_id": "P019_Q12",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What does the 'off' state of a vacuum tube in the ENIAC represent?",
+        "options": {
+          "A": "The number 0",
+          "B": "The number 1",
+          "C": "A system failure",
+          "D": "The program has ended"
+        },
+        "target_id": "P019_Q13",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Compared to modern computers, what is a major difference in the ENIAC's hardware technology?",
+        "options": {
+          "A": "It used vacuum tubes instead of silicon transistors.",
+          "B": "It had no memory storage capability.",
+          "C": "It was powered by steam.",
+          "D": "It used a network of mechanical gears."
+        },
+        "target_id": "P019_Q14",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is one surprising similarity between the ENIAC and today's computers, despite their technological differences?",
+        "options": {
+          "A": "Their fundamental computational capability is the same.",
+          "B": "They are exactly the same physical size.",
+          "C": "They use the same programming languages.",
+          "D": "They were both invented by the same person."
+        },
+        "target_id": "P019_Q15",
+        "source_ids": [
+          "P019"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:58:57.453473",
+    "pool_size": 15
+  },
+  "L20": {
+    "pool": [
+      {
+        "question": "What is the term for the algorithmic principles that determine how results are computed in a computer?",
+        "options": {
+          "A": "Software",
+          "B": "Hardware",
+          "C": "Memory",
+          "D": "Network"
+        },
+        "target_id": "P020_Q01",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What fundamental computing model is shared by almost all computers, from the ENIAC to modern systems, that allows them to run any algorithm?",
+        "options": {
+          "A": "Turing-complete",
+          "B": "Specialized computing",
+          "C": "Dynamic programming",
+          "D": "Digital electronics"
+        },
+        "target_id": "P020_Q02",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which English mathematician provided a formalization of the concepts of algorithm and computation with the Turing machine?",
+        "options": {
+          "A": "Alan Mathison Turing",
+          "B": "George E. Forsythe",
+          "C": "Richard Bellman",
+          "D": "John von Neumann"
+        },
+        "target_id": "P020_Q03",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In a Turing-complete computer, data is stored in what component?",
+        "options": {
+          "A": "Memory",
+          "B": "Processor",
+          "C": "Network",
+          "D": "Storage"
+        },
+        "target_id": "P020_Q04",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "According to the lesson, what is a computer program?",
+        "options": {
+          "A": "An algorithm that can be run on a computer",
+          "B": "The physical circuitry of a computer",
+          "C": "A theory of mathematical processes",
+          "D": "A list of hardware components"
+        },
+        "target_id": "P020_Q05",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What are the symbols and instructions that can be interpreted by a computer called?",
+        "options": {
+          "A": "A programming language",
+          "B": "A vacuum tube",
+          "C": "A lithium battery",
+          "D": "A data network"
+        },
+        "target_id": "P020_Q06",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Where is a program stored in a computer, which allows programmers to modify and improve it?",
+        "options": {
+          "A": "In memory",
+          "B": "In the processor",
+          "C": "In a vacuum tube",
+          "D": "On a printed circuit board"
+        },
+        "target_id": "P020_Q07",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What term is synonymous with 'Turing-complete'?",
+        "options": {
+          "A": "Computationally Universal",
+          "B": "Specialized Calculator",
+          "C": "Hardware-Dependent",
+          "D": "Algorithmically Limited"
+        },
+        "target_id": "P020_Q08",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which component of a Turing-complete computer manipulates stored data according to a program?",
+        "options": {
+          "A": "The computer itself (following the program's instructions)",
+          "B": "The network connection",
+          "C": "The permanent storage device",
+          "D": "The physical material silicon"
+        },
+        "target_id": "P020_Q09",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What foundational concept explains why the ENIAC and a modern smartphone can, in principle, compute the same things?",
+        "options": {
+          "A": "They are both Turing-complete.",
+          "B": "They both use silicon transistors.",
+          "C": "They were both invented for military research.",
+          "D": "They both run the same operating system."
+        },
+        "target_id": "P020_Q10",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What field of study did Alan Turing's work on the Turing machine help to establish?",
+        "options": {
+          "A": "Theoretical computer science",
+          "B": "Digital electronics",
+          "C": "Dynamic programming",
+          "D": "Lithium battery technology"
+        },
+        "target_id": "P020_Q11",
+        "source_ids": [
+          "P020"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:59:10.599206",
+    "pool_size": 11
+  },
+  "L17": {
+    "pool": [
+      {
+        "question": "What are the four main components of computer hardware?",
+        "options": {
+          "A": "Processor, memory, network, and storage",
+          "B": "Input, output, processing, and control",
+          "C": "Algorithms, data, programs, and users",
+          "D": "Silicon, lithium, vacuum tubes, and transistors"
+        },
+        "target_id": "P017_Q01",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which hardware component is often described as the computer's 'brain'?",
+        "options": {
+          "A": "Processor",
+          "B": "Memory",
+          "C": "Punch card machine",
+          "D": "Vacuum tube"
+        },
+        "target_id": "P017_Q02",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary function of a computer's processor?",
+        "options": {
+          "A": "It follows instructions from algorithms and processes data.",
+          "B": "It permanently stores data.",
+          "C": "It connects devices to share information.",
+          "D": "It addresses information by storing it in consistent locations."
+        },
+        "target_id": "P017_Q03",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In computing, what is memory?",
+        "options": {
+          "A": "A means of addressing information by storing it in consistent locations.",
+          "B": "The hardware that permanently houses data.",
+          "C": "The technological devices connected to share information.",
+          "D": "The physical material like silicon used in transistors."
+        },
+        "target_id": "P017_Q04",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What does the network component of a computer refer to?",
+        "options": {
+          "A": "The various technological devices that are connected and share information.",
+          "B": "The pathway for electrons in a circuit.",
+          "C": "The system for programming computers.",
+          "D": "The method for storing data permanently."
+        },
+        "target_id": "P017_Q05",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is storage in the context of computer hardware?",
+        "options": {
+          "A": "The hardware and physical components that permanently house a computer's data.",
+          "B": "The temporary holding area for data being processed.",
+          "C": "The connection between different computers.",
+          "D": "The material used to make processors."
+        },
+        "target_id": "P017_Q06",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What enables computations in a computer?",
+        "options": {
+          "A": "Hardware",
+          "B": "Software",
+          "C": "Algorithms",
+          "D": "People"
+        },
+        "target_id": "P017_Q07",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "All computers are made of what?",
+        "options": {
+          "A": "Hardware",
+          "B": "Software",
+          "C": "Algorithms",
+          "D": "Silicon"
+        },
+        "target_id": "P017_Q08",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is a component of computer hardware?",
+        "options": {
+          "A": "Processor",
+          "B": "Algorithm",
+          "C": "Dynamic programming",
+          "D": "Computer science"
+        },
+        "target_id": "P017_Q09",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the role of hardware in a computer?",
+        "options": {
+          "A": "It enables computations.",
+          "B": "It defines algorithms.",
+          "C": "It processes social media apps.",
+          "D": "It was used in the 1890 census."
+        },
+        "target_id": "P017_Q10",
+        "source_ids": [
+          "P017"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T21:59:42.004298",
+    "pool_size": 10
+  },
+  "L21": {
+    "pool": [
+      {
+        "question": "Which subfield of computer science focuses on the mathematical processes behind software?",
+        "options": {
+          "A": "Theoretical computer science",
+          "B": "Human-computer interaction (HCI)",
+          "C": "Computer engineering",
+          "D": "Data processing"
+        },
+        "target_id": "P021_Q01",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a foundational concept in theoretical computer science for understanding problem-solving by computers?",
+        "options": {
+          "A": "Turing-completeness",
+          "B": "Digital electronics",
+          "C": "Network protocols",
+          "D": "User interface design"
+        },
+        "target_id": "P021_Q02",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary scope of theoretical computer science when considering problem-solving?",
+        "options": {
+          "A": "How computers in general, including past, present, and future ones, can solve problems",
+          "B": "Only the capabilities of specific current hardware like silicon chips",
+          "C": "Only the social and ethical implications of computation",
+          "D": "Only the practical details of writing software programs"
+        },
+        "target_id": "P021_Q03",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is a key question explored by theoretical computer science regarding a problem?",
+        "options": {
+          "A": "Whether a Turing-complete computer can compute the problem at all",
+          "B": "Which programming language is best suited for the problem",
+          "C": "How much the hardware to solve the problem will cost",
+          "D": "What the user interface for the solution should look like"
+        },
+        "target_id": "P021_Q04",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Besides whether a problem is computable, what else does theoretical computer science investigate about problem-solving?",
+        "options": {
+          "A": "How an algorithm might compute the problem and how efficiently it can run",
+          "B": "The specific brand of processor needed to run the algorithm",
+          "C": "The geographical source of the lithium for the computer's battery",
+          "D": "The number of programmers required to write the code"
+        },
+        "target_id": "P021_Q05",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What does theoretical computer science seek to understand about the efficiency of algorithms?",
+        "options": {
+          "A": "How quickly or efficiently a computer can run an algorithm",
+          "B": "How many lines of code the algorithm contains",
+          "C": "How easy the algorithm is for a human to understand",
+          "D": "How much network bandwidth the algorithm consumes"
+        },
+        "target_id": "P021_Q06",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "By answering questions about computability and efficiency, what does theoretical computer science help define?",
+        "options": {
+          "A": "The technical limits of what we can achieve with computers",
+          "B": "The market price for commercial software",
+          "C": "The best materials for building computer hardware",
+          "D": "The social values embedded in technology"
+        },
+        "target_id": "P021_Q07",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How does the perspective of theoretical computer science primarily contribute to computer science knowledge?",
+        "options": {
+          "A": "By contributing mathematical ideas about computability, algorithm design, and efficiency",
+          "B": "By contributing insights into the psychology of computer programmers",
+          "C": "By contributing designs for new smartphone batteries",
+          "D": "By contributing methods for testing software for bugs"
+        },
+        "target_id": "P021_Q08",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In contrast to focusing on practical program details, what is the emphasis of theoretical computer science?",
+        "options": {
+          "A": "The mathematical processes and fundamental principles behind software",
+          "B": "The physical assembly of computer hardware components",
+          "C": "The historical development of the ARPANET",
+          "D": "The training of users on new software applications"
+        },
+        "target_id": "P021_Q09",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What type of limits does theoretical computer science primarily investigate?",
+        "options": {
+          "A": "The technical limits of computation, such as what problems can be solved and with what resources",
+          "B": "The legal limits on data sharing across networks",
+          "C": "The physical limits of how small silicon transistors can be made",
+          "D": "The geographical limits of lithium mining for batteries"
+        },
+        "target_id": "P021_Q10",
+        "source_ids": [
+          "P021"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:00:02.169641",
+    "pool_size": 10
+  },
+  "L22": {
+    "pool": [
+      {
+        "question": "What is an example of a problem that humans can solve but computers typically struggle with?",
+        "options": {
+          "A": "Interpreting subtle human emotions or making moral judgments in complex social situations.",
+          "B": "Processing large datasets and recognizing patterns within them.",
+          "C": "Accurately predicting long-term weather patterns in chaotic systems.",
+          "D": "Manipulating data stored in memory according to a computer program."
+        },
+        "target_id": "P022_Q01",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following tasks are both humans and computers unable to perform accurately, according to the material?",
+        "options": {
+          "A": "Accurately predicting long-term weather patterns in chaotic systems.",
+          "B": "Interpreting subtle human emotions in a social context.",
+          "C": "Following instructions from algorithms to process data.",
+          "D": "Recognizing patterns within visual data."
+        },
+        "target_id": "P022_Q02",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why do computers struggle to fully understand the nuances of human emotions and ethics?",
+        "options": {
+          "A": "These tasks often require context, empathy, and lived experience that computers lack.",
+          "B": "Computers are not capable of processing visual or auditory data related to emotions.",
+          "C": "They are limited by the physical properties of the silicon in their hardware.",
+          "D": "They can only run a single, predetermined program and are not general-purpose."
+        },
+        "target_id": "P022_Q03",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key limitation that prevents computers from making nuanced moral judgments in complex social situations?",
+        "options": {
+          "A": "They lack the context, empathy, and human experience required.",
+          "B": "Their memory storage is insufficient for the amount of data involved.",
+          "C": "They are not Turing-complete and therefore cannot run the necessary algorithms.",
+          "D": "They are too slow compared to human thought processes."
+        },
+        "target_id": "P022_Q04",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What kind of systems are mentioned as being inherently unpredictable and complex, posing problems for both humans and computers?",
+        "options": {
+          "A": "Chaotic natural systems.",
+          "B": "General-purpose programmable silicon systems.",
+          "C": "Logical systems built from thousands of vacuum tubes.",
+          "D": "Social media application networks."
+        },
+        "target_id": "P022_Q05",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of these is cited as a reason some problems remain beyond the collective reach of humans and computers?",
+        "options": {
+          "A": "The inherent unpredictability and complexity of certain natural systems.",
+          "B": "The lack of advanced artificial intelligence algorithms.",
+          "C": "The limitations of lithium-ion batteries in mobile devices.",
+          "D": "The historical roots of computer science in military research."
+        },
+        "target_id": "P022_Q06",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a specific example of a chaotic system that is difficult for both humans and computers to predict?",
+        "options": {
+          "A": "Long-term weather patterns.",
+          "B": "The trajectory of a missile.",
+          "C": "The flow of information on the ARPANET.",
+          "D": "The operation of a Turing machine."
+        },
+        "target_id": "P022_Q07",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What can humans utilize to interpret subtle emotions that computers cannot fully replicate?",
+        "options": {
+          "A": "Context, empathy, and personal experience.",
+          "B": "Specialized hardware for visual perception.",
+          "C": "Formal algorithms and programming languages.",
+          "D": "High-speed network connections for data sharing."
+        },
+        "target_id": "P022_Q08",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Even with advancements in artificial intelligence (AI), what remains a fundamental barrier for computers in tasks like understanding human ethics?",
+        "options": {
+          "A": "The inability to fully grasp the nuances that involve context, empathy, and experience.",
+          "B": "The physical limitation of using vacuum tubes instead of silicon for memory.",
+          "C": "The requirement that all computers be computationally universal.",
+          "D": "The dependence on brittle, crystalline metalloids for circuitry."
+        },
+        "target_id": "P022_Q09",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What type of judgment in complex social situations is identified as a problem better suited to humans than computers?",
+        "options": {
+          "A": "Moral judgment.",
+          "B": "Statistical judgment.",
+          "C": "Logical judgment based on algorithms.",
+          "D": "Judgment about hardware efficiency."
+        },
+        "target_id": "P022_Q10",
+        "source_ids": [
+          "P022"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:04:01.195181",
+    "pool_size": 10
+  },
+  "L25": {
+    "pool": [
+      {
+        "question": "Who were the three principal designers of the LOGO programming language in the late 1960s?",
+        "options": {
+          "A": "Wally Feurzeig, Seymour Papert, and Cynthia Solomon",
+          "B": "Alan Turing, John von Neumann, and Grace Hopper",
+          "C": "Bill Gates, Steve Jobs, and Paul Allen",
+          "D": "Linus Torvalds, Richard Stallman, and Ken Thompson"
+        },
+        "target_id": "P025_Q01",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Compared to languages like FORTRAN, which emphasized scientific and engineering applications, what was a primary goal in designing the LOGO programming language?",
+        "options": {
+          "A": "To enable new kinds of computer-mediated expression and communication for learning",
+          "B": "To optimize for high-performance numerical computation on early supercomputers",
+          "C": "To create a language for managing large business databases",
+          "D": "To develop the first operating system for personal computers"
+        },
+        "target_id": "P025_Q02",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What distinctive feature, involving a programmable digital object, is the LOGO language best known for?",
+        "options": {
+          "A": "Turtle graphics",
+          "B": "Vacuum tube simulations",
+          "C": "Three-dimensional polygon rendering",
+          "D": "Spreadsheet formula calculations"
+        },
+        "target_id": "P025_Q03",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In LOGO's turtle graphics, what does the 'turtle' represent?",
+        "options": {
+          "A": "A digital cursor that can be instructed to move and draw",
+          "B": "A robotic arm used in manufacturing",
+          "C": "A graphical representation of computer memory",
+          "D": "A simulated silicon transistor on a circuit board"
+        },
+        "target_id": "P025_Q04",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What specific type of reasoning did Seymour Papert argue was enabled by programming the turtle's movements in LOGO?",
+        "options": {
+          "A": "Body-syntonic reasoning",
+          "B": "Abstract logical deduction",
+          "C": "Object-oriented analysis",
+          "D": "Parallel processing logic"
+        },
+        "target_id": "P025_Q05",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "According to the educational philosophy behind LOGO, instructing a digital turtle to draw could help students learn concepts from which academic subject?",
+        "options": {
+          "A": "Mathematics",
+          "B": "Linguistics",
+          "C": "Organic Chemistry",
+          "D": "Musical Theory"
+        },
+        "target_id": "P025_Q06",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following mathematical concepts can students learn by programming a LOGO turtle?",
+        "options": {
+          "A": "Angles and geometric shapes",
+          "B": "Trigonometric identities",
+          "C": "Differential equations",
+          "D": "Matrix multiplication"
+        },
+        "target_id": "P025_Q07",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Besides mathematics, what other scientific subject did Seymour Papert suggest could be taught by having students reason about the turtle's motion?",
+        "options": {
+          "A": "Physics",
+          "B": "Biology",
+          "C": "Geology",
+          "D": "Astronomy"
+        },
+        "target_id": "P025_Q08",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the context of LOGO turtle graphics, what physics concept could be demonstrated by making the turtle move forward in increasing amounts?",
+        "options": {
+          "A": "Acceleration",
+          "B": "Velocity",
+          "C": "Friction",
+          "D": "Gravity"
+        },
+        "target_id": "P025_Q09",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What physics concept could be demonstrated in LOGO by having the turtle slow down by moving forward in decreasing amounts?",
+        "options": {
+          "A": "Friction",
+          "B": "Momentum",
+          "C": "Energy conservation",
+          "D": "Elastic collision"
+        },
+        "target_id": "P025_Q10",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The ideas behind LOGO's educational use have been expanded into subjects like the social sciences. What tool in these subjects helps students identify patterns related to social change?",
+        "options": {
+          "A": "Interactive data visualization",
+          "B": "Statistical hypothesis testing",
+          "C": "Economic forecasting models",
+          "D": "Literary text analysis software"
+        },
+        "target_id": "P025_Q11",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What fundamental skill, alongside learning about social patterns, can students develop through using interactive data visualizations in subjects like history?",
+        "options": {
+          "A": "Data fluencies",
+          "B": "Algorithmic optimization",
+          "C": "Hardware assembly",
+          "D": "Network protocol design"
+        },
+        "target_id": "P025_Q12",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What basic instruction set is used to control the actions of a turtle in the LOGO programming language?",
+        "options": {
+          "A": "Commands to move forward/backward and turn left/right",
+          "B": "Commands to read from and write to memory addresses",
+          "C": "Commands to connect to other computers on a network",
+          "D": "Commands to define classes and objects"
+        },
+        "target_id": "P025_Q13",
+        "source_ids": [
+          "P025"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:03:56.164004",
+    "pool_size": 13
+  },
+  "L23": {
+    "pool": [
+      {
+        "question": "Why is theoretical computer science often emphasized in undergraduate computer science programs?",
+        "options": {
+          "A": "Because academic computer science emerged from mathematics.",
+          "B": "Because it focuses on hardware components like processors and memory.",
+          "C": "Due to its origins in military research and communication.",
+          "D": "Because it is essential for programming languages like FORTRAN."
+        },
+        "target_id": "P023_Q01",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What has the traditional emphasis in computer science sometimes overlooked?",
+        "options": {
+          "A": "Perspectives that center on social and technical values in computer technology applications.",
+          "B": "The importance of hardware components such as storage and network.",
+          "C": "The theoretical limits of computation as defined by Turing machines.",
+          "D": "The use of computers in education through tools like turtle graphics."
+        },
+        "target_id": "P023_Q02",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Are perspectives in computer science regarding the integration of social values changing?",
+        "options": {
+          "A": "Yes, they are gradually changing.",
+          "B": "No, they have remained static since the inception of computer science.",
+          "C": "No, they are becoming less important over time.",
+          "D": "Yes, but only in theoretical computer science."
+        },
+        "target_id": "P023_Q03",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What historical network's design shaped the design of the modern Internet?",
+        "options": {
+          "A": "The ARPANET.",
+          "B": "The ENIAC.",
+          "C": "The LOGO programming environment.",
+          "D": "A network based on vacuum tube technology."
+        },
+        "target_id": "P023_Q04",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What primarily determines what can be efficiently computed by a computer?",
+        "options": {
+          "A": "The physical aspects of computer hardware.",
+          "B": "The software algorithms written in programming languages.",
+          "C": "The theoretical model of Turing-completeness.",
+          "D": "The social values embedded in technology design."
+        },
+        "target_id": "P023_Q05",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What type of hardware do many of today's artificial intelligence technologies rely on?",
+        "options": {
+          "A": "Highly specialized computer hardware fundamentally different from general-purpose programmable silicon.",
+          "B": "General-purpose programmable silicon similar to traditional computers.",
+          "C": "Vacuum tubes like those used in the ENIAC.",
+          "D": "Batteries based on lithium harvested from South America."
+        },
+        "target_id": "P023_Q06",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary focus of the human-computer interaction (HCI) subfield in computer science?",
+        "options": {
+          "A": "It emphasizes the social aspects of computation.",
+          "B": "It focuses on the design and optimization of computer hardware.",
+          "C": "It centers on the mathematical processes behind software.",
+          "D": "It is concerned with educational methods for teaching programming."
+        },
+        "target_id": "P023_Q07",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What aspects does the subfield of computer science education emphasize?",
+        "options": {
+          "A": "The cognitive, social, and communal aspects of learning computer science.",
+          "B": "The efficiency of algorithms and computational complexity.",
+          "C": "The physical materials used in computer hardware like silicon and lithium.",
+          "D": "The historical development of computers from ENIAC to modern devices."
+        },
+        "target_id": "P023_Q08",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Are human-centered subfields like human-computer interaction (HCI) and computer science education found in every computer science department?",
+        "options": {
+          "A": "No, they are not yet in every department but are increasing in representation.",
+          "B": "Yes, they are standard components of all computer science departments.",
+          "C": "No, they are only present in departments focused on theoretical computer science.",
+          "D": "Yes, but they are primarily industry-led rather than academic."
+        },
+        "target_id": "P023_Q09",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What does the increasing representation of human-centered subfields in computer science reflect?",
+        "options": {
+          "A": "Computer scientists' growing desire to serve more engaged students and a more engaged public.",
+          "B": "A shift towards emphasizing theoretical mathematics in computer science.",
+          "C": "The need for more military applications of computer technology.",
+          "D": "The decline of hardware-focused perspectives in computing."
+        },
+        "target_id": "P023_Q10",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How is the hardware used in many artificial intelligence technologies different from traditional computer hardware?",
+        "options": {
+          "A": "It is highly specialized and fundamentally different at the physical level from general-purpose programmable silicon.",
+          "B": "It is identical and uses the same general-purpose programmable silicon.",
+          "C": "It relies on older technology like vacuum tubes for memory.",
+          "D": "It is primarily powered by lithium batteries for mobility."
+        },
+        "target_id": "P023_Q11",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key function of the annual conferences hosted by organizations in the human-computer interaction (HCI) subfield?",
+        "options": {
+          "A": "They bring together thousands of researchers in academia and professionals in the industry.",
+          "B": "They focus on the manufacturing of computer hardware components.",
+          "C": "They teach programming languages like LOGO for educational purposes.",
+          "D": "They discuss theoretical limits of computation and Turing machines."
+        },
+        "target_id": "P023_Q12",
+        "source_ids": [
+          "P023"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:04:57.034947",
+    "pool_size": 12
+  },
+  "L26": {
+    "pool": [
+      {
+        "question": "In what decade did the academic study of computer science education first emerge as a narrow field?",
+        "options": {
+          "A": "The 1970s",
+          "B": "The 1940s",
+          "C": "The 1960s",
+          "D": "The 1990s"
+        },
+        "target_id": "P026_Q01",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the original, narrow focus of computer science education when it emerged as a field?",
+        "options": {
+          "A": "Producing more effective software engineers",
+          "B": "Training academic mathematicians",
+          "C": "Creating educational tools for children",
+          "D": "Developing theoretical models of computation"
+        },
+        "target_id": "P026_Q02",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What type of demand motivated higher-education faculty to design the original computer science curricula?",
+        "options": {
+          "A": "Demand from early computer companies like IBM",
+          "B": "Demand from public primary and secondary schools",
+          "C": "Demand from the military for cryptography experts",
+          "D": "Demand from social activists for digital tools"
+        },
+        "target_id": "P026_Q03",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What were the three main emphases of early university computer science courses designed for software engineers?",
+        "options": {
+          "A": "Efficiency, performance, and scalability",
+          "B": "Creativity, ethics, and social impact",
+          "C": "Theoretical proofs, hardware design, and networking",
+          "D": "Data visualization, user experience, and accessibility"
+        },
+        "target_id": "P026_Q04",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the intended career outcome for students in the original design of university computer science education?",
+        "options": {
+          "A": "Software development jobs",
+          "B": "Academic research in mathematics",
+          "C": "Human-computer interaction design",
+          "D": "Computer hardware manufacturing"
+        },
+        "target_id": "P026_Q05",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who primarily designed the early university curricula that defined computer science education?",
+        "options": {
+          "A": "Higher-education computer science faculty",
+          "B": "Government education agencies",
+          "C": "Industry software engineers",
+          "D": "K-12 school teachers"
+        },
+        "target_id": "P026_Q06",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What concept do modern computer science textbooks inherit from the 1970s educational design?",
+        "options": {
+          "A": "The borders between computer science concepts",
+          "B": "The focus on physical hardware materials",
+          "C": "The use of turtle graphics for learning",
+          "D": "The integration of social science methods"
+        },
+        "target_id": "P026_Q07",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Besides software engineers, which of the following is now recognized as a role for computer scientists?",
+        "options": {
+          "A": "Data analysts",
+          "B": "Vacuum tube technicians",
+          "C": "Turtle graphics artists",
+          "D": "Silicon miners"
+        },
+        "target_id": "P026_Q08",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following was a consequence of the 1970s design of computer science education?",
+        "options": {
+          "A": "A curriculum narrowly focused on software engineering concepts",
+          "B": "A curriculum centered on the physics of computer hardware",
+          "C": "A curriculum built around learning programming through games",
+          "D": "A curriculum focused on the social impacts of technology"
+        },
+        "target_id": "P026_Q09",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What early industry's needs shaped the foundational concepts taught in computer science?",
+        "options": {
+          "A": "The early computer industry",
+          "B": "The automotive industry",
+          "C": "The telecommunications industry",
+          "D": "The aerospace industry"
+        },
+        "target_id": "P026_Q10",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What broader understanding has developed since the 1970s regarding the societal application of computer science?",
+        "options": {
+          "A": "There are many more roles for computer scientists beyond just software engineering.",
+          "B": "Computer science is primarily a branch of applied mathematics.",
+          "C": "Computer science education should only be offered at the university level.",
+          "D": "All computing problems can be solved with more efficient algorithms."
+        },
+        "target_id": "P026_Q11",
+        "source_ids": [
+          "P026"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:04:14.157214",
+    "pool_size": 11
+  },
+  "L24": {
+    "pool": [
+      {
+        "question": "How can computers be conceptualized in relation to societal improvement?",
+        "options": {
+          "A": "As sources, tools, and opportunities for changing social conditions",
+          "B": "As specialized hardware for efficient algorithm processing",
+          "C": "As Turing-complete machines for solving any computational problem",
+          "D": "As military research tools for developing communication networks"
+        },
+        "target_id": "P024_Q01",
+        "source_ids": [
+          "P024"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What have many people used computer science to accomplish, beyond a narrow technical focus?",
+        "options": {
+          "A": "To achieve diverse goals beyond the dominant vision for computer science",
+          "B": "To design programming languages like FORTRAN for scientific applications",
+          "C": "To build general-purpose computers like the ENIAC",
+          "D": "To study the theoretical limits of what can be computed"
+        },
+        "target_id": "P024_Q02",
+        "source_ids": [
+          "P024"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is an example of using computers to achieve goals beyond the dominant vision of computer science?",
+        "options": {
+          "A": "Using computers in education",
+          "B": "Using computers for military communication on the ARPANET",
+          "C": "Using computers to process data with silicon-based transistors",
+          "D": "Using computers to prove mathematical theorems in theoretical computer science"
+        },
+        "target_id": "P024_Q03",
+        "source_ids": [
+          "P024"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What broader purpose can computers serve beyond technical computation?",
+        "options": {
+          "A": "They can be tools for social change",
+          "B": "They are only for running algorithms efficiently",
+          "C": "They are devices for predicting chaotic systems like weather",
+          "D": "They are physical hardware components like processors and memory"
+        },
+        "target_id": "P024_Q04",
+        "source_ids": [
+          "P024"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In what way do some perspectives view the application of computer technology?",
+        "options": {
+          "A": "As a means to change social conditions",
+          "B": "Solely as a pursuit of computational efficiency and performance",
+          "C": "Primarily as the development of hardware using materials like silicon",
+          "D": "Exclusively as a field for producing software engineers"
+        },
+        "target_id": "P024_Q05",
+        "source_ids": [
+          "P024"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:04:49.230037",
+    "pool_size": 5
+  },
+  "L27": {
+    "pool": [
+      {
+        "question": "In the context of integrating computers into education, the role of computers expanded with the introduction of what in the late 1990s?",
+        "options": {
+          "A": "The Internet",
+          "B": "The personal computer",
+          "C": "The ARPANET",
+          "D": "Silicon microchips"
+        },
+        "target_id": "P027_Q01",
+        "source_ids": [
+          "P027"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Whose vision for using computation as a learning medium has been challenging to implement in education?",
+        "options": {
+          "A": "Seymour Papert's vision",
+          "B": "Alan Turing's vision",
+          "C": "Roy L. Clay Sr.'s vision",
+          "D": "Mark Dean's vision"
+        },
+        "target_id": "P027_Q02",
+        "source_ids": [
+          "P027"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is identified as one reason why implementing a vision of computers as a learning medium has been difficult?",
+        "options": {
+          "A": "Funding constraints",
+          "B": "Lack of Turing-complete hardware",
+          "C": "Resistance from software engineers",
+          "D": "The complexity of vacuum tube technology"
+        },
+        "target_id": "P027_Q03",
+        "source_ids": [
+          "P027"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a current goal for primary and secondary education in the United States regarding computer use?",
+        "options": {
+          "A": "To use computers to more effectively teach all subjects",
+          "B": "To use computers only to teach computer science",
+          "C": "To use computers to replace teachers in the classroom",
+          "D": "To use computers primarily for standardized test preparation"
+        },
+        "target_id": "P027_Q04",
+        "source_ids": [
+          "P027"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:07:15.217591",
+    "pool_size": 4
+  },
+  "L29": {
+    "pool": [
+      {
+        "question": "What is the name of the chapter in Charlton McIlwain's book 'Black Software' that shares stories of Black men and women who made early contributions to computer science?",
+        "options": {
+          "A": "The Vanguard",
+          "B": "Hidden Figures",
+          "C": "AfroLink",
+          "D": "LOGO"
+        },
+        "target_id": "P029_Q01",
+        "source_ids": [
+          "P029"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which pioneering Black technologist helped Hewlett-Packard develop its first computer lab and create the company's first computers?",
+        "options": {
+          "A": "Roy L. Clay Sr.",
+          "B": "Mark Dean",
+          "C": "Seymour Papert",
+          "D": "Kamal Al-Mansour"
+        },
+        "target_id": "P029_Q02",
+        "source_ids": [
+          "P029"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which pioneering Black technologist provided information to venture capitalists that motivated them to invest in start-ups such as Intel and Compaq?",
+        "options": {
+          "A": "Roy L. Clay Sr.",
+          "B": "Mark Dean",
+          "C": "Wally Feurzeig",
+          "D": "Kamal Al-Mansour"
+        },
+        "target_id": "P029_Q03",
+        "source_ids": [
+          "P029"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which pioneering Black technologist was an engineer for IBM and instrumental in developing the Industry Standard Architecture (ISA) bus?",
+        "options": {
+          "A": "Mark Dean",
+          "B": "Roy L. Clay Sr.",
+          "C": "Kamal Al-Mansour",
+          "D": "Charlton McIlwain"
+        },
+        "target_id": "P029_Q04",
+        "source_ids": [
+          "P029"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What did the Industry Standard Architecture (ISA) bus create a method for?",
+        "options": {
+          "A": "Connecting a computer's processor with other components and enabling them to communicate",
+          "B": "Enabling turtle graphics in the LOGO programming language",
+          "C": "Connecting computers to the ARPANET",
+          "D": "Running the first artificial intelligence algorithms"
+        },
+        "target_id": "P029_Q05",
+        "source_ids": [
+          "P029"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The development of the Industry Standard Architecture (ISA) bus led to the creation of what?",
+        "options": {
+          "A": "PCs",
+          "B": "The first computer lab at Hewlett-Packard",
+          "C": "The first social media platform for Black technologists",
+          "D": "The first programmable computer"
+        },
+        "target_id": "P029_Q06",
+        "source_ids": [
+          "P029"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How many of the nine patents used to create the original PC did Mark Dean own?",
+        "options": {
+          "A": "Three",
+          "B": "One",
+          "C": "Five",
+          "D": "Nine"
+        },
+        "target_id": "P029_Q07",
+        "source_ids": [
+          "P029"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "According to the chapter 'The Vanguard' in 'Black Software', what have the histories of these Black technologists been largely erased by?",
+        "options": {
+          "A": "Dominant Silicon Valley narratives",
+          "B": "The dominant narratives of the space race",
+          "C": "The focus on hardware over software",
+          "D": "The emphasis on theoretical computer science"
+        },
+        "target_id": "P029_Q08",
+        "source_ids": [
+          "P029"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The accomplishments of the Black technologists in 'The Vanguard' include leading computer stores and developing early versions of what?",
+        "options": {
+          "A": "Internet social media platforms, news, and blog websites",
+          "B": "The ARPANET",
+          "C": "The LOGO programming language",
+          "D": "The first personal computer"
+        },
+        "target_id": "P029_Q09",
+        "source_ids": [
+          "P029"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Roy L. Clay Sr. is a member of which Hall of Fame?",
+        "options": {
+          "A": "Silicon Valley Engineering Hall of Fame",
+          "B": "National Inventors Hall of Fame",
+          "C": "Internet Hall of Fame",
+          "D": "National Academy of Engineering"
+        },
+        "target_id": "P029_Q10",
+        "source_ids": [
+          "P029"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:07:09.702299",
+    "pool_size": 10
+  },
+  "L30": {
+    "pool": [
+      {
+        "question": "Which group's efforts in the tech industry were historically hampered because computer science failed to center or accommodate them?",
+        "options": {
+          "A": "Black people",
+          "B": "White American men",
+          "C": "American Indians",
+          "D": "Asian Americans"
+        },
+        "target_id": "P030_Q01",
+        "source_ids": [
+          "P030"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Historically, which groups had even less access to computers and higher education than Black Americans?",
+        "options": {
+          "A": "American Indians and Hispanic people",
+          "B": "White American men and women",
+          "C": "Immigrants from Europe",
+          "D": "Asian Americans and Pacific Islanders"
+        },
+        "target_id": "P030_Q02",
+        "source_ids": [
+          "P030"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who worked as a technical contract negotiator at the NASA Jet Propulsion Lab during Ronald Reagan's presidency?",
+        "options": {
+          "A": "Kamal Al-Mansour",
+          "B": "Roy L. Clay Sr.",
+          "C": "Mark Dean",
+          "D": "Seymour Papert"
+        },
+        "target_id": "P030_Q03",
+        "source_ids": [
+          "P030"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What type of projects did Kamal Al-Mansour work on at NASA's Jet Propulsion Lab?",
+        "options": {
+          "A": "Space projects, including missiles",
+          "B": "Designing early personal computers",
+          "C": "Developing the LOGO programming language",
+          "D": "Creating Internet social media platforms"
+        },
+        "target_id": "P030_Q04",
+        "source_ids": [
+          "P030"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How did Kamal Al-Mansour describe the environment at the NASA Jet Propulsion Lab?",
+        "options": {
+          "A": "Somewhat hostile",
+          "B": "Highly collaborative and inclusive",
+          "C": "Neutral and purely technical",
+          "D": "Focused on social activism"
+        },
+        "target_id": "P030_Q05",
+        "source_ids": [
+          "P030"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What internal conflict did Kamal Al-Mansour experience while working on space projects?",
+        "options": {
+          "A": "Supporting projects like missiles while trying to find his own identity and culture",
+          "B": "Balancing software engineering efficiency with social values",
+          "C": "Teaching computer science versus working in the industry",
+          "D": "Developing hardware versus software solutions"
+        },
+        "target_id": "P030_Q06",
+        "source_ids": [
+          "P030"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What question did Kamal Al-Mansour ask himself at the end of each workday?",
+        "options": {
+          "A": "What did I accomplish that benefited people like me?",
+          "B": "How can I make computer science education more effective?",
+          "C": "What new programming language should I learn?",
+          "D": "How can I advance the company's profit margins?"
+        },
+        "target_id": "P030_Q07",
+        "source_ids": [
+          "P030"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was Kamal Al-Mansour's answer to his daily question about benefiting people like him?",
+        "options": {
+          "A": "Nothing",
+          "B": "He helped create more efficient software",
+          "C": "He advanced human spaceflight technology",
+          "D": "He taught computer science to more students"
+        },
+        "target_id": "P030_Q08",
+        "source_ids": [
+          "P030"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:07:10.541785",
+    "pool_size": 8
+  },
+  "L28": {
+    "pool": [
+      {
+        "question": "What is the primary focus of the book and movie 'Hidden Figures' in the context of computing history?",
+        "options": {
+          "A": "It highlights the contributions of Black women as human computers and early computer scientists at NASA.",
+          "B": "It details the development of the Turing machine by Alan Turing.",
+          "C": "It explores the creation of the LOGO programming language for education.",
+          "D": "It discusses the role of White American men in the early days of computing."
+        },
+        "target_id": "P028_Q01",
+        "source_ids": [
+          "P028"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What role did the Black women featured in 'Hidden Figures' have at NASA?",
+        "options": {
+          "A": "They were human computers and some of the first computer scientists for early digital computers.",
+          "B": "They were astronauts who participated in space missions.",
+          "C": "They were engineers who designed the ARPANET.",
+          "D": "They were theorists who developed concepts in theoretical computer science."
+        },
+        "target_id": "P028_Q02",
+        "source_ids": [
+          "P028"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "According to critiques of historical narratives in computing, which group's interests have often been centered?",
+        "options": {
+          "A": "White American men.",
+          "B": "Black women technologists.",
+          "C": "Hispanic engineers.",
+          "D": "Asian mathematicians."
+        },
+        "target_id": "P028_Q03",
+        "source_ids": [
+          "P028"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What do untold histories in computing seek to uncover?",
+        "options": {
+          "A": "The contributions of people from marginalized backgrounds, races, ethnicities, and genders.",
+          "B": "The technical specifications of early computers like ENIAC.",
+          "C": "The evolution of programming languages from FORTRAN to modern ones.",
+          "D": "The social impacts of the Internet on education."
+        },
+        "target_id": "P028_Q04",
+        "source_ids": [
+          "P028"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was a key achievement of the Black women at NASA as depicted in 'Hidden Figures'?",
+        "options": {
+          "A": "Their work powered human spaceflight using early digital computers.",
+          "B": "They invented the first personal computer.",
+          "C": "They developed the Internet's foundational protocols.",
+          "D": "They pioneered human-computer interaction research."
+        },
+        "target_id": "P028_Q05",
+        "source_ids": [
+          "P028"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How have traditional histories of computer science been biased, resulting in hidden figures?",
+        "options": {
+          "A": "By centering on White American men and overlooking other groups.",
+          "B": "By focusing only on hardware advancements.",
+          "C": "By emphasizing theoretical over practical aspects.",
+          "D": "By ignoring the contributions of software engineers."
+        },
+        "target_id": "P028_Q06",
+        "source_ids": [
+          "P028"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:07:14.775669",
+    "pool_size": 6
+  },
+  "L31": {
+    "pool": [
+      {
+        "question": "Who founded the company AfroLink?",
+        "options": {
+          "A": "Kamal Al-Mansour",
+          "B": "Roy L. Clay Sr.",
+          "C": "Mark Dean",
+          "D": "Seymour Papert"
+        },
+        "target_id": "P031_Q01",
+        "source_ids": [
+          "P031"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary focus of AfroLink software?",
+        "options": {
+          "A": "Centering on Black and African history and culture",
+          "B": "Teaching programming with turtle graphics",
+          "C": "Developing hardware for personal computers",
+          "D": "Addressing the digital divide in global communities"
+        },
+        "target_id": "P031_Q02",
+        "source_ids": [
+          "P031"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was Afronet?",
+        "options": {
+          "A": "An early social media platform for connecting Black technologists",
+          "B": "A website dedicated to popularizing Black culture",
+          "C": "A programming language designed for educational use",
+          "D": "A hardware innovation for IBM computers"
+        },
+        "target_id": "P031_Q03",
+        "source_ids": [
+          "P031"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was NetNoir?",
+        "options": {
+          "A": "A website that sought to popularize Black culture",
+          "B": "An early social network for Black technologists",
+          "C": "A company started by Kamal Al-Mansour",
+          "D": "A technology for connecting computer components"
+        },
+        "target_id": "P031_Q04",
+        "source_ids": [
+          "P031"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What did the creation of Afronet and NetNoir indicate about Black technologists in the United States?",
+        "options": {
+          "A": "They invented computer technologies for Black people",
+          "B": "They primarily worked on NASA space projects",
+          "C": "They focused on developing educational software like LOGO",
+          "D": "They were largely excluded from the tech industry"
+        },
+        "target_id": "P031_Q05",
+        "source_ids": [
+          "P031"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What political implication does the book Black Software raise about Black technologists?",
+        "options": {
+          "A": "The historical exclusion of Black technologists",
+          "B": "The need for more software engineers in education",
+          "C": "The benefits of body-syntonic reasoning in learning",
+          "D": "The importance of computers for global development"
+        },
+        "target_id": "P031_Q06",
+        "source_ids": [
+          "P031"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How has Black culture on the Internet affected mainstream media in the United States?",
+        "options": {
+          "A": "It has greatly influenced mainstream media and culture",
+          "B": "It has had minimal impact on mainstream media",
+          "C": "It only benefits Black-centered technological platforms",
+          "D": "It has helped reduce social inequities"
+        },
+        "target_id": "P031_Q07",
+        "source_ids": [
+          "P031"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Where does attention and money from Black cultural products on the Internet often go?",
+        "options": {
+          "A": "To dominant platforms such as X and TikTok",
+          "B": "To Black-centered platforms like AfroLink",
+          "C": "To educational institutions for computer science",
+          "D": "To government agencies like NASA"
+        },
+        "target_id": "P031_Q08",
+        "source_ids": [
+          "P031"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What risk is associated with computer technologies regarding social inequities?",
+        "options": {
+          "A": "They risk reproducing social inequities through the distribution of benefits and harms",
+          "B": "They consistently eliminate social inequities",
+          "C": "They only create inequities in wealthy countries",
+          "D": "They have no effect on social conditions"
+        },
+        "target_id": "P031_Q09",
+        "source_ids": [
+          "P031"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:11:39.559592",
+    "pool_size": 9
+  },
+  "L32": {
+    "pool": [
+      {
+        "question": "What is the digital divide?",
+        "options": {
+          "A": "The uneven and unequal access to technology across populations based on factors like geography and socioeconomic status.",
+          "B": "The gap between software engineers and other computer science roles.",
+          "C": "The difference in programming language usage between FORTRAN and LOGO.",
+          "D": "The challenge of integrating computers in learning due to funding constraints."
+        },
+        "target_id": "P032_Q01",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following societal aspects are becoming tied to computing and connectivity, according to the concept of the digital divide?",
+        "options": {
+          "A": "Education, employment, and social mobility.",
+          "B": "Only education and entertainment.",
+          "C": "Primarily scientific research and engineering.",
+          "D": "Mainly social media and communication."
+        },
+        "target_id": "P032_Q02",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What infrastructure factor can significantly affect computer and Internet usage in some communities?",
+        "options": {
+          "A": "Unreliable electricity.",
+          "B": "Lack of telephone coverage.",
+          "C": "Absence of turtle graphics in education.",
+          "D": "High cost of software subscriptions."
+        },
+        "target_id": "P032_Q03",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "How can individual product or service access contribute to the digital divide within communities?",
+        "options": {
+          "A": "By limiting benefits to specific populations, such as through high-priced subscriptions for AI tools.",
+          "B": "By providing equal access to all through public funding.",
+          "C": "By focusing on software engineering education only.",
+          "D": "By erasing the contributions of marginalized groups in computing."
+        },
+        "target_id": "P032_Q04",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key factor that varies across communities in the United States and around the world regarding technology access?",
+        "options": {
+          "A": "Access to high-speed Internet.",
+          "B": "Availability of LOGO programming language.",
+          "C": "Use of body-syntonic reasoning in learning.",
+          "D": "Implementation of the OLPC project."
+        },
+        "target_id": "P032_Q05",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Beyond infrastructure, what can create a digital divide within communities?",
+        "options": {
+          "A": "Differences in individual product or service access, such as subscription-based tools.",
+          "B": "Uniform access to all technologies through government programs.",
+          "C": "The historical focus on producing software engineers.",
+          "D": "The development of the Afronet social media platform."
+        },
+        "target_id": "P032_Q06",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What generally happens to technological access over time, according to the lesson?",
+        "options": {
+          "A": "It generally improves over time.",
+          "B": "It remains stagnant across all populations.",
+          "C": "It decreases due to rising costs.",
+          "D": "It becomes exclusively available to software engineers."
+        },
+        "target_id": "P032_Q07",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which of the following is an example of how the digital divide can manifest in education?",
+        "options": {
+          "A": "Unequal access to functioning school computers.",
+          "B": "Equal distribution of laptops through the OLPC project.",
+          "C": "Universal use of turtle graphics for learning mathematics.",
+          "D": "Focus on efficiency and scalability in university curricula."
+        },
+        "target_id": "P032_Q08",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What role does unreliable electricity play in the context of the digital divide?",
+        "options": {
+          "A": "It can significantly affect computer and Internet usage.",
+          "B": "It is irrelevant to technology access.",
+          "C": "It primarily impacts the development of early Internet social media.",
+          "D": "It is a solved problem in all communities."
+        },
+        "target_id": "P032_Q09",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is one consequence of the digital divide in terms of technology benefits?",
+        "options": {
+          "A": "Specific populations may be limited in benefiting from tools like AI-based search if they are high-priced.",
+          "B": "All populations have equal access to the latest technologies.",
+          "C": "Computer science education becomes uniformly focused on software engineering.",
+          "D": "Historical contributions of Black technologists are widely recognized."
+        },
+        "target_id": "P032_Q10",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "The digital divide refers to disparities in access to technology based on which factors?",
+        "options": {
+          "A": "Geography, socioeconomic status, race, and ethnicity.",
+          "B": "Only age and gender.",
+          "C": "Programming language preferences.",
+          "D": "Educational background in computer science."
+        },
+        "target_id": "P032_Q11",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In addition to Internet and computers, what other utility can impact technology usage?",
+        "options": {
+          "A": "Reliable electricity.",
+          "B": "Telephone networks for dial-up.",
+          "C": "Availability of turtle graphics software.",
+          "D": "Access to venture capital for tech start-ups."
+        },
+        "target_id": "P032_Q12",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a potential internal cause of digital divide within communities?",
+        "options": {
+          "A": "Differential access to individual products or services, such as subscription-based AI tools.",
+          "B": "Universal access to high-speed Internet mandated by law.",
+          "C": "The historical erasure of Black technologists' contributions.",
+          "D": "The use of LOGO for learning mathematics and physics."
+        },
+        "target_id": "P032_Q13",
+        "source_ids": [
+          "P032"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:11:27.134704",
+    "pool_size": 13
+  },
+  "L34": {
+    "pool": [
+      {
+        "question": "According to Morgan Ames, what is a characteristic of 'charismatic technologies'?",
+        "options": {
+          "A": "They are deceptive, making adoption and social change seem straightforward.",
+          "B": "They are always designed for entertainment purposes.",
+          "C": "They require extensive community involvement to succeed.",
+          "D": "They are primarily used in wealthy countries."
+        },
+        "target_id": "P034_Q01",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary power source for the One Laptop Per Child (OLPC) laptops?",
+        "options": {
+          "A": "A hand crank.",
+          "B": "Solar panels.",
+          "C": "Grid electricity.",
+          "D": "Batteries only."
+        },
+        "target_id": "P034_Q02",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which year was the One Laptop Per Child (OLPC) project announced?",
+        "options": {
+          "A": "2005.",
+          "B": "1995.",
+          "C": "2000.",
+          "D": "2010."
+        },
+        "target_id": "P034_Q03",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which organization announced the One Laptop Per Child (OLPC) project?",
+        "options": {
+          "A": "Massachusetts Institute of Technology Media Lab.",
+          "B": "IBM.",
+          "C": "NASA.",
+          "D": "Hewlett-Packard."
+        },
+        "target_id": "P034_Q04",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the target demographic for the One Laptop Per Child (OLPC) project?",
+        "options": {
+          "A": "Children in the Global South.",
+          "B": "Software engineers in Silicon Valley.",
+          "C": "Students in the United States.",
+          "D": "Black technologists in the Afronet."
+        },
+        "target_id": "P034_Q05",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "According to Morgan Ames's fieldwork, what was a common use of OLPC computers by children when they worked?",
+        "options": {
+          "A": "For their own entertainment.",
+          "B": "For educational learning as intended.",
+          "C": "For social media platforms.",
+          "D": "For coding and programming."
+        },
+        "target_id": "P034_Q06",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What does Morgan Ames argue is a risk associated with designing technologies for global development?",
+        "options": {
+          "A": "Technology is embedded in a complicated social context and history.",
+          "B": "Technology is too expensive to scale.",
+          "C": "Technology always benefits the wealthy first.",
+          "D": "Technology requires advanced infrastructure."
+        },
+        "target_id": "P034_Q07",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What methods do computer scientists employ for effective solutions in global development?",
+        "options": {
+          "A": "Methods drawing from the social sciences.",
+          "B": "Methods emphasizing efficiency and performance.",
+          "C": "Methods from hardware engineering.",
+          "D": "Methods based on market demand."
+        },
+        "target_id": "P034_Q08",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Why is designing for diverse communities difficult, as mentioned in the context of global development?",
+        "options": {
+          "A": "Designers often have little direct experience with the people they wish to serve.",
+          "B": "Communities lack interest in new technologies.",
+          "C": "Funding constraints limit design options.",
+          "D": "Technological access is always unequal."
+        },
+        "target_id": "P034_Q09",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is one of the reasons Morgan Ames cites for the failure of the OLPC project?",
+        "options": {
+          "A": "Electricity infrastructure problems.",
+          "B": "Social media distractions.",
+          "C": "Government interference.",
+          "D": "High cost of Internet connectivity."
+        },
+        "target_id": "P034_Q10",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the title of Morgan Ames's book that critiques the OLPC project?",
+        "options": {
+          "A": "\"The Charisma Machine\".",
+          "B": "\"Design Justice\".",
+          "C": "\"Black Software\".",
+          "D": "\"Hidden Figures\"."
+        },
+        "target_id": "P034_Q11",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What does Ames mean by 'charismatic technologies' being deceptive?",
+        "options": {
+          "A": "They make technological adoption and social change appear straightforward instead of difficult and political.",
+          "B": "They attract users with flashy designs but fail functionally.",
+          "C": "They are promoted by charismatic leaders but lack substance.",
+          "D": "They create illusions of accessibility but are actually exclusive."
+        },
+        "target_id": "P034_Q12",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What has been a criticism of Morgan Ames's account of the OLPC project?",
+        "options": {
+          "A": "It presents an oversimplified narrative.",
+          "B": "It ignores the successes of the project.",
+          "C": "It focuses too much on technical details.",
+          "D": "It underestimates the role of community involvement."
+        },
+        "target_id": "P034_Q13",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What are some of the resource constraints in global development that computer technologies must address?",
+        "options": {
+          "A": "Lack of reliable power, limited or nonexistent Internet connectivity, and low literacy.",
+          "B": "High-speed Internet, abundant power, and high literacy.",
+          "C": "Social media integration, AI capabilities, and cloud storage.",
+          "D": "Government regulations, market competition, and intellectual property."
+        },
+        "target_id": "P034_Q14",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the vision of the OLPC project that did not materialize according to Ames?",
+        "options": {
+          "A": "Children using computers for intended learning experiences.",
+          "B": "Providing every child with a laptop.",
+          "C": "Creating a global network of educators.",
+          "D": "Reducing the digital divide in the Global South."
+        },
+        "target_id": "P034_Q15",
+        "source_ids": [
+          "P034"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:11:53.221819",
+    "pool_size": 15
+  },
+  "L33": {
+    "pool": [
+      {
+        "question": "What does computer technology change in society?",
+        "options": {
+          "A": "The balance of power",
+          "B": "The way students learn through programming",
+          "C": "The demand for software engineers",
+          "D": "The representation of marginalized groups in history"
+        },
+        "target_id": "P033_Q01",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who typically sees improved quality of life from computer science advancements?",
+        "options": {
+          "A": "People with access and control over computer technology",
+          "B": "People living in the Global South",
+          "C": "People with low literacy levels",
+          "D": "People in rural areas without reliable electricity"
+        },
+        "target_id": "P033_Q02",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "For whom are context-sensitive technology designs particularly necessary?",
+        "options": {
+          "A": "People living in the Global South",
+          "B": "Children using educational software like LOGO",
+          "C": "Software engineers in Silicon Valley",
+          "D": "Government officials in developed nations"
+        },
+        "target_id": "P033_Q03",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What was the primary method for consumer Internet access in the 1990s?",
+        "options": {
+          "A": "Dial-up systems",
+          "B": "Broadband connections",
+          "C": "Satellite internet",
+          "D": "Mobile data networks"
+        },
+        "target_id": "P033_Q04",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a current infrastructure challenge for Internet access in many parts of the world?",
+        "options": {
+          "A": "Lack of telephone coverage and Internet connectivity",
+          "B": "High cost of data plans in urban areas",
+          "C": "Government censorship of online content",
+          "D": "Slow connection speeds in developed countries"
+        },
+        "target_id": "P033_Q05",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the goal of research in computers for global development?",
+        "options": {
+          "A": "To improve the quality of life for low-income and underserved populations worldwide",
+          "B": "To increase Internet access in wealthy urban centers",
+          "C": "To develop cheaper smartphones for emerging markets",
+          "D": "To promote Western technology standards in developing countries"
+        },
+        "target_id": "P033_Q06",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the 1990s, what infrastructure did dial-up Internet access primarily rely on?",
+        "options": {
+          "A": "Public telephone network systems",
+          "B": "Cable television networks",
+          "C": "Satellite communications systems",
+          "D": "Fiber optic cables"
+        },
+        "target_id": "P033_Q07",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a major barrier to Internet access in many parts of the world today?",
+        "options": {
+          "A": "Lack of telephone coverage",
+          "B": "High cost of personal computers",
+          "C": "Lack of educational software",
+          "D": "Language barriers in software design"
+        },
+        "target_id": "P033_Q08",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which region is specifically mentioned as needing context-sensitive technology designs?",
+        "options": {
+          "A": "The Global South",
+          "B": "North America",
+          "C": "Europe",
+          "D": "East Asia"
+        },
+        "target_id": "P033_Q09",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is the primary aim of designing technology for underserved global communities?",
+        "options": {
+          "A": "To meet the specific needs of low-income and underserved populations",
+          "B": "To expand the market for technology companies",
+          "C": "To replicate successful Western business models",
+          "D": "To increase technology usage in schools worldwide"
+        },
+        "target_id": "P033_Q10",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key challenge in the distribution of computer technology?",
+        "options": {
+          "A": "Unequal access to technology and its benefits",
+          "B": "The high cost of training software engineers",
+          "C": "The rapid obsolescence of hardware",
+          "D": "The complexity of programming languages"
+        },
+        "target_id": "P033_Q11",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What populations are the focus of research in computers for global development?",
+        "options": {
+          "A": "Low-income and underserved populations across the world",
+          "B": "Wealthy countries with advanced infrastructure",
+          "C": "Urban populations in developed nations",
+          "D": "Rural populations in the United States"
+        },
+        "target_id": "P033_Q12",
+        "source_ids": [
+          "P033"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:13:41.748714",
+    "pool_size": 12
+  },
+  "L35": {
+    "pool": [
+      {
+        "question": "What category of challenges, beyond purely technical ones, are particularly prominent in computing for global development?",
+        "options": {
+          "A": "Sociopolitical or technopolitical challenges",
+          "B": "Hardware reliability and power infrastructure challenges",
+          "C": "Software compatibility and user interface challenges",
+          "D": "Market competition and intellectual property challenges"
+        },
+        "target_id": "P035_Q01",
+        "source_ids": [
+          "P035"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the context of computing for global development, a pilot test to evaluate a new design can create what negative social perception?",
+        "options": {
+          "A": "It can appear as favoritism toward the pilot group participants.",
+          "B": "It can be seen as a colonialist imposition of Western technology.",
+          "C": "It can be viewed as a wasteful misuse of limited resources.",
+          "D": "It can create an expectation of universal, immediate deployment."
+        },
+        "target_id": "P035_Q02",
+        "source_ids": [
+          "P035"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In which global region are the social tensions and issues in computing for development described as being especially exacerbated?",
+        "options": {
+          "A": "The Global South",
+          "B": "Silicon Valley and the United States",
+          "C": "European Union member states",
+          "D": "East Asian technology hubs"
+        },
+        "target_id": "P035_Q03",
+        "source_ids": [
+          "P035"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What historical legacies are noted for continuing to produce or expand social inequities and injustices in the Global South, impacting technology projects?",
+        "options": {
+          "A": "The legacies of imperialism and racial hierarchies",
+          "B": "The legacies of the Cold War and non-aligned movements",
+          "C": "The legacies of pre-industrial economic systems",
+          "D": "The legacies of 20th-century nationalist movements"
+        },
+        "target_id": "P035_Q04",
+        "source_ids": [
+          "P035"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "According to the material, what is a primary reason why simply including communities in the design process is insufficient for addressing risks in global development computing?",
+        "options": {
+          "A": "Many core challenges are sociopolitical or technopolitical, not purely technical.",
+          "B": "Community members rarely have the technical expertise to contribute meaningfully.",
+          "C": "It is too expensive and time-consuming to involve communities effectively.",
+          "D": "Designers typically already possess a deep, lived understanding of the target communities."
+        },
+        "target_id": "P035_Q05",
+        "source_ids": [
+          "P035"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:12:28.043517",
+    "pool_size": 5
+  },
+  "L37": {
+    "pool": [
+      {
+        "question": "What is one way underdeveloped countries can achieve rapid technological advancement without bearing the initial high development costs?",
+        "options": {
+          "A": "By adopting and implementing technologies originally developed in other regions.",
+          "B": "By investing heavily in proprietary, locally-developed research from scratch.",
+          "C": "By waiting for dominant tech platforms to distribute benefits equitably.",
+          "D": "By focusing exclusively on charismatic technologies like the One Laptop Per Child project."
+        },
+        "target_id": "P037_Q01",
+        "source_ids": [
+          "P037"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "According to an example, what type of infrastructure can be deployed quickly and cheaply in Middle Eastern and African countries using pre-existing technology?",
+        "options": {
+          "A": "Ad hoc networks.",
+          "B": "Industry Standard Architecture (ISA) bus systems.",
+          "C": "Dial-up Internet systems running on public telephone networks.",
+          "D": "High-speed Internet cell towers with reliable electricity."
+        },
+        "target_id": "P037_Q02",
+        "source_ids": [
+          "P037"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What does the sharing of technological progress from one region to another enable for the receiving region?",
+        "options": {
+          "A": "Quick progression and technological advancement.",
+          "B": "A guaranteed solution to sociopolitical challenges and social tensions.",
+          "C": "Immediate access to high-priced subscription tools like powerful AI.",
+          "D": "The automatic centering of their cultural identity in the technology."
+        },
+        "target_id": "P037_Q03",
+        "source_ids": [
+          "P037"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "In the context of global technological sharing, where were the original high-cost investments for technologies like ad hoc networks typically made?",
+        "options": {
+          "A": "In the United States and Europe.",
+          "B": "Primarily in countries within the Global South.",
+          "C": "Through community-led design justice initiatives.",
+          "D": "By early Black technologists pioneering Internet platforms."
+        },
+        "target_id": "P037_Q04",
+        "source_ids": [
+          "P037"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What is a key benefit when technological progress is shared across global regions?",
+        "options": {
+          "A": "It allows other areas to advance technologically without replicating the original high investment.",
+          "B": "It ensures that the digital divide is completely eliminated within those regions.",
+          "C": "It guarantees that the technology will be used exactly as the original designers intended.",
+          "D": "It resolves the underlying infrastructure issues like unreliable electricity."
+        },
+        "target_id": "P037_Q05",
+        "source_ids": [
+          "P037"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:12:36.095051",
+    "pool_size": 5
+  },
+  "L36": {
+    "pool": [
+      {
+        "question": "According to Design Justice principles, how important are the identities of people creating technologies for global development compared to the technologies themselves?",
+        "options": {
+          "A": "They are just as important as the technologies.",
+          "B": "They are less important than the technologies.",
+          "C": "They are more important than the technologies.",
+          "D": "They are not important at all."
+        },
+        "target_id": "P036_Q01",
+        "source_ids": [
+          "P036"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What approach does Sasha Costanza-Chock advocate for in Design Justice when computer scientists work with communities?",
+        "options": {
+          "A": "Building with, not for, communities.",
+          "B": "Building for, not with, communities.",
+          "C": "Building by experts alone without community input.",
+          "D": "Building without considering community needs."
+        },
+        "target_id": "P036_Q02",
+        "source_ids": [
+          "P036"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Which central question does Design Justice use to address social justice tensions in technology design?",
+        "options": {
+          "A": "\"Who does technology ultimately benefit?\"",
+          "B": "\"How can technology be made more efficient?\"",
+          "C": "\"What is the cost of developing the technology?\"",
+          "D": "\"When will the technology be widely accessible?\""
+        },
+        "target_id": "P036_Q03",
+        "source_ids": [
+          "P036"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Whose ingenuity does Design Justice aim to center in the process of technology design?",
+        "options": {
+          "A": "The ingenuity of the marginalized user.",
+          "B": "The ingenuity of the dominant designer.",
+          "C": "The ingenuity of government regulators.",
+          "D": "The ingenuity of corporate stakeholders."
+        },
+        "target_id": "P036_Q04",
+        "source_ids": [
+          "P036"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "Who reiterates the call for computer scientists to 'build with, not for' communities in the book Design Justice?",
+        "options": {
+          "A": "Sasha Costanza-Chock",
+          "B": "Morgan Ames",
+          "C": "Charlton McIlwain",
+          "D": "Roy L. Clay Sr."
+        },
+        "target_id": "P036_Q05",
+        "source_ids": [
+          "P036"
+        ],
+        "correct": "A"
+      },
+      {
+        "question": "What does Design Justice seek to address by centering the ingenuity of marginalized users rather than dominant designers?",
+        "options": {
+          "A": "Social justice tensions in technology.",
+          "B": "Technological inefficiencies and bugs.",
+          "C": "The digital divide in access to hardware.",
+          "D": "The risks of charismatic technologies."
+        },
+        "target_id": "P036_Q06",
+        "source_ids": [
+          "P036"
+        ],
+        "correct": "A"
+      }
+    ],
+    "generated_at": "2026-04-18T22:12:55.858125",
+    "pool_size": 6
+  }
+}

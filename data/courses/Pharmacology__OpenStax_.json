@@ -1,0 +1,538 @@
+{
+  "L01": {
+    "module_id": "M01",
+    "module_title": "Origins of Pharmacology",
+    "module_subtitle": "Explore the etymology and historical roots of the study of drugs.",
+    "lesson_header": "History of Pharmacology",
+    "lesson_title": "Origins and Ancient Traditions of Medicinal Plants (1)",
+    "lesson_content": [
+      {
+        "id": "P001",
+        "questions": 5
+      }
+    ],
+    "source_ids": [
+      "P001"
+    ],
+    "type": "lesson",
+    "next": "L02"
+  },
+  "L02": {
+    "module_id": "M01",
+    "module_title": "Origins of Pharmacology",
+    "module_subtitle": "Explore the etymology and historical roots of the study of drugs.",
+    "lesson_header": "History of Pharmacology",
+    "lesson_title": "Etymology and Definitions of Drug and Medication (2)",
+    "lesson_content": [
+      {
+        "id": "P002",
+        "questions": 4
+      }
+    ],
+    "source_ids": [
+      "P002"
+    ],
+    "type": "lesson",
+    "next": "L03"
+  },
+  "L03": {
+    "module_id": "M01",
+    "module_title": "Origins of Pharmacology",
+    "module_subtitle": "Explore the etymology and historical roots of the study of drugs.",
+    "lesson_header": "History of Pharmacology",
+    "lesson_title": "Ancient Wound Treatments and Early Medical Documents (3)",
+    "lesson_content": [
+      {
+        "id": "P003",
+        "questions": 8
+      }
+    ],
+    "source_ids": [
+      "P003"
+    ],
+    "type": "lesson",
+    "next": "L04"
+  },
+  "L04": {
+    "module_id": "M01",
+    "module_title": "Origins of Pharmacology",
+    "module_subtitle": "Explore the etymology and historical roots of the study of drugs.",
+    "lesson_header": "History of Pharmacology",
+    "lesson_title": "Early Effective Remedies and the Use of Opium (4)",
+    "lesson_content": [
+      {
+        "id": "P004",
+        "questions": 5
+      }
+    ],
+    "source_ids": [
+      "P004"
+    ],
+    "type": "lesson",
+    "next": "M01-CP1"
+  },
+  "M01-CP1": {
+    "module_id": "M01",
+    "module_title": "Origins of Pharmacology",
+    "module_subtitle": "Explore the etymology and historical roots of the study of drugs.",
+    "lesson_title": "Checkpoint 1: Origins of Pharmacology",
+    "type": "module_checkpoint",
+    "children_ids": [
+      "L01",
+      "L02",
+      "L03",
+      "L04"
+    ],
+    "next": "L05"
+  },
+  "L05": {
+    "module_id": "M01",
+    "module_title": "Origins of Pharmacology",
+    "module_subtitle": "Explore the etymology and historical roots of the study of drugs.",
+    "lesson_header": "History of Pharmacology",
+    "lesson_title": "The London Pharmacopoeia and Eighteenth-Century Advances (5)",
+    "lesson_content": [
+      {
+        "id": "P005",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P005"
+    ],
+    "type": "lesson",
+    "next": "L06"
+  },
+  "L06": {
+    "module_id": "M01",
+    "module_title": "Origins of Pharmacology",
+    "module_subtitle": "Explore the etymology and historical roots of the study of drugs.",
+    "lesson_header": "History of Pharmacology",
+    "lesson_title": "Isolation of Pure Drugs and the Birth of Modern Pharmacology (6)",
+    "lesson_content": [
+      {
+        "id": "P006",
+        "questions": 12
+      }
+    ],
+    "source_ids": [
+      "P006"
+    ],
+    "type": "lesson",
+    "next": "L07"
+  },
+  "L07": {
+    "module_id": "M01",
+    "module_title": "Origins of Pharmacology",
+    "module_subtitle": "Explore the etymology and historical roots of the study of drugs.",
+    "lesson_header": "History of Pharmacology",
+    "lesson_title": "Key Drug Discoveries from Aspirin to Penicillin (7)",
+    "lesson_content": [
+      {
+        "id": "P007",
+        "questions": 14
+      }
+    ],
+    "source_ids": [
+      "P007"
+    ],
+    "type": "lesson",
+    "next": "L08"
+  },
+  "L08": {
+    "module_id": "M01",
+    "module_title": "Origins of Pharmacology",
+    "module_subtitle": "Explore the etymology and historical roots of the study of drugs.",
+    "lesson_header": "History of Pharmacology",
+    "lesson_title": "From Natural Resources to Synthetic and Biologic Drugs (8)",
+    "lesson_content": [
+      {
+        "id": "P008",
+        "questions": 4
+      }
+    ],
+    "source_ids": [
+      "P008"
+    ],
+    "type": "lesson",
+    "next": "M01-SYNTHESIS"
+  },
+  "M01-SYNTHESIS": {
+    "module_id": "M01",
+    "module_title": "Origins of Pharmacology",
+    "module_subtitle": "Explore the etymology and historical roots of the study of drugs.",
+    "lesson_title": "Module Summary: Origins of Pharmacology",
+    "type": "module_synthesis",
+    "children_ids": [
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L08"
+    ],
+    "next": "L09"
+  },
+  "L09": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Interdisciplinary Nature of Pharmacology",
+    "lesson_title": "The Healthcare Team's Roles in Medication Administration (1)",
+    "lesson_content": [
+      {
+        "id": "P009",
+        "questions": 15
+      }
+    ],
+    "source_ids": [
+      "P009"
+    ],
+    "type": "lesson",
+    "next": "L10"
+  },
+  "L10": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Interdisciplinary Nature of Pharmacology",
+    "lesson_title": "Principles and Benefits of Interprofessional Collaboration (2)",
+    "lesson_content": [
+      {
+        "id": "P010",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P010"
+    ],
+    "type": "lesson",
+    "next": "L11"
+  },
+  "L11": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Pharmacology and Clinical Nursing Practice",
+    "lesson_title": "Therapeutic Effects and Adverse Drug Reactions in Nursing (1)",
+    "lesson_content": [
+      {
+        "id": "P011",
+        "questions": 6
+      }
+    ],
+    "source_ids": [
+      "P011"
+    ],
+    "type": "lesson",
+    "next": "L12"
+  },
+  "L12": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Pharmacology and Clinical Nursing Practice",
+    "lesson_title": "Nursing Responsibilities for Safe Medication Management (2)",
+    "lesson_content": [
+      {
+        "id": "P012",
+        "questions": 8
+      }
+    ],
+    "source_ids": [
+      "P012"
+    ],
+    "type": "lesson",
+    "next": "L13"
+  },
+  "L13": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Plant-Based Drug Sources and Historical Examples (1)",
+    "lesson_content": [
+      {
+        "id": "P013",
+        "questions": 14
+      }
+    ],
+    "source_ids": [
+      "P013"
+    ],
+    "type": "lesson",
+    "next": "M02-CP1"
+  },
+  "M02-CP1": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_title": "Checkpoint 1: Foundations and Drug Basics",
+    "type": "module_checkpoint",
+    "children_ids": [
+      "L09",
+      "L10",
+      "L11",
+      "L12",
+      "L13"
+    ],
+    "next": "L14"
+  },
+  "L14": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Animal Sources for Common Therapeutic Medications (2)",
+    "lesson_content": [
+      {
+        "id": "P014",
+        "questions": 11
+      }
+    ],
+    "source_ids": [
+      "P014"
+    ],
+    "type": "lesson",
+    "next": "L15"
+  },
+  "L15": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Biologics: Living Sources and Targeted Therapies (3)",
+    "lesson_content": [
+      {
+        "id": "P015",
+        "questions": 16
+      }
+    ],
+    "source_ids": [
+      "P015"
+    ],
+    "type": "lesson",
+    "next": "L16"
+  },
+  "L16": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Biosimilars as Lower-Cost Alternatives to Biologics (4)",
+    "lesson_content": [
+      {
+        "id": "P016",
+        "questions": 10
+      }
+    ],
+    "source_ids": [
+      "P016"
+    ],
+    "type": "lesson",
+    "next": "L17"
+  },
+  "L17": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Comparing Biosimilars and Generic Drug Development (5)",
+    "lesson_content": [
+      {
+        "id": "P017",
+        "questions": 13
+      }
+    ],
+    "source_ids": [
+      "P017"
+    ],
+    "type": "lesson",
+    "next": "L18"
+  },
+  "L18": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Synthetic Drugs Created in Laboratory Settings (6)",
+    "lesson_content": [
+      {
+        "id": "P018",
+        "questions": 6
+      }
+    ],
+    "source_ids": [
+      "P018"
+    ],
+    "type": "lesson",
+    "next": "M02-CP2"
+  },
+  "M02-CP2": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_title": "Checkpoint 2: Foundations and Drug Basics",
+    "type": "module_checkpoint",
+    "children_ids": [
+      "L09",
+      "L10",
+      "L11",
+      "L12",
+      "L13",
+      "L14",
+      "L15",
+      "L16",
+      "L17",
+      "L18"
+    ],
+    "next": "L19"
+  },
+  "L19": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Inorganic Compounds and Their Therapeutic Uses (7)",
+    "lesson_content": [
+      {
+        "id": "P019",
+        "questions": 6
+      }
+    ],
+    "source_ids": [
+      "P019"
+    ],
+    "type": "lesson",
+    "next": "L20"
+  },
+  "L20": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Three Primary Routes of Drug Administration (8)",
+    "lesson_content": [
+      {
+        "id": "P020",
+        "questions": 2
+      }
+    ],
+    "source_ids": [
+      "P020"
+    ],
+    "type": "lesson",
+    "next": "L21"
+  },
+  "L21": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Percutaneous Drug Forms and Delivery Methods (9)",
+    "lesson_content": [
+      {
+        "id": "P021",
+        "questions": 7
+      }
+    ],
+    "source_ids": [
+      "P021"
+    ],
+    "type": "lesson",
+    "next": "L22"
+  },
+  "L22": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Enteral Medications and Gastrointestinal Administration (10)",
+    "lesson_content": [
+      {
+        "id": "P022",
+        "questions": 13
+      }
+    ],
+    "source_ids": [
+      "P022"
+    ],
+    "type": "lesson",
+    "next": "L23"
+  },
+  "L23": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_header": "Drug Sources and Forms",
+    "lesson_title": "Parenteral Drug Injections and Absorption Rates (11)",
+    "lesson_content": [
+      {
+        "id": "P023",
+        "questions": 11
+      }
+    ],
+    "source_ids": [
+      "P023"
+    ],
+    "type": "lesson",
+    "next": "M02-SYNTHESIS"
+  },
+  "M02-SYNTHESIS": {
+    "module_id": "M02",
+    "module_title": "Foundations and Drug Basics",
+    "module_subtitle": "Examine the interdisciplinary nature, nursing role, and sources of medications.",
+    "lesson_title": "Module Summary: Foundations and Drug Basics",
+    "type": "module_synthesis",
+    "children_ids": [
+      "L09",
+      "L10",
+      "L11",
+      "L12",
+      "L13",
+      "L14",
+      "L15",
+      "L16",
+      "L17",
+      "L18",
+      "L19",
+      "L20",
+      "L21",
+      "L22",
+      "L23"
+    ],
+    "next": "FINAL_TEST"
+  },
+  "FINAL_TEST": {
+    "lesson_title": "Final Test",
+    "type": "final_test",
+    "next": null
+  },
+  "_master_index": {
+    "P001": "The word pharmacology (from two Greek words, pharmakon, which means “drug” or “medicine,” and logos, which means “study”) essentially means the study of medicine; it could also be described as the study of the biological effects of chemicals on the body. The history of pharmacology dates back thousands of years, most likely beginning with the use of medicinal plants and herbs to relieve symptoms of various diseases. Herbal medications have been used in medicine in most civilizations around the globe dating back to ancient times. One generation passed its knowledge to the next through oral tradition. Individuals might not know how a treatment worked, but they were able to observe its effects.",
+    "P002": "The word drug may originate from an old Dutch word, droog, which means dry, or an old French term, drogue. This may have referred to “dry barrels,” the method for preserving medicinal plants as dry matter or any substance, such as animal products or inorganic materials, used in the composition of medicines. The words drug and medication are used interchangeably throughout this text.",
+    "P003": "More than 2,000 years ago in China, Greece, and Egypt, poultices composed of moldy bread were used to treat open wounds. (Was it possible that this had antimicrobial effects?) This treatment was documented in the Ebers papyrus (see Figure 1.2), one of the world’s oldest preserved medical documents, in 1550 BCE. Medicinal soils were used at that time as well. An Anglo-Saxon recipe has been found that dates back 1,000 years ago, and it was recently discovered that it is helpful in the treatment of methicillin-resistant Staphylococcus aureus (Hutchings et al., 2019).",
+    "P004": "It is true that although many treatments or remedies were simply ineffective, others unfortunately were poisonous. However, some treatments did contain substances that worked. Opium, from the poppy plant, has been used for centuries to relieve pain and for sedation by the Sumerians and the Greeks. However, the first authentic use was recorded by the Greek philosopher Theophrastus in the 3rd century BCE (Stefano et al., 2017).",
+    "P005": "The London Pharmacopoeia, first published in 1618, contained over 1,000 simple drugs and over 900 preparations and compounds. Progress in the use of pharmacological treatments continued to develop worldwide at differing rates, but in the late 1700s, several advances in Europe were made that remain significant today. William Withering in England developed digitalis, a derivative from the foxglove plant, which was and still is used in treating heart disease and rhythm disorders. Foxglove had been used for centuries in folk medicine, but Withering was able to use small amounts of the foxglove leaves for the treatment of dropsy (now known as heart failure). Another advancement occurred in 1796 when Edward Jenner developed the first vaccine against smallpox. His work established that infectious diseases could be controlled with the deliberate use of vaccination.",
+    "P006": "The era of modern pharmacology began approximately 200 years ago. Even in the early 1800s, chemists could isolate various chemicals from substances and mixtures. In 1804 or 1805, Fredrich Serturner isolated morphine from opium, which is still used for treating severe pain (Kumar, 2022). Once scientists could isolate the drugs from plants and other natural resources, they could better study their actions on the body. Most often, these experiments were conducted on animals, but occasionally the chemists would test the drug on themselves or on friends and family, sometimes with disastrous results. The first school of pharmacy was established in 1847 in the country of Estonia. The oldest pharmacology journal, Naunyn-Schmeideberg’s Archives of Pharmacology, was first published in 1873 and is still being published today (Hattori & Seifert, 2023).",
+    "P007": "Scientists in the 1890s developed aspirin from the bark of the willow tree, using it to treat fevers and mild discomfort. The link between diabetes mellitus and the pancreas was established in 1889 through the work of Joseph von Mering and Oskar Minkowski. Approximately 30 years later, in 1921, Frederick Banting and Charles Best formulated the first insulin preparation (Karamanou et al., 2016; Lee & Yoon, 2021). Paul Ehrlich introduced the first treatment for syphilis in 1909 by isolating a chemical compound that could be used against a microorganism (arsphenamine, or compound 606). Arsphenamine is a derivative of arsenic, and although it could successfully treat syphilis, it did have potentially fatal side effects, which caused it to fall out of use quickly. Shortly after that, in 1928, Alexander Fleming discovered that Penicillium notatum mold prevented the growth of Staphylococcus aureus and ushered in the era of antibiotic use. Millions of lives have been saved since then by using antibiotics to treat infectious diseases such as pneumonia, sepsis, gangrene, scarlet fever, syphilis, gonorrhea, meningitis, and tuberculosis.",
+    "P008": "Although plants and natural resources are still used today, they can be a finite resource. The development of new medicines has continued to evolve with the synthesis of drugs in the laboratory and the use of biomolecules or biologics. (Biologics will be discussed in further detail later in this chapter.) There have been tremendous strides in the development of medications that have revolutionized (and will continue to revolutionize) the treatment of disease and our understanding of the human body.",
+    "P009": "The nurse administers medication as part of a team that includes other professions. The health care provider (physician, physician’s assistant, or nurse practitioner) orders the drug indicated to treat the client. (The term client is interchangeable with patient in some settings.) The pharmacist evaluates the client and their situation and verifies the appropriateness of the requested medication and its dose for the client. Then, the pharmacist may dispense the medication, recommend the appropriate time for administration, and complete teaching to the client. In the hospital setting, the nurse assesses the client and the potential effects of the medication and then administers the drug after determining the safety to the client. A social worker may become involved if issues of non-adherence to the medication regimen are found or if the client cannot afford the drug once discharged from the hospital. These are just a few of the health care roles involved in the pharmacological care of the client, and often these roles overlap in practice. Communication between professions is crucial in delivering the best care to the client. The concept of collaborative practice, also known as interprofessional (IP) collaboration, within health care professions is viewed as “best practice” because inadequate collaboration may adversely affect the delivery of health care and the safety of the client. More efficient use of resources also results from IP teamwork.",
+    "P010": "Health care providers should understand each other’s roles to prevent mistakes. Competence in interprofessional collaboration is crucial for effective teamwork among physicians, nurses, pharmacists, and others. Interprofessional teamwork improves the efficiency of client care, helps lower costs to the client and the institution, improves client outcomes, and enhances the delivery of holistic care. It also boosts job satisfaction and reduces staff burnout. Maintaining competency includes understanding team goals, having a shared identity, and committing to safe client care while relying on mutual respect and trust. Effective communication and decision-making involves active listening and embracing each discipline’s roles in client care.",
+    "P011": "Knowledge about pharmacology and the various drugs prescribed and administered to clients is a major part of the nurse’s role. Even when not administering the medications directly to the client, it is crucial to the client’s care. Nurses must understand the pharmacotherapeutic effects of the drugs in their clinical practice. Drugs have intended or therapeutic effects—these are effects that are expected and desired from that particular medication. However, drugs may also have undesirable adverse effects or side effects.",
+    "P012": "There are thousands of drugs on the market. Although the nurse is usually responsible for a much smaller number of medications in a specialty area, it is still a significant task to be responsible for the consequences of administering several drugs to various clients with an assortment of diseases.Follow-up with the client is critical to their safety and well-being. The nursing care plan will need to be modified if goals are not reached, and this may need to be done in collaboration with other health care team members. Communication between interprofessional team members is key to preventing adverse drug events. The nurse should allow plenty of time to counsel the client about the prescribed drugs and speak clearly, using simple language that avoids medical jargon. It is helpful to have the client repeat the instructions back to the nurse to assess understanding.",
+    "P013": "Drugs are substances or compounds that prevent, treat, diagnose, or cure various conditions or diseases. As mentioned previously, drugs come from a variety of resources—plants, animal products, and inorganic substances. Ideally, these chemicals have desirable therapeutic effects without harmful properties, although many derivatives may have poisonous effects, depending upon the dosage used. Some plant-based products in use today include digitalis from the foxglove plant, vincristine from the periwinkle, and morphine from the poppy plant. The Amazon Basin is home to countless numbers of plants with medicinal properties. Though not in use today, one of the first paralytic agents used in anesthesia was curare, made from a vine known as Chondrodendron tomentosum, found near the Amazon River in South America. The Indigenous population in the area placed a curare mixture on the tip of blow darts and used it for hunting (see Figure 1.3). The prey is paralyzed once curare enters the bloodstream; however, the meat is safe to eat because it is not toxic when eaten and digested.",
+    "P014": "Some medications come from animals and animal products, including the human body. This list includes a few common medications derived from animals or animal products, though it is not all-inclusive. Heparin and enoxaparin, anticoagulants used to prevent or treat blood clots, are made from pig intestines, and some thyroid medications and pancrelipase are also porcine derivatives. Conjugated estrogens, used to treat menopausal hot flashes, are made from the urine of female horses. Exenatide, used to treat type 2 diabetes, can be made from the saliva or venom of the Gila monster, which is a venomous lizard native to the southwestern United States and northern Mexico. Other drugs come from chicken eggs or yeast.",
+    "P015": "Several medications, such as vaccines, antivenins and antitoxins, hormones, and monoclonal antibodies, are known as biologics. Biologics are medications that come from a living source and are developed through a combination of biomolecular science, immunology, and genetic engineering. Gene-based therapies are another example of cutting-edge research in the world of biologics. They show great promise in treating some cancers and other conditions that currently have no available treatments. They are produced through biotechnological processes, some of which may have unique drug-delivery systems (Atkinson, 2022). Biologics offer the advantage of more targeted therapy for specific diseases, such as autoimmune disorders and cancer, with the potential for fewer side effects, but they are uniquely formulated with complex pharmacotherapy and may require administration through infusions or injections, which adds to the cost of treatment. Monoclonal antibodies, exemplified by etanercept (Enbrel), a biologic, have revolutionized the treatment of diseases like rheumatoid arthritis (RA). Formerly managed with drugs like methotrexate and corticosteroids, known for their severe adverse effects, monoclonal antibodies now offer a more favorable and less toxic treatment option for RA.",
+    "P016": "One of the primary drawbacks to the use of biologics is their expense. These drugs take more work to purify, process, and produce, and many are given through infusions or injections. As their patents expire, however, biosimilars may be produced. Biosimilars are synthetically produced drugs with similar properties, including mechanism of action and dosing, to those of a biologic. Generally, this allows a biosimilar drug to be produced at a reduced cost than the equivalent biologic drug. Biosimilars are effectively a means to improve the access to biologics while decreasing the cost of therapy.",
+    "P017": "Biosimilars differ somewhat from generic drugs. The development of biosimilars may take as long as 10 years and cost close to $100 million (Pfizer, 2021). Generic medications are much less costly ($1–2 million) and may be developed over only a couple of years. However, the essential difference between a biosimilar and a generic medication is in the drug’s molecular structure. Biosimilar drugs have a larger and more complex molecular structure than generic drugs and are made from a living organism such as yeast or bacteria (U.S. Food and Drug Administration [FDA], 2022c). They are not bioequivalent, however, because of the complex manufacturing processes involved. A brand biologic may be produced using a specific cell line or protein to yield the molecule, which is not available to the maker of the biosimilar. They must come up with their own manufacturing process to create a molecule that is very similar. A company manufacturing a generic drug has to demonstrate that the drug is bioequivalent to the brand-name drug, whereas a company developing and producing a biosimilar drug must demonstrate that it is similar to the biologic it is patterned after (called the reference drug). (See more about generic drugs a little later in this chapter.)",
+    "P018": "Chemical compounds produced in a laboratory either commercially by a drug manufacturer or illegally by individuals producing drugs for illicit reasons are called synthetic drugs. The first synthetic drug, a sedative-hypnotic drug known as chloral hydrate, was first used in medicine in 1869. Sometimes scientists will genetically engineer bacteria or slightly alter the chemical structure of substances to produce chemicals that are therapeutic. A small change in the chemical structure of some medications may make them more helpful than they previously were—they may become more potent or have fewer side effects—making the new compound much more desirable. Often individuals have fewer allergic reactions to synthetic drugs.",
+    "P019": "Many drugs come from inorganic compounds. Inorganic compounds are often salts from chemical components that have been found to have therapeutic effects. Aluminum and magnesium compounds are helpful in the treatment of indigestion, constipation, or diarrhea. Fluoride and iodide strengthen the enamel on teeth and prevent cavities. Iron helps treat iron-deficiency anemia.",
+    "P020": "Drugs come in many forms, but there are three primary categories for their routes of administration:",
+    "P021": "Drug forms in the percutaneous category include creams, topical ointments, powders, dressings (such as those used for wound care), and transdermal patches or disks. Other drugs in this category include eye, nose, or ear drops; vaginal medications; and aerosolized liquids that are inhaled and can be absorbed in the lungs. Some drugs in this category are able to deliver the medication in a constant amount over a specific time frame. The therapeutic effects may last longer depending upon the delivery method.",
+    "P022": "Enteral medications are drugs administered into the gastrointestinal (GI) tract. This can be done orally, rectally, or through a tube in the GI tract. The most common forms for these routes are through capsules and tablets (both may be sustained release), caplets, elixirs, emulsions, lozenges, suspensions, and syrups. The onset of action of these preparations will vary depending upon the form of the drug. Time-release capsules or tablets and enteric-coated tablets should not be crushed or chewed. Generally, these capsules should also not be opened and emptied onto food because this will alter how quickly the drug is absorbed. Note that some formulations can be opened in this manner, but it is best to ask before attempting this. An overdose of medication could result, although a subtherapeutic dose could also result from opening the capsule.",
+    "P023": "The parenteral route commonly refers to drugs given by injection, though parenteral literally means “outside the GI tract.” The onset of action is often more rapid than with oral administration; however, the duration of action is usually shorter. Because these drugs do not have to travel through the stomach and be metabolized in the liver, the dose is usually smaller than with oral dosing. This route is often prescribed when it is necessary to deliver a drug quickly. It is also helpful when the client is experiencing nausea or vomiting. The drug form for parenteral medications is that of a liquid. There are no barriers to absorption for intravenous medications because these drugs are injected directly into the bloodstream—absorption is immediate and complete. Intramuscular injections and subcutaneous injections may be absorbed rapidly or slowly, depending upon the solubility of the drug and blood flow to the injection area. Drugs that are highly soluble in water are absorbed very quickly (10–30 minutes); however, poorly soluble drugs will be absorbed at a much slower rate."
+  }
+}

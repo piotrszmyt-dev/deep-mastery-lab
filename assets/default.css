@@ -1,0 +1,1255 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/* ─────────────────────────────────────────────────────────────
+   COLOR PALETTE DEFINITIONS (Mapped to your Aesthetic)
+   ───────────────────────────────────────────────────────────── */
+:root {
+    --bg-elevated-l2: #2C2E33;
+    --bg-elevated-l3: #373A40;
+    --text-primary: #C1C2C5;
+    --text-muted: #909296;
+    
+    /* Amethyst Primary */
+    --amethyst-main: #7048E8;
+    --amethyst-hover: #845EF7;
+    --amethyst-active: #6741D9;
+    
+    /* Cyan Secondary */
+    --cyan-candy: #3BC9DB;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+/* ============================================================
+   MASTERY MODE COURSE TREE
+   ============================================================ */
+
+/* ── 1. ACTIVE MODULE HEADER ─────────────────────────────────
+   Targets the expander summary text when the module contains
+   at least one enabled (non-disabled) checkbox child.
+   ─────────────────────────────────────────────────────────── */
+.st-key-mastery_tree [data-testid="stExpander"] summary,
+.st-key-module_review [data-testid="stExpander"] summary,
+.st-key-srs_deck_list [data-testid="stExpander"] summary
+ {
+    color: var(--eye-candy-amethyst, #9775FA) !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    letter-spacing: -0.01em !important;
+    text-shadow: 0 0 12px rgba(151, 117, 250, 0.3) !important; /* Eye candy glow */
+}
+
+/* ── 2. ACTIVE CONCEPT GROUP HEADER ─────────────────────────
+   Targets the concept-group checkbox label when the group
+   contains at least one enabled lesson row underneath it.
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_concept_"] [data-testid="stMarkdownContainer"] p,
+.module-header
+ {
+    color: var(--eye-candy-cyan, #3BC9DB) !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    font-style: normal !important;
+    letter-spacing: 0px !important;
+}
+
+/* ── 3. ACTIVE INDIVIDUAL LESSON ROW ────────────────────────
+   Targets individual lesson checkbox labels that are enabled
+   (i.e. the lesson has a question pool available).
+   ─────────────────────────────────────────────────────────── */
+[class*="st-key-mastery_cb_"] [data-testid="stMarkdownContainer"] p,
+[class*="srs_cb_"] [data-testid="stMarkdownContainer"] p  {
+    color: var(--text-primary, #C1C2C5) !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+    letter-spacing: 0.2px !important;
+}
+
+/* ── 4. INACTIVE / DISABLED ITEMS ───────────────────────────
+   Covers all three levels (module expander, concept group,
+   lesson row) when they are disabled — either no question
+   pool exists or no enabled children are present.
+   ─────────────────────────────────────────────────────────── */
+[data-testid="stCheckbox"]:has(input:disabled) [data-testid="stMarkdownContainer"] p,
+.st-key-mastery_tree [data-testid="stExpander"]:not(:has(input:not(:disabled))) summary {
+    color: var(--text-muted, #909296) !important;
+    opacity: 0.5 !important; 
+    text-shadow: none !important;
+}
+
+/* 1. Main Button (Primary) ────────────────────────────────── */
+
+button[kind="primary"],
+.st-key-mastery_tree label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-module_review label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type,
+.st-key-srs_deck_list label[data-baseweb="checkbox"]:has(input:checked) span:first-of-type {
+    background: var(--amethyst-main) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #FFFFFF !important; /* High legibility on dark purple */
+    box-shadow: var(--shadow-sm) !important;
+    border-radius: 10px !important; /* Sweet spot of 8-12px */
+    font-weight: 500 !important;
+    letter-spacing: 0.3px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+button[kind="primary"]:hover {
+    background-color: var(--amethyst-hover) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 0 15px rgba(112, 72, 232, 0.4) !important; /* Eye candy glow */
+    transform: translateY(-1px);
+}
+
+section[data-testid="stMain"] button[kind="primary"]:active {
+    background-color: var(--amethyst-active) !important;
+    transform: translateY(0.5px);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+button[kind="primary"]:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(112, 72, 232, 0.5) !important;
+}
+
+button[kind="primary"]:disabled {
+    background-color: #2C2E33 !important;
+    border-color: #373A40 !important;
+    color: var(--text-muted) !important;
+    box-shadow: none !important;
+    opacity: 0.5 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+}
+
+/* 2. Secondary Button ─────────────────────────────────────── */
+
+section[data-testid="stMain"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[kind="secondary"],
+div[data-testid="stDownloadButton"] > button,
+[data-testid="stPopoverBody"] [data-testid="stBaseButton-secondary"] {
+    background: var(--bg-elevated-l2) !important;
+    border: 1px solid var(--bg-elevated-l3) !important;
+    color: var(--text-primary) !important;
+    box-shadow: var(--shadow-sm) !important;
+    border-radius: 10px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+section[data-testid="stMain"] button[kind="secondary"]:hover,
+section[data-testid="stSidebar"] button[kind="secondary"]:hover,
+div[data-testid="stDownloadButton"] > button:hover,
+.st-key-sidebar_mastery_btn button[kind="tertiary"]:hover {
+    background-color: var(--bg-elevated-l3) !important;
+    border-color: var(--cyan-candy) !important; /* Cyan eye candy highlight */
+    color: #FFFFFF !important;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md) !important;
+}
+
+section[data-testid="stMain"] button[kind="secondary"]:active,
+section[data-testid="stSidebar"] button[kind="secondary"]:active,
+div[data-testid="stDownloadButton"] > button:active {
+    background-color: #1A1B1E !important; /* Sinks into background */
+    border-color: var(--bg-elevated-l3) !important;
+    transform: translateY(0);
+}
+
+section[data-testid="stMain"] button[kind="secondary"]:focus,
+section[data-testid="stSidebar"] button[kind="secondary"]:focus,
+div[data-testid="stDownloadButton"] > button:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(59, 201, 219, 0.3) !important;
+}
+
+section[data-testid="stMain"] button[kind="secondary"]:disabled,
+div[data-testid="stDownloadButton"] > button:disabled,
+section[data-testid="stSidebar"] button[kind="secondary"]:disabled {
+    background-color: #1A1B1E !important;
+    border-color: #25262B !important;
+    color: #495057 !important;
+    opacity: 0.4 !important;
+    box-shadow: none !important;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WELCOME WINDOW / LANDING STATE (Elevated Level 2)
+   ───────────────────────────────────────────────────────────── */
+
+/* Target the specific container - Updated for L2 Elevation */
+.st-key-welcome_card {
+    background-color: #2C2E33; /* Level 2 Surface */
+    border: 1px solid #373A40; /* Subtle defining border */
+    
+    /* Strategic Material Shadow (Level 2: Stronger depth) */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 
+                0 4px 6px -2px rgba(0, 0, 0, 0.2);
+                
+    /* Crisp corners per 8-12px requirement */
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.2s ease-out;
+}
+
+/* The Main Title - Low Contrast but legible */
+.welcome-title {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #C1C2C5; /* Meets 4.5:1 contrast on L2 background */
+    
+    /* "Eye Candy" Glow - Amethyst Accent */
+    text-shadow: 0 0 20px rgba(151, 117, 250, 0.2); 
+    margin-bottom: 0.5rem;
+}
+
+/* Icon Pop - Cyan Accent */
+.welcome-title .material-icons {
+    font-size: 2.5rem;
+    color: #3BC9DB; /* Eye candy contrast */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* The Subtitle - Muted secondary text */
+.welcome-subtitle {
+    color: #909296; /* Muted contrast */
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+/* Custom Divider - Soft integration */
+.st-key-welcome_card hr {
+    border: 0;
+    border-top: 1px solid #373A40;
+    margin: 1.5rem 0;
+}
+
+/* Sidebar ──────────────────────────────────────────── */
+
+/* Background color of sidebar (Level 1 Surface) */
+section[data-testid="stSidebar"] {
+    background-color: #25262B; 
+    color: #C1C2C5; /* Primary Text */
+    border-right: 1px solid #373A40;
+}
+
+/* Sidebar Collapse Button - Icon (Cyan Eye-Candy) */
+div[data-testid="stSidebarCollapseButton"] span[data-testid="stIconMaterial"] {
+    color: #3BC9DB !important; 
+    font-size: 1.2rem !important;
+    transition: all 0.3s ease;
+}
+
+/* Sidebar Collapse Button - Hover (Elevation + Glow) */
+div[data-testid="stSidebarCollapseButton"] button:hover {
+    background-color: #2C2E33 !important; /* Level 2 Elevation */
+    box-shadow: 0 0 15px rgba(59, 201, 219, 0.15); /* Soft Cyan Glow */
+}
+
+/* Sidebar - APP Title (Amethyst Gradient feel) */
+.sidebar-title, .card-title {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #C1C2C5 !important; 
+    letter-spacing: -0.5px;
+}
+
+/* Sidebar - APP Title Icon (Gently glowing behind glass) */
+.sidebar-title .material-icons,
+.card-title .material-icons {
+    color: #9775FA; /* Amethyst Accent */
+    text-shadow: 0 0 12px rgba(151, 117, 250, 0.4); 
+    margin-right: 10px;
+}
+
+/* Separator Line (Low Contrast) */
+section[data-testid="stSidebar"] hr {
+    background-color: #373A40 !important;
+    margin-top: 5px !important;
+    opacity: 0.5;
+    height: 1px;
+    border: none;
+}
+
+/* Expander Module Title - Closed */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary {
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    color: #909296 !important; /* Muted Text */
+    border-radius: 10px !important;
+    transition: all 0.2s ease;
+}
+
+/* Expander Module Title - Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] > details > summary:hover {
+    color: #C1C2C5 !important;
+    background-color: #2C2E33 !important; /* Level 2 */
+}
+
+/* Expander Module Title - Open (Elevated Card) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > summary {
+    background-color: #2C2E33 !important;
+    color: #9775FA !important; /* Amethyst focus */
+    border-radius: 10px 10px 0 0 !important;
+    border: 1px solid #373A40 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+}
+
+/* Header for subconcepts (Uppercase/Muted) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] button:disabled p {
+    color: #5C5F66 !important; 
+    text-transform: uppercase;
+    font-size: 0.75rem !important;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    padding-top: 10px;
+} 
+
+/* Subconcepts and quick test icons (Default state) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button {
+    color: #909296 !important;
+    background-color: transparent !important;
+    transition: all 0.2s ease;
+}
+
+/* Subconcepts Hover (Cyan Eye-Candy) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_bt_"] button:enabled:hover p,
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-q_"] button:hover{
+    color: #3BC9DB !important;
+    text-shadow: 0 0 8px rgba(59, 201, 219, 0.3);
+}
+
+/* Subconcepts: ACTIVE Element (Amethyst Highlight) */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button {
+    background-color: rgba(151, 117, 250, 0.1) !important; /* Subtle Amethyst tint */
+    border-radius: 8px !important;
+    border-left: 3px solid #9775FA !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button p {
+    color: #C1C2C5 !important;
+    font-weight: 600 !important;
+}
+
+/* Subconcepts: Active Hover */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] [class*="st-key-nav_active"] button:hover {
+    background-color: rgba(151, 117, 250, 0.15) !important;
+}
+
+/* --- UI Variables for Easy Maintenance --- */
+:root {
+    --bg-l0: #1A1B1E;
+    --bg-l1: #25262B;
+    --bg-l2: #2C2E33;
+    --text-primary: #C1C2C5;
+    --text-muted: #909296;
+    --accent-purple: #9775FA;
+    --accent-cyan: #3BC9DB;
+    --border-subtle: #373A40;
+    --radius-main: 10px;
+    --shadow-l1: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Lesson Area ──────────────────────────────────────────── */
+
+/* Main Area - Level 0 */
+section[data-testid="stMain"], header[data-testid="stHeader"] {
+    background-color: var(--bg-l0);
+    color: var(--text-primary);
+}
+
+/* Sidebar Expand Button - Icon (default) */
+button[data-testid="stExpandSidebarButton"] span {
+    background-color: transparent !important;
+    color: var(--accent-cyan) !important; /* Eye candy contrast */
+    filter: drop-shadow(0 0 5px rgba(59, 201, 219, 0.2));
+}
+
+/* Sidebar Expand Button - Icon (hover) */
+button[data-testid="stExpandSidebarButton"]:hover span {
+    color: #FFFFFF !important;
+    background-color: transparent !important;
+}
+
+button[data-testid="stExpandSidebarButton"]:hover {
+    background-color: var(--bg-l2) !important;
+    border-radius: var(--radius-main);
+}
+
+/* Lesson State ──────────────────────────────────────────── */
+
+/* Lesson Title */
+section[data-testid="stMain"] .st-key-lesson_title h3 {
+    color: var(--text-primary);
+    background-color: transparent;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+/* Lesson Card: Main Area - Level 1 Elevation */
+section[data-testid="stMain"] .st-key-lesson_window {
+    background-color: var(--bg-l1);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-main);
+    padding: 20px;
+    box-shadow: var(--shadow-l1);
+}
+
+/* Lesson Card: Strong Text - Using Purple for Eye Candy */
+section[data-testid="stMain"] .st-key-lesson_window strong {
+    color: var(--accent-purple);
+    font-weight: 600;
+}
+
+/* Lesson: Headers */
+section[data-testid="stMain"] .st-key-lesson_window :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--text-primary) !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px;
+    margin-top: 1.5rem;
+}
+
+/* Lesson Card: Italic Text */
+section[data-testid="stMarkdownContainer"] em {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Lesson Card: Table Headers - Level 2 Elevation */
+section[data-testid="stMain"] .st-key-lesson_window th {
+    color: var(--accent-cyan);
+    border: 1px solid var(--border-subtle);
+    background-color: var(--bg-l2);
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Lesson Card: Table Data */
+section[data-testid="stMain"] .st-key-lesson_window td {
+    color: var(--text-primary);
+    border: 1px solid var(--border-subtle);
+    padding: 10px;
+}
+
+/* Scrollbar styling for lesson window */
+.st-key-lesson_window:hover {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-purple) transparent;
+}
+
+/* Custom Webkit Scrollbar for Chrome/Safari */
+.st-key-lesson_window::-webkit-scrollbar {
+    width: 6px;
+}
+.st-key-lesson_window::-webkit-scrollbar-thumb {
+    background-color: var(--bg-l2);
+    border-radius: 10px;
+}
+.st-key-lesson_window:hover::-webkit-scrollbar-thumb {
+    background-color: var(--accent-purple);
+}
+
+/* ────────────────────────────────────────────────────────────
+   QUIZ TEST STATE: REFINED DESIGN SYSTEM
+   Theme: Low-Contrast Dark / High-Tactile Elevation
+   ──────────────────────────────────────────────────────────── */
+
+:root {
+    /* Base Palette */
+    --bg-level-0: #1A1B1E;      /* Deepest Background */
+    --bg-level-1: #25262B;      /* Card Surface */
+    --bg-level-2: #2C2E33;      /* Active/Elevated Surface */
+    --border-subtle: #373A40;   /* Low-contrast separators */
+    
+    /* Typography (WCAG AA Compliant 4.5:1+) */
+    --text-primary: #C1C2C5;    /* Soft White */
+    --text-muted: #909296;      /* Secondary Labels */
+    
+    /* Eye Candy Accents */
+    --eye-candy-amethyst: #9775FA;
+    --eye-candy-cyan: #3BC9DB;
+    --glow-purple: rgba(151, 117, 250, 0.15);
+}
+
+/* 1. Question Container ────────────────────────────────────── */
+.st-key-question {
+    background-color: rgba(37, 38, 43, 0.4); /* Very subtle L0.5 well */
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    
+    /* Subtle inner shadow to make it feel "recessed" compared to the answer cards */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* The Accent Indicator: Now a small "Pill" instead of a full-height line */
+.st-key-question p {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+
+
+/* 2. Answer Cards (Elevation L1) ───────────────────────────── */
+[class*="st-key-answer"] {
+    color: var(--text-primary);
+    background-color: var(--bg-level-1);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px; /* Precise 8-12px range */
+    
+    /* Smooth lift transition */
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                background-color 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+    
+    /* Initial L1 Shadow */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 
+                0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Answer Hover State (Elevation L2) ────────────────────────── */
+[class*="st-key-answer"]:hover {
+    background-color: var(--bg-level-2);
+    border-color: var(--eye-candy-amethyst);
+    cursor: pointer;
+    
+    /* Physical Lift Effect */
+    transform: translateY(-2px);
+    
+    /* Deeper L2 Shadow + Purple Ambient Glow */
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4), 
+                0 0 15px var(--glow-purple);
+}
+
+/* 3. Letter Labels (A, B, C, D) ────────────────────────────── */
+[class*="st-key-answer"] strong {
+    color: var(--eye-candy-amethyst);
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.95em;
+    margin-right: 0.75rem;
+    /* Soft text glow for eye-candy effect */
+    text-shadow: 0 0 8px rgba(151, 117, 250, 0.3);
+}
+
+/* 4. Keyboard Legend & Hints ───────────────────────────────── */
+.keyboard-legend {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Skeuomorphic Key Cap Style */
+.key-hint {
+    font-family: ui-monospace, 'Cascadia Code', monospace;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--eye-candy-cyan);
+    background: linear-gradient(145deg, var(--bg-level-2), var(--bg-level-1));
+    border: 1px solid var(--border-subtle);
+    border-radius: 5px;
+    padding: 3px 7px;
+    margin-right: 4px;
+    
+    /* 3D Keycap Shadow */
+    box-shadow: 0 2px 0 #141517, 
+                inset 0 1px 1px rgba(255,255,255,0.05);
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Feedback State ──────────────────────────────────────────── */
+:root {
+    /* New Material Dark Palette (Optimized for 4.5:1 Contrast) */
+    --bg-l0: #1A1B1E;           /* App Background */
+    --bg-l1: #25262B;           /* Surface 1 (Cards) */
+    --bg-l2: #2C2E33;           /* Surface 2 (Elevated/Hover) */
+    --text-main: #C1C2C5;       /* Primary Text (AA Accessible) */
+    --text-muted: #909296;      /* Secondary Text */
+    
+    /* Eye Candy Accents */
+    --accent-amethyst: #9775FA; /* Primary Pop */
+    --accent-cyan: #3BC9DB;     /* Secondary Pop */
+    --candy-success: #40C057;   /* Vibrant Green */
+    --candy-danger: #FA5252;    /* Vibrant Red */
+    
+    /* Elevation Shadows */
+    --shadow-l1: 0 4px 12px rgba(0, 0, 0, 0.25);
+    --shadow-l2: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* 1. HERO METRIC BOXES (Elevated Surface) */
+.feedback-box {
+    background-color: var(--bg-l1);
+    border: 1px solid #373A40;
+    border-radius: 12px; /* Precision Corner */
+    box-shadow: var(--shadow-l1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 1.5rem;
+}
+
+.feedback-box:hover {
+    transform: translateY(-2px);
+    background-color: var(--bg-l2);
+    box-shadow: var(--shadow-l2);
+    border-color: var(--accent-amethyst);
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+
+.metric-value {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    /* Subtle text glow for "Eye Candy" feel */
+    text-shadow: 0 0 15px rgba(193, 194, 197, 0.1);
+}
+
+/* Status Specifics */
+.feedback-box.status-passed {
+    border-bottom: 3px solid var(--candy-success);
+}
+
+.feedback-box.status-failed {
+    border-bottom: 3px solid var(--candy-danger);
+}
+
+/* Material Icons in Status Box */
+.feedback-box .material-icons {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--accent-amethyst), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 2. QUESTION EXPANDERS (Low Contrast Contrast) */
+.st-key-feedback_list details {
+    border: none !important;
+    background: transparent !important;
+    border-bottom: 1px solid #2C2E33 !important;
+    padding: 10px 0;
+}
+
+.st-key-feedback_list summary {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+
+.st-key-feedback_list summary:hover {
+    color: var(--accent-cyan) !important;
+    background-color: var(--bg-l1) !important;
+    padding-left: 10px;
+}
+
+/* 3. ANSWER COMPARISON CARDS (Layered) */
+.answer-card {
+    border-radius: 10px;
+    font-size: 0.95rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid #373A40;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* User's Answer Card */
+.answer-card.user-wrong {
+    background-color: rgba(250, 82, 82, 0.05); /* Very subtle red tint */
+    border-color: rgba(250, 82, 82, 0.2);
+    color: var(--text-main);
+}
+
+.answer-card.user-correct {
+    background-color: rgba(64, 192, 87, 0.05); /* Very subtle green tint */
+    border-color: rgba(64, 192, 87, 0.2);
+    color: var(--text-main);
+}
+
+/* Correct Answer Card (Elevation Level 2) */
+.answer-card.correct-key {
+    background-color: var(--bg-l2);
+    border: 1px solid var(--candy-success);
+    color: var(--candy-success);
+    font-weight: 600;
+    box-shadow: var(--shadow-l1);
+}
+
+.answer-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 800;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Explanation Box Theme */
+[data-testid="stMarkdownContainer"] blockquote {
+    background-color: var(--bg-l1) !important;
+    border-left: 4px solid var(--accent-cyan) !important;
+    border-radius: 4px 12px 12px 4px !important;
+    color: var(--text-main) !important;
+    padding: 1.2rem !important;
+    box-shadow: var(--shadow-l1);
+}
+
+.explanation-box .material-icons {
+    font-size: 1.2rem;
+    color: var(--accent-cyan);
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GENERATOR WINDOW (The "Magic" Box) - Refined Design
+   ───────────────────────────────────────────────────────────── */
+
+/* Main Card Container (Level 2 Elevation) */
+.st-key-generator_card {
+    background-color: var(--bg-level-1);
+    border: 1px solid var(--border-subtle);
+    /* Subtle accent top border for personality */
+    border-top: 3px solid var(--eye-candy-amethyst);
+    /* Stronger shadow to indicate higher elevation */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                0 0 20px rgba(151, 117, 250, 0.05); 
+    border-radius: 12px; /* Per 8-12px spec */
+    padding: 1.5rem;
+    animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Header inside the Generator Card */
+.st-key-generator_card h3 {
+    color: var(--text-primary);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* Separator Line */
+.st-key-generator_card hr {
+    border-color: var(--border-subtle) !important;
+    opacity: 0.5;
+}
+
+/* Icons in Headers */
+.gen-header-icon {
+    font-size: 1.2em !important;
+    color: var(--eye-candy-amethyst);
+}
+
+.gen-input-icon {
+    color: var(--eye-candy-cyan); 
+}
+
+/* Warning Box - Low Contrast Danger */
+.generator-warning {
+    color: #FFA5A5; /* Softer red for dark mode */
+    background: rgba(250, 82, 82, 0.08); 
+    border-radius: 10px;
+    border: 1px solid rgba(250, 82, 82, 0.2);
+    padding: 12px;
+}
+
+/* Metric Stats Box (Internal Level 2 Surface) */
+.generator-stat-box {
+    background: var(--bg-level-2);
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    padding: 1rem;
+}
+
+/* Completion Stats specific layout */
+.stat-item-bordered {
+    border-left: 1px solid var(--border-subtle);
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.stat-value {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.stat-value-accent {
+    color: var(--eye-candy-cyan);
+    font-weight: 700;
+}
+
+.stat-value-success {
+    color: #40C057; /* Success Green */
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px rgba(64, 192, 87, 0.2);
+}
+
+/* Loading/Spinner Icon */
+.spinner-icon {
+    color: var(--eye-candy-amethyst);
+    animation: spin 1.5s linear infinite;
+}
+
+/* Console Log (Recessed L0 Look) */
+.generator-console {
+    background: #141517; /* Deepest black for code feel */
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    /* Inset shadow creates the "recessed" look */
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+    padding: 1rem;
+}
+
+.generator-console-step {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 8px 0;
+}
+
+.console-icon {
+    color: var(--eye-candy-cyan);
+}
+
+.console-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.console-message {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-left: 2px solid var(--bg-level-2);
+    padding-left: 10px;
+    margin-left: 5px;
+}
+
+/* Completion Screen */
+.completion-header {
+    color: #40C057; 
+}
+
+.completion-icon {
+    font-size: 42px;
+    filter: drop-shadow(0 0 10px rgba(64, 192, 87, 0.3));
+}
+
+/* Spinner Animation Color */
+.stVerticalBlock [data-testid="stSpinner"] {
+    color: var(--eye-candy-cyan) !important;
+}
+
+/* Streamlit Metric Card Container */
+[data-testid="stMetric"] {
+    background-color: var(--bg-level-1);
+    border: 1px solid var(--border-subtle);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Effect for Metric Card */
+[data-testid="stMetric"]:hover {
+    border-color: var(--eye-candy-cyan);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+}
+
+/* Metric Label (Title) */
+[data-testid="stMetricLabel"] {
+    font-size: 0.75rem !important;
+    color: var(--text-muted) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Metric Value (Big Number) */
+[data-testid="stMetricValue"] {
+    font-size: 2.2rem !important;
+    color: var(--text-primary) !important;
+    font-weight: 700;
+    /* Soft cyan glow for eye candy */
+    text-shadow: 0 0 15px rgba(59, 201, 219, 0.15); 
+}
+
+/* Metric Delta (Change indicator) */
+[data-testid="stMetricDelta"] {
+    font-size: 0.85rem !important;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 4px 10px;
+    border-radius: 20px; /* Pill shape */
+    margin-top: 10px;
+}
+
+/* ────────────────────────────────────────────────────────────
+   UI ELEMENTS: PROGRESS, TABS, & UPLOADER
+   ──────────────────────────────────────────────────────────── */
+
+/* 1. Progress Bar (Glowing "Status Tube" Style) ────────────── */
+.progress-container {
+    background-color: #141517 !important; /* Slightly deeper than L0 for "inset" look */
+    height: 10px !important;
+    border-radius: 20px !important;
+    width: 100%;
+    margin: 10px 0 20px 0;
+    /* Inset shadow creates the "carved out" effect */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5), 
+                0 1px 0 rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.progress-fill {
+    /* Eye Candy: Cyan to Amethyst Gradient */
+    background: linear-gradient(90deg, var(--eye-candy-cyan), var(--eye-candy-amethyst)) !important;
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Soft glow that follows the progress */
+    box-shadow: 0 0 12px rgba(59, 201, 219, 0.4);
+}
+
+/* 2. Tabs (Segmented Control Aesthetic) ────────────────────── */
+button[data-baseweb="tab"] {
+    background-color: transparent !important;
+    color: var(--text-muted) !important;
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+    margin-right: 8px;
+    border: none !important;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+/* Inactive Tab - Hover */
+button[data-baseweb="tab"][aria-selected="false"]:hover {
+    background-color: var(--bg-level-2) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Active Tab (Elevated Surface L2) */
+button[data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--bg-level-2) !important;
+    color: var(--eye-candy-amethyst) !important;
+    /* Elevated "Pill" effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 
+                inset 0 0 0 1px rgba(151, 117, 250, 0.2) !important;
+}
+
+/* Remove Streamlit's default underline */
+div[data-baseweb="tab-border"] {
+    display: none !important;
+}
+
+/* 3. File Uploader (Material Dropzone) ─────────────────────── */
+[data-testid="stFileUploaderDropzone"] {
+    background-color: var(--bg-level-1) !important;
+    border: 2px dashed var(--border-subtle) !important;
+    border-radius: 12px !important;
+    padding: 2rem !important;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+[data-testid="stFileUploaderDropzone"]:hover {
+    border-color: var(--eye-candy-cyan) !important;
+    background-color: var(--bg-level-2) !important;
+}
+
+/* Dropzone Text Styling */
+[data-testid="stFileUploaderDropzoneInstructions"] > div > span {
+    color: var(--text-primary) !important;
+    font-size: 0.95rem;
+}
+
+/* "Browse Files" Button Override */
+[data-testid="stFileUploaderDropzone"] button {
+    width: 100%;
+    border-radius: 8px !important;
+    background-color: rgba(151, 117, 250, 0.1) !important;
+    color: var(--eye-candy-amethyst) !important;
+    border: 1px solid rgba(151, 117, 250, 0.2) !important;
+    margin-top: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+[data-testid="stFileUploaderDropzone"] button:hover {
+    background-color: var(--eye-candy-amethyst) !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 15px rgba(151, 117, 250, 0.3);
+}
+
+/* Icon Polish */
+[data-testid="stFileUploaderDropzoneInstructions"] svg {
+    color: var(--eye-candy-cyan) !important;
+    transform: scale(1.2);
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 8px rgba(59, 201, 219, 0.3));
+}
+
+/* ────────────────────────────────────────────────────────────
+   DROPDOWN & SELECTBOX: ELEVATED SYSTEM
+   ──────────────────────────────────────────────────────────── */
+
+/* Dropdown Menu: Outer container reset */
+[data-baseweb="select"] {
+    background-color: transparent !important;
+}
+
+/* 1. CLOSED STATE (Elevation Level 1) ─────────────────────── */
+[data-baseweb="select"] > div {
+    background-color: var(--bg-level-1) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 10px !important; /* 8-12px spec */
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Text & Icon styling inside closed container */
+[data-baseweb="select"] div[class*="st-ct"], 
+[data-baseweb="select"] svg {
+    color: var(--text-primary) !important;
+}
+
+/* 2. HOVER STATE (Transitioning to Level 2) ───────────────── */
+[data-baseweb="select"] > div:hover {
+    background-color: var(--bg-level-2) !important;
+    border-color: var(--eye-candy-cyan) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 3. OPEN STATE (Active Focus) ───────────────────────────── */
+[data-baseweb="select"]:has(input[aria-expanded="true"]) > div {
+    background-color: var(--bg-level-2) !important;
+    border: 1px solid var(--eye-candy-amethyst) !important; /* Amethyst for active state */
+    color: var(--text-primary) !important;
+    box-shadow: 0 0 0 3px var(--glow-purple) !important;
+}
+
+/* 4. THE DROPDOWN LIST (Elevation Level 3) ────────────────── */
+
+/* Container Reset */
+[data-baseweb="popover"]:has([data-testid="stSelectboxVirtualDropdown"]),
+[data-testid="stSelectboxVirtualDropdown"],
+[data-testid="stSelectboxVirtualDropdown"] > div {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* The actual floating list card */
+[data-testid="stSelectboxVirtualDropdown"] {
+    background-color: var(--bg-level-2) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 12px !important;
+    margin-top: 8px !important;
+    overflow: hidden !important;
+    /* Strongest Shadow for Top Layer */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 5. INDIVIDUAL ITEMS (Virtual List) ─────────────────────── */
+
+[role="option"] {
+    transition: background-color 0.15s ease !important;
+}
+
+/* Item Text Color */
+[role="option"] div[class*="e1bi6yfx1"] {
+    color: var(--text-primary) !important;
+    font-size: 0.95rem !important;
+}
+
+/* Item Hover (Soft Highlight) */
+[role="option"]:hover {
+    background-color: var(--bg-level-1) !important;
+}
+
+/* SELECTED ITEM STATE */
+[role="option"][aria-selected="true"] {
+    background-color: rgba(151, 117, 250, 0.1) !important; /* Subtle Amethyst Tint */
+}
+
+[role="option"][aria-selected="true"] div[class*="e1bi6yfx1"] {
+    color: var(--eye-candy-amethyst) !important;
+    font-weight: 600 !important;
+}
+
+/* 6. UTILITIES: SCROLLBARS ────────────────────────────────── */
+
+div[style*="overflow: auto"][style*="position: relative"] {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-subtle) transparent;
+}
+
+/* Chrome/Safari Scrollbar refinement */
+div[style*="overflow: auto"]::-webkit-scrollbar {
+    width: 6px;
+}
+
+div[style*="overflow: auto"]::-webkit-scrollbar-thumb {
+    background-color: var(--border-subtle);
+    border-radius: 10px;
+}
+
+/* ────────────────────────────────────────────────────────────
+   UI INTERACTIVE ELEMENTS: POPOVERS & INPUTS
+   Theme: High-Elevation Popovers & Tactile Inputs
+   ──────────────────────────────────────────────────────────── */
+
+/* 1. Button Dropdown Popover (Elevation L3) ────────────────── */
+[data-testid="stPopoverBody"] {
+    width: var(--ui_popover_width) !important;  
+    max-width: var(--ui_popover_width) !important;
+    background-color: var(--bg-level-2) !important; /* L2 Surface */
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 12px;
+    /* High elevation shadow for "floating" feel */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 
+                0 10px 10px -5px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-testid="stPopoverBody"] > div {
+    background-color: transparent !important; 
+}
+
+/* Popover Text Styling */
+[data-testid="stPopoverBody"] .stMarkdown p {
+    color: var(--text-primary) !important;
+    font-size: 0.95rem;
+}
+
+/* Remove Streamlit default focus ring on popover buttons */
+[data-testid="stPopoverBody"] button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 2. Sidebar & Expander Cleanup ────────────────────────────── */
+section[data-testid="stSidebar"] div[data-testid="stExpander"] details[open] > *,
+section[data-testid="stMain"] div[data-testid="stExpander"] details[open] > * {
+    border: none !important;
+}
+
+/* 3. Text Fields & Inputs (Tactile/Slightly Inset) ─────────── */
+div[data-testid="stTextInputRootElement"],
+div[data-testid="stTextAreaRootElement"],
+div[data-testid="stNumberInputContainer"] {
+    border-radius: 10px; /* Aligned with 8-12px spec */
+    /* Subtle inset shadow to make the input feel "cut into" the surface */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: all 0.2s ease;
+    background-color: var(--bg-level-1) !important;
+    border: 1px solid var(--border-subtle) !important;
+}
+
+/* Interactive States: Hover */
+div[data-testid="stTextInputRootElement"]:hover,
+div[data-baseweb="base-input"]:hover,
+div[data-testid="stNumberInputContainer"]:hover {
+    border-color: var(--text-muted) !important;
+    background-color: var(--bg-level-2) !important;
+}
+
+/* Interactive States: Focus (Eye Candy Accent) */
+div[data-testid="stTextInputRootElement"]:focus-within,
+div[data-baseweb="base-input"]:focus-within,
+div[data-testid="stNumberInputContainer"]:focus-within {
+    border-color: var(--eye-candy-cyan) !important;
+    background-color: var(--bg-level-2) !important;
+    /* Subtle outer glow on focus */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 
+                0 0 0 2px rgba(59, 201, 219, 0.15);
+}
+
+/* 4. Input Text & Number Controls ──────────────────────────── */
+textarea, 
+div[data-baseweb="base-input"] > input,
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    color: var(--text-primary) !important;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Number Input Step Buttons */
+button[data-testid="stNumberInputStepDown"],
+button[data-testid="stNumberInputStepUp"] {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+button[data-testid="stNumberInputStepDown"]:hover,
+button[data-testid="stNumberInputStepUp"]:hover {
+    color: var(--eye-candy-cyan) !important;
+}
+
+/* Disabled State for Step Buttons */
+button[data-testid="stNumberInputStepDown"]:disabled svg,
+button[data-testid="stNumberInputStepUp"]:disabled svg {
+    fill: var(--text-muted) !important;
+    opacity: 0.3;
+}
+
+/* 5. Tooltip & Labels ──────────────────────────────────────── */
+[data-testid="stTooltipIcon"] svg {
+    stroke: var(--eye-candy-amethyst) !important; /* Amethyst for hint icons */
+    transition: transform 0.2s ease;
+}
+
+[data-testid="stTooltipIcon"]:hover svg {
+    transform: scale(1.1);
+}
+
+/* Input Labels (The text above the input) */
+span[aria-hidden="true"] [data-testid="stMarkdownContainer"] p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 2px;
+}
+
+/* Scrollbar for Text Areas */
+textarea {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-subtle) transparent;
+}
