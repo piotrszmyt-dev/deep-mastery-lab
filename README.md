@@ -159,7 +159,7 @@ LLM generation is reliable most of the time, but some curation is expected. Non-
 
 Checkpoint tests appear every few lessons at module boundaries. There are three types:
 - **Module Checkpoint** — a broader review accompanied by a synthesis card that summarises all lessons covered so far in the module. 
-- **Module Synthesis** — tests the current module's material, also accompanied by the a synthesis card.
+- **Module Synthesis** — tests the current module's material, also accompanied by a synthesis card.
 - **Final Test** — covers the entire course
 
 These serve as structured pauses in the normal flow, giving the material time to consolidate before moving forward.
