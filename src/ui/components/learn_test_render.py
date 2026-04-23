@@ -73,7 +73,7 @@ def render_test_state(tutor, adapter):
 def _render_test_header(tutor, current):
     """Render action bar and title for TEST state."""
     current_type = current.get('type', '')
-    if current_type in ('module_synthesis', 'module_checkpoint'):
+    if current_type in ('module_synthesis', 'module_checkpoint', 'final_test'):
         _render_module_test_action_buttons(tutor)
     else:
         _render_test_action_buttons(tutor)
